@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TalentTrees>
+  <TalentTree jobidentifier="bodybuilder">
+    <SubTree identifier="bodybuilder_primary" nameidentifier="talenttree.primary" type="primary">
+      <TalentOptions requiredtalents="3" maxchosentalents="6">
+        <TalentOption identifier="swole" />
+        <TalentOption identifier="mountain" />
+        <TalentOption identifier="jogger" />
+        <TalentOption identifier="selfcare" />
+        <TalentOption identifier="thewaitinglist" />
+        <TalentOption identifier="puretonic" />
+      </TalentOptions>
+      <TalentOptions requiredtalents="1" maxchosentalents="1">
+        <TalentOption identifier="training_vigor" />
+        <TalentOption identifier="training_joy" />
+        <TalentOption identifier="training_haste" />
+        <TalentOption identifier="training_stabilozine" />
+        <TalentOption identifier="training_paralysis" />
+      </TalentOptions>
+      <TalentOptions requiredtalents="1" maxchosentalents="1">
+        <TalentOption identifier="naturalgains" />
+        <TalentOption identifier="unnaturalgains" />
+        <TalentOption identifier="opioidgains" />
+      </TalentOptions>
+    </SubTree>
+    <SubTree identifier="narcomaniac" type="specialization" requires="bodybuilder_primary" blocks="atletic">
+      <!--done-->
+      <TalentOptions>
+        <TalentOption identifier="drugsexpert" />
+      </TalentOptions>
+      <TalentOptions>
+        <TalentOption identifier="vodka" />
+        <TalentOption identifier="steroider" />
+      </TalentOptions>
+      <TalentOptions>
+        <TalentOption identifier="cortizol" />
+        <TalentOption identifier="torpor" />
+      </TalentOptions>
+      <TalentOptions>
+        <TalentOption identifier="methlover" />
+      </TalentOptions>
+    </SubTree>
+    <SubTree identifier="atletic" type="specialization" requires="bodybuilder_primary" blocks="narcomaniac">
+      <!--done-->
+      <TalentOptions>
+        <TalentOption identifier="proteinplus" />
+      </TalentOptions>
+      <TalentOptions>
+        <TalentOption identifier="getback" />
+        <TalentOption identifier="meleedancer" />
+      </TalentOptions>
+      <TalentOptions>
+        <TalentOption identifier="paracetamol" />
+        <TalentOption identifier="stonewalltonic" />
+      </TalentOptions>
+      <TalentOptions>
+        <TalentOption identifier="berserkcry" />
+      </TalentOptions>
+    </SubTree>
+    <SubTree identifier="rambo" type="specialization" requires="bodybuilder_primary" blocks="atletic">
+      <!--done-->
+      <TalentOptions>
+        <TalentOption identifier="drunkinbullets" />
+      </TalentOptions>
+      <TalentOptions>
+        <TalentOption identifier="tumbling" />
+        <TalentOption identifier="hyperrush" />
+      </TalentOptions>
+      <TalentOptions>
+        <TalentOption identifier="broakine_mixture" />
+        <TalentOption identifier="machinegunner" />
+      </TalentOptions>
+      <TalentOptions>
+        <TalentOption identifier="rebreather" />
+      </TalentOptions>
+    </SubTree>
+  </TalentTree>
+</TalentTrees>

@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Talents>
+  <!-- Upper Downer -->
+  <Talent identifier="wired">
+    <Description tag="talentdescription.wired">
+      <Replace tag="[stunresistance]" value="50" color="gui.green" />
+      <Replace tag="[skillgain]" value="10" color="gui.green" />
+    </Description>
+    <Icon texture="Content/UI/TalentsIcons1.png" sheetindex="3,0" sheetelementsize="128,128" />
+    <AbilityGroupInterval interval="1">
+      <Conditions>
+        <AbilityConditionHasAffliction afflictionidentifier="haste" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffects>
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="This" multiplyafflictionsbymaxvitality="true" disabledeltatime="true">
+              <Affliction identifier="wired" amount="1.0" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+      </Abilities>
+    </AbilityGroupInterval>
+  </Talent>
+  <Talent identifier="clandestineveins">
+    <Description tag="talentdescription.clandestineveins">
+      <Replace tag="[effect]" value="slow metabolism" color="gui.green" />
+      <Replace tag="[effectiveness]" value="35%" color="gui.green" />
+      <Replace tag="[durationpercent]" value="15%" color="gui.green" />
+    </Description>
+    <Icon texture="Content/UI/TalentsIcons1.png" sheetindex="3,5" sheetelementsize="128,128" />
+    <AbilityGroupInterval>
+      <Conditions>
+        <AbilityConditionHasAffliction afflictionidentifier="opiateaddiction" minimumpercentage="0.15" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffects>
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="This" multiplyafflictionsbymaxvitality="true" disabledeltatime="true">
+              <Affliction identifier="durationincrease" amount="1.0" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+      </Abilities>
+    </AbilityGroupInterval>
+    <AbilityGroupInterval interval="1">
+      <Conditions>
+        <AbilityConditionHasAffliction afflictionidentifier="opiateaddiction" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffects>
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="This" multiplyafflictionsbymaxvitality="true" disabledeltatime="true">
+              <Affliction identifier="clandestineveins" amount="1.0" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+      </Abilities>
+    </AbilityGroupInterval>
+  </Talent>
+  <Talent identifier="waterwhite">
+    <Description tag="talentdescription.waterwhite"></Description>
+    <Icon texture="Content/UI/TalentsIcons1.png" sheetindex="6,5" sheetelementsize="128,128" />
+    <AbilityGroupEffect abilityeffecttype="OnAnyMissionCompleted">
+      <Abilities>
+        <CharacterAbilityGivePermanentStat statidentifier="waterwhite" value="2" giveonaddingfirsttime="true" setvalue="true" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnItemFabricatedAmount">
+      <Conditions>
+        <AbilityConditionItem identifier="antidama1,antidama2,opium,meth,steroids,hyperzine" />
+        <AbilityConditionHasPermanentStat statidentifier="waterwhite" min="1" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityModifyValue multiplyvalue="3" />
+        <CharacterAbilityGivePermanentStat statidentifier="waterwhite" value="-1" />
+      </Abilities>
+    </AbilityGroupEffect>
+  </Talent>
+  <Talent identifier="aprofessional">
+    <Icon texture="Content/UI/TalentsIcons1.png" sheetindex="4,6" sheetelementsize="128,128" />
+    <Description tag="talentdescription.aprofessional">
+      <Replace tag="[amount]" value="3" color="gui.green" />
+      <Replace tag="[experiencegain]" value="85" color="gui.green" />
+    </Description>
+    <AbilityGroupEffect abilityeffecttype="OnAnyMissionCompleted">
+      <Abilities>
+        <CharacterAbilityGivePermanentStat statidentifier="fentanyluse" value="3" giveonaddingfirsttime="true" setvalue="true" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnApplyTreatment">
+      <Conditions>
+        <AbilityConditionItem identifiers="antidama2" />
+        <AbilityConditionHasPermanentStat statidentifier="fentanyluse" min="1" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffects>
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="Character">
+              <GiveExperience amount="85" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+        <CharacterAbilityGivePermanentStat statidentifier="fentanyluse" value="-1" />
+      </Abilities>
+    </AbilityGroupEffect>
+  </Talent>
+  <Talent identifier="sharingneedles">
+    <Icon texture="Content/UI/TalentsIcons1.png" sheetindex="1,5" sheetelementsize="128,128" />
+    <Description tag="talentdescription.sharingneedles">
+      <Replace tag="[percent]" value="50" color="gui.green" />
+      <Replace tag="[medical]" value="20" color="gui.orange" />
+    </Description>
+    <AbilityGroupEffect abilityeffecttype="OnAnyMissionCompleted">
+      <Abilities>
+        <CharacterAbilityPutItem itemidentifier="antinarc" amount="1" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="None">
+      <Abilities>
+        <CharacterAbilityGiveStat stattype="MedicalSkillBonus" value="20" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupInterval>
+      <Abilities>
+        <CharacterAbilityModifyStat stattype="ApplyTreatmentsOnSelfFraction" value="0.5" />
+      </Abilities>
+    </AbilityGroupInterval>
+  </Talent>
+  <Talent identifier="midnightswim">
+    <Icon texture="Content/UI/TalentsIcons1.png" sheetindex="5,2" sheetelementsize="128,128" />
+    <Description tag="talentdescription.midnightswim">
+      <Replace tag="[health]" value="15" color="gui.green" />
+      <Replace tag="[speed]" value="10" color="gui.green" />
+    </Description>
+    <AbilityGroupInterval interval="1">
+      <Conditions>
+        <AbilityConditionHasAffliction afflictionidentifier="opiateaddiction" minimumpercentage="20" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffects>
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="This" multiplyafflictionsbymaxvitality="true" disabledeltatime="true">
+              <Affliction identifier="midnightswim" amount="600.0" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+      </Abilities>
+    </AbilityGroupInterval>
+    <AbilityGroupEffect abilityeffecttype="None">
+      <Abilities>
+        <CharacterAbilityGiveResistance resistanceid="nausea" multiplier="0" />
+      </Abilities>
+    </AbilityGroupEffect>
+  </Talent>
+  <Talent identifier="trapped">
+    <Icon texture="Content/UI/TalentsIcons2.png" sheetindex="2,2" sheetelementsize="128,128" />
+    <Description tag="talentdescription.trapped">
+      <Replace tag="[attack]" value="20" color="gui.green" />
+      <Replace tag="[resistance]" value="25" color="gui.green" />
+      <Replace tag="[vigor]" value="Vigor" color="gui.green" />
+    </Description>
+    <AbilityGroupInterval interval="1">
+      <Conditions>
+        <AbilityConditionHasAffliction afflictionidentifier="haste" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffects>
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="This" multiplyafflictionsbymaxvitality="true" disabledeltatime="true">
+              <Affliction identifier="trappedhaste" amount="600.0" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+      </Abilities>
+    </AbilityGroupInterval>
+    <AbilityGroupInterval interval="1">
+      <Conditions>
+        <AbilityConditionHasAffliction afflictionidentifier="opiateoverdose" minimumpercentage="0.2" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffects>
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="This" multiplyafflictionsbymaxvitality="true" disabledeltatime="true">
+              <Affliction identifier="trappedoverdose" amount="2.0" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+      </Abilities>
+    </AbilityGroupInterval>
+    <AbilityGroupInterval interval="1">
+      <Conditions>
+        <AbilityConditionHasAffliction afflictionidentifier="opiateoverdose" minimumpercentage="0.2" />
+        <AbilityConditionHasAffliction afflictionidentifier="haste" />
+        <AbilityConditionHasAffliction afflictionidentifier="psychosis" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffects>
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="This" multiplyafflictionsbymaxvitality="true" disabledeltatime="true">
+              <Affliction identifier="strengthen" amount="2.0" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+      </Abilities>
+    </AbilityGroupInterval>
+  </Talent>
+  <!-- Who I have become? -->
+  <Talent identifier="ptsdattack">
+    <Icon texture="Content/UI/TalentsIcons1.png" sheetindex="7,1" sheetelementsize="128,128" />
+    <Description tag="talentdescription.ptsdattack">
+      <Replace tag="[affliction]" value="Psychosis" color="gui.orange" />
+      <Replace tag="[amount]" value="25" color="gui.green" />
+    </Description>
+    <AbilityGroupEffect abilityeffecttype="OnAttacked">
+      <Abilities>
+        <CharacterAbilityApplyStatusEffects>
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="Character" multiplyafflictionsbymaxvitality="true">
+              <Affliction identifier="psychosis" amount="15" maxamount="150" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupInterval interval="0.9">
+      <Conditions>
+        <AbilityConditionHasAffliction afflictionidentifier="psychosis" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffects>
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
+              <Affliction identifier="clownpower" amount="1.0" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+      </Abilities>
+    </AbilityGroupInterval>
+  </Talent>
+</Talents>

@@ -1,0 +1,269 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="English" nowhitespace="false" translatedname="English">
+  <!-- job descriptions -->
+  <jobdescription.bodybuilder>Bodybuilders, although they do not have special skills that can be very useful in helping the team and / or setting up the submarine, they can still be useful.
+
+After all, among the common features of submariners, bodybuilders have a strong advantage among ordinary workers:
+
+* Ability to work in confined spaces: Not afraid of closed spaces and ready to perform their duties in submarine conditions.
+* Endurance: Has high endurance, which is important for long dives.
+* Physical strength: Able to move heavy loads and perform physically demanding tasks.
+* Psychological stability: Not afraid of the depths and calm in critical situations.
+
+(Max in crew: 4)
+  </jobdescription.bodybuilder>
+  <jobdescription.deliveryman>A submariner's delivery man is a specialist responsible for the movement of cargo and materials inside the submarine. He is engaged in:
+
+* Transportation: Delivery of equipment, provisions, tools and other necessary materials to different sections of the submarine.
+
+* Storage: Tracking supplies, their safety, proper stowage and organization of warehouses.
+
+* Equipment: Knowledge and ability to work with loading and unloading equipment and specific mechanisms.
+
+* Safety: Compliance with safety regulations, prevention of damage and loss of cargo.
+
+The delivery man is an indispensable member of the team, ensuring its vital functions and uninterrupted operation.
+
+(Max in crew: 3)
+  </jobdescription.deliveryman>
+  <jobdescription.highvoltageworker>The submariner is an electrical specialist responsible for: * Maintenance: Electrical equipment, control systems, lighting and communications of the submarine.
+* Repair: Troubleshooting electrical systems, replacing and connecting components.
+* Safety: Monitoring voltage, grounding and insulation, preventing short circuits and other hazardous situations.
+* Prevention: Carrying out preventive maintenance and electrical service.
+
+The submariner is the guarantee of uninterrupted operation of vital submarine systems, ensuring safe and efficient operation.
+
+(Max in crew: 2)
+  </jobdescription.highvoltageworker>
+  <jobdescription.terrorist>A Terrorist in a submarine team is a specialist responsible for:
+
+* Covert infiltration: Behind enemy lines using a submarine or other means.
+
+* Subversive actions: Planting explosive devices, damaging infrastructure, sabotage.
+
+* Information gathering: Reconnaissance, surveillance and transmission of data on enemy facilities.
+
+* Special operations: Carrying out complex tasks that require special training and skills.
+
+A Terrorist is a highly skilled and experienced fighter who can act alone or as part of a group, using his ingenuity, endurance and knowledge of enemy territory.
+
+(Max in crew: 1)
+  </jobdescription.terrorist>
+  <!-- effects -->
+  <talentdescription.desc>[desc]</talentdescription.desc>
+  <talentdescription.whenunconciousgaineffect>When you became unconcious , gain "[effect]".</talentdescription.whenunconciousgaineffect>
+  <talentdescription.whenatprocenthpabove>When your character is above [amount] health , gain "[effect]".</talentdescription.whenatprocenthpabove>
+  <talentdescription.whenatprocenthpbelow>When your character is below [amount] health , gain "[effect]".</talentdescription.whenatprocenthpbelow>
+  <talentdescription.turretsgainbuffpowerusage>Turrets on submarine consume [amount]% less power when used by you.</talentdescription.turretsgainbuffpowerusage>
+  <talentdescription.turretsgaindebuffpowerusage>Turrets on submarine consume [amount]% more power when used by you.</talentdescription.turretsgaindebuffpowerusage>
+  <talentdescription.turretsgainbuffdamage>Turrets on submarine deal [amount]% more damage when used by you.</talentdescription.turretsgainbuffdamage>
+  <talentdescription.turretsgaindebuffdamage>Turrets on submarine deal [amount]% less damage when used by you.</talentdescription.turretsgaindebuffdamage>
+  <talentdescription.turretsgainbuffcharge>Turrets on submarine charges [amount]% faster when used by you.</talentdescription.turretsgainbuffcharge>
+  <talentdescription.turretsgainbufffirerate>Turrets on submarine fires [amount]% faster when used by you.</talentdescription.turretsgainbufffirerate>
+  <talentdescription.turretsgaindebuffcharge>Turrets on submarine charges [amount]% slower when used by you.</talentdescription.turretsgaindebuffcharge>
+  <talentdescription.turretsgaindebufffirerate>Turrets on submarine fires [amount]% slower when used by you.</talentdescription.turretsgaindebufffirerate>
+  <talentdescription.whenpointsreachnumbergainpermanent>When you reach "[amountp]" points, gain permanent: "[effect]".</talentdescription.whenpointsreachnumbergainpermanent>
+  <talentdescription.whenpointsreachnumbergainreduce>When you reach "[amountp]" points, slowly reduce "[effect]".</talentdescription.whenpointsreachnumbergainreduce>
+  <talentdescription.whenpointsreachnumbergaineffect>When you reach "[amountp]" points, gain "[effect]" effect.</talentdescription.whenpointsreachnumbergaineffect>
+  <talentdescription.whenpointsreachnumbergainresistance>When you reach "[amountp]" points, gain [amount]% "[effect]" resistance".</talentdescription.whenpointsreachnumbergainresistance>
+  <talentdescription.whenpointsreachnumbergaindamageresistance>When you reach "[amountp]" points, gain [amount]% damage resistance".</talentdescription.whenpointsreachnumbergaindamageresistance>
+  <talentdescription.lastslonger>"[item]" effect lasts longer.</talentdescription.lastslonger>
+  <talentdescription.enemydebuffwhenattacked>Enemy will suffer "[effect]" effect when attacked by your character.</talentdescription.enemydebuffwhenattacked>
+  <talentdescription.strongereffect>"[item]" now have a stronger main effect.</talentdescription.strongereffect>
+  <talentdescription.additionalbuff>"[item]" additionally gives "[effect]".</talentdescription.additionalbuff>
+  <talentdescription.additionallyheals>"[item]" additionally heals.</talentdescription.additionallyheals>
+  <talentdescription.gainpermanentaffliction>Gives a permanent [affliction]</talentdescription.gainpermanentaffliction>
+  <talentdescription.whenitemusedheal>"[item]" additionally heals damage.</talentdescription.whenitemusedheal>
+  <talentdescription.reduceafflictionwhenused>Reduce "[effect]" when used "[item]".</talentdescription.reduceafflictionwhenused>
+  <talentdescription.slowlygaineffect>Slowly gain "[effect]".</talentdescription.slowlygaineffect>
+  <talentdescription.slowlygaineffectinwater>When you submerged in water , gain "[effect]".</talentdescription.slowlygaineffectinwater>
+  <talentdescription.slowlyreduceeffect>Slowly reduce "[effect]".</talentdescription.slowlyreduceeffect>
+  <talentdescription.slowlyreduceeffectinwater>When you submerged in water , reduce "[effect]".</talentdescription.slowlyreduceeffectinwater>
+  <talentdescription.slowlyreduceeffectinsubmarine>When you are inside submarine , reduce "[effect]".</talentdescription.slowlyreduceeffectinsubmarine>
+  <talentdescription.slowlygaineffectinsubmarine>When you are inside submarine , gain "[effect]".</talentdescription.slowlygaineffectinsubmarine>
+  <talentdescription.gaineffectonragdoll>Gain "[effect]" everytime you ragdoll.</talentdescription.gaineffectonragdoll>
+  <talentdescription.deattachfaster>Deattach components [amount]% faster.</talentdescription.deattachfaster>
+  <talentdescription.gainmoneywhenplayed>Gain money when "[item]" played.</talentdescription.gainmoneywhenplayed>
+  <talentdescription.onlyworkscrouch>Only works when crouched</talentdescription.onlyworkscrouch>
+  <talentdescription.healusingtoken>From now you can heal when using token.</talentdescription.healusingtoken>
+  <talentdescription.healusingtokencrouched>From now you can heal using token. (Only when crouched)</talentdescription.healusingtokencrouched>
+  <talentdescription.gaintokenwhenused>Gain token for every "[item]" used by you.</talentdescription.gaintokenwhenused>
+  <talentdescription.gaintokenwhenrepaired>Gain token for every device repaired.</talentdescription.gaintokenwhenrepaired>
+  <talentdescription.gainskillforeverytoken>From now you can gain random skill point when using token.</talentdescription.gainskillforeverytoken>
+  <talentdescription.gainskillforeverytokenwhencrouched>From now you can gain random skill point when using token. (Only when crouched)</talentdescription.gainskillforeverytokenwhencrouched>
+  <talentdescription.applyforcewhen>When you ragdoll in non-water enviroment , propel yourself forward in your current directions</talentdescription.applyforcewhen>
+  <talentdescription.gainlesswhenweared>Gain [amount]% less "[effect]" when wearing "[item]"</talentdescription.gainlesswhenweared>
+  <talentdescription.production>Gain [item] , when being ragdolled for [time] seconds.</talentdescription.production>
+  <talentdescription.movefasterwhenaiming>Move [amount]% faster , when you aiming "[item]".</talentdescription.movefasterwhenaiming>
+  <talentdescription.movefasterinhands>Move [amount]% faster , when "[item]" in your hands.</talentdescription.movefasterinhands>
+  <talentdescription.movefasterwhenweared>Move [amount]% faster when "[item]" weared.</talentdescription.movefasterwhenweared>
+  <talentdescription.moveslowerwhenaiming>Move [amount]% slower , when you aiming "[item]".</talentdescription.moveslowerwhenaiming>
+  <talentdescription.moveslowerinhands>Move [amount]% slower , when "[item]" in your hands.</talentdescription.moveslowerinhands>
+  <talentdescription.moveslowerwhenweared>Move [amount]% slower when "[item]" weared.</talentdescription.moveslowerwhenweared>
+  <talentdescription.healingwithitems>Heal [damage] and [damage1] when [item] in your hands.</talentdescription.healingwithitems>
+  <talentdescription.whennotattackeddealdamage>If you have not been attacked for [seconds] seconds, the next attack your attacker will be afflicted with "[effect]".</talentdescription.whennotattackeddealdamage>
+  <talentdescription.whennotattackedgainbuff>If you have not been attacked for [seconds] seconds, the next attack you will be afflicted with "[effect]".</talentdescription.whennotattackedgainbuff>
+  <talentdescription.whennotattackedgainlessdamage>If you have not been attacked for [seconds] seconds, the next attack you suffer has [amount]% less power.</talentdescription.whennotattackedgainlessdamage>
+  <talentdescription.fabricatorsworkfaster>Fabricators work [amount]% faster.</talentdescription.fabricatorsworkfaster>
+  <talentdescription.fabricatorsworkslower>Fabricators work [amount]% slower.</talentdescription.fabricatorsworkslower>
+  <talentdescription.teammatesnearyougain>Teammates within "[distance]" meters, gain "[effect]" effect, that grants the following:</talentdescription.teammatesnearyougain>
+  <talentdescription.deallessdamagetoteammates>Teammates gain [amount] less damage from friendly fire</talentdescription.deallessdamagetoteammates>
+  <talentdescription.gainamountflowresistance>Gain [amount]% flow resistance.</talentdescription.gainamountflowresistance>
+  <talentdescription.ifgainskillgainrandomskill>When you gain a skill point, so gain "[amount]" random additional skill point.</talentdescription.ifgainskillgainrandomskill>
+  <talentdescription.bemoreloud>Be more louder by "[amount]%".</talentdescription.bemoreloud>
+  <talentdescription.belessloud>Be less louder by "[amount]%".</talentdescription.belessloud>
+  <talentdescription.bemorevisible>Be more visible by "[amount]%".</talentdescription.bemorevisible>
+  <talentdescription.belessvisible>Be less visible by "[amount]%".</talentdescription.belessvisible>
+  <talentdescription.loudnessandvisibilityreminder>Loudness/visibility doesnt means in-game sounds loudness or transparency of skill user , it only changes behavior of AI and how it react.</talentdescription.loudnessandvisibilityreminder>
+  <talentdescription.thiseffectdoesnotapliestoyou>This effect(s) doesn`t applies to you</talentdescription.thiseffectdoesnotapliestoyou>
+  <talentdescription.thiseffectdoapliestoyou>This effect(s) also applies to you</talentdescription.thiseffectdoapliestoyou>
+  <talentdescription.thiseffectdoapliesonlytoyou>This effect(s) applies only to you</talentdescription.thiseffectdoapliesonlytoyou>
+  <!--afflictions and affl desc-->
+  <afflictionname.followme>Follow me!</afflictionname.followme>
+  <afflictiondescription.followme>Feel the power of speed! (Move 35% faster)</afflictiondescription.followme>
+  <afflictionname.electricalextertize>Electrical expertize</afflictionname.electricalextertize>
+  <afflictiondescription.electricalextertize>I think that will work. (+25 electrical skill)</afflictiondescription.electricalextertize>
+  <afflictionname.gunneryexpert>Gunnery expert</afflictionname.gunneryexpert>
+  <afflictiondescription.gunneryexpert>Big babah (+20 weapons skill)</afflictiondescription.gunneryexpert>
+  <afflictionname.vodolaz>Vodolaz</afflictionname.vodolaz>
+  <afflictiondescription.vodolaz>Breath in , breath out. (Hold your breath 100% longer)</afflictiondescription.vodolaz>
+  <afflictionname.hardstyle>Hard-style</afflictionname.hardstyle>
+  <afflictiondescription.hardstyle>Work harder. (+75% skill gain speed)</afflictiondescription.hardstyle>
+  <afflictionname.pomoshnik>Helper</afflictionname.pomoshnik>
+  <afflictiondescription.pomoshnik>A little help will be always usefull (+10% walking speed , +20% repair speed)</afflictiondescription.pomoshnik>
+  <afflictionname.nomoredeals>No more deals</afflictionname.nomoredeals>
+  <afflictiondescription.nomoredeals>Im tired of this all situation. (+11% turrets attack speed , +10% turrets power consumption , +50% turrets charge speed)</afflictiondescription.nomoredeals>
+  <afflictionname.killkillkillkillkill>KILL</afflictionname.killkillkillkillkill>
+  <afflictiondescription.killkillkillkillkill>BLOOD IS FUEL , HELL IS FULL (+29% turrets attack speed , +27% power consumption , -85% turrets charge speed)</afflictiondescription.killkillkillkillkill>
+  <afflictionname.stillbreathing>Still breathing</afflictionname.stillbreathing>
+  <afflictiondescription.stillbreathing>Keep calm , breath slower (+150% CPR revival chance)</afflictiondescription.stillbreathing>
+  <afflictionname.donoharm>Do no harm.</afflictionname.donoharm>
+  <afflictiondescription.donoharm>We are the same blood. (-99% damage to teammates)</afflictiondescription.donoharm>
+  <afflictionname.notdead>Almost medic</afflictionname.notdead>
+  <afflictiondescription.notdead>I know how to use bandage! (+15 medical skill)</afflictiondescription.notdead>
+  <afflictionname.teachandlearn>Teach and learn</afflictionname.teachandlearn>
+  <afflictiondescription.teachandlearn>Captn` lil fella (+25 helm skill bonu)</afflictiondescription.teachandlearn>
+  <afflictionname.shadow>Shadow</afflictionname.shadow>
+  <afflictiondescription.shadow>See me (not) (-60% sound range , -50% sight range)</afflictiondescription.shadow>
+  <afflictionname.decoy>Decoy</afflictionname.decoy>
+  <afflictiondescription.decoy>"I never really was on your side." (+150% sound range , -85% sight range)</afflictiondescription.decoy>
+  <!--job names-->
+  <jobname.bodybuilder>Bodybuilder</jobname.bodybuilder>
+  <jobname.cursed>Cursed</jobname.cursed>
+  <jobname.deliveryman>Deliveryman</jobname.deliveryman>
+  <jobname.highvoltageworker>High-voltage technician</jobname.highvoltageworker>
+  <jobname.miner>Miner</jobname.miner>
+  <jobname.terrorist>Terrorist</jobname.terrorist>
+  <jobname.amphibia>Amphibia</jobname.amphibia>
+  <!-- talents -->
+  <talentname.decoy>T E R R O R</talentname.decoy>
+  <talentname.experiencedammomaker>Experienced ammomaker</talentname.experiencedammomaker>
+  <talentname.mentor_combat>Tactical practitioner</talentname.mentor_combat>
+  <talentname.mentor_maintance>Repair practitioner</talentname.mentor_maintance>
+  <talentname.miner_professional>Dwarf</talentname.miner_professional>
+  <talentname.mentor_helm>Navigation practitioner</talentname.mentor_helm>
+  <talentname.electricalmastery>Electrical phantom</talentname.electricalmastery>
+  <talentname.wire_production>Serpentin`e</talentname.wire_production>
+  <talentname.lasthope>Last hope</talentname.lasthope>
+  <talentname.noshortcircuit>Stubborn</talentname.noshortcircuit>
+  <talentname.improved_safetyharness_electric>Electrician's garters</talentname.improved_safetyharness_electric>
+  <talentname.electrical_plus>Silent helper</talentname.electrical_plus>
+  <talentname.terror>Slavery</talentname.terror>
+  <talentname.submarinerevive>From depths to fire</talentname.submarinerevive>
+  <talentname.theoretic>Theory of practice</talentname.theoretic>
+  <talentname.experiencedandrich>Shift work</talentname.experiencedandrich>
+  <talentname.growing>Growing</talentname.growing>
+  <talentname.preparednready>Striker</talentname.preparednready>
+  <talentname.sharingiscaring>Coauthor</talentname.sharingiscaring>
+  <talentname.rocketswimmer>Repulsive swimmer</talentname.rocketswimmer>
+  <talentname.jump>Jump</talentname.jump>
+  <talentname.bard_accordion>Burning melody</talentname.bard_accordion>
+  <talentname.methlover>Refined meth</talentname.methlover>
+  <talentname.writingdownactions>Repairing and resulting</talentname.writingdownactions>
+  <talentname.playtogain>Playing for the public</talentname.playtogain>
+  <talentname.deattacher>Disassembler</talentname.deattacher>
+  <talentname.alternaterepair>Another way</talentname.alternaterepair>
+  <talentname.allaboard>All`a-board!</talentname.allaboard>
+  <talentname.dionyscurse>Dionys</talentname.dionyscurse>
+  <talentname.steroider>"Trestoid" mixture</talentname.steroider>
+  <talentname.proteinplus>Gematogen</talentname.proteinplus>
+  <talentname.paracetamol>"Paredroid" mixture</talentname.paracetamol>
+  <talentname.broakine_mixture>"Broakine" mixture</talentname.broakine_mixture>
+  <talentname.hyperrush>Hyper-rush</talentname.hyperrush>
+  <talentname.puretonic>Pure tonic</talentname.puretonic>
+  <talentname.transfusion>Transfusion</talentname.transfusion>
+  <talentname.emergencypurification>Eau-de-vie</talentname.emergencypurification>
+  <talentname.calmmind>Calm mind</talentname.calmmind>
+  <talentname.protectivestand>"Guard" stand</talentname.protectivestand>
+  <talentname.getback>"Shock" stand</talentname.getback>
+  <talentname.tumbling>Serpent</talentname.tumbling>
+  <talentname.clustermunitions>Cluster munitions</talentname.clustermunitions>
+  <talentname.concretepiercingammunition>CON-PE munitions</talentname.concretepiercingammunition>
+  <talentname.fuckgenevaconventions>Geneva fury</talentname.fuckgenevaconventions>
+  <talentname.firefirefire>Brrrrrt</talentname.firefirefire>
+  <talentname.ecoturrets>Bzzzzzt</talentname.ecoturrets>
+  <talentname.autoturrets>Automatic turrets</talentname.autoturrets>
+  <talentname.momentumturrets>"Momentum" modernization</talentname.momentumturrets>
+  <talentname.streamlinedturrets>Stream-lined turrets</talentname.streamlinedturrets>
+  <talentname.training_vigor>Bodybuilding</talentname.training_vigor>
+  <talentname.training_joy>Callanetics</talentname.training_joy>
+  <talentname.training_haste>Fitness</talentname.training_haste>
+  <talentname.talented>Talented</talentname.talented>
+  <talentname.naturalgains>Natural supplements</talentname.naturalgains>
+  <talentname.unnaturalgains>Harmful additives</talentname.unnaturalgains>
+  <talentname.opioidgains>Polishing supplements</talentname.opioidgains>
+  <talentname.rebreather>Oxygen doping</talentname.rebreather>
+  <talentname.calmness>Calmness</talentname.calmness>
+  <talentname.demolitionist>Demolitionist</talentname.demolitionist>
+  <talentname.cortizol>"Cartozide" addition</talentname.cortizol>
+  <talentname.morethanalive>More than alive</talentname.morethanalive>
+  <talentname.opiatebullets>Diamorphine roudns</talentname.opiatebullets>
+  <talentname.drunkinbullets>Ethanol covering</talentname.drunkinbullets>
+  <talentname.ontheknees>Bigger load</talentname.ontheknees>
+  <talentname.riprounds>RIP rounds</talentname.riprounds>
+  <talentname.toxicbullets>Toxic bullets</talentname.toxicbullets>
+  <talentname.explosiverounds>EXP-l rounds</talentname.explosiverounds>
+  <talentname.soulreaperrounds>Soul reapers</talentname.soulreaperrounds>
+  <talentname.softpointbullets>Soft-point rounds</talentname.softpointbullets>
+  <talentname.incendiaryrounds>Hell-fire rounds</talentname.incendiaryrounds>
+  <talentname.dominanthuskeggs>Binary D-infection</talentname.dominanthuskeggs>
+  <talentname.vodka>Vodka</talentname.vodka>
+  <talentname.bufotoxinmixture>Bufotoxin mixture</talentname.bufotoxinmixture>
+  <talentname.stonewalltonic>"Stone-wall" tonic</talentname.stonewalltonic>
+  <talentname.advancedhealer>Combat medic</talentname.advancedhealer>
+  <talentname.berserkcry>Berserk cry</talentname.berserkcry>
+  <talentname.nevermore>Never again</talentname.nevermore>
+  <talentname.supreme>Supreme</talentname.supreme>
+  <talentname.followme>Follow me!</talentname.followme>
+  <talentname.electricalhelper>Electrical helper</talentname.electricalhelper>
+  <talentname.gunneryexpert>Shooting coach</talentname.gunneryexpert>
+  <talentname.vodolaz>Vodolaz</talentname.vodolaz>
+  <talentname.hardstyle>Hardstyle</talentname.hardstyle>
+  <talentname.pomoshnik>Pomoshnik</talentname.pomoshnik>
+  <talentname.nomoredeals>No more deals.</talentname.nomoredeals>
+  <talentname.killkillkillkillkill>RAGE</talentname.killkillkillkillkill>
+  <talentname.stillbreathing>Breath-in</talentname.stillbreathing>
+  <talentname.donoharm>Do NO harm</talentname.donoharm>
+  <talentname.teachandlearn>Leadin` to darkness</talentname.teachandlearn>
+  <talentname.savage>Savage</talentname.savage>
+  <talentname.flash>VROOOM</talentname.flash>
+  <talentname.mastery>Mastery</talentname.mastery>
+  <talentname.torpor>Stazis regeneration</talentname.torpor>
+  <talentname.training_stabilozine>Cardio</talentname.training_stabilozine>
+  <talentname.training_paralysis>Yoga</talentname.training_paralysis>
+  <talentname.drugsexpert>Drug expert</talentname.drugsexpert>
+  <talentname.jogger>Jogger</talentname.jogger>
+  <talentname.mountain>Mountain</talentname.mountain>
+  <talentname.meleedancer>Melee dancer</talentname.meleedancer>
+  <talentname.machinegunner>Machinegunner</talentname.machinegunner>
+  <!-- trees -->
+  <talenttree.qualification>Qualification</talenttree.qualification>
+  <talenttree.acolyte>Acolyte</talenttree.acolyte>
+  <talenttree.demolitioner>Demolitioner</talenttree.demolitioner>
+  <talenttree.khalifa>Khalifa</talenttree.khalifa>
+  <talenttree.narcomaniac>Narco-maniac</talenttree.narcomaniac>
+  <talenttree.atletic>Atletic</talenttree.atletic>
+  <talenttree.hardworker>Hardworker</talenttree.hardworker>
+  <talenttree.guru>Guru</talenttree.guru>
+  <talenttree.shocker>Shocker</talenttree.shocker>
+</infotexts>

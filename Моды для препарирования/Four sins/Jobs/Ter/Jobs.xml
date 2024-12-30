@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Jobs>
+  <Job identifier="terrorist" maxnumber="1" initialcount="1" minkarma="35" uicolor="0.99,0.05,0.05" vitalitymodifier="3" pricemultiplier="1.25" idlebehavior="Patrol">
+    <Jobicon>
+      <sprite texture="%ModDir%/IconsTer.png" sourcerect="512,512,0,0" origin="0.5,0.5" />
+    </Jobicon>
+    <JobiconSmall>
+      <sprite texture="%ModDir%/IconsTer.png" sourcerect="512,512,0,0" origin="0.5,0.5" />
+    </JobiconSmall>
+    <Skills>
+      <Skill identifier="medical" level="10,15" />
+      <Skill identifier="weapons" level="35,40" primary="true" />
+      <Skill identifier="helm" level="15,20" />
+      <Skill identifier="mechanical" level="10,15" />
+      <Skill identifier="electrical" level="20,30" />
+    </Skills>
+    <ItemSet>
+      <Item identifier="idcard" equip="true" showpreview="false" />
+      <Item identifier="banditclothes1" equip="true" outfit="true" />
+      <Item identifier="headset" equip="true" showpreview="false" />
+      <Item identifier="volatilecompoundn" equip="false" showpreview="true" />
+      <Item identifier="piratebandana" equip="true" showpreview="true" />
+    </ItemSet>
+    <ItemSet>
+      <Item identifier="idcard" equip="true" showpreview="false" />
+      <Item identifier="commonerclothes5" equip="true" outfit="true" />
+      <Item identifier="headset" equip="true" showpreview="false" />
+      <Item identifier="UEX" equip="false" showpreview="true" />
+      <Item identifier="stungrenade" equip="false" showpreview="true" />
+      <Item identifier="piratebandana" equip="true" showpreview="true" />
+    </ItemSet>
+  </Job>
+</Jobs>

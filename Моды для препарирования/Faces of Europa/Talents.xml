@@ -1,0 +1,3859 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Talents>
+  <Talent identifier="hollow_start">
+    <Icon texture="%ModDir%/talenticon.png" sheetindex="1,2" sheetelementsize="128,128" />
+    <Description tag="talentdescription.hollow_start">
+      <Replace tag="[psychosis]" value="afflictionname.psychosis" color="gui.orange" />
+      <Replace tag="[units]" value="15" color="gui.green" />
+      <Replace tag="[units2]" value="95" color="gui.red" />
+    </Description>
+    <Description tag="talenttip.hollow_start" />
+    <AbilityGroupEffect abilityeffecttype="OnAttacked">
+      <Abilities>
+        <CharacterAbilityApplyStatusEffects>
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="Character">
+              <Affliction identifier="psychosis" amount="15" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupInterval interval="0.9">
+      <Abilities>
+        <CharacterAbilityApplyStatusEffects>
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
+              <Affliction identifier="psychosis" amount="1" />
+              <Conditional psychosis="lt 15" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+      </Abilities>
+    </AbilityGroupInterval>
+    <AbilityGroupInterval interval="0.9">
+      <Abilities>
+        <CharacterAbilityApplyStatusEffects>
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="Character" targetlimb="Head" multiplyafflictionsbymaxvitality="true">
+              <Affliction identifier="organdamage" amount="0.5" />
+              <Affliction identifier="stun" amount="2" probability="0.035" />
+              <Conditional psychosis="gt 95" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+      </Abilities>
+    </AbilityGroupInterval>
+  </Talent>
+  <Talent identifier="bloody_gust">
+    <Icon texture="%ModDir%/talenticon.png" sheetindex="7,0" sheetelementsize="128,128" />
+    <Description tag="talentdescription.bloody_gust">
+      <Replace tag="[dmg]" value="200" color="gui.red" />
+      <Replace tag="[hprange1]" value="75" color="gui.red" />
+      <Replace tag="[hprange2]" value="50" color="gui.red" />
+      <Replace tag="[hprange3]" value="25" color="gui.red" />
+      <Replace tag="[skillamount1]" value="25" color="gui.green" />
+      <Replace tag="[movementspeed1]" value="stattypenames.movementspeed" color="gui.orange" />
+      <Replace tag="[skillamount2]" value="50" color="gui.green" />
+      <Replace tag="[movementspeed2]" value="stattypenames.movementspeed, stattypenames.meleeattackspeed, qualitystattypenames.rangedspreadreduction" color="gui.orange" />
+      <Replace tag="[MeleeAttackMultiplier1]" value="stattypenames.meleeattackmultiplier" color="gui.orange" />
+      <Replace tag="[skillamount3]" value="-75" color="gui.red" />
+      <Replace tag="[skillamount1.1]" value="-50" color="gui.red" />
+      <Replace tag="[MeleeAttackMultiplier2]" value="stattypenames.meleeattackspeed, stattypenames.meleeattackmultiplier" color="gui.red" />
+      <Replace tag="[movementspeed3]" value="stattypenames.movementspeed, stattypenames.meleeattackspeed, qualitystattypenames.rangedspreadreduction" color="gui.red" />
+    </Description>
+    <AbilityGroupInterval>
+      <Abilities>
+        <CharacterAbilityModifyResistance resistanceid="damage" multiplier="3" />
+      </Abilities>
+    </AbilityGroupInterval>
+    <AbilityGroupInterval interval="0.9">
+      <Conditions>
+        <AbilityConditionAboveVitality invert="true" vitalitypercentage="0.75" />
+        <AbilityConditionAboveVitality vitalitypercentage="0.5" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityModifyStat stattype="MovementSpeed" value="0.25" />
+      </Abilities>
+    </AbilityGroupInterval>
+    <AbilityGroupInterval interval="0.9">
+      <Conditions>
+        <AbilityConditionAboveVitality invert="true" vitalitypercentage="0.5" />
+        <AbilityConditionAboveVitality vitalitypercentage="0.25" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityModifyStat stattype="MovementSpeed" value="0.5" />
+        <CharacterAbilityModifyStat stattype="MeleeAttackMultiplier" value="0.25" />
+        <CharacterAbilityModifyStat stattype="MeleeAttackSpeed" value="0.5" />
+        <CharacterAbilityModifyStat stattype="RangedSpreadReduction" value="0.5" />
+      </Abilities>
+    </AbilityGroupInterval>
+    <AbilityGroupInterval interval="0.9">
+      <Conditions>
+        <AbilityConditionAboveVitality invert="true" vitalitypercentage="0.25" />
+        <AbilityConditionAboveVitality vitalitypercentage="0" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityModifyStat stattype="MovementSpeed" value="-0.75" />
+        <CharacterAbilityModifyStat stattype="MeleeAttackMultiplier" value="-0.5" />
+        <CharacterAbilityModifyStat stattype="MeleeAttackSpeed" value="-0.5" />
+        <CharacterAbilityModifyStat stattype="RangedSpreadReduction" value="-0.75" />
+      </Abilities>
+    </AbilityGroupInterval>
+  </Talent>
+  <Talent identifier="lost">
+    <Icon texture="%ModDir%/talenticon.png" sheetindex="4,0" sheetelementsize="128,128" />
+    <Description tag="talentdescription.lost">
+      <Replace tag="[psychosis]" value="afflictionname.psychosis" color="gui.orange" />
+      <Replace tag="[units]" value="90" color="gui.green" />
+      <Replace tag="[skillamount1]" value="100" color="gui.green" />
+      <Replace tag="[skillname]" value="afflictionname.concussion, afflictionname.stun" color="gui.orange" />
+    </Description>
+    <AbilityGroupInterval interval="0.9">
+      <Conditions>
+        <AbilityConditionHasAffliction afflictionidentifier="psychosis" minimumpercentage="0.99" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityModifyResistance resistanceid="concussion" multiplier="0" />
+        <CharacterAbilityModifyResistance resistanceid="progressivestun" multiplier="0" />
+        <CharacterAbilityModifyResistance resistanceid="incrementalstun" multiplier="0" />
+        <CharacterAbilityModifyResistance resistanceid="stun" multiplier="0" />
+      </Abilities>
+    </AbilityGroupInterval>
+  </Talent>
+  <Talent identifier="crawler">
+    <Icon texture="%ModDir%/talenticon.png" sheetindex="2,0" sheetelementsize="128,128" />
+    <Description tag="talentdescription.crawler">
+      <Replace tag="[talentsuit]" value="entityname.crawlermask" color="gui.orange" />
+      <Replace tag="[thermogoogles]" value="entityname.thermalgoggles" color="gui.orange" />
+    </Description>
+    <Description tag="talentdescription.dinendash">
+      <Replace tag="[skillamount1]" value="entityname.divingknife" color="gui.orange" />
+      <Replace tag="[skillamount2]" value="character.crawler" color="gui.orange" />
+    </Description>
+    <AbilityGroupInterval interval="0.9">
+      <Conditions>
+        <AbilityConditionHasItem tags="crawlermask" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffects>
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="Character" multiplyafflictionsbymaxvitality="true">
+              <Affliction identifier="crawlermask" amount="1.0" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+      </Abilities>
+    </AbilityGroupInterval>
+    <AbilityGroupEffect abilityeffecttype="OnLootCharacter">
+      <Conditions>
+        <AbilityConditionHoldingItem identifiers="divingknife" />
+        <AbilityConditionCharacter>
+          <Conditional group="eq crawler" />
+          <Conditional isDead="eq true" />
+        </AbilityConditionCharacter>
+        <AbilityConditionCharacterNotLooted identifier="dinendash" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffects>
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="This" duration="8">
+              <ReduceAffliction type="damage" amount="1.0" />
+              <ReduceAffliction type="damage" amount="0.5" probability="0.2" />
+              <ReduceAffliction type="damage" amount="0.25" probability="0.2" />
+              <ReduceAffliction type="damage" amount="0.15" probability="0.1" />
+            </StatusEffect>
+            <StatusEffect type="OnAbility" target="UseTarget" disabledeltatime="true" duration="4">
+              <Explosion range="200.0" force="3" showeffects="false" severlimbsprobability="1" camerashake="2.0" />
+              <Sound file="Content/Sounds/Damage/Gore1.ogg" type="OnUse" range="500" />
+              <Sound file="Content/Sounds/Damage/Gore2.ogg" type="OnUse" range="500" />
+              <Sound file="Content/Sounds/Damage/Gore3.ogg" type="OnUse" range="500" />
+              <ParticleEmitter particle="bloodsplash" anglemin="0" anglemax="360" particleamount="10" velocitymin="0" velocitymax="0" scalemin="0.75" scalemax="1" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnLootCharacter">
+      <Conditions>
+        <AbilityConditionHoldingItem identifiers="divingknife" />
+        <AbilityConditionServerRandom randomchance="0.75" />
+        <AbilityConditionCharacter>
+          <Conditional group="eq crawler" />
+          <Conditional isDead="eq true" />
+        </AbilityConditionCharacter>
+        <AbilityConditionCharacterNotLooted identifier="dinendash" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityMarkAsLooted identifier="dinendash" />
+      </Abilities>
+    </AbilityGroupEffect>
+  </Talent>
+  <Talent identifier="sotp">
+    <Icon texture="%ModDir%/talenticon.png" sheetindex="5,0" sheetelementsize="128,128" />
+    <Description tag="talentdescription.sotp">
+      <Replace tag="[ruins]" value="locationname.ruins" color="gui.orange" />
+      <Replace tag="[skillamount1]" value="25" color="gui.green" />
+      <Replace tag="[skillamount2]" value="10" color="gui.green" />
+      <Replace tag="[movementspeed]" value="stattypenames.movementspeed" color="gui.orange" />
+    </Description>
+    <Description tag="talentdescription.xpformission">
+      <Replace tag="[xp]" value="30" color="gui.green" />
+      <Replace tag="[missiontype]" value="missiontype.scanalienruins" color="gui.orange" />
+    </Description>
+    <AbilityGroupInterval interval="0.9">
+      <Conditions>
+        <AbilityConditionItemInSubmarine submarinetype="Ruin" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityModifyStat stattype="SwimmingSpeed" value="0.1" />
+        <CharacterAbilityModifyResistance resistanceid="damage" multiplier="0.75" />
+      </Abilities>
+    </AbilityGroupInterval>
+    <AbilityGroupInterval effectdelay="2">
+      <Conditions>
+        <AbilityConditionItemInSubmarine submarinetype="Ruin" />
+        <AbilityConditionRagdolled />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityModifyFlag flagtype="IgnoredByEnemyAI" />
+      </Abilities>
+    </AbilityGroupInterval>
+    <AbilityGroupEffect abilityeffecttype="OnGainMissionExperience">
+      <Conditions>
+        <AbilityConditionMission missiontype="ScanAlienRuins" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityModifyValue multiplyvalue="1.3" />
+      </Abilities>
+    </AbilityGroupEffect>
+  </Talent>
+  <Talent identifier="morbidcuriosity">
+    <Icon texture="%ModDir%/TalentsIcons1.png" sheetindex="4,2" sheetelementsize="128,128" />
+    <Description tag="talentdescription.xpformission">
+      <Replace tag="[xp]" value="30" color="gui.green" />
+      <Replace tag="[missiontype]" value="missiontype.monster, missiontype.nest" color="gui.orange" />
+    </Description>
+    <AbilityGroupEffect abilityeffecttype="OnGainMissionExperience">
+      <Conditions>
+        <AbilityConditionMission missiontype="Monster" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityModifyValue multiplyvalue="1.3" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnGainMissionExperience">
+      <Conditions>
+        <AbilityConditionMission missiontype="Nest" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityModifyValue multiplyvalue="1.3" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnAttack">
+      <Conditions>
+        <AbilityConditionAttackData weapontype="NoWeapon,Melee" />
+        <AbilityConditionCharacter>
+          <Conditional group="neq human" />
+        </AbilityConditionCharacter>
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityModifyAttackData addeddamagemultiplier="0.5" />
+      </Abilities>
+    </AbilityGroupEffect>
+  </Talent>
+  <Talent identifier="dellirium">
+    <Icon texture="%ModDir%/talenticon.png" sheetindex="0,2" sheetelementsize="128,128" />
+    <Description tag="talentdescription.dellirium">
+      <Replace tag="[psychosis]" value="afflictionname.psychosis" color="gui.orange" />
+      <Replace tag="[enlightened]" value="afflictionname.enlightened" color="gui.orange" />
+      <Replace tag="[skillamount]" value="15" color="gui.green" />
+      <Replace tag="[regen]" value="afflictionname.regeneration" color="gui.orange" />
+    </Description>
+    <Description tag="talenttip.enlightened">
+      <Replace tag="[skillamount]" value="20" />
+      <Replace tag="[skill]" value="skillname.mechanical, skillname.electrical, skillname.medical" />
+      <Replace tag="[values]" value="25" />
+    </Description>
+    <AbilityGroupInterval>
+      <Conditions>
+        <AbilityConditionRagdolled />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffects>
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="Character">
+              <Sound file="%ModDir%/hehe1.ogg" volume="0.25" range="100" frequencymultiplier="1.5" selectionmode="Random" />
+              <Sound file="%ModDir%/hehe2.ogg" volume="0.25" range="100" frequencymultiplier="1.8" />
+              <Sound file="%ModDir%/hehe1.ogg" volume="0.25" range="200" frequencymultiplier="1.1" selectionmode="Random" />
+              <Sound file="%ModDir%/hehe2.ogg" volume="0.25" range="150" frequencymultiplier="1.5" />
+              <Sound file="%ModDir%/hehe2.ogg" volume="0.25" range="300" />
+              <Affliction identifier="enlightened" amount="1.0" />
+              <Affliction identifier="psychosis" amount="-1.0" />
+              <Conditional psychosis="gt 16" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+        <CharacterAbilityApplyStatusEffectsToAllies insameroom="true" allowself="false">
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="Character" multiplyafflictionsbymaxvitality="true">
+              <Affliction identifier="psychosis" amount="0.1" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffectsToAllies>
+      </Abilities>
+    </AbilityGroupInterval>
+    <AbilityGroupInterval interval="0.25">
+      <Conditions>
+        <AbilityConditionRagdolled />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffects>
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="Character">
+              <Explosion range="100.0" force="2" showeffects="false" anglemin="50" anglemax="90" />
+              <Conditional psychosis="gt 16" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+      </Abilities>
+    </AbilityGroupInterval>
+    <AbilityGroupInterval interval="0.5">
+      <Conditions>
+        <AbilityConditionRagdolled />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffects>
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="Character">
+              <Explosion range="100.0" force="-1.5" showeffects="false" anglemin="-90" anglemax="150" />
+              <Conditional psychosis="gt 16" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+      </Abilities>
+    </AbilityGroupInterval>
+    <AbilityGroupInterval interval="0.75">
+      <Conditions>
+        <AbilityConditionRagdolled />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffects>
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="Character">
+              <Explosion range="100.0" force="2" showeffects="false" anglemin="-150" anglemax="360" />
+              <Conditional psychosis="gt 16" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+      </Abilities>
+    </AbilityGroupInterval>
+    <AbilityGroupInterval interval="1">
+      <Conditions>
+        <AbilityConditionRagdolled />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffects>
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="Character">
+              <Explosion range="100.0" force="-3" showeffects="false" anglemin="90" anglemax="150" />
+              <Conditional psychosis="gt 16" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+      </Abilities>
+    </AbilityGroupInterval>
+  </Talent>
+  <Talent identifier="cans">
+    <Description tag="talentdescription.double">
+      <Replace tag="[talentsuit]" value="entityname.bluejumpsuit1" color="gui.orange" />
+      <Replace tag="[suitprot]" value="20" color="gui.green" />
+      <Replace tag="[element1]" value="afflictionname.burn" color="gui.orange" />
+      <Replace tag="[element2]" value="afflictionname.blunttrauma" color="gui.orange" />
+    </Description>
+    <Description tag="talentdescription.debufftootherskills">
+      <Replace tag="[skillamount]" value="25" color="gui.green" />
+      <Replace tag="[talentsuitskill]" value="skillname.mechanical" color="gui.orange" />
+      <Replace tag="[skillamountloss]" value="30" color="gui.red" />
+    </Description>
+    <Description tag="talentdescription.tools_bonus">
+      <Replace tag="[tools]" value="entityname.oxygentank, entityname.oxygenitetank, entityname.weldingfueltank, entityname.incendiumfueltank" color="gui.orange" />
+      <Replace tag="[skillamount]" value="1" color="gui.green" />
+    </Description>
+    <Description tag="talentdescription.joke_cans" />
+    <Icon texture="Content/UI/TalentsIcons2.png" sheetindex="5,2" sheetelementsize="128,128" />
+    <AbilityGroupEffect abilityeffecttype="None">
+      <Abilities>
+        <CharacterAbilityGivePermanentStat statidentifier="weldingtoolfuel" stattype="IncreaseFabricationQuality" value="1" />
+        <CharacterAbilityGivePermanentStat statidentifier="refillableoxygensource" stattype="IncreaseFabricationQuality" value="1" />
+        <CharacterAbilityGivePermanentStat statidentifier="oxygenitetank" stattype="IncreaseFabricationQuality" value="1" />
+        <CharacterAbilityGivePermanentStat statidentifier="upgradeabletank" stattype="IncreaseFabricationQuality" value="1" />
+        <CharacterAbilityGivePermanentStat statidentifier="incendiumfueltank" stattype="IncreaseFabricationQuality" value="1" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupInterval interval="0.9">
+      <Conditions>
+        <AbilityConditionHasItem tags="bluejumpsuit1" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityModifyResistance resistanceid="burn" multiplier="0.8" />
+        <CharacterAbilityModifyResistance resistanceid="blunttrauma" multiplier="0.8" />
+        <CharacterAbilityModifyStat stattype="ElectricalSkillBonus" value="-30" />
+        <CharacterAbilityModifyStat stattype="MechanicalSkillBonus" value="25" />
+        <CharacterAbilityModifyStat stattype="WeaponsSkillBonus" value="-30" />
+        <CharacterAbilityModifyStat stattype="MedicalSkillBonus" value="-30" />
+        <CharacterAbilityModifyStat stattype="HelmSkillBonus" value="-30" />
+      </Abilities>
+    </AbilityGroupInterval>
+  </Talent>
+  <Talent identifier="staring_down">
+    <Description tag="talentdescription.double">
+      <Replace tag="[talentsuit]" value="entityname.vipoutfit" color="gui.orange" />
+      <Replace tag="[suitprot]" value="10" color="gui.green" />
+      <Replace tag="[element1]" value="afflictionname.lacerations" color="gui.orange" />
+      <Replace tag="[element2]" value="afflictionname.drunk" color="gui.orange" />
+    </Description>
+    <Description tag="talentdescription.debufftootherskills">
+      <Replace tag="[skillamount]" value="10" color="gui.green" />
+      <Replace tag="[talentsuitskill]" value="skillname.helm" color="gui.orange" />
+      <Replace tag="[skillamountloss]" value="50" color="gui.red" />
+    </Description>
+    <Description tag="talentdescription.staring_down_bonus">
+      <Replace tag="[skillamount]" value="25" color="gui.green" />
+      <Replace tag="[suitprot]" value="10" color="gui.green" />
+    </Description>
+    <Description tag="talentdescription.joke_staring_down" />
+    <Icon texture="Content/UI/TalentsIcons1.png" sheetindex="4,6" sheetelementsize="128,128" />
+    <AbilityGroupInterval interval="1">
+      <Conditions>
+        <AbilityConditionHasItem tags="vipclothes1,vipclothes2,vipclothes3" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffectsToAllies insameroom="true" allowself="false">
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
+              <Affliction identifier="staring_down" strength="5.0" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffectsToAllies>
+        <CharacterAbilityModifyResistance resistanceid="lacerations" multiplier="0.9" />
+        <CharacterAbilityModifyResistance resistanceid="drunk" multiplier="0.9" />
+        <CharacterAbilityModifyStat stattype="ElectricalSkillBonus" value="-50" />
+        <CharacterAbilityModifyStat stattype="HelmSkillBonus" value="10" />
+        <CharacterAbilityModifyStat stattype="WeaponsSkillBonus" value="-50" />
+        <CharacterAbilityModifyStat stattype="MedicalSkillBonus" value="-50" />
+        <CharacterAbilityModifyStat stattype="MechanicalSkillBonus" value="-50" />
+      </Abilities>
+    </AbilityGroupInterval>
+  </Talent>
+  <Talent identifier="cells">
+    <Description tag="talentdescription.double">
+      <Replace tag="[talentsuit]" value="entityname.orangejumpsuit1" color="gui.orange" />
+      <Replace tag="[suitprot]" value="50" color="gui.green" />
+      <Replace tag="[element1]" value="afflictionname.burn" color="gui.orange" />
+      <Replace tag="[element2]" value="afflictionname.radiationsickness" color="gui.orange" />
+    </Description>
+    <Description tag="talentdescription.debufftootherskills">
+      <Replace tag="[skillamount]" value="25" color="gui.green" />
+      <Replace tag="[talentsuitskill]" value="skillname.electrical" color="gui.orange" />
+      <Replace tag="[skillamountloss]" value="30" color="gui.red" />
+    </Description>
+    <Description tag="talentdescription.tools_bonus">
+      <Replace tag="[tools]" value="entityname.fulguriumbatterycell, entityname.fulguriumfuelrodvolatile" color="gui.orange" />
+      <Replace tag="[skillamount]" value="1" color="gui.green" />
+    </Description>
+    <Description tag="talentdescription.joke_cells" />
+    <Icon texture="Content/UI/TalentsIcons2.png" sheetindex="4,1" sheetelementsize="128,128" />
+    <AbilityGroupEffect abilityeffecttype="None">
+      <Abilities>
+        <CharacterAbilityGivePermanentStat statidentifier="fulguriumbatterycell" stattype="IncreaseFabricationQuality" value="1" />
+        <CharacterAbilityGivePermanentStat statidentifier="fulguriumfuelrodvolatile" stattype="IncreaseFabricationQuality" value="1" />
+        <CharacterAbilityGiveStat stattype="ExperienceGainMultiplier" value="-0.75" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupInterval interval="0.9">
+      <Conditions>
+        <AbilityConditionHasItem tags="radiationproof" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityModifyResistance resistanceid="radiationsickness" multiplier="0.5" />
+        <CharacterAbilityModifyResistance resistanceid="burn" multiplier="0.5" />
+        <CharacterAbilityModifyStat stattype="HelmSkillBonus" value="-30" />
+        <CharacterAbilityModifyStat stattype="ElectricalSkillBonus" value="25" />
+        <CharacterAbilityModifyStat stattype="WeaponsSkillBonus" value="-30" />
+        <CharacterAbilityModifyStat stattype="MedicalSkillBonus" value="-30" />
+        <CharacterAbilityModifyStat stattype="MechanicalSkillBonus" value="-30" />
+      </Abilities>
+    </AbilityGroupInterval>
+    <AddedRecipe itemidentifier="fulguriumfuelrodvolatile" />
+  </Talent>
+  <Talent identifier="conscript">
+    <Description tag="talentdescription.double2">
+      <Replace tag="[talentsuit]" value="entityname.securityuniform3, entityname.ballistichelmet2" color="gui.orange" />
+      <Replace tag="[suitprot1]" value="20" color="gui.green" />
+      <Replace tag="[element1]" value="stattypenames.movementspeed" color="gui.orange" />
+      <Replace tag="[suitprot2]" value="50" color="gui.green" />
+      <Replace tag="[element2]" value="qualitystattypenames.rangedspreadreduction" color="gui.orange" />
+    </Description>
+    <Description tag="talentdescription.debufftootherskills">
+      <Replace tag="[skillamount]" value="10" color="gui.green" />
+      <Replace tag="[talentsuitskill]" value="skillname.weapons" color="gui.orange" />
+      <Replace tag="[skillamountloss]" value="30" color="gui.red" />
+    </Description>
+    <Description tag="talentdescription.joke_conscript" />
+    <Icon texture="Content/UI/TalentsIcons1.png" sheetindex="3,3" sheetelementsize="128,128" />
+    <AbilityGroupInterval interval="0.9">
+      <Conditions>
+        <AbilityConditionHasItem tags="securityuniform3,ballistichelmet2" requireall="true" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityModifyStat stattype="MovementSpeed" value="0.2" />
+        <CharacterAbilityModifyStat stattype="RangedSpreadReduction" value="0.5" />
+        <CharacterAbilityModifyStat stattype="ElectricalSkillBonus" value="-30" />
+        <CharacterAbilityModifyStat stattype="HelmSkillBonus" value="-30" />
+        <CharacterAbilityModifyStat stattype="WeaponsSkillBonus" value="10" />
+        <CharacterAbilityModifyStat stattype="MedicalSkillBonus" value="-30" />
+        <CharacterAbilityModifyStat stattype="MechanicalSkillBonus" value="-30" />
+      </Abilities>
+    </AbilityGroupInterval>
+  </Talent>
+  <Talent identifier="idiot">
+    <Icon texture="Content/UI/TalentsIcons2.png" sheetindex="4,5" sheetelementsize="128,128" />
+    <Description tag="talentdescription.urnidiot" color="gui.red" />
+    <Description tag="talentdescription.double1">
+      <Replace tag="[idiot]" value="afflictionname.idiot" color="gui.orange" />
+      <Replace tag="[clownpower]" value="afflictionname.clownpower" color="gui.orange" />
+      <Replace tag="[xp]" value="-100" color="gui.red" />
+      <Replace tag="[vitality]" value="vitality" color="gui.orange" />
+      <Replace tag="[hp]" value="0" color="gui.green" />
+    </Description>
+    <Description tag="talentdescription.miracleworkerreminder" />
+    <Description tag="talentdescription.unlockrecipe">
+      <Replace tag="[itemname]" value="entityname.notaclown" color="gui.orange" />
+    </Description>
+    <Description tag="talentdescription.unlockrecipe">
+      <Replace tag="[itemname]" value="entityname.notaclownmask" color="gui.orange" />
+    </Description>
+    <Icon texture="Content/UI/TalentsIcons2.png" sheetindex="7,5" sheetelementsize="128,128" />
+    <AbilityGroupInterval effectdelay="2" maxtriggercount="1">
+      <Conditions>
+        <AbilityConditionAboveVitality invert="true" vitalitypercentage="0" />
+        <AbilityConditionHasItem tags="clowngear,clownmask" requireall="true" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffects>
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="Character" disabledeltatime="true">
+              <Explosion range="2500.0" ballastfloradamage="300" structuredamage="300" itemdamage="1000" force="20" severlimbsprobability="0.75" debris="true" decal="explosion" decalsize="0.75" penetration="0.5" camerashake="200" camerashakerange="10000" flashrange="1000" flashduration="2.0" screencolor="255,255,255,255" screencolorrange="5000" screencolorduration="3.0">
+                <Affliction identifier="explosiondamage" strength="200" />
+                <Affliction identifier="burn" strength="200" />
+                <Affliction identifier="bleeding" strength="40" probability="0.05" dividebylimbcount="false" />
+                <Affliction identifier="stun" strength="10" />
+                <Affliction identifier="radiationsickness" strength="30" />
+              </Explosion>
+              <sound file="Content/Items/Weapons/ExplosionDebris1.ogg" range="6000" />
+              <sound file="Content/Items/Weapons/ExplosionDebris2.ogg" range="6000" />
+              <Remove />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+      </Abilities>
+    </AbilityGroupInterval>
+    <AbilityGroupInterval interval="1">
+      <Conditions>
+        <AbilityConditionHasItem tags="clowngear,clownmask" requireall="true" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffects>
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="Character" disabledeltatime="true">
+              <Affliction identifier="idiot" amount="1" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+      </Abilities>
+    </AbilityGroupInterval>
+    <AbilityGroupInterval>
+      <Conditions>
+        <AbilityConditionHasAffliction afflictionidentifier="idiot" />
+        <AbilityConditionAboveVitality invert="true" vitalitypercentage="0" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffects>
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="Character" disabledeltatime="true" duration="4">
+              <sound file="Content/Sounds/RadioStatic.ogg" type="OnAbility" range="600.0" loop="true" volume="1.5" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+      </Abilities>
+    </AbilityGroupInterval>
+    <AbilityGroupInterval maxtriggercount="1">
+      <Conditions>
+        <AbilityConditionAboveVitality invert="true" vitalitypercentage="0" />
+        <AbilityConditionHasItem tags="clowngear,clownmask" requireall="true" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffects>
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="Character" multiplyafflictionsbymaxvitality="true" disabledeltatime="true">
+              <Affliction identifier="final" amount="2.0" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+      </Abilities>
+    </AbilityGroupInterval>
+    <AbilityGroupEffect abilityeffecttype="None">
+      <Abilities>
+        <CharacterAbilityGiveResistance resistanceid="miracleworker" multiplier="-1" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupInterval interval="0.9">
+      <Conditions>
+        <AbilityConditionAboveVitality invert="true" vitalitypercentage="0" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityModifyStat stattype="MedicalItemEffectivenessMultiplier" value="-1" />
+        <CharacterAbilityModifyStat stattype="MedicalItemApplyingMultiplier" value="-1" />
+      </Abilities>
+    </AbilityGroupInterval>
+    <AddedRecipe itemidentifier="notaclown" />
+    <AddedRecipe itemidentifier="notaclownmask" />
+  </Talent>
+  <Talent identifier="geneus">
+    <Description tag="talentdescription.double">
+      <Replace tag="[talentsuit]" value="entityname.medicalofficeroutfit, entityname.healthscanner" color="gui.orange" />
+      <Replace tag="[suitprot]" value="20" color="gui.green" />
+      <Replace tag="[element1]" value="afflictionname.acidburn" color="gui.orange" />
+      <Replace tag="[element2]" value="afflictionname.infection" color="gui.orange" />
+    </Description>
+    <Description tag="talentdescription.geneticmaterialrefinebonus">
+      <Replace tag="[amount]" value="50" color="gui.green" />
+    </Description>
+    <Description tag="talentdescription.geneticmaterialtaintedprobabilityreductiononcombine">
+      <Replace tag="[amount]" value="100" color="gui.green" />
+    </Description>
+    <Description tag="talentdescription.debufftootherskills">
+      <Replace tag="[skillamount]" value="15" color="gui.green" />
+      <Replace tag="[talentsuitskill]" value="skillname.medical" color="gui.orange" />
+      <Replace tag="[skillamountloss]" value="30" color="gui.red" />
+    </Description>
+    <Description tag="talentdescription.joke_geneus" />
+    <Icon texture="Content/UI/TalentsIcons1.png" sheetindex="0,6" sheetelementsize="128,128" />
+    <AbilityGroupInterval interval="0.9">
+      <Conditions>
+        <AbilityConditionHasItem tags="medicalofficerclothes,healthscanner" requireall="true" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityModifyStat stattype="GeneticMaterialTaintedProbabilityReductionOnCombine" value="1" />
+        <CharacterAbilityModifyStat stattype="GeneticMaterialRefineBonus" value="50" />
+        <CharacterAbilityModifyResistance resistanceid="acidburn" multiplier="0.8" />
+        <CharacterAbilityModifyResistance resistanceid="infection" multiplier="0.8" />
+        <CharacterAbilityModifyStat stattype="MedicalSkillBonus" value="15" />
+        <CharacterAbilityModifyStat stattype="ElectricalSkillBonus" value="-30" />
+        <CharacterAbilityModifyStat stattype="WeaponsSkillBonus" value="-30" />
+        <CharacterAbilityModifyStat stattype="MechanicalSkillBonus" value="-30" />
+        <CharacterAbilityModifyStat stattype="HelmSkillBonus" value="-30" />
+      </Abilities>
+    </AbilityGroupInterval>
+  </Talent>
+  <!-- cultist Tree -->
+  <Talent identifier="communion">
+    <Icon texture="%ModDir%/talenticon.png" sheetindex="3,3" sheetelementsize="128,128" />
+    <Description tag="talentdescription.communion">
+      <Replace tag="[affname1]" value="afflictionname.huskinfection" color="ForestGreen" />
+      <Replace tag="[skillamount1]" value="50" color="gui.green" />
+      <Replace tag="[skillamount2]" value="30" color="gui.green" />
+      <Replace tag="[skillamount3]" value="100" color="gui.red" />
+      <Replace tag="[affname2]" value="afflictionname.husksymbiosis" color="SeaGreen" />
+      <Replace tag="[affname3]" value="afflictionname.psychosis,afflictionname.paralysis" color="gui.orange" />
+      <Replace tag="[affname4]" value="afflictionname.burn" color="gui.red" />
+    </Description>
+    <AbilityGroupInterval interval="0.9">
+      <Conditions>
+        <AbilityConditionHasAffliction afflictionidentifier="huskinfection" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityModifyResistance resistanceid="burn" multiplier="2" />
+        <CharacterAbilityModifyResistance resistanceid="damage" multiplier="0.7" />
+        <CharacterAbilityModifyResistance resistanceid="paralysis" multiplier="0.5" />
+        <CharacterAbilityModifyResistance resistanceid="psychosis" multiplier="0.5" />
+      </Abilities>
+    </AbilityGroupInterval>
+    <AbilityGroupInterval interval="0.9">
+      <Conditions>
+        <AbilityConditionHasAffliction afflictionidentifier="husksymbiosis" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityModifyResistance resistanceid="burn" multiplier="2" />
+        <CharacterAbilityModifyResistance resistanceid="damage" multiplier="0.7" />
+        <CharacterAbilityModifyResistance resistanceid="paralysis" multiplier="0.5" />
+        <CharacterAbilityModifyResistance resistanceid="psychosis" multiplier="0.5" />
+      </Abilities>
+    </AbilityGroupInterval>
+  </Talent>
+  <Talent identifier="devotion">
+    <Icon texture="%ModDir%/talenticon.png" sheetindex="0,4" sheetelementsize="128,128" />
+    <Description tag="talentdescription.devotion">
+      <Replace tag="[figurine]" value="entityname.huskfigurine" color="gui.orange" />
+      <Replace tag="[skillamount1]" value="50" color="gui.green" />
+      <Replace tag="[affname1]" value="afflictionname.stun" color="gui.orange" />
+      <Replace tag="[skillamount2]" value="20" color="gui.green" />
+      <Replace tag="[affname3]" value="stattypenames.movementspeed" color="gui.orange" />
+    </Description>
+    <Description tag="talentdescription.unlockrecipe">
+      <Replace tag="[itemname]" value="entityname.huskfigurine" color="gui.orange" />
+    </Description>
+    <AbilityGroupInterval interval="0.9">
+      <Conditions>
+        <AbilityConditionHoldingItem tags="huskfigurine" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityModifyResistance resistanceid="stun" multiplier="0.5" />
+        <CharacterAbilityModifyResistance resistanceid="progressivestun" multiplier="0.5" />
+        <CharacterAbilityModifyResistance resistanceid="incrementalstun" multiplier="0.5" />
+        <CharacterAbilityModifyResistance resistanceid="damage" multiplier="0.8" />
+        <CharacterAbilityModifyStat stattype="MovementSpeed" value="0.2" />
+        <CharacterAbilityApplyStatusEffects>
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="Character" multiplyafflictionsbymaxvitality="true">
+              <Affliction identifier="devotion" amount="1.0" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+      </Abilities>
+    </AbilityGroupInterval>
+    <AddedRecipe itemidentifier="huskfigurine" />
+  </Talent>
+  <Talent identifier="living_plague">
+    <Icon texture="%ModDir%/talenticon.png" sheetindex="6,0" sheetelementsize="128,128" />
+    <Description tag="talentdescription.living_plague">
+      <Replace tag="[skillamount1]" value="25" color="gui.green" />
+      <Replace tag="[huskstinger]" value="entityname.huskstinger" color="gui.orange" />
+    </Description>
+    <AbilityGroupEffect abilityeffecttype="OnAttack">
+      <Conditions>
+        <AbilityConditionAttackData itemidentifier="huskstinger" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffects>
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="UseTarget" multiplyafflictionsbymaxvitality="true">
+              <Affliction identifier="huskinfection" amount="20.0" probability="0.25" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnAttack">
+      <Conditions>
+        <AbilityConditionAttackData itemidentifier="huskstinger" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffects>
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="UseTarget" multiplyafflictionsbymaxvitality="true">
+              <Affliction identifier="paralysis" amount="10.0" />
+              <Conditional maxhealth="gt 200" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+      </Abilities>
+    </AbilityGroupEffect>
+  </Talent>
+  <Talent identifier="feral">
+    <Icon texture="%ModDir%/talenticon.png" sheetindex="1,0" sheetelementsize="128,128" />
+    <Description tag="talentdescription.feral">
+      <Replace tag="[skillamount1]" value="entityname.brokendivingsuit" color="orange" />
+      <Replace tag="[affname1]" value="afflictionname.huskinfection" color="ForestGreen" />
+      <Replace tag="[affname2]" value="afflictionname.husksymbiosis" color="SeaGreen" />
+    </Description>
+    <AbilityGroupInterval interval="0.9">
+      <Conditions>
+        <AbilityConditionHasAffliction afflictionidentifier="huskinfection" />
+        <AbilityConditionHasItem itemidentifier="brokendivingsuit" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffects>
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="Character" multiplyafflictionsbymaxvitality="true">
+              <ReduceAffliction type="damage" amount="0.125" />
+              <ReduceAffliction type="burn" amount="0.05" />
+              <ReduceAffliction identifier="bloodloss" amount="0.015" />
+              <ReduceAffliction identifier="bleeding" amount="0.1" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+      </Abilities>
+    </AbilityGroupInterval>
+    <AbilityGroupInterval interval="0.9">
+      <Conditions>
+        <AbilityConditionHasAffliction afflictionidentifier="husksymbiosis" />
+        <AbilityConditionHasItem itemidentifier="brokendivingsuit" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffects>
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="Character" multiplyafflictionsbymaxvitality="true">
+              <ReduceAffliction type="damage" amount="0.125" />
+              <ReduceAffliction type="burn" amount="0.05" />
+              <ReduceAffliction identifier="bloodloss" amount="0.015" />
+              <ReduceAffliction identifier="bleeding" amount="0.1" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+      </Abilities>
+    </AbilityGroupInterval>
+  </Talent>
+  <Talent identifier="fumigator">
+    <Icon texture="%ModDir%/talenticon.png" sheetindex="1,3" sheetelementsize="128,128" />
+    <Description tag="talentdescription.fumigator">
+      <Replace tag="[affname1]" value="afflictionname.huskinfection" color="ForestGreen" />
+      <Replace tag="[affname2]" value="afflictionname.husksymbiosis" color="SeaGreen" />
+    </Description>
+    <AbilityGroupInterval interval="0.9">
+      <Conditions>
+        <AbilityConditionHasAffliction afflictionidentifier="huskinfection" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffectsToAllies maxdistance="600" allowself="false">
+          <StatusEffects>
+            <StatusEffect target="This,Character" type="OnAbility" interval="0.5" setvalue="true">
+              <Affliction identifier="fumigator" amount="1.0" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffectsToAllies>
+      </Abilities>
+    </AbilityGroupInterval>
+    <AbilityGroupInterval interval="0.9">
+      <Conditions>
+        <AbilityConditionHasAffliction afflictionidentifier="husksymbiosis" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffectsToAllies maxdistance="600" allowself="false">
+          <StatusEffects>
+            <StatusEffect target="This,Character" type="OnAbility" interval="0.5" setvalue="true">
+              <Affliction identifier="disguisedashusk" amount="1.0" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffectsToAllies>
+      </Abilities>
+    </AbilityGroupInterval>
+  </Talent>
+  <Talent identifier="naturesdelight">
+    <Icon texture="%ModDir%/talenticon.png" sheetindex="0,1" sheetelementsize="128,128" />
+    <Description tag="talentdescription.naturesdelight">
+      <Replace tag="[skillamount1]" value="entityname.huskeggsbasic" color="gui.orange" />
+      <Replace tag="[skillamount2]" value="entityname.huskeggs" color="gui.orange" />
+      <Replace tag="[skillamount3]" value="50" color="gui.green" />
+      <Replace tag="[courage]" value="talentname.courage" color="gui.orange" />
+      <Replace tag="[huskstinger]" value="entityname.huskstinger" color="gui.orange" />
+    </Description>
+    <AbilityGroupEffect abilityeffecttype="OnAttack">
+      <Conditions>
+        <AbilityConditionAttackData itemidentifier="huskstinger" />
+        <AbilityConditionHasAffliction afflictionidentifier="egg_swallower" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffects>
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="This" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
+              <Affliction identifier="courage" amount="1.0" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnApplyTreatment">
+      <Conditions>
+        <AbilityConditionItem identifiers="huskeggsbasic, huskeggs" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffects>
+          <StatusEffects>
+            <StatusEffect tags="medical" type="OnAbility" target="Character">
+              <Affliction identifier="egg_swallower" amount="1.0" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+      </Abilities>
+    </AbilityGroupEffect>
+  </Talent>
+  <!-- Horror Tree -->
+  <Talent identifier="courage">
+    <Icon texture="%ModDir%/talenticon.png" sheetindex="3,0" sheetelementsize="128,128" />
+    <Description tag="talentdescription.courage">
+      <Replace tag="[skillamount1]" value="entityname.divingknife" color="gui.orange" />
+    </Description>
+    <AbilityGroupEffect abilityeffecttype="OnAttack">
+      <Conditions>
+        <AbilityConditionAttackData itemidentifier="divingknife" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffects>
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="This" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
+              <Affliction identifier="courage" amount="1.0" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+      </Abilities>
+    </AbilityGroupEffect>
+  </Talent>
+  <Talent identifier="what">
+    <Description tag="talentdescription.what">
+      <Replace tag="[skillamount1]" value="entityname.divingknife" color="gui.orange" />
+      <Replace tag="[skillamount2]" value="talentdescription.corpse" color="gui.red" />
+      <Replace tag="[skillamount3]" value="entityname.mucusball" color="gui.orange" />
+    </Description>
+    <Icon texture="Content/UI/TalentsIcons4.png" sheetindex="1,2" sheetelementsize="128,128" />
+    <AbilityGroupEffect abilityeffecttype="OnLootCharacter">
+      <Conditions>
+        <AbilityConditionHoldingItem identifiers="divingknife" />
+        <AbilityConditionCharacter targettype="Alive" invert="true">
+          <Conditional group="eq human" />
+        </AbilityConditionCharacter>
+        <AbilityConditionCharacterNotLooted identifier="what" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffectsToAllies maxdistance="600" allowself="false">
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
+              <Affliction identifier="psychosis" strength="30" />
+              <Affliction identifier="nausea" strength="30" probability="0.35" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffectsToAllies>
+        <CharacterAbilityApplyStatusEffects>
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="UseTarget" spawnitemrandomly="false" SpawnIfInventoryFull="true">
+              <SpawnItem identifiers="mucusball" count="2" spawnposition="ThisInventory" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnLootCharacter">
+      <Conditions>
+        <AbilityConditionHoldingItem identifiers="divingknife" />
+        <AbilityConditionCharacter targettype="Alive" invert="true">
+          <Conditional group="eq human" />
+        </AbilityConditionCharacter>
+        <AbilityConditionCharacterNotLooted identifier="what" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityMarkAsLooted identifier="what" />
+      </Abilities>
+    </AbilityGroupEffect>
+  </Talent>
+  <Talent identifier="dinendash">
+    <Description tag="talentdescription.dinendash">
+      <Replace tag="[skillamount1]" value="entityname.divingknife" color="gui.orange" />
+      <Replace tag="[skillamount2]" value="talentdescription.corpse" color="gui.red" />
+    </Description>
+    <Description tag="talenttip.dinendash" />
+    <Icon texture="Content/UI/TalentsIcons4.png" sheetindex="4,2" sheetelementsize="128,128" />
+    <AbilityGroupEffect abilityeffecttype="OnLootCharacter">
+      <Conditions>
+        <AbilityConditionHoldingItem identifiers="divingknife" />
+        <AbilityConditionCharacter>
+          <Conditional group="eq human" />
+          <Conditional isDead="eq true" />
+        </AbilityConditionCharacter>
+        <AbilityConditionCharacterNotLooted identifier="dinendash" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffects>
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="This,Character" duration="8" delay="5">
+              <ReduceAffliction type="damage" amount="1.0" />
+              <ReduceAffliction type="damage" amount="0.5" probability="0.2" />
+              <ReduceAffliction type="damage" amount="0.25" probability="0.2" />
+              <ReduceAffliction type="damage" amount="0.15" probability="0.1" />
+              <Sound file="Content/Sounds/Damage/Gore2.ogg" type="OnUse" range="500" />
+            </StatusEffect>
+            <StatusEffect type="OnAbility" target="UseTarget" disabledeltatime="true" duration="5" interval="1">
+              <Sound file="Content/Sounds/Damage/LimbSlash1.ogg" type="OnUse" range="500" selectionmode="Random" />
+              <Sound file="Content/Sounds/Damage/LimbSlash2.ogg" type="OnUse" range="500" />
+              <Sound file="Content/Sounds/Damage/LimbSlash3.ogg" type="OnUse" range="500" />
+              <Sound file="Content/Sounds/Damage/LimbSlash4.ogg" type="OnUse" range="500" />
+              <Sound file="Content/Sounds/Damage/Gore1.ogg" type="OnUse" range="500" />
+              <Sound file="Content/Sounds/Damage/Gore2.ogg" type="OnUse" range="500" />
+              <Sound file="Content/Sounds/Damage/Gore6.ogg" type="OnUse" range="500" />
+              <Sound file="Content/Sounds/Damage/Gore4.ogg" type="OnUse" range="500" />
+              <Sound file="Content/Sounds/Damage/Gore5.ogg" type="OnUse" range="500" />
+              <Sound file="Content/Sounds/Damage/Gore8.ogg" type="OnUse" range="500" />
+              <ParticleEmitter particle="bloodsplash" anglemin="0" anglemax="360" particleamount="10" velocitymin="0" velocitymax="0" scalemin="0.75" scalemax="1" />
+              <Remove />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnLootCharacter">
+      <Conditions>
+        <AbilityConditionHoldingItem identifiers="divingknife" />
+        <AbilityConditionServerRandom randomchance="0.8" />
+        <AbilityConditionCharacter>
+          <Conditional group="eq human" />
+          <Conditional isDead="eq true" />
+        </AbilityConditionCharacter>
+        <AbilityConditionCharacterNotLooted identifier="dinendash" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityMarkAsLooted identifier="dinendash" />
+      </Abilities>
+    </AbilityGroupEffect>
+  </Talent>
+  <Talent identifier="leech">
+    <Description tag="talentdescription.leech">
+      <Replace tag="[skillamount1]" value="entityname.alienblood" color="gui.orange" />
+      <Replace tag="[skillamount2]" value="15" color="gui.green" />
+      <Replace tag="[skillamount3]" value="entityname.antibloodloss2" color="gui.orange" />
+      <Replace tag="[vitality]" value="vitality" color="gui.orange" />
+      <Replace tag="[haste]" value="afflictionname.haste" color="gui.orange" />
+      <Replace tag="[skillamount2]" value="15" color="gui.green" />
+    </Description>
+    <Icon texture="Content/UI/TalentsIcons3.png" sheetindex="1,4" sheetelementsize="128,128" />
+    <AbilityGroupEffect abilityeffecttype="OnApplyTreatment">
+      <Conditions>
+        <AbilityConditionItem identifiers="alienblood" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffects>
+          <StatusEffects>
+            <!-- counter half of the psychosis applied by alien blood -->
+            <StatusEffect tags="medical" type="OnAbility" target="UseTarget" duration="15.0">
+              <ReduceAffliction identifier="psychosis" amount="1.5" />
+              <ReduceAffliction identifier="damage" amount="4" />
+              <ReduceAffliction identifier="organdamage" amount="0.65" />
+            </StatusEffect>
+            <StatusEffect type="OnAbility" target="UseTarget">
+              <Affliction identifier="haste" amount="15" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnApplyTreatment">
+      <Conditions>
+        <AbilityConditionItem identifiers="antibloodloss2" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffects>
+          <StatusEffects>
+            <!-- counter half of the psychosis applied by alien blood -->
+            <StatusEffect tags="medical" type="OnAbility" target="UseTarget" duration="15.0">
+              <ReduceAffliction identifier="damage" amount="8" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+      </Abilities>
+    </AbilityGroupEffect>
+  </Talent>
+  <Talent identifier="puttingpressure">
+    <Icon texture="Content/UI/TalentsIcons3.png" sheetindex="5,3" sheetelementsize="128,128" />
+    <Description tag="talentdescription.puttingpressure">
+      <Replace tag="[bandage]" value="entityname.antibleeding1" color="gui.orange" />
+      <Replace tag="[bleedinglacer]" value="afflictionname.bleeding,afflictionname.lacerations" color="gui.orange" />
+    </Description>
+    <AbilityGroupInterval interval="0.9">
+      <Conditions>
+        <AbilityConditionCrouched />
+        <AbilityConditionHoldingItem tags="antibleeding1" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffects>
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="Character" disabledeltatime="true">
+              <ReduceAffliction identifier="bleeding" amount="1" />
+              <ReduceAffliction identifier="lacerations" amount="2" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+      </Abilities>
+    </AbilityGroupInterval>
+  </Talent>
+  <!-- EUROPAN -->
+  <!-- diving_in tree -->
+  <!-- Done and forgotten -->
+  <Talent identifier="new_habitat">
+    <Description tag="talentdescription.new_habitat" />
+    <Description tag="talentdescription.unlockrecipe">
+      <Replace tag="[itemname]" value="entityname.diver" color="gui.orange" />
+    </Description>
+    <Icon texture="%ModDir%/talenticon.png" sheetindex="3,2" sheetelementsize="128,128" />
+    <!--Получите круглым счетом нихуя, лолололололололололололололо-->
+    <AbilityGroupEffect abilityeffecttype="None">
+      <Abilities>
+        <!--Ладно, вот поощрение, купи чоколадку и пиздуй плавать-->
+        <CharacterAbilityGiveMoney amount="120" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AddedRecipe itemidentifier="diver" />
+  </Talent>
+  <!-- Done and forgotten -->
+  <!-- diving_in tree -->
+  <!-- europanbackground tree -->
+  <!-- Done and forgotten -->
+  <Talent identifier="jengaenjoyer">
+    <Icon texture="Content/UI/TalentsIcons4.png" sheetindex="2,2" sheetelementsize="128,128" />
+    <Description tag="talentdescription.mule">
+      <Replace tag="[amount]" value="2" color="gui.green" />
+    </Description>
+    <Description tag="talentdescription.jengamaster">
+      <Replace tag="[amount]" value="2" color="gui.green" />
+    </Description>
+    <Description tag="talentdescription.doesnotstack" />
+    <Description tag="talentdescription.unlockrecipe">
+      <Replace tag="[itemname]" value="entityname.backpack" color="gui.orange" />
+    </Description>
+    <AbilityGroupEffect abilityeffecttype="None">
+      <Abilities>
+        <CharacterAbilityGivePermanentStat stattype="InventoryExtraStackSize" statidentifier="Material" value="2" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnItemSelected">
+      <Conditions>
+        <AbilityConditionItem tags="container" />
+        <AbilityConditionItemIsStatic />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityGiveItemStat stattype="ExtraStackSize" value="2" stackable="false" save="true" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AddedRecipe itemidentifier="backpack" />
+  </Talent>
+  <Talent identifier="beaconkeeper">
+    <Description tag="talentdescription.xpformission">
+      <Replace tag="[xp]" value="30" color="gui.green" />
+      <Replace tag="[missiontype]" value="missiontype.Beacon" color="gui.orange" />
+    </Description>
+    <Description tag="talentdescription.beaconkeeper1">
+      <Replace tag="[skillamount1]" value="15" color="gui.green" />
+      <Replace tag="[skillname1]" value="skillname.mechanical, skillname.electrical" color="gui.orange" />
+      <Replace tag="[skillamount2]" value="20" color="gui.green" />
+      <Replace tag="[affname1]" value="afflictionname.burn, afflictionname.lacerations" color="gui.orange" />
+    </Description>
+    <Description tag="talentdescription.characterbuffs2">
+      <Replace tag="[skillamount1]" value="15" color="gui.green" />
+      <Replace tag="[skillname1]" value="skillname.mechanical,skillname.electrical" color="gui.orange" />
+    </Description>
+    <Icon texture="Content/UI/TalentsIcons2.png" sheetindex="7,3" sheetelementsize="128,128" />
+    <AbilityGroupEffect abilityeffecttype="OnGainMissionExperience">
+      <Conditions>
+        <AbilityConditionMission missiontype="Beacon" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityModifyValue multiplyvalue="1.3" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupInterval interval="0.9">
+      <Conditions>
+        <AbilityConditionInSubmarine submarinetype="BeaconStation" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityModifyStat stattype="ElectricalSkillBonus" value="15" />
+        <CharacterAbilityModifyStat stattype="MechanicalSkillBonus" value="15" />
+        <CharacterAbilityModifyResistance resistanceid="burn" multiplier="0.8" />
+        <CharacterAbilityModifyResistance resistanceid="lacerations" multiplier="0.8" />
+      </Abilities>
+    </AbilityGroupInterval>
+    <AbilityGroupEffect abilityeffecttype="None">
+      <Abilities>
+        <CharacterAbilityGiveStat stattype="MechanicalSkillBonus" value="15" />
+        <CharacterAbilityGiveStat stattype="ElectricalSkillBonus" value="15" />
+      </Abilities>
+    </AbilityGroupEffect>
+  </Talent>
+  <Talent identifier="hunter">
+    <Description tag="talentdescription.xpformission">
+      <Replace tag="[xp]" value="30" color="gui.green" />
+      <Replace tag="[missiontype]" value="missiontype.Nest, missiontype.Monster" color="gui.orange" />
+    </Description>
+    <Description tag="talentdescription.extrapowder">
+      <Replace tag="[rangeamount]" value="30" color="gui.green" />
+      <Replace tag="[damageamount]" value="30" color="gui.green" />
+    </Description>
+    <Description tag="talentdescription.characterbuffs2">
+      <Replace tag="[skillamount1]" value="10" color="gui.green" />
+      <Replace tag="[skillname1]" value="skillname.weapons" color="gui.orange" />
+    </Description>
+    <Description tag="talentdescription.unlockrecipe">
+      <Replace tag="[itemname]" value="entityname.explosivespear" color="gui.orange" />
+    </Description>
+    <Icon texture="Content/UI/TalentsIcons1.png" sheetindex="4,2" sheetelementsize="128,128" />
+    <AbilityGroupEffect abilityeffecttype="OnGainMissionExperience">
+      <Conditions>
+        <AbilityConditionMission missiontype="Monster" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityModifyValue addedvalue="1.3" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnGainMissionExperience">
+      <Conditions>
+        <AbilityConditionMission missiontype="Nest" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityModifyValue addedvalue="1.3" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="None">
+      <Abilities>
+        <CharacterAbilityGiveStat stattype="ExplosionRadiusMultiplier" value="0.3" />
+        <CharacterAbilityGiveStat stattype="ExplosionDamageMultiplier" value="0.3" />
+        <CharacterAbilityGiveStat stattype="WeaponsSkillBonus" value="10" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AddedRecipe itemidentifier="explosivespear" />
+  </Talent>
+  <Talent identifier="сourier">
+    <Description tag="talentdescription.xpformission">
+      <Replace tag="[xp]" value="60" color="gui.green" />
+      <Replace tag="[missiontype]" value="missiontype.Cargo" color="gui.orange" />
+    </Description>
+    <Description tag="talentdescription.unlockrecipe">
+      <Replace tag="[itemname]" value="entityname.makeshiftshelf" color="gui.orange" />
+    </Description>
+    <Description tag="talentdescription.letitdrainreminder">
+      <Replace tag="[itemcount]" value="OVER9000!" color="gui.green" />
+    </Description>
+    <Icon texture="Content/UI/TalentsIcons1.png" sheetindex="0,4" sheetelementsize="128,128" />
+    <AbilityGroupEffect abilityeffecttype="OnGainMissionExperience">
+      <Conditions>
+        <AbilityConditionMission missiontype="Cargo" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityModifyValue addedvalue="1.6" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <Migrations>
+      <AddStat version="1.0.10.0" statidentifier="makeshiftshelf" stattype="MaxAttachableCount" value="3" />
+    </Migrations>
+    <AbilityGroupEffect abilityeffecttype="None">
+      <Abilities>
+        <CharacterAbilityGivePermanentStat statidentifier="makeshiftshelf" stattype="MaxAttachableCount" value="9999" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AddedRecipe itemidentifier="makeshiftshelf" />
+  </Talent>
+  <Talent identifier="expansionist">
+    <Icon texture="Content/UI/TalentsIcons3.png" sheetindex="0,7" sheetelementsize="128,128" />
+    <Description tag="talentdescription.expansionist1">
+      <Replace tag="[skillamount1]" value="100" color="gui.green" />
+      <Replace tag="[skillamount2]" value="50" color="gui.green" />
+    </Description>
+    <Description tag="talentdescription.expansionist2">
+      <Replace tag="[xp]" value="20" color="gui.green" />
+      <Replace tag="[missiontype]" value="missiontype.Beacon" color="gui.orange" />
+      <Replace tag="[skillname]" value="talentname.beaconkeeper" color="gui.orange" />
+    </Description>
+    <Description tag="talentdescription.expansionist2">
+      <Replace tag="[xp]" value="20" color="gui.green" />
+      <Replace tag="[missiontype]" value="missiontype.Cargo, missiontype.Escort, missiontype.Mineral" color="gui.orange" />
+      <Replace tag="[skillname]" value="talentname.сourier" color="gui.orange" />
+    </Description>
+    <Description tag="talentdescription.expansionist2">
+      <Replace tag="[xp]" value="20" color="gui.green" />
+      <Replace tag="[missiontype]" value="missiontype.Nest, missiontype.Monster" color="gui.orange" />
+      <Replace tag="[skillname]" value="talentname.hunter" color="gui.orange" />
+    </Description>
+    <Description tag="talentdescription.characterbuffs2">
+      <Replace tag="[skillamount1]" value="15" color="gui.green" />
+      <Replace tag="[skillname1]" value="skillname.helm" color="gui.orange" />
+    </Description>
+    <AbilityGroupEffect abilityeffecttype="OnLocationDiscovered">
+      <Conditions>
+        <AbilityConditionLocation hasoutpost="true" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityGiveMoney amount="100" />
+        <CharacterAbilityGiveExperience amount="50" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnLocationDiscovered">
+      <Conditions>
+        <AbilityConditionLocation hasoutpost="false" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityGiveExperience amount="50" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnGainMissionMoney">
+      <Conditions>
+        <AbilityConditionHasTalent identifier="beaconkeeper" />
+        <AbilityConditionMission missiontype="Beacon" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityModifyValue multiplyvalue="1.2" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnGainMissionExperience">
+      <Conditions>
+        <AbilityConditionHasTalent identifier="beaconkeeper" />
+        <AbilityConditionMission missiontype="Beacon" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityModifyValue multiplyvalue="1.2" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnGainMissionMoney">
+      <Conditions>
+        <AbilityConditionHasTalent identifier="сourier" />
+        <AbilityConditionMission missiontype="Cargo" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityModifyValue multiplyvalue="1.2" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnGainMissionExperience">
+      <Conditions>
+        <AbilityConditionHasTalent identifier="сourier" />
+        <AbilityConditionMission missiontype="Cargo" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityModifyValue multiplyvalue="1.2" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnGainMissionMoney">
+      <Conditions>
+        <AbilityConditionHasTalent identifier="сourier" />
+        <AbilityConditionMission missiontype="Escort" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityModifyValue multiplyvalue="1.2" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnGainMissionExperience">
+      <Conditions>
+        <AbilityConditionHasTalent identifier="сourier" />
+        <AbilityConditionMission missiontype="Escort" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityModifyValue multiplyvalue="1.2" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnGainMissionMoney">
+      <Conditions>
+        <AbilityConditionHasTalent identifier="сourier" />
+        <AbilityConditionMission missiontype="Mineral" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityModifyValue multiplyvalue="1.2" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnGainMissionExperience">
+      <Conditions>
+        <AbilityConditionHasTalent identifier="сourier" />
+        <AbilityConditionMission missiontype="Mineral" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityModifyValue multiplyvalue="1.2" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnGainMissionMoney">
+      <Conditions>
+        <AbilityConditionHasTalent identifier="hunter" />
+        <AbilityConditionMission missiontype="Monster" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityModifyValue multiplyvalue="1.2" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnGainMissionExperience">
+      <Conditions>
+        <AbilityConditionHasTalent identifier="hunter" />
+        <AbilityConditionMission missiontype="Monster" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityModifyValue multiplyvalue="1.2" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnGainMissionMoney">
+      <Conditions>
+        <AbilityConditionHasTalent identifier="hunter" />
+        <AbilityConditionMission missiontype="Nest" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityModifyValue multiplyvalue="1.2" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnGainMissionExperience">
+      <Conditions>
+        <AbilityConditionHasTalent identifier="hunter" />
+        <AbilityConditionMission missiontype="Nest" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityModifyValue multiplyvalue="1.2" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="None">
+      <Abilities>
+        <CharacterAbilityGiveStat stattype="HelmSkillBonus" value="15" />
+      </Abilities>
+    </AbilityGroupEffect>
+  </Talent>
+  <Talent identifier="herbalist">
+    <Icon texture="Content/UI/TalentsIcons1.png" sheetindex="4,5" sheetelementsize="128,128" />
+    <Description tag="talentdescription.doubleoutput">
+      <Replace tag="[itemcat]" value="entityname.raptorbane, entityname.pomegrenadeextract, entityname.pipetobacco" color="gui.orange" />
+      <Replace tag="[skillamount1]" value="50" color="gui.green" />
+    </Description>
+    <Description tag="talentdescription.doubledeconout">
+      <Replace tag="[itemcat]" value="entityname.yeastshroom, entityname.slimebacteria, entityname.elastinplant, entityname.aquaticpoppy, entityname.fiberplant" color="gui.orange" />
+      <Replace tag="[skillamount1]" value="20" color="gui.green" />
+    </Description>
+    <Description tag="talentdescription.highereffect">
+      <Replace tag="[itemcat]" value="entityname.pomegrenadeextract" color="gui.orange" />
+    </Description>
+    <Description tag="talentdescription.characterbuffs2">
+      <Replace tag="[skillamount1]" value="15" color="gui.green" />
+      <Replace tag="[skillname1]" value="skillname.medical" color="gui.orange" />
+    </Description>
+    <AbilityGroupEffect abilityeffecttype="OnItemFabricatedAmount">
+      <Conditions>
+        <AbilityConditionServerRandom randomchance="0.5" />
+        <AbilityConditionItem identifiers="raptorbane,pomegrenadeextract,pipetobacco" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityModifyValue multiplyvalue="2" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnItemDeconstructedMaterial">
+      <Conditions>
+        <AbilityConditionServerRandom randomChance="0.2" />
+        <AbilityConditionItem tags="plantitem" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityModifyValue multiplyvalue="2" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnApplyTreatment">
+      <Conditions>
+        <AbilityConditionItem identifiers="pomegrenadeextract" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffects>
+          <StatusEffects>
+            <StatusEffect tags="medical" type="OnAbility" target="Character">
+              <ReduceAffliction type="damage" amount="5" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="None">
+      <Abilities>
+        <CharacterAbilityGiveStat stattype="MedicalSkillBonus" value="15" />
+      </Abilities>
+    </AbilityGroupEffect>
+  </Talent>
+  <Talent identifier="tough">
+    <Description tag="talentdescription.characterbuffs1">
+      <Replace tag="[skillamount1]" value="20" color="gui.green" />
+      <Replace tag="[skillname1]" value="vitality" color="gui.orange" />
+    </Description>
+    <Description tag="talentdescription.characterbuffs1">
+      <Replace tag="[skillamount1]" value="15" color="gui.green" />
+      <Replace tag="[skillname1]" value="stattypenames.movementspeed" color="gui.orange" />
+    </Description>
+    <Description tag="talentdescription.characterbuffs1">
+      <Replace tag="[skillamount1]" value="15" color="gui.green" />
+      <Replace tag="[skillname1]" value="afflictionname.opiateaddiction, afflictionname.opiatewithdrawal, afflictionname.chemaddiction,  afflictionname.chemwithdrawal" color="gui.orange" />
+    </Description>
+    <Icon texture="Content/UI/TalentsIcons3.png" sheetindex="6,4" sheetelementsize="128,128" />
+    <AbilityGroupEffect abilityeffecttype="None">
+      <Abilities>
+        <CharacterAbilityGiveStat stattype="MaximumHealthMultiplier" value="0.2" />
+        <CharacterAbilityGiveResistance resistanceid="opiateaddiction" multiplier="0.85" />
+        <CharacterAbilityGiveResistance resistanceid="chemaddiction" multiplier="0.85" />
+        <CharacterAbilityGiveResistance resistanceid="opiatewithdrawal" multiplier="0.85" />
+        <CharacterAbilityGiveResistance resistanceid="chemwithdrawal" multiplier="0.85" />
+        <CharacterAbilityGiveStat stattype="MovementSpeed" value="0.15" />
+      </Abilities>
+    </AbilityGroupEffect>
+  </Talent>
+  <Talent identifier="virtuoso">
+    <Description tag="talentdescription.characterbuffs3">
+      <Replace tag="[instrument]" value="entityname.guitar" color="gui.orange" />
+      <Replace tag="[skillamount1]" value="afflictionname.highmorale" color="gui.orange" />
+    </Description>
+    <Description tag="talentdescription.characterbuffs3">
+      <Replace tag="[instrument]" value="entityname.harmonica" color="gui.orange" />
+      <Replace tag="[skillamount1]" value="afflictionname.regeneration" color="gui.orange" />
+    </Description>
+    <Description tag="talentdescription.characterbuffs3">
+      <Replace tag="[instrument]" value="entityname.accordion" color="gui.orange" />
+      <Replace tag="[skillamount1]" value="afflictionname.inspiringtunes" color="gui.orange" />
+    </Description>
+    <Icon texture="Content/UI/TalentsIcons2.png" sheetindex="1,0" sheetelementsize="128,128" />
+    <AbilityGroupEffect abilityeffecttype="OnUseRangedWeapon">
+      <Conditions>
+        <AbilityConditionItem identifiers="guitar" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffectsToAllies insameroom="true" allowself="true">
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="Character" multiplyafflictionsbymaxvitality="true" disabledeltatime="true">
+              <Affliction identifier="highmorale" amount="10" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffectsToAllies>
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnUseRangedWeapon">
+      <Conditions>
+        <AbilityConditionItem identifiers="harmonica" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffectsToAllies insameroom="true" allowself="true">
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="Character" multiplyafflictionsbymaxvitality="true" disabledeltatime="true">
+              <Affliction identifier="regeneration" amount="1" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffectsToAllies>
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnUseRangedWeapon">
+      <Conditions>
+        <AbilityConditionItem identifiers="accordion" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffectsToAllies insameroom="true" allowself="true">
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="Character" multiplyafflictionsbymaxvitality="true" disabledeltatime="true">
+              <Affliction identifier="inspiringtunes" amount="10" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffectsToAllies>
+      </Abilities>
+    </AbilityGroupEffect>
+  </Talent>
+  <!-- Done and forgotten -->
+  <!-- europanbackground tree -->
+  <!-- Diver tree -->
+  <!-- Done and forgotten -->
+  <Talent identifier="freediving_championship">
+    <Description tag="talentdescription.characterbuffs1">
+      <Replace tag="[skillamount1]" value="80" color="gui.green" />
+      <Replace tag="[skillname1]" value="stattypenames.swimmingspeed" color="gui.orange" />
+    </Description>
+    <Description tag="talentdescription.characterbuffs1.2">
+      <Replace tag="[skillamount1]" value="80" color="gui.green" />
+      <Replace tag="[skillname1]" value="afflictionname.oxygenlow" color="gui.orange" />
+    </Description>
+    <Description tag="talentdescription.freediving_championship">
+      <Replace tag="[skillamount1]" value="75" color="gui.green" />
+      <Replace tag="[skillname1]" value="stattypenames.FlowResistance" color="gui.orange" />
+    </Description>
+    <Icon texture="Content/UI/TalentsIcons1.png" sheetindex="5,2" sheetelementsize="128,128" />
+    <AbilityGroupEffect abilityeffecttype="None">
+      <Abilities>
+        <CharacterAbilityGiveStat stattype="SwimmingSpeed" value="0.8" />
+        <CharacterAbilityGiveResistance resistanceid="oxygenlow" multiplier="0.2" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="None">
+      <Conditions>
+        <AbilityConditionCrouched />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityGiveStat stattype="FlowResistance" value="0.75" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupInterval interval="0.9">
+      <Abilities>
+        <CharacterAbilityApplyStatusEffectsToAllies allowself="false" maxdistance="500">
+          <!--jobs="securityofficer,medicaldoctor"-->
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="Character" disabledeltatime="true">
+              <Affliction identifier="swimming_trainer" strength="1.0" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffectsToAllies>
+      </Abilities>
+    </AbilityGroupInterval>
+  </Talent>
+  <Talent identifier="tough_skin">
+    <Description tag="talentdescription.characterbuffs1.2">
+      <Replace tag="[skillamount1]" value="30" color="gui.green" />
+      <Replace tag="[skillname1]" value="afflictionname.bitewounds, afflictionname.lacerations, afflictionname.burn" color="gui.orange" />
+    </Description>
+    <Description tag="talentdescription.characterbuffs1.2">
+      <Replace tag="[skillamount1]" value="70" color="gui.green" />
+      <Replace tag="[skillname1]" value="afflictionname.infection" color="gui.orange" />
+    </Description>
+    <Description tag="talentdescription.characterbuffs1">
+      <Replace tag="[skillamount1]" value="-30" color="gui.red" />
+      <Replace tag="[skillname1]" value="stattypenames.MovementSpeed" color="gui.orange" />
+    </Description>
+    <Description tag="talentdescription.tough_skin_deb" />
+    <Icon texture="Content/UI/TalentsIcons3.png" sheetindex="3,6" sheetelementsize="128,128" />
+    <AbilityGroupEffect abilityeffecttype="None">
+      <Abilities>
+        <CharacterAbilityGiveStat stattype="MovementSpeed" value="-0.3" />
+        <CharacterAbilityGiveResistance resistanceid="bitewounds" multiplier="0.7" />
+        <CharacterAbilityGiveResistance resistanceid="lacerations" multiplier="0.7" />
+        <CharacterAbilityGiveResistance resistanceid="burn" multiplier="0.7" />
+        <CharacterAbilityGiveResistance resistanceid="infection" multiplier="0.3" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupInterval interval="1">
+      <Conditions>
+        <AbilityConditionServerRandom randomchance="0.035" />
+        <AbilityConditionInWater invert="true" />
+        <AbilityConditionRunning />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffects>
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="Character">
+              <Affliction identifier="stun" amount="2.25" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+      </Abilities>
+    </AbilityGroupInterval>
+  </Talent>
+  <Talent identifier="easy_does_it">
+    <!--СЮДАААААААААААААААА СУКАААААААААААА-->
+    <Description tag="talentdescription.easy_does_it">
+      <Replace tag="[affname1]" value="afflictionname.concealed" color="gui.orange" />
+    </Description>
+    <Description tag="talentdescription.easy_does_it_inv" />
+    <Icon texture="Content/UI/TalentsIcons3.png" sheetindex="1,6" sheetelementsize="128,128" />
+    <Description tag="talentdescription.feigndeath">
+      <Replace tag="[seconds]" value="2" color="gui.green" />
+    </Description>
+    <AbilityGroupInterval effectdelay="4">
+      <Conditions>
+        <AbilityConditionRagdolled />
+        <AbilityConditionInWater />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityModifyFlag flagtype="IgnoredByEnemyAI" />
+      </Abilities>
+    </AbilityGroupInterval>
+    <AbilityGroupInterval>
+      <!--Раскрывать перса если рядом враги-->
+      <Conditions>
+        <AbilityConditionNearbyCharacterCount distance="200" targettypes="Monster,Alive" count="1" />
+        <AbilityConditionInWater />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffects>
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="Character">
+              <Affliction identifier="spotted" amount="2.5" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+      </Abilities>
+    </AbilityGroupInterval>
+    <AbilityGroupInterval>
+      <!--Давать невидимку во время плавания(если не быстро)-->
+      <Conditions>
+        <AbilityConditionHasPermanentStat statidentifier="imswimminhere" min="1" />
+        <AbilityConditionInWater />
+        <AbilityConditionInSubmarine submarinetype="Player" invert="true" />
+        <AbilityConditionHasAffliction afflictionidentifier="spotted" invert="true" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffects>
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
+              <Affliction identifier="easydoesit" amount="1.0" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+      </Abilities>
+    </AbilityGroupInterval>
+    <AbilityGroupInterval>
+      <!--Снимать невидимку если не плаваешь -->
+      <Conditions>
+        <AbilityConditionInWater invert="true" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffects>
+          <StatusEffects>
+            <StatusEffect type="OnAbility" disabledeltatime="true" target="Character">
+              <ReduceAffliction identifier="easydoesit" amount="1" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+      </Abilities>
+    </AbilityGroupInterval>
+    <AbilityGroupInterval effectdelay="15">
+      <!--Возврат пермастата при потере через 15 сек-->
+      <Abilities>
+        <CharacterAbilityGivePermanentStat statidentifier="imswimminhere" value="1" maxvalue="1" giveonaddingfirsttime="true" setvalue="true" />
+      </Abilities>
+    </AbilityGroupInterval>
+    <AbilityGroupInterval interval="1">
+      <!--Снятие пермастата при расрытии-->
+      <Conditions>
+        <AbilityConditionHasAffliction afflictionidentifier="spotted" minimumpercentage="0.98" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityResetPermanentStat statidentifier="imswimminhere" />
+        <CharacterAbilityApplyStatusEffects>
+          <StatusEffects>
+            <StatusEffect type="OnAbility" disabledeltatime="true" target="Character">
+              <ReduceAffliction identifier="easydoesit" amount="1" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+      </Abilities>
+    </AbilityGroupInterval>
+    <!--	<AbilityGroupInterval><!{1}**Снимать вонючеебучиее раскрытие после какого-то времени**{1}>
+			<Abilities>
+				<CharacterAbilityApplyStatusEffects>
+					<StatusEffects>
+						<StatusEffect type="OnAbility" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
+							<ReduceAffliction identifier="spotted" amount="10.0"/>
+						</StatusEffect>
+					</StatusEffects>
+				</CharacterAbilityApplyStatusEffects>
+			</Abilities>
+		</AbilityGroupInterval> -->
+  </Talent>
+  <Talent identifier="frog_leaping">
+    <Description tag="talentdescription.frog_leaping" />
+    <Icon texture="Content/UI/TalentsIcons3.png" sheetindex="1,3" sheetelementsize="128,128" />
+    <AbilityGroupEffect abilityeffecttype="OnRagdoll">
+      <Conditions>
+        <AbilityConditionInWater />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffects>
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="Character" multiplyafflictionsbymaxvitality="true">
+              <Affliction identifier="frog_leaping" amount="1.0" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupInterval>
+      <Conditions>
+        <AbilityConditionInWater />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyForce maxvelocity="40" force="150" afflictionidentifier="frog_leaping" />
+      </Abilities>
+    </AbilityGroupInterval>
+    <AbilityGroupEffect abilityeffecttype="OnRagdoll">
+      <Conditions>
+        <AbilityConditionInWater />
+        <AbilityConditionInHull invert="true" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffects>
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="Character" multiplyafflictionsbymaxvitality="true">
+              <Affliction identifier="frog_leaping" amount="1.0" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupInterval>
+      <Conditions>
+        <AbilityConditionInWater />
+        <AbilityConditionInHull />
+        <AbilityConditionHasAffliction afflictionidentifier="frog_leaping" minimumpercentage="0.1" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyForce maxvelocity="40" force="250" afflictionidentifier="frog_leaping" />
+        <CharacterAbilityModifyResistance resistanceid="blunttrauma" multiplier="0" />
+        <CharacterAbilityModifyResistance resistanceid="concussion" multiplier="0" />
+        <CharacterAbilityModifyResistance resistanceid="stun" multiplier="0" />
+        <CharacterAbilityModifyResistance resistanceid="progressivestun" multiplier="0" />
+        <CharacterAbilityModifyResistance resistanceid="incrementalstun" multiplier="0" />
+        <CharacterAbilityModifyStat stattype="SightRangeMultiplier" value="0.75" />
+        <CharacterAbilityModifyStat stattype="SoundRangeMultiplier" value="0.75" />
+      </Abilities>
+    </AbilityGroupInterval>
+  </Talent>
+  <Talent identifier="flight">
+    <!--Типа починил, но все еще хуета-->
+    <Description tag="talentdescription.flight">
+      <Replace tag="[affname1]" value="stattypenames.swimmingspeed" color="gui.orange" />
+    </Description>
+    <Description tag="talentdescription.flight_dodge">
+      <Replace tag="[skillamount1]" value="50" color="gui.green" />
+    </Description>
+    <Icon texture="Content/UI/TalentsIcons2.png" sheetindex="5,4" sheetelementsize="128,128" color="10,193,114,255" origin="0,0" />
+    <AbilityGroupEffect abilityeffecttype="OnAttacked">
+      <Conditions>
+        <AbilityConditionInWater />
+        <!--<AbilityConditionCharacter targettype="Monster"/> Сука, ждем пока не сделают-->
+        <!--				<AbilityConditionCharacter targettype="Enemy" />-->
+        <!--<Conditional speciesgroup="neq human"/>-->
+        <!--<Conditional speciesname="neq human"/>-->
+        <!--<Conditional ishuman="false"/>-->
+        <AbilityConditionAttackData ignoreOwnAttacks="true" ignorenonharmfulattacks="true" weapontype="NoWeapon" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffects>
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="Character" multiplyafflictionsbymaxvitality="true">
+              <Affliction identifier="flight" amount="1.0" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnAttacked">
+      <Conditions>
+        <AbilityConditionInWater />
+        <AbilityConditionHasAffliction afflictionidentifier="flight" />
+        <AbilityConditionServerRandom randomchance="0.5" />
+        <AbilityConditionAttackData ignorenonharmfulattacks="true" ignoreOwnAttacks="true" weapontype="NoWeapon" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityModifyAttackData addeddamagemultiplier="-1" />
+      </Abilities>
+    </AbilityGroupEffect>
+  </Talent>
+  <Talent identifier="fight">
+    <!--Типа починил, но все еще хуета-->
+    <Description tag="talentdescription.fight">
+      <Replace tag="[affname1]" value="stattypenames.swimmingspeed" color="gui.orange" />
+      <Replace tag="[skillamount1]" value="50" color="gui.green" />
+      <Replace tag="[skillamount2]" value="25" color="gui.green" />
+    </Description>
+    <Description tag="talentdescription.fight_stun">
+      <Replace tag="[skillamount1]" value="25" color="gui.green" />
+    </Description>
+    <Icon texture="Content/UI/TalentsIcons3.png" sheetindex="0,6" sheetelementsize="128,128" />
+    <AbilityGroupEffect abilityeffecttype="OnAttacked">
+      <Conditions>
+        <AbilityConditionInWater />
+        <AbilityConditionAttackData ignorenonharmfulattacks="true" ignoreOwnAttacks="true" weapontype="NoWeapon" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffects>
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="Character" multiplyafflictionsbymaxvitality="true">
+              <Affliction identifier="fight" amount="1.0" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnAttacked">
+      <Conditions>
+        <AbilityConditionInWater />
+        <AbilityConditionAttackData ignorenonharmfulattacks="true" ignoreOwnAttacks="true" weapontype="NoWeapon" />
+        <AbilityConditionHasAffliction afflictionidentifier="fight" />
+        <AbilityConditionServerRandom randomchance="0.25" />
+        <!--	<AbilityConditionCharacter targettype="Monster">
+				<Conditional maxhealth="lt 300"/>
+			</AbilityConditionCharacter>-->
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffectsToAttacker>
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="Character">
+              <Affliction identifier="stun" amount="4.0" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffectsToAttacker>
+      </Abilities>
+    </AbilityGroupEffect>
+  </Talent>
+  <Talent identifier="hunting_grounds">
+    <Icon texture="%ModDir%/talenticon.png" sheetindex="5,1" sheetelementsize="128,128" />
+    <Description tag="talentdescription.hunting_grounds">
+      <Replace tag="[rifle]" value="entityname.rifle" color="gui.orange" />
+      <Replace tag="[skillamount1]" value="65" color="gui.green" />
+      <Replace tag="[skillamount2]" value="10" color="gui.green" />
+    </Description>
+    <Description tag="talentdescription.hunting_grounds_beasts">
+      <Replace tag="[xp1]" value="200" color="gui.green" />
+      <Replace tag="[knife]" value="entityname.divingknife" color="gui.orange" />
+      <Replace tag="[xp2]" value="100" color="gui.green" />
+    </Description>
+    <Description tag="talentdescription.hunting_grounds_harpoon">
+      <Replace tag="[harpguns]" value="entityname.harpoongun, entityname.harpooncoilrifle" color="gui.orange" />
+      <Replace tag="[skillamount1]" value="50" color="gui.green" />
+      <Replace tag="[harpoons]" value="entityname.spear, entityname.alienspear, entityname.explosivespear, entityname.spearunique" color="gui.orange" />
+    </Description>
+    <Description tag="talentdescription.hunting_grounds_adapting">
+      <Replace tag="[pressurehudwarning]" value="pressurehudwarning" color="gui.red" />
+      <Replace tag="[divingsuit]" value="entityname.divingsuit" color="gui.orange" />
+      <Replace tag="[bluntorgan]" value="afflictionname.blunttrauma, afflictionname.organdamage" color="gui.red" />
+    </Description>
+    <AddedRecipe itemidentifier="cargoscooter" />
+    <AbilityGroupInterval interval="0.9">
+      <Conditions>
+        <AbilityConditionHoldingItem tags="rifle" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityModifyStat stattype="RangedAttackSpeed" value="-0.65" />
+      </Abilities>
+    </AbilityGroupInterval>
+    <AbilityGroupEffect abilityeffecttype="OnAttack">
+      <Conditions>
+        <AbilityConditionAttackData tags="rifleammo" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityModifyAttackData addeddamagemultiplier="10" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnKillCharacter">
+      <Conditions>
+        <AbilityConditionCharacter targettype="Monster">
+          <Conditional maxhealth="gt 300" />
+        </AbilityConditionCharacter>
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityGiveExperience amount="200" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnKillCharacter">
+      <Conditions>
+        <!--	<AbilityConditionCharacter targettype="Any">
+				<Conditional group="eq human"/>
+				<Conditional maxhealth="lt 50"/>
+			</AbilityConditionCharacter>-->
+        <AbilityConditionCharacter targettype="Any">
+          <Conditional ispet="true" />
+        </AbilityConditionCharacter>
+        <AbilityConditionAttackData itemidentifier="divingknife" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityGiveExperience amount="100" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupInterval interval="0.9">
+      <Conditions>
+        <AbilityConditionHoldingItem tags="harpoongun,harpooncoilrifle" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityModifyStat stattype="RangedAttackSpeed" value="0.5" />
+      </Abilities>
+    </AbilityGroupInterval>
+    <AbilityGroupEffect abilityeffecttype="OnAttack">
+      <Conditions>
+        <AbilityConditionCharacter targettype="Monster" />
+        <AbilityConditionAttackData tags="harpoonammo" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityModifyStat stattype="AttackMultiplier" value="0.5" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupInterval effectdelay="1">
+      <Conditions>
+        <AbilityConditionInWater />
+        <AbilityConditionHasItem tags="deepdiving" invert="true" />
+        <AbilityConditionHasAffliction afflictionidentifier="adapting" invert="true" />
+        <AbilityConditionHasAffliction afflictionidentifier="husksymbiosis" invert="true" />
+        <AbilityConditionHasAffliction afflictionidentifier="huskinfection" invert="true" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffects>
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
+              <Conditional InPressure="True" />
+              <Affliction identifier="adapting" amount="7.0" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+      </Abilities>
+    </AbilityGroupInterval>
+  </Talent>
+  <!-- Done and forgotten -->
+  <!-- Sailor tree -->
+  <Talent identifier="savvy_navy">
+    <Description tag="talentdescription.characterbuffs1">
+      <Replace tag="[skillamount1]" value="20" color="gui.green" />
+      <Replace tag="[skillname1]" value="stattypenames.repairspeed" color="gui.orange" />
+    </Description>
+    <Description tag="talentdescription.characterbuffs1">
+      <Replace tag="[skillamount1]" value="10" color="gui.green" />
+      <Replace tag="[skillname1]" value="skillname.mechanical, skillname.electrical, skillname.medical" color="gui.orange" />
+    </Description>
+    <Icon texture="Content/UI/TalentsIcons3.png" sheetindex="5,4" sheetelementsize="128,128" />
+    <CharacterAbilityGiveStat stattype="MechanicalSkillGainSpeed" value="0.1" />
+    <CharacterAbilityGiveStat stattype="ElectricalSkillGainSpeed" value="0.1" />
+    <CharacterAbilityGiveStat stattype="MedicalSkillGainSpeed" value="0.1" />
+    <CharacterAbilityGiveStat stattype="RepairSpeed" value="0.2" />
+  </Talent>
+  <Talent identifier="second_in_command">
+    <Description tag="talentdescription.characterbuffs1">
+      <Replace tag="[skillamount1]" value="25" color="gui.green" />
+      <Replace tag="[skillname1]" value="stattypenames.repairspeed" color="gui.orange" />
+    </Description>
+    <Description tag="talentdescription.characterbuffs1.1">
+      <Replace tag="[skillamount1]" value="25" color="gui.green" />
+      <Replace tag="[skillname1]" value="skillname.helm, skillname.weapons" color="gui.orange" />
+    </Description>
+    <Icon texture="Content/UI/TalentsIcons1.png" sheetindex="4,4" sheetelementsize="128,128" />
+    <AbilityGroupEffect abilityeffecttype="None">
+      <Abilities>
+        <CharacterAbilityGiveStat stattype="HelmSkillGainSpeed" value="0.25" />
+        <CharacterAbilityGiveStat stattype="WeaponsSkillGainSpeed" value="0.25" />
+        <CharacterAbilityGiveStat stattype="RepairSpeed" value="0.25" />
+      </Abilities>
+    </AbilityGroupEffect>
+  </Talent>
+  <Talent identifier="safety_specialist">
+    <Description tag="talentdescription.safety_specialist">
+      <Replace tag="[skillname]" value="skillname.mechanical, skillname.electrical" color="gui.orange" />
+      <Replace tag="[skillamount]" value="75" color="gui.green" />
+      <Replace tag="[skillamount1]" value="25" color="gui.green" />
+      <Replace tag="[skillbookhandyseaman]" value="entityname.skillbookhandyseaman" color="gui.orange" />
+    </Description>
+    <Description tag="talentdescription.unlockrecipe">
+      <Replace tag="[itemname]" value="entityname.hardhat,entityname.clownhardhat,entityname.safetyharness, entityname.handheldstatusmonitor, entityname.handhelditemfinder, entityname.handheldelectricalmonitor, entityname.reactorpda" color="gui.orange" />
+    </Description>
+    <Icon texture="Content/UI/TalentsIcons1.png" sheetindex="4,6" sheetelementsize="128,128" />
+    <AbilityGroupEffect abilityeffecttype="OnAnyMissionCompleted">
+      <Conditions>
+        <AbilityConditionHasSkill skillidentifier="mechanical" minvalue="75" />
+        <AbilityConditionHasSkill skillidentifier="electrical" minvalue="75" />
+        <AbilityConditionServerRandom randomChance="0.25" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityPutItem itemidentifier="skillbookhandyseaman" amount="1" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AddedRecipe itemidentifier="hardhat" />
+    <AddedRecipe itemidentifier="clownhardhat" />
+    <AddedRecipe itemidentifier="safetyharness" />
+    <AddedRecipe itemidentifier="handheldstatusmonitor" />
+    <AddedRecipe itemidentifier="handhelditemfinder" />
+    <AddedRecipe itemidentifier="handheldelectricalmonitor" />
+    <AddedRecipe itemidentifier="reactorpda" />
+  </Talent>
+  <Talent identifier="all_hands">
+    <Description tag="talentdescription.all_hands">
+      <Replace tag="[skillamount1]" value="25" color="gui.green" />
+      <Replace tag="[skillamount2]" value="25" color="gui.green" />
+      <Replace tag="[RepairSpeedRepairToolStructureRepairMultiplier]" value="stattypenames.repairspeed, stattypenames.repairtoolstructurerepairmultiplier" color="gui.orange" />
+      <Replace tag="[xp1]" value="10" color="gui.green" />
+      <Replace tag="[xp2]" value="10" color="gui.green" />
+    </Description>
+    <Icon texture="Content/UI/TalentsIcons1.png" sheetindex="1,4" sheetelementsize="128,128" />
+    <AbilityGroupInterval interval="0.9">
+      <Conditions>
+        <AbilityConditionShipFlooded floodpercentage="0.25" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffectsToAllies insameroom="true" allowself="true">
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="Character" disabledeltatime="true">
+              <Affliction identifier="all_hands" strength="1.0" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffectsToAllies>
+      </Abilities>
+    </AbilityGroupInterval>
+    <AbilityGroupEffect abilityeffecttype="OnRepairedOutsideLeak">
+      <Conditions>
+        <AbilityConditionHasAffliction afflictionidentifier="all_hands" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffectsToAllies insameroom="true" allowself="true">
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="Character" disabledeltatime="true">
+              <GiveExperience amount="10" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffectsToAllies>
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnRepairComplete">
+      <Conditions>
+        <AbilityConditionHasAffliction afflictionidentifier="all_hands" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffectsToAllies insameroom="true" allowself="true">
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="Character" disabledeltatime="true">
+              <GiveExperience amount="5" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffectsToAllies>
+      </Abilities>
+    </AbilityGroupEffect>
+  </Talent>
+  <Talent identifier="premium_produce">
+    <Description tag="talentdescription.premium_produce" />
+    <Icon texture="Content/UI/TalentsIcons4.png" sheetindex="5,2" sheetelementsize="128,128" />
+    <AbilityGroupEffect abilityeffecttype="None">
+      <Abilities>
+        <CharacterAbilityGivePermanentStat statidentifier="expensiveloot" stattype="StoreSellMultiplier" value="0.5" targetallies="false" setvalue="true" />
+        <CharacterAbilityGivePermanentStat statidentifier="mediumloot" stattype="StoreSellMultiplier" value="2" targetallies="false" setvalue="true" />
+        <CharacterAbilityGivePermanentStat statidentifier="cheaploot" stattype="StoreSellMultiplier" value="1000" targetallies="false" setvalue="true" />
+      </Abilities>
+    </AbilityGroupEffect>
+  </Talent>
+  <Talent identifier="royalties">
+    <Description tag="talentdescription.bountyhunter">
+      <Replace tag="[percentage]" value="25" color="gui.green" />
+    </Description>
+    <Icon texture="Content/UI/TalentsIcons1.png" sheetindex="2,6" sheetelementsize="128,128" />
+    <AbilityGroupEffect abilityeffecttype="OnCrewKillCharacter">
+      <Conditions>
+        <AbilityConditionCharacter targettypes="Monster" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityBountyHunter vitalitypercentage="0.25" />
+      </Abilities>
+    </AbilityGroupEffect>
+  </Talent>
+  <!-- Gatherer tree -->
+  <!-- Done and forgotten -->
+  <Talent identifier="winnow">
+    <Description tag="talentdescription.doubledeconout">
+      <Replace tag="[itemcat]" value="entityname.yeastshroom, entityname.slimebacteria, entityname.elastinplant, entityname.aquaticpoppy, entityname.fiberplant, entityname.scrap, entityname.diversremains" color="gui.orange" />
+      <Replace tag="[skillamount1]" value="75" color="gui.green" />
+    </Description>
+    <Icon texture="Content/UI/TalentsIcons4.png" sheetindex="1,2" sheetelementsize="128,128" />
+    <AbilityGroupEffect abilityeffecttype="OnItemDeconstructedMaterial">
+      <Conditions>
+        <AbilityConditionServerRandom randomchance="0.75" />
+        <AbilityConditionItem tags="plant,scrap,diversremains" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityModifyValue multiplyvalue="2" />
+      </Abilities>
+    </AbilityGroupEffect>
+  </Talent>
+  <Talent identifier="stone_chomper">
+    <Description tag="talentdescription.doubledeconout">
+      <Replace tag="[itemcat]" value="missionsonarlabel.miningmission2" color="gui.orange" />
+      <Replace tag="[skillamount1]" value="35" color="gui.green" />
+    </Description>
+    <Description tag="talentdescription.gainoredetachspeed">
+      <Replace tag="[amount]" value="100" color="gui.green" />
+    </Description>
+    <Icon texture="Content/UI/TalentsIcons2.png" sheetindex="2,3" sheetelementsize="128,128" />
+    <AbilityGroupEffect abilityeffecttype="OnItemDeconstructedMaterial">
+      <Conditions>
+        <AbilityConditionServerRandom randomchance="0.35" />
+        <AbilityConditionItem tags="ore" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityModifyValue multiplyvalue="2" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="None">
+      <Abilities>
+        <CharacterAbilityGiveStat stattype="RepairToolDeattachTimeMultiplier" value="2" />
+      </Abilities>
+    </AbilityGroupEffect>
+  </Talent>
+  <Talent identifier="cuts_of_meat">
+    <Description tag="talentdescription.cuts_of_meat">
+      <Replace tag="[tool]" value="entityname.divingknife, entityname.divingknifeunique, entityname.ceremonialsword, entityname.toothy" color="gui.orange" />
+      <Replace tag="[monsters]" value="character.hammerheadmatriarch, character.hammerheadgold, character.hammerhead" color="gui.orange" />
+    </Description>
+    <Icon texture="Content/UI/TalentsIcons3.png" sheetindex="7,1" sheetelementsize="128,128" />
+    <AbilityGroupEffect abilityeffecttype="OnLootCharacter">
+      <Conditions>
+        <AbilityConditionServerRandom randomchance="0.75" />
+        <AbilityConditionHoldingItem tags="sharptool" />
+        <AbilityConditionCharacter targettype="Monster">
+          <Conditional group="eq hammerheadmatriarch" />
+        </AbilityConditionCharacter>
+        <AbilityConditionCharacterNotLooted identifier="cuts_of_meat" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffects>
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="UseTarget" SpawnIfInventoryFull="false">
+              <SpawnItem identifiers="hammerheadribs" spawnposition="ThisInventory" />
+              <SpawnItem identifiers="mucusball" count="4" spawnposition="ThisInventory" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnLootCharacter">
+      <Conditions>
+        <AbilityConditionHoldingItem tags="sharptool" />
+        <AbilityConditionCharacter targettype="Monster">
+          <Conditional group="eq hammerheadmatriarch" />
+        </AbilityConditionCharacter>
+        <AbilityConditionCharacterNotLooted identifier="cuts_of_meat" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityMarkAsLooted identifier="cuts_of_meat" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnLootCharacter">
+      <Conditions>
+        <AbilityConditionHoldingItem tags="sharptool" />
+        <AbilityConditionServerRandom randomchance="0.75" />
+        <AbilityConditionCharacter targettype="Monster">
+          <Conditional group="eq hammerheadgold" />
+        </AbilityConditionCharacter>
+        <AbilityConditionCharacterNotLooted identifier="europan_gatherer_meat" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffects>
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="UseTarget" spawnitemrandomly="true" SpawnIfInventoryFull="false">
+              <SpawnItem identifiers="hammerheadribs" count="3" spawnposition="ThisInventory" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnLootCharacter">
+      <Conditions>
+        <AbilityConditionHoldingItem tags="sharptool" />
+        <AbilityConditionCharacter targettype="Monster">
+          <Conditional group="eq hammerheadgold" />
+        </AbilityConditionCharacter>
+        <AbilityConditionCharacterNotLooted identifier="cuts_of_meat" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityMarkAsLooted identifier="cuts_of_meat" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnLootCharacter">
+      <Conditions>
+        <AbilityConditionHoldingItem tags="sharptool" />
+        <AbilityConditionServerRandom randomchance="0.75" />
+        <AbilityConditionCharacter targettype="Monster">
+          <Conditional group="eq hammerhead" />
+        </AbilityConditionCharacter>
+        <AbilityConditionCharacterNotLooted identifier="europan_gatherer_meat" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffects>
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="UseTarget" spawnitemrandomly="true" SpawnIfInventoryFull="false">
+              <SpawnItem identifiers="hammerheadribs" spawnposition="ThisInventory" />
+              <SpawnItem identifiers="mucusball" spawnposition="ThisInventory" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnLootCharacter">
+      <Conditions>
+        <AbilityConditionHoldingItem tags="sharptool" />
+        <AbilityConditionCharacter targettype="Monster">
+          <Conditional group="eq hammerhead" />
+        </AbilityConditionCharacter>
+        <AbilityConditionCharacterNotLooted identifier="cuts_of_meat" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityMarkAsLooted identifier="cuts_of_meat" />
+      </Abilities>
+    </AbilityGroupEffect>
+  </Talent>
+  <Talent identifier="defense_mechanisms">
+    <Description tag="talentdescription.cuts_of_meat">
+      <Replace tag="[tool]" value="entityname.crowbar" color="gui.orange" />
+      <Replace tag="[monsters]" value="character.molochblack, character.moloch, character.watcher, character.endworm, character.doomworm, character.mudraptor, character.bonethresher, character.husk, character.crawlerhusk, character.spineling" color="gui.orange" />
+    </Description>
+    <Icon texture="Content/UI/TalentsIcons3.png" sheetindex="2,6" sheetelementsize="128,128" />
+    <AbilityGroupEffect abilityeffecttype="OnLootCharacter">
+      <Conditions>
+        <AbilityConditionHoldingItem tags="crowbaritem" />
+        <AbilityConditionServerRandom randomchance="0.75" />
+        <AbilityConditionCharacter targettype="Monster">
+          <Conditional group="eq molochblack" />
+        </AbilityConditionCharacter>
+        <AbilityConditionCharacterNotLooted identifier="defense_mechanisms" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffects>
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="UseTarget" spawnitemrandomly="true" SpawnIfInventoryFull="false">
+              <SpawnItem identifiers="shellshield" spawnposition="ThisInventory" />
+              <SpawnItem identifiers="molochbone" spawnposition="ThisInventory" />
+              <SpawnItem identifiers="molochbone" count="2" spawnposition="ThisInventory" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnLootCharacter">
+      <Conditions>
+        <AbilityConditionHoldingItem tags="crowbaritem" />
+        <AbilityConditionCharacter targettype="Monster">
+          <Conditional group="eq molochblack" />
+        </AbilityConditionCharacter>
+        <AbilityConditionCharacterNotLooted identifier="defense_mechanisms" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityMarkAsLooted identifier="defense_mechanisms" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnLootCharacter">
+      <Conditions>
+        <AbilityConditionHoldingItem tags="crowbaritem" />
+        <AbilityConditionServerRandom randomchance="0.75" />
+        <AbilityConditionCharacter targettype="Monster">
+          <Conditional group="eq watcher" />
+        </AbilityConditionCharacter>
+        <AbilityConditionCharacterNotLooted identifier="defense_mechanisms" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffects>
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="UseTarget" spawnitemrandomly="true" SpawnIfInventoryFull="false">
+              <SpawnItem identifiers="watchershell" count="2" spawnposition="ThisInventory" />
+              <SpawnItem identifiers="watchershell" count="1" spawnposition="ThisInventory" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnLootCharacter">
+      <Conditions>
+        <AbilityConditionHoldingItem tags="crowbaritem" />
+        <AbilityConditionCharacter targettype="Monster">
+          <Conditional group="eq watcher" />
+        </AbilityConditionCharacter>
+        <AbilityConditionCharacterNotLooted identifier="defense_mechanisms" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityMarkAsLooted identifier="defense_mechanisms" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnLootCharacter">
+      <Conditions>
+        <AbilityConditionHoldingItem tags="crowbaritem" />
+        <AbilityConditionServerRandom randomchance="0.75" />
+        <AbilityConditionCharacter targettype="Monster">
+          <Conditional group="eq moloch" />
+        </AbilityConditionCharacter>
+        <AbilityConditionCharacterNotLooted identifier="defense_mechanisms" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffects>
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="UseTarget" spawnitemrandomly="true" SpawnIfInventoryFull="false">
+              <SpawnItem identifiers="shellshield" count="2" spawnposition="ThisInventory" />
+              <SpawnItem identifiers="shellshield" spawnposition="ThisInventory" />
+              <SpawnItem identifiers="molochbone" spawnposition="ThisInventory" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnLootCharacter">
+      <Conditions>
+        <AbilityConditionHoldingItem tags="crowbaritem" />
+        <AbilityConditionCharacter targettype="Monster">
+          <Conditional group="eq moloch" />
+        </AbilityConditionCharacter>
+        <AbilityConditionCharacterNotLooted identifier="defense_mechanisms" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityMarkAsLooted identifier="defense_mechanisms" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnLootCharacter">
+      <Conditions>
+        <AbilityConditionHoldingItem tags="crowbaritem" />
+        <AbilityConditionServerRandom randomchance="0.75" />
+        <AbilityConditionCharacter targettype="Monster">
+          <Conditional group="eq endworm" />
+        </AbilityConditionCharacter>
+        <AbilityConditionCharacterNotLooted identifier="defense_mechanisms" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffects>
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="UseTarget" spawnitemrandomly="true" SpawnIfInventoryFull="false">
+              <SpawnItem identifiers="endwormshell" spawnposition="ThisInventory" />
+              <SpawnItem identifiers="diversremains" count="3" spawnposition="ThisInventory" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnLootCharacter">
+      <Conditions>
+        <AbilityConditionHoldingItem tags="crowbaritem" />
+        <AbilityConditionCharacter targettype="Monster">
+          <Conditional group="eq endworm" />
+        </AbilityConditionCharacter>
+        <AbilityConditionCharacterNotLooted identifier="defense_mechanisms" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityMarkAsLooted identifier="defense_mechanisms" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnLootCharacter">
+      <Conditions>
+        <AbilityConditionHoldingItem tags="crowbaritem" />
+        <AbilityConditionServerRandom randomchance="0.75" />
+        <AbilityConditionCharacter targettype="Monster">
+          <Conditional group="eq doomworm" />
+        </AbilityConditionCharacter>
+        <AbilityConditionCharacterNotLooted identifier="defense_mechanisms" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffects>
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="UseTarget" spawnitemrandomly="true" SpawnIfInventoryFull="false">
+              <SpawnItem identifiers="endwormshell" spawnposition="ThisInventory" count="4" />
+              <SpawnItem identifiers="diversremains" count="3" spawnposition="ThisInventory" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnLootCharacter">
+      <Conditions>
+        <AbilityConditionHoldingItem tags="crowbaritem" />
+        <AbilityConditionCharacter targettype="Monster">
+          <Conditional group="eq doomworm" />
+        </AbilityConditionCharacter>
+        <AbilityConditionCharacterNotLooted identifier="defense_mechanisms" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityMarkAsLooted identifier="defense_mechanisms" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnLootCharacter">
+      <Conditions>
+        <AbilityConditionHoldingItem tags="crowbaritem" />
+        <AbilityConditionServerRandom randomchance="0.75" />
+        <AbilityConditionCharacter targettype="Monster">
+          <Conditional group="eq mudraptor" />
+        </AbilityConditionCharacter>
+        <AbilityConditionCharacterNotLooted identifier="defense_mechanisms" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffects>
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="UseTarget" SpawnIfInventoryFull="false">
+              <SpawnItem identifiers="chitin" spawnposition="ThisInventory" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnLootCharacter">
+      <Conditions>
+        <AbilityConditionHoldingItem tags="crowbaritem" />
+        <AbilityConditionCharacter targettype="Monster">
+          <Conditional group="eq mudraptor" />
+        </AbilityConditionCharacter>
+        <AbilityConditionCharacterNotLooted identifier="defense_mechanisms" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityMarkAsLooted identifier="defense_mechanisms" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnLootCharacter">
+      <Conditions>
+        <AbilityConditionHoldingItem tags="crowbaritem" />
+        <AbilityConditionServerRandom randomchance="0.75" />
+        <AbilityConditionCharacter targettype="Monster">
+          <Conditional group="eq mudraptor_veteran" />
+        </AbilityConditionCharacter>
+        <AbilityConditionCharacterNotLooted identifier="defense_mechanisms" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffects>
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="UseTarget" spawnitemrandomly="true" SpawnIfInventoryFull="false">
+              <SpawnItem identifiers="chitin" spawnposition="ThisInventory" />
+              <SpawnItem identifiers="huskeggsbasic" spawnposition="ThisInventory" />
+              <SpawnItem identifiers="poop" spawnposition="ThisInventory" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnLootCharacter">
+      <Conditions>
+        <AbilityConditionHoldingItem tags="crowbaritem" />
+        <AbilityConditionCharacter targettype="Monster">
+          <Conditional group="eq mudraptor_veteran" />
+        </AbilityConditionCharacter>
+        <AbilityConditionCharacterNotLooted identifier="defense_mechanisms" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityMarkAsLooted identifier="defense_mechanisms" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnLootCharacter">
+      <Conditions>
+        <AbilityConditionHoldingItem tags="crowbaritem" />
+        <AbilityConditionServerRandom randomchance="0.75" />
+        <AbilityConditionCharacter targettype="Monster">
+          <Conditional group="eq bonethresher" />
+        </AbilityConditionCharacter>
+        <AbilityConditionCharacterNotLooted identifier="defense_mechanisms" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffects>
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="UseTarget" spawnitemrandomly="true" SpawnIfInventoryFull="false">
+              <SpawnItem identifiers="chitin" spawnposition="ThisInventory" />
+              <SpawnItem identifiers="huskeggsbasic" spawnposition="ThisInventory" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnLootCharacter">
+      <Conditions>
+        <AbilityConditionHoldingItem tags="crowbaritem" />
+        <AbilityConditionCharacter targettype="Monster">
+          <Conditional group="eq bonethresher" />
+        </AbilityConditionCharacter>
+        <AbilityConditionCharacterNotLooted identifier="defense_mechanisms" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityMarkAsLooted identifier="defense_mechanisms" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnLootCharacter">
+      <Conditions>
+        <AbilityConditionHoldingItem tags="crowbaritem" />
+        <AbilityConditionServerRandom randomchance="0.25" />
+        <AbilityConditionCharacter targettype="Monster">
+          <Conditional group="eq husk" />
+        </AbilityConditionCharacter>
+        <AbilityConditionCharacterNotLooted identifier="defense_mechanisms" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffects>
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="UseTarget" spawnitemrandomly="true" SpawnIfInventoryFull="false">
+              <SpawnItem identifiers="huskeggsbasic" count="2" spawnposition="ThisInventory" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnLootCharacter">
+      <Conditions>
+        <AbilityConditionHoldingItem tags="crowbaritem" />
+        <AbilityConditionCharacter targettype="Monster">
+          <Conditional group="eq husk" />
+        </AbilityConditionCharacter>
+        <AbilityConditionCharacterNotLooted identifier="defense_mechanisms" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityMarkAsLooted identifier="defense_mechanisms" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnLootCharacter">
+      <Conditions>
+        <AbilityConditionHoldingItem tags="crowbaritem" />
+        <AbilityConditionServerRandom randomchance="0.25" />
+        <AbilityConditionCharacter targettype="Monster">
+          <Conditional group="eq crawlerhusk" />
+        </AbilityConditionCharacter>
+        <AbilityConditionCharacterNotLooted identifier="defense_mechanisms" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffects>
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="UseTarget" spawnitemrandomly="true" SpawnIfInventoryFull="false">
+              <SpawnItem identifiers="huskeggsbasic" count="2" spawnposition="ThisInventory" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnLootCharacter">
+      <Conditions>
+        <AbilityConditionHoldingItem tags="crowbaritem" />
+        <AbilityConditionCharacter targettype="Monster">
+          <Conditional group="eq crawlerhusk" />
+        </AbilityConditionCharacter>
+        <AbilityConditionCharacterNotLooted identifier="defense_mechanisms" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityMarkAsLooted identifier="defense_mechanisms" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnLootCharacter">
+      <Conditions>
+        <AbilityConditionHoldingItem tags="crowbaritem" />
+        <AbilityConditionServerRandom randomchance="0.75" />
+        <AbilityConditionCharacter targettype="Monster">
+          <Conditional group="eq spineling" />
+        </AbilityConditionCharacter>
+        <AbilityConditionCharacterNotLooted identifier="defense_mechanisms" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffects>
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="UseTarget" spawnitemrandomly="true" SpawnIfInventoryFull="false">
+              <SpawnItem identifiers="spinelingspikeloot" count="2" spawnposition="ThisInventory" />
+              <SpawnItem identifiers="chitin" spawnposition="ThisInventory" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnLootCharacter">
+      <Conditions>
+        <AbilityConditionHoldingItem tags="crowbaritem" />
+        <AbilityConditionCharacter targettype="Monster">
+          <Conditional group="eq spineling" />
+        </AbilityConditionCharacter>
+        <AbilityConditionCharacterNotLooted identifier="defense_mechanisms" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityMarkAsLooted identifier="defense_mechanisms" />
+      </Abilities>
+    </AbilityGroupEffect>
+  </Talent>
+  <Talent identifier="lamprey">
+    <Description tag="talentdescription.cuts_of_meat">
+      <Replace tag="[tool]" value="entityname.divingknife, entityname.divingknifeunique, entityname.ceremonialsword, entityname.toothy" color="gui.orange" />
+      <Replace tag="[monsters]" value="character.crawler, character.spineling, character.molochbaby, character.moloch, character.molochblack" color="gui.orange" />
+    </Description>
+    <Icon texture="Content/UI/TalentsIcons3.png" sheetindex="1,3" sheetelementsize="128,128" />
+    <AbilityGroupEffect abilityeffecttype="OnLootCharacter">
+      <Conditions>
+        <AbilityConditionHoldingItem tags="sharptool" />
+        <AbilityConditionServerRandom randomchance="0.75" />
+        <AbilityConditionCharacter targettype="Monster">
+          <Conditional group="eq crawler" />
+        </AbilityConditionCharacter>
+        <AbilityConditionCharacterNotLooted identifier="lamprey" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffects>
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="UseTarget" spawnitemrandomly="true" SpawnIfInventoryFull="false">
+              <SpawnItem identifiers="mucusball" spawnposition="ThisInventory" />
+              <SpawnItem identifiers="alienblood" spawnposition="ThisInventory" />
+              <SpawnItem identifiers="poop" count="2" spawnposition="ThisInventory" />
+              <SpawnItem identifiers="swimbladder" spawnposition="ThisInventory" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnLootCharacter">
+      <Conditions>
+        <AbilityConditionHoldingItem tags="sharptool" />
+        <AbilityConditionCharacter targettype="Monster">
+          <Conditional group="eq crawler" />
+        </AbilityConditionCharacter>
+        <AbilityConditionCharacterNotLooted identifier="lamprey" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityMarkAsLooted identifier="lamprey" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnLootCharacter">
+      <Conditions>
+        <AbilityConditionHoldingItem tags="sharptool" />
+        <AbilityConditionServerRandom randomchance="0.75" />
+        <AbilityConditionCharacter targettype="Monster">
+          <Conditional group="eq spineling" />
+        </AbilityConditionCharacter>
+        <AbilityConditionCharacterNotLooted identifier="lamprey" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffects>
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="UseTarget" SpawnIfInventoryFull="false">
+              <SpawnItem identifiers="swimbladder" spawnposition="ThisInventory" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnLootCharacter">
+      <Conditions>
+        <AbilityConditionHoldingItem tags="sharptool" />
+        <AbilityConditionCharacter targettype="Monster">
+          <Conditional group="eq spineling" />
+        </AbilityConditionCharacter>
+        <AbilityConditionCharacterNotLooted identifier="lamprey" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityMarkAsLooted identifier="lamprey" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnLootCharacter">
+      <Conditions>
+        <AbilityConditionHoldingItem tags="sharptool" />
+        <AbilityConditionServerRandom randomchance="0.75" />
+        <AbilityConditionCharacter targettype="Monster">
+          <Conditional group="eq molochbaby" />
+        </AbilityConditionCharacter>
+        <AbilityConditionCharacterNotLooted identifier="lamprey" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffects>
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="UseTarget" spawnitemrandomly="true" SpawnIfInventoryFull="false">
+              <SpawnItem identifiers="mucusball" spawnposition="ThisInventory" />
+              <SpawnItem identifiers="alienblood" spawnposition="ThisInventory" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnLootCharacter">
+      <Conditions>
+        <AbilityConditionHoldingItem tags="sharptool" />
+        <AbilityConditionCharacter targettype="Monster">
+          <Conditional group="eq molochbaby" />
+        </AbilityConditionCharacter>
+        <AbilityConditionCharacterNotLooted identifier="lamprey" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityMarkAsLooted identifier="lamprey" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnLootCharacter">
+      <Conditions>
+        <AbilityConditionHoldingItem tags="sharptool" />
+        <AbilityConditionServerRandom randomchance="0.75" />
+        <AbilityConditionCharacter targettype="Monster">
+          <Conditional group="eq moloch" />
+        </AbilityConditionCharacter>
+        <AbilityConditionCharacterNotLooted identifier="lamprey" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffects>
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="UseTarget" spawnitemrandomly="true" SpawnIfInventoryFull="false">
+              <SpawnItem identifiers="mucusball" spawnposition="ThisInventory" />
+              <SpawnItem identifiers="swimbladder" spawnposition="ThisInventory" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnLootCharacter">
+      <Conditions>
+        <AbilityConditionHoldingItem tags="sharptool" />
+        <AbilityConditionCharacter targettype="Monster">
+          <Conditional group="eq moloch" />
+        </AbilityConditionCharacter>
+        <AbilityConditionCharacterNotLooted identifier="lamprey" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityMarkAsLooted identifier="lamprey" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnLootCharacter">
+      <Conditions>
+        <AbilityConditionHoldingItem tags="sharptool" />
+        <AbilityConditionServerRandom randomchance="0.75" />
+        <AbilityConditionCharacter targettype="Monster">
+          <Conditional group="eq molochblack" />
+        </AbilityConditionCharacter>
+        <AbilityConditionCharacterNotLooted identifier="lamprey" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffects>
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="UseTarget" spawnitemrandomly="true" SpawnIfInventoryFull="false">
+              <SpawnItem identifiers="mucusball" spawnposition="ThisInventory" />
+              <SpawnItem identifiers="swimbladder" spawnposition="ThisInventory" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnLootCharacter">
+      <Conditions>
+        <AbilityConditionHoldingItem tags="sharptool" />
+        <AbilityConditionCharacter targettype="Monster">
+          <Conditional group="eq molochblack" />
+        </AbilityConditionCharacter>
+        <AbilityConditionCharacterNotLooted identifier="lamprey" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityMarkAsLooted identifier="lamprey" />
+      </Abilities>
+    </AbilityGroupEffect>
+  </Talent>
+  <!-- Freestyle -->
+  <!-- Fugitive-->
+  <Talent identifier="runaway">
+    <Description tag="talentdescription.runaway" />
+    <Description tag="talentdescription.runaway_debuffs">
+      <Replace tag="[skillamount1]" value="25" color="gui.red" />
+      <Replace tag="[skillamount2]" value="65" color="gui.red" />
+      <Replace tag="[affname1]" value="vitality" color="gui.orange" />
+      <Replace tag="[movementspeed]" value="stattypenames.movementspeed" color="gui.orange" />
+      <Replace tag="[psychosis]" value="afflictionname.psychosis" color="gui.orange" />
+    </Description>
+    <Description tag="talentdescription.unlockrecipe">
+      <Replace tag="[itemname]" value="entityname.trenchcoat, entityname.militia, entityname.toothy" color="gui.orange" />
+    </Description>
+    <Icon texture="%ModDir%/talenticon.png" sheetindex="4,3" sheetelementsize="128,128" />
+    <AbilityGroupEffect abilityeffecttype="None">
+      <Abilities>
+        <CharacterAbilityGiveStat stattype="MaximumHealthMultiplier" value="-0.25" />
+        <CharacterAbilityModifyStat stattype="MovementSpeed" value="-0.25" />
+        <CharacterAbilityModifyStat stattype="RangedSpreadReduction" value="-0.65" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupInterval interval="1">
+      <Conditions>
+        <AbilityConditionHasItem tags="mobileradio" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffects>
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="Character" disabledeltatime="true">
+              <Affliction identifier="psychosis" amount="0.25" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+      </Abilities>
+    </AbilityGroupInterval>
+    <AddedRecipe itemidentifier="trenchcoat" />
+    <AddedRecipe itemidentifier="militia" />
+    <AddedRecipe itemidentifier="toothy" />
+  </Talent>
+  <Talent identifier="teetotaler">
+    <Description tag="talentdescription.teetotaler">
+      <Replace tag="[skillamount1]" value="50" color="gui.green" />
+    </Description>
+    <Icon texture="Content/UI/TalentsIcons3.png" sheetindex="6,4" sheetelementsize="128,128" />
+    <AbilityGroupEffect abilityeffecttype="None">
+      <Abilities>
+        <CharacterAbilityGiveStat stattype="MedicalSkillBonus" value="20" />
+        <CharacterAbilityGiveResistance resistanceid="chemaddiction" multiplier="0.5" />
+        <CharacterAbilityGiveResistance resistanceid="opiateaddiction" multiplier="0.5" />
+        <CharacterAbilityGiveResistance resistanceid="opiatewithdrawal" multiplier="0.5" />
+        <CharacterAbilityGiveResistance resistanceid="chemwithdrawal" multiplier="0.5" />
+      </Abilities>
+    </AbilityGroupEffect>
+  </Talent>
+  <Talent identifier="cheaping_out">
+    <Description tag="talentdescription.cheaping_out" />
+    <Description tag="talentdescription.doubleoutput">
+      <Replace tag="[itemcat]" value="talentdescription.ammo" color="gui.orange" />
+      <Replace tag="[skillamount1]" value="50" color="gui.green" />
+    </Description>
+    <Icon texture="%ModDir%/talenticon.png" sheetindex="2,3" sheetelementsize="128,128" />
+    <AbilityGroupEffect abilityeffecttype="OnItemFabricatedAmount">
+      <Conditions>
+        <AbilityConditionServerRandom randomchance="0.5" />
+        <AbilityConditionItem tags="smgammo,shotgunammo,stungunammo,pistolammoitem,handheldammo" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityModifyValue multiplyvalue="2" />
+      </Abilities>
+    </AbilityGroupEffect>
+  </Talent>
+  <Talent identifier="undercoveragent">
+    <Description tag="talentdescription.undercoveragent">
+      <Replace tag="[skillamount1]" value="entityname.piratecaptainhat, entityname.piratebandana" color="gui.orange" />
+      <Replace tag="[toothy]" value="entityname.toothy" color="gui.orange" />
+      <Replace tag="[inconspicuous]" value="afflictionname.inconspicuous" color="gui.orange" />
+    </Description>
+    <Description tag="talenttip.inconspicuous" />
+    <Icon texture="%ModDir%/talenticon.png" sheetindex="0,0" sheetelementsize="128,128" />
+    <AbilityGroupInterval>
+      <!--Раскрывать перса если рядом враги-->
+      <Conditions>
+        <AbilityConditionInHull />
+        <AbilityConditionNearbyCharacterCount distance="200" targettypes="Enemy,Alive" count="1"></AbilityConditionNearbyCharacterCount>
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffects>
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="Character">
+              <Affliction identifier="spotted" amount="1" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+      </Abilities>
+    </AbilityGroupInterval>
+    <AbilityGroupInterval>
+      <!--Давать невидимку на аванпостах если есть пермастат-->
+      <Conditions>
+        <AbilityConditionHasPermanentStat statidentifier="uknownbaka" min="1" />
+        <AbilityConditionInSubmarine submarinetype="Outpost" />
+        <AbilityConditionHasItem tags="piratecaptainhat" />
+        <AbilityConditionInHull />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffects>
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
+              <Affliction identifier="inconspicuous" amount="0.1" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+      </Abilities>
+    </AbilityGroupInterval>
+    <AbilityGroupInterval>
+      <!--Давать невидимку на аванпостах если есть пермастат-->
+      <Conditions>
+        <AbilityConditionHasPermanentStat statidentifier="uknownbaka" min="1" />
+        <AbilityConditionInSubmarine submarinetype="Outpost" />
+        <AbilityConditionHasItem tags="piratebandana" />
+        <AbilityConditionInHull />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffects>
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
+              <Affliction identifier="inconspicuous" amount="0.1" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+      </Abilities>
+    </AbilityGroupInterval>
+    <AbilityGroupInterval>
+      <!--Снимать невидимку если снаружи-->
+      <Conditions>
+        <AbilityConditionInHull invert="true" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffects>
+          <StatusEffects>
+            <StatusEffect type="OnAbility" disabledeltatime="true" target="Character">
+              <ReduceAffliction identifier="inconspicuous" amount="1" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+      </Abilities>
+    </AbilityGroupInterval>
+    <AbilityGroupEffect abilityeffecttype="OnRoundEnd">
+      <!--Возврат пермастата при потере-->
+      <Abilities>
+        <CharacterAbilityGivePermanentStat statidentifier="uknownbaka" value="1" maxvalue="1" giveonaddingfirsttime="true" setvalue="true" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupInterval interval="1">
+      <!--Снятие пермастата при расрытии-->
+      <Conditions>
+        <AbilityConditionHasAffliction afflictionidentifier="spotted" minimumpercentage="0.98" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityResetPermanentStat statidentifier="uknownbaka" />
+        <CharacterAbilityApplyStatusEffects>
+          <StatusEffects>
+            <StatusEffect type="OnAbility" disabledeltatime="true" target="Character">
+              <ReduceAffliction identifier="inconspicuous" amount="1" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+      </Abilities>
+    </AbilityGroupInterval>
+    <AbilityGroupInterval>
+      <!--Снимать вонючеебучиее раскрытие на субмарине перса-->
+      <Conditions>
+        <AbilityConditionInSubmarine submarinetype="Player" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffects>
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
+              <ReduceAffliction identifier="spotted" amount="10.0" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+      </Abilities>
+    </AbilityGroupInterval>
+    <AbilityGroupEffect abilityeffecttype="OnAttack">
+      <Conditions>
+        <AbilityConditionHasAffliction afflictionidentifier="inconspicuous" />
+        <AbilityConditionAttackData itemidentifier="toothy" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffects>
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="UseTarget">
+              <Conditional ishuman="true" />
+              <Affliction identifier="lacerations" strength="400" probability="0.8" />
+              <Affliction identifier="bleeding" strength="400" probability="0.8" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+      </Abilities>
+    </AbilityGroupEffect>
+  </Talent>
+  <!--	<Talent identifier="badreptest">
+		<AbilityGroupEffect abilityeffecttype="OnRagdoll">
+			<Abilities>
+				<CharacterAbilityGiveReputation identifier="coalition" amount="-100"/>
+			</Abilities>
+		</AbilityGroupEffect>
+	</Talent>	-->
+  <!--Assisting tree-->
+  <Talent identifier="teamplayer" trackedstat="helpful_counter" trackedmax="360">
+    <Description tag="talentdescription.teamplayer" />
+    <Description tag="talentdescription.teamplayer.100">
+      <Replace tag="[skillamount1]" value="10" color="gui.green" />
+      <Replace tag="[skillamount2]" value="20" color="gui.green" />
+      <Replace tag="[movementspeed]" value="stattypenames.movementspeed" color="gui.orange" />
+      <Replace tag="[vitality]" value="vitality" color="gui.orange" />
+    </Description>
+    <Description tag="talentdescription.teamplayer.200">
+      <Replace tag="[skillamount1]" value="20" color="gui.green" />
+      <Replace tag="[skillamount2]" value="10" color="gui.green" />
+      <Replace tag="[weapons]" value="skillname.weapons" color="gui.orange" />
+    </Description>
+    <Description tag="talentdescription.teamplayer.360">
+      <Replace tag="[skillamount1]" value="15" color="gui.green" />
+      <Replace tag="[skillamount2]" value="35" color="gui.green" />
+      <Replace tag="[skillamount3]" value="30" color="gui.green" />
+      <Replace tag="[skillamount4]" value="20" color="gui.green" />
+      <Replace tag="[skillamount5]" value="10" color="gui.green" />
+      <Replace tag="[skillamount5]" value="100" color="gui.green" />
+      <Replace tag="[skillamount6]" value="100" color="gui.green" />
+      <Replace tag="[affname1]" value="afflictionname.burn" color="gui.orange" />
+      <Replace tag="[affname2]" value="afflictionname.concussion" color="gui.orange" />
+      <Replace tag="[affname3]" value="afflictionname.oxygenlow" color="gui.orange" />
+      <Replace tag="[meleeattackspeed]" value="stattypenames.meleeattackspeed" color="gui.orange" />
+      <Replace tag="[mechel]" value="skillname.mechanical, skillname.electrical" color="gui.orange" />
+    </Description>
+    <Icon texture="Content/UI/TalentsIcons3.png" sheetindex="0,2" sheetelementsize="128,128" />
+    <AbilityGroupEffect abilityeffecttype="None">
+      <Abilities>
+        <CharacterAbilityModifyStat stattype="MechanicalSkillGainSpeed" value="-0.7" />
+        <CharacterAbilityModifyStat stattype="ElectricalSkillGainSpeed" value="-0.7" />
+        <CharacterAbilityModifyStat stattype="HelmSkillGainSpeed" value="-0.7" />
+        <CharacterAbilityModifyStat stattype="MedicalSkillGainSpeed" value="-0.7" />
+        <CharacterAbilityModifyStat stattype="WeaponsSkillGainSpeed" value="0.2" />
+        <CharacterAbilityGiveStat stattype="RepairSpeed" value="-0.75" />
+        <CharacterAbilityGivePermanentStat statidentifier="helpful_100" value="1" maxvalue="1" setvalue="true" />
+        <CharacterAbilityGivePermanentStat statidentifier="helpful_200" value="1" maxvalue="1" setvalue="true" />
+        <CharacterAbilityGivePermanentStat statidentifier="helpful_360" value="1" maxvalue="1" setvalue="true" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupInterval interval="1">
+      <Conditions>
+        <AbilityConditionHoldingItem tags="crate,railgunammo,ammobox,depthchargeammo,deepdiving" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityGivePermanentStat statidentifier="helpful_counter" value="0.005" removeondeath="false" />
+      </Abilities>
+    </AbilityGroupInterval>
+    <AbilityGroupEffect abilityeffecttype="OnRepairedOutsideLeak">
+      <Abilities>
+        <CharacterAbilityGivePermanentStat statidentifier="helpful_counter" value="0.01" removeondeath="false" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnRepairComplete">
+      <Abilities>
+        <CharacterAbilityGivePermanentStat statidentifier="helpful_counter" value="0.1" removeondeath="false" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnRepairComplete">
+      <Conditions>
+        <AbilityConditionHasPermanentStat statidentifier="helpful_counter" min="100" />
+        <AbilityConditionHasPermanentStat statidentifier="helpful_100" min="1" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityGivePermanentStat stattype="MovementSpeed" value="0.1" statidentifier="bodycount" setvalue="true" removeondeath="false" />
+        <CharacterAbilityGivePermanentStat stattype="MaximumHealthMultiplier" value="0.2" statidentifier="bodycount" setvalue="true" removeondeath="false" />
+        <CharacterAbilityResetPermanentStat statidentifier="helpful_100" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnRepairComplete">
+      <Conditions>
+        <AbilityConditionHasPermanentStat statidentifier="helpful_counter" min="200" />
+        <AbilityConditionHasPermanentStat statidentifier="helpful_200" min="1" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityGivePermanentStat stattype="MeleeAttackMultiplier" value="0.2" statidentifier="bodycount" setvalue="true" removeondeath="false" />
+        <CharacterAbilityModifyResistance resistanceid="damage" multiplier="0.8" statidentifier="bodycount" setvalue="true" removeondeath="false" />
+        <CharacterAbilityResetPermanentStat statidentifier="helpful_200" />
+        <CharacterAbilityGivePermanentStat stattype="WeaponsSkillBonus" value="10" statidentifier="bodycount" setvalue="true" removeondeath="false" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnRepairComplete">
+      <Conditions>
+        <AbilityConditionHasPermanentStat statidentifier="helpful_counter" min="360" />
+        <AbilityConditionHasPermanentStat statidentifier="helpful_360" min="1" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityGiveFlag flagtype="MoveNormallyWhileDragging" />
+        <CharacterAbilityModifyResistance resistanceid="burn" multiplier="0.85" />
+        <CharacterAbilityModifyResistance resistanceid="stun" multiplier="0.65" />
+        <CharacterAbilityModifyResistance resistanceid="progressivestun" multiplier="0.65" />
+        <CharacterAbilityModifyResistance resistanceid="incrementalstun" multiplier="0.65" />
+        <CharacterAbilityModifyResistance resistanceid="oxygenlow" multiplier="0.7" />
+        <CharacterAbilityGivePermanentStat stattype="MeleeAttackSpeed" value="0.2" statidentifier="bodycount" setvalue="true" removeondeath="false" />
+        <CharacterAbilityGivePermanentStat stattype="ElectricalSkillBonus" value="10" statidentifier="bodycount" setvalue="true" removeondeath="false" />
+        <CharacterAbilityGivePermanentStat stattype="MechanicalSkillBonus" value="10" statidentifier="bodycount" setvalue="true" removeondeath="false" />
+        <CharacterAbilityGivePermanentStat stattype="MechanicalSkillGainSpeed" value="1" statidentifier="bodycount" setvalue="true" removeondeath="false" />
+        <CharacterAbilityGivePermanentStat stattype="ElectricalSkillGainSpeed" value="1" statidentifier="bodycount" setvalue="true" removeondeath="false" />
+        <CharacterAbilityResetPermanentStat statidentifier="helpful_360" />
+      </Abilities>
+    </AbilityGroupEffect>
+  </Talent>
+  <Talent identifier="strongarms">
+    <Description tag="talentdescription.strongarms">
+      <Replace tag="[skillamount1]" value="25" color="gui.green" />
+      <Replace tag="[affname1]" value="afflictionname.psychosis" color="gui.orange" />
+    </Description>
+    <Icon texture="Content/UI/TalentsIcons2.png" sheetindex="5,3" sheetelementsize="128,128" />
+    <AbilityGroupInterval interval="0.9">
+      <Conditions>
+        <AbilityConditionHoldingItem tags="crate,ammobox,railgunammo,depthchargeammo" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityModifyStat stattype="MovementSpeed" value="0.25" />
+        <CharacterAbilityApplyStatusEffects>
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="Character" disabledeltatime="true">
+              <Affliction identifier="psychosis" amount="0.05" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+      </Abilities>
+    </AbilityGroupInterval>
+  </Talent>
+  <Talent identifier="nap">
+    <Description tag="talentdescription.nap">
+      <Replace tag="[skillamount1]" value="30" color="gui.green" />
+      <Replace tag="[affname1]" value="afflictionname.haste" color="gui.orange" />
+    </Description>
+    <Icon texture="Content/UI/TalentsIcons2.png" sheetindex="6,4" sheetelementsize="128,128" />
+    <AbilityGroupInterval interval="1">
+      <Conditions>
+        <AbilityConditionRagdolled />
+        <AbilityConditionAboveVitality vitalitypercentage="0" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffects>
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="Character">
+              <ReduceAffliction type="damage" amount="2" />
+              <ReduceAffliction type="psychosis" amount="1" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+      </Abilities>
+    </AbilityGroupInterval>
+    <AbilityGroupInterval effectdelay="30">
+      <Conditions>
+        <AbilityConditionRagdolled />
+        <AbilityConditionAboveVitality vitalitypercentage="0" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffects>
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="Character">
+              <Affliction identifier="haste" amount="90" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+      </Abilities>
+    </AbilityGroupInterval>
+  </Talent>
+  <Talent identifier="pieceofmind">
+    <Description tag="talentdescription.pieceofmind" />
+    <Description tag="talenttip.pieceofmind" />
+    <Icon texture="Content/UI/TalentsIcons3.png" sheetindex="2,7" sheetelementsize="128,128" />
+    <AbilityGroupInterval interval="1">
+      <Conditions>
+        <AbilityConditionHasItem tags="mobileradio" invert="true" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffects>
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="Character" disabledeltatime="true">
+              <ReduceAffliction identifier="psychosis" amount="0.5" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+      </Abilities>
+    </AbilityGroupInterval>
+  </Talent>
+  <Talent identifier="angry_management">
+    <Description tag="talentdescription.angry_management">
+      <Replace tag="[psychosis]" value="afflictionname.psychosis" color="gui.orange" />
+    </Description>
+    <Description tag="talentdescription.angry_management_info">
+      <Replace tag="[skillamount1]" value="skillname.mechanical, skillname.electrical, skillname.weapons, skillname.helm, skillname.medical" />
+      <Replace tag="[skillname1]" value="10" />
+      <Replace tag="[skillamount2]" value="stattypenames.repairspeed" />
+      <Replace tag="[skillname2]" value="10" />
+      <Replace tag="[time]" value="10" />
+    </Description>
+    <Icon texture="Content/UI/TalentsIcons1.png" sheetindex="5,5" sheetelementsize="128,128" />
+    <AbilityGroupEffect abilityeffecttype="OnAttack">
+      <Conditions>
+        <AbilityConditionAttackData weapontype="Melee" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffects>
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="Character" disabledeltatime="true">
+              <Affliction identifier="psychosis" amount="-10" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+        <CharacterAbilityApplyStatusEffects allowself="false">
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="UseTarget" disabledeltatime="true">
+              <Affliction identifier="motivation" amount="10" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+      </Abilities>
+    </AbilityGroupEffect>
+  </Talent>
+  <Talent identifier="shitisreal">
+    <Description tag="talentdescription.shitisreal">
+      <Replace tag="[skillamount1]" value="50" color="gui.green" />
+      <Replace tag="[skillamount2]" value="75" color="gui.green" />
+      <Replace tag="[skillamount3]" value="100" color="gui.green" />
+      <Replace tag="[affname1]" value="stattypenames.repairspeed" color="gui.orange" />
+    </Description>
+    <Icon texture="Content/UI/TalentsIcons2.png" sheetindex="7,4" sheetelementsize="128,128" />
+    <AbilityGroupInterval interval="1">
+      <Conditions>
+        <AbilityConditionShipFlooded floodpercentage="0.5" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityModifyStatToFlooding stattype="RepairSpeed" maxvalue="0.75" />
+        <CharacterAbilityModifyStatToFlooding stattype="MaxRepairConditionMultiplierElectrical" maxvalue="1" />
+        <CharacterAbilityModifyStatToFlooding stattype="MaxRepairConditionMultiplierMechanical" maxvalue="1" />
+        <CharacterAbilityApplyStatusEffects>
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="Character" disabledeltatime="true">
+              <Affliction identifier="psychosis" amount="0.75" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+      </Abilities>
+    </AbilityGroupInterval>
+  </Talent>
+  <!--Assisting tree-->
+  <!--Serpent tree-->
+  <Talent identifier="bodycount" trackedstat="bodycount_counter" trackedmax="500">
+    <Description tag="talentdescription.bodycount" />
+    <Description tag="talentdescription.bodycount.70">
+      <Replace tag="[skillamount1]" value="10" color="gui.green" />
+      <Replace tag="[skillamount2]" value="30" color="gui.green" />
+      <Replace tag="[skillamount3]" value="25" color="gui.green" />
+      <Replace tag="[skillamount4]" value="75" color="gui.green" />
+      <Replace tag="[affname1]" value="stattypenames.movementspeed" color="gui.orange" />
+      <Replace tag="[affname2]" value="vitality" color="gui.orange" />
+      <Replace tag="[affname3]" value="vitality" color="gui.orange" />
+      <Replace tag="[skillname]" value="skillname.medical" color="gui.orange" />
+    </Description>
+    <Description tag="talentdescription.bodycount.200">
+      <Replace tag="[skillamount1]" value="70" color="gui.green" />
+      <Replace tag="[skillamount2]" value="10" color="gui.green" />
+      <Replace tag="[skillamount3]" value="20" color="gui.green" />
+      <Replace tag="[skillname]" value="skillname.medical" color="gui.orange" />
+    </Description>
+    <Description tag="talentdescription.bodycount.500">
+      <Replace tag="[skillamount1]" value="20" color="gui.green" />
+      <Replace tag="[skillamount2]" value="35" color="gui.green" />
+      <Replace tag="[skillamount3]" value="10" color="gui.green" />
+      <Replace tag="[affname1]" value="afflictionname.stun" color="gui.orange" />
+      <Replace tag="[affname2]" value="afflictionname.oxygenlow" color="gui.orange" />
+    </Description>
+    <Description tag="talentdescription.unlockrecipe">
+      <Replace tag="[itemname]" value="entityname.smgmagazine, entityname.shotgunshell,entityname.assaultriflemagazine, entityname.revolverround, entityname.riflebullet, entityname.handcannonround, entityname.hmgmagazine" color="gui.orange" />
+    </Description>
+    <Icon texture="Content/UI/TalentsIcons1.png" sheetindex="3,4" sheetelementsize="128,128" />
+    <AbilityGroupEffect abilityeffecttype="None">
+      <Abilities>
+        <CharacterAbilityGivePermanentStat statidentifier="bodycount_70" value="1" maxvalue="1" setvalue="true" />
+        <CharacterAbilityGivePermanentStat statidentifier="bodycount_200" value="1" maxvalue="1" setvalue="true" />
+        <CharacterAbilityGivePermanentStat statidentifier="bodycount_500" value="1" maxvalue="1" setvalue="true" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnKillCharacter">
+      <Conditions>
+        <AbilityConditionCharacter targettypes="Any">
+          <Conditional maxhealth="gt 25" />
+          <Conditional ispet="false" />
+        </AbilityConditionCharacter>
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityGivePermanentStat statidentifier="bodycount_counter" value="1" removeondeath="false" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnKillCharacter">
+      <Conditions>
+        <AbilityConditionHasPermanentStat statidentifier="bodycount_counter" min="70" />
+        <AbilityConditionHasPermanentStat statidentifier="bodycount_70" min="1" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityGivePermanentStat stattype="MovementSpeed" value="0.1" statidentifier="bodycount" setvalue="true" removeondeath="false" />
+        <CharacterAbilityGivePermanentStat stattype="MaximumHealthMultiplier" value="0.3" statidentifier="bodycount" setvalue="true" removeondeath="false" />
+        <CharacterAbilityGivePermanentStat stattype="RangedSpreadReduction" value="0.25" statidentifier="bodycount" setvalue="true" removeondeath="false" />
+        <CharacterAbilityGivePermanentStat stattype="MedicalSkillGainSpeed" value="0.75" statidentifier="bodycount" setvalue="true" removeondeath="false" />
+        <CharacterAbilityResetPermanentStat statidentifier="bodycount_70" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnKillCharacter">
+      <Conditions>
+        <AbilityConditionHasPermanentStat statidentifier="bodycount_counter" min="200" />
+        <AbilityConditionHasPermanentStat statidentifier="bodycount_200" min="1" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityGivePermanentStat stattype="RangedSpreadReduction" value="0.70" statidentifier="bodycount" setvalue="true" removeondeath="false" />
+        <CharacterAbilityModifyResistance resistanceid="damage" multiplier="0.9" statidentifier="bodycount" setvalue="true" removeondeath="false" />
+        <CharacterAbilityGivePermanentStat stattype="MedicalSkillGainSpeed" value="0.2" statidentifier="bodycount" setvalue="true" removeondeath="false" />
+        <CharacterAbilityResetPermanentStat statidentifier="bodycount_200" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnKillCharacter">
+      <Conditions>
+        <AbilityConditionHasPermanentStat statidentifier="bodycount_counter" min="500" />
+        <AbilityConditionHasPermanentStat statidentifier="bodycount_500" min="1" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityModifyResistance resistanceid="stun" multiplier="0.65" />
+        <CharacterAbilityModifyResistance resistanceid="progressivestun" multiplier="0.65" />
+        <CharacterAbilityModifyResistance resistanceid="incrementalstun" multiplier="0.65" />
+        <CharacterAbilityModifyResistance resistanceid="damage" multiplier="0.8" />
+        <CharacterAbilityModifyResistance resistanceid="oxygenlow" multiplier="0.9" />
+        <CharacterAbilityGivePermanentStat stattype="DualWieldingPenaltyReduction" value="1" statidentifier="bodycount" setvalue="true" removeondeath="false" />
+        <CharacterAbilityGivePermanentStat stattype="CPRBoost" value="1" statidentifier="bodycount" setvalue="true" removeondeath="false" />
+        <CharacterAbilityResetPermanentStat statidentifier="bodycount_500" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AddedRecipe itemidentifier="smgmagazine" />
+    <AddedRecipe itemidentifier="shotgunshell" />
+    <AddedRecipe itemidentifier="assaultriflemagazine" />
+    <AddedRecipe itemidentifier="revolverround" />
+    <AddedRecipe itemidentifier="riflebullet" />
+    <AddedRecipe itemidentifier="handcannonround" />
+    <AddedRecipe itemidentifier="hmgmagazine" />
+  </Talent>
+  <Talent identifier="inhumane_measures">
+    <Description tag="talentdescription.inhumane_measures" />
+    <Description tag="talentdescription.bythebook">
+      <Replace tag="[moneyamount]" value="1250" color="gui.green" />
+      <Replace tag="[experienceamount]" value="200" color="gui.green" />
+      <Replace tag="[moneyamountmax]" value="2500" color="gui.green" />
+      <Replace tag="[experienceamountmax]" value="400" color="gui.green" />
+    </Description>
+    <Description tag="talentdescription.unlockrecipe">
+      <Replace tag="[itemname]" value="entityname.vortex" color="gui.orange" />
+    </Description>
+    <Description tag="talentdescription.unlockrecipe">
+      <Replace tag="[itemname]" value="entityname.firemagazine,entityname.metalmagazine,entityname.shotgunslugexplosive" color="gui.orange" />
+    </Description>
+    <Description tag="talentdescription.unlockrecipe">
+      <Replace tag="[itemname]" value="entityname.riotshield" color="gui.orange" />
+    </Description>
+    <Icon texture="Content/UI/TalentsIcons1.png" sheetindex="1,3" sheetelementsize="128,128" />
+    <AbilityGroupEffect abilityeffecttype="OnAnyMissionCompleted">
+      <Abilities>
+        <CharacterAbilityByTheBook moneyamount="1250" experienceamount="200" max="10" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AddedRecipe itemidentifier="vortex" />
+    <AddedRecipe itemidentifier="firemagazine" />
+    <AddedRecipe itemidentifier="metalmagazine" />
+    <AddedRecipe itemidentifier="shotgunslugexplosive" />
+    <AddedRecipe itemidentifier="riotshield" />
+  </Talent>
+  <Talent identifier="dealwiththedevil">
+    <Description tag="talentdescription.dealwiththedevil">
+      <Replace tag="[skillamount1]" value="10" color="gui.green" />
+      <Replace tag="[skillamount2]" value="75" color="gui.green" />
+      <Replace tag="[skillamount3]" value="70" color="gui.green" />
+    </Description>
+    <Description tag="talenttip.onfeet" />
+    <Icon texture="Content/UI/TalentsIcons3.png" sheetindex="2,3" sheetelementsize="128,128" />
+    <AbilityGroupEffect abilityeffecttype="None">
+      <Abilities>
+        <CharacterAbilityGivePermanentStat statidentifier="dwtd" value="0" maxvalue="2" setvalue="true" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnKillCharacter">
+      <Abilities>
+        <CharacterAbilityGivePermanentStat statidentifier="dwtd" value="0.1" removeondeath="true" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupInterval effectdelay="4" interval="1">
+      <Conditions>
+        <AbilityConditionHasPermanentStat statidentifier="dwtd" min="1" />
+        <AbilityConditionAboveVitality invert="true" vitalitypercentage="0" />
+        <AbilityConditionServerRandom randomchance="0.75" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffects>
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="Character" multiplyafflictionsbymaxvitality="true" disabledeltatime="true">
+              <Affliction identifier="onfeet" amount="1.0" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+      </Abilities>
+    </AbilityGroupInterval>
+    <AbilityGroupEffect abilityeffecttype="OnAttacked">
+      <Conditions>
+        <AbilityConditionRunning />
+        <AbilityConditionServerRandom randomChance="0.7" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityModifyAttackData addeddamagemultiplier="-1" />
+      </Abilities>
+    </AbilityGroupEffect>
+  </Talent>
+  <Talent identifier="clawingback">
+    <Description tag="talentdescription.clawingback">
+      <Replace tag="[skillamount1]" value="0" color="gui.green" />
+      <Replace tag="[skillamount2]" value="-70" color="gui.red" />
+      <Replace tag="[skillamount3]" value="entityname.combatstimulantsyringe, entityname.hyperzine, entityname.meth, entityname.steroids,entityname.adrenaline, entityname.antidama2, entityname.deusizine" color="gui.orange" />
+      <Replace tag="[affname1]" value="vitality" color="gui.orange" />
+    </Description>
+    <Description tag="talenttip.swansong" />
+    <Icon texture="Content/UI/TalentsIcons3.png" sheetindex="6,2" sheetelementsize="128,128" />
+    <AbilityGroupInterval>
+      <Conditions>
+        <AbilityConditionAboveVitality invert="true" vitalitypercentage="-0.6" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffects>
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="Character" disabledeltatime="true">
+              <ReduceAffliction type="damage" amount="12" />
+              <ReduceAffliction type="bleeding" amount="5" />
+              <ReduceAffliction type="infection" amount="5" />
+              <ReduceAffliction type="oxygenlow" amount="2" />
+              <ReduceAffliction type="bloodloss" amount="10" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+      </Abilities>
+    </AbilityGroupInterval>
+    <AbilityGroupInterval>
+      <Conditions>
+        <AbilityConditionAboveVitality invert="true" vitalitypercentage="-0.7" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffects>
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="Character" disabledeltatime="true">
+              <Affliction identifier="pressure" amount="1" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+        <CharacterAbilityModifyResistance resistanceid="miracleworker" multiplier="-1" />
+      </Abilities>
+    </AbilityGroupInterval>
+    <AbilityGroupInterval>
+      <Conditions>
+        <AbilityConditionAboveVitality invert="true" vitalitypercentage="0" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffects>
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="Character" multiplyafflictionsbymaxvitality="true" disabledeltatime="true">
+              <Affliction identifier="swansong" amount="1" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+        <CharacterAbilityModifyStat stattype="MedicalItemEffectivenessMultiplier" value="-1" />
+        <CharacterAbilityModifyStat stattype="MedicalItemApplyingMultiplier" value="-1" />
+        <CharacterAbilityModifyStat stattype="MedicalSkillGainSpeed" value="-10" />
+      </Abilities>
+    </AbilityGroupInterval>
+    <AbilityGroupEffect abilityeffecttype="OnApplyTreatment">
+      <Conditions>
+        <AbilityConditionAboveVitality invert="true" vitalitypercentage="0" />
+        <AbilityConditionItem identifiers="meth,hyperzine,steroids,combatstimulantsyringe,adrenaline,antidama2,deusizine" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffects>
+          <StatusEffects>
+            <StatusEffect tags="medical" type="OnAbility" target="Character">
+              <ReduceAffliction type="damage" amount="100" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+      </Abilities>
+    </AbilityGroupEffect>
+  </Talent>
+  <Talent identifier="spaceinvader">
+    <Description tag="talentdescription.spaceinvader">
+      <Replace tag="[skillamount1]" value="25" color="gui.green" />
+      <Replace tag="[[affname1]]" value="25" color="gui.green" />
+      <Replace tag="[affname1]" value="afflictionname.stun" color="gui.orange" />
+      <Replace tag="[affname2]" value="afflictionname.concussion" color="gui.orange" />
+      <Replace tag="[itemname]" value="entityname.plasmacutter" color="gui.orange" />
+    </Description>
+    <Description tag="talentdescription.unlockrecipe">
+      <Replace tag="[itemname]" value="entityname.shortyGL, entityname.thermitegrenade, entityname.canistershot, entityname.thermitecharge, entityname.impactgrenade" color="gui.orange" />
+    </Description>
+    <Icon texture="Content/UI/TalentsIcons2.png" sheetindex="6,3" sheetelementsize="128,128" />
+    <AbilityGroupInterval interval="0.9">
+      <Conditions>
+        <AbilityConditionInHull invert="true" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityModifyResistance resistanceid="concussion" multiplier="0.75" />
+        <CharacterAbilityModifyResistance resistanceid="stun" multiplier="0.75" />
+        <CharacterAbilityModifyResistance resistanceid="progressivestun" multiplier="0.75" />
+        <CharacterAbilityModifyResistance resistanceid="incrementalstun" multiplier="0.75" />
+        <CharacterAbilityModifyResistance resistanceid="damage" multiplier="0.75" />
+        <CharacterAbilityModifyStat stattype="RepairToolStructureDamageMultiplier" value="6" />
+        <CharacterAbilityModifyStat stattype="RepairToolDeattachTimeMultiplier" value="6" />
+      </Abilities>
+    </AbilityGroupInterval>
+    <AddedRecipe itemidentifier="shortyGL" />
+    <AddedRecipe itemidentifier="impactgrenade" />
+    <AddedRecipe itemidentifier="thermitecharge" />
+    <AddedRecipe itemidentifier="thermitegrenade" />
+    <AddedRecipe itemidentifier="canistershot" />
+  </Talent>
+  <Talent identifier="cqc">
+    <Description tag="talentdescription.cqc">
+      <Replace tag="[skillamount1]" value="20" color="gui.green" />
+      <Replace tag="[skillamount2]" value="80" color="gui.green" />
+      <Replace tag="[skillamount3]" value="25" color="gui.green" />
+      <Replace tag="[skillamount4]" value="15" color="gui.green" />
+      <Replace tag="[skillamount5]" value="10" color="gui.green" />
+      <Replace tag="[affname1]" value="afflictionname.stun, afflictionname.burn" color="gui.orange" />
+      <Replace tag="[affname3]" value="afflictionname.explosiondamage" color="gui.orange" />
+    </Description>
+    <Icon texture="Content/UI/TalentsIcons3.png" sheetindex="7,3" sheetelementsize="128,128" />
+    <AbilityGroupInterval interval="0.9">
+      <Conditions>
+        <AbilityConditionIsAiming weapontype="ranged" />
+        <AbilityConditionInHull />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityModifyStat stattype="MovementSpeed" value="0.2" />
+      </Abilities>
+    </AbilityGroupInterval>
+    <AbilityGroupInterval interval="0.9">
+      <Conditions>
+        <AbilityConditionInHull />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityModifyStatToSkill stattype="RangedAttackSpeed" maxvalue="0.8" skillidentifier="weapons" />
+        <CharacterAbilityModifyStatToSkill stattype="AttackMultiplier" maxvalue="0.25" skillidentifier="weapons" />
+      </Abilities>
+    </AbilityGroupInterval>
+    <AbilityGroupEffect abilityeffecttype="OnItemPicked">
+      <Conditions>
+        <AbilityConditionItem tags="door,aliendoor" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityModifyValue multiplyvalue="0.8" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnAttack">
+      <Conditions>
+        <AbilityConditionItemInSubmarine submarinetype="EnemySubmarine" />
+        <AbilityConditionHoldingItem tags="shotgun,shotgununique,autoshotgun" />
+        <AbilityConditionServerRandom randomchance="0.1" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityModifyAttackData implode="true" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupInterval interval="0.9">
+      <Conditions>
+        <AbilityConditionInHull />
+        <AbilityConditionItemInSubmarine submarinetype="EnemySubmarine" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityModifyResistance resistanceid="stun" multiplier="0.85" />
+        <CharacterAbilityModifyResistance resistanceid="progressivestun" multiplier="0.85" />
+        <CharacterAbilityModifyResistance resistanceid="incrementalstun" multiplier="0.85" />
+        <CharacterAbilityModifyResistance resistanceid="explosiondamage" multiplier="0.75" />
+        <CharacterAbilityModifyResistance resistanceid="burn" multiplier="0.85" />
+      </Abilities>
+    </AbilityGroupInterval>
+  </Talent>
+  <!--Serpent tree-->
+  <!--Dealer tree-->
+  <Talent identifier="slapithere">
+    <Icon texture="Content/UI/TalentsIcons3.png" sheetindex="3,5" sheetelementsize="128,128" />
+    <Description tag="talentdescription.ironstorm" />
+    <AbilityGroupEffect abilityeffecttype="None">
+      <Abilities>
+        <CharacterAbilitySetMetadataInt identifier="tiermodifieroverride" value="3" />
+        <!--			<CharacterAbilitySetMetadataInt identifier="tiermodifiers.increasewallhealth" value="1"/>
+			<CharacterAbilitySetMetadataInt identifier="tiermodifiers.increasemaxpumpflow" value="1"/>
+			<CharacterAbilitySetMetadataInt identifier="tiermodifiers.increasesupercapacitorcapacity" value="1"/>
+			<CharacterAbilitySetMetadataInt identifier="tiermodifiers.increasesupercapacitorrechargespeed" value="1"/>
+			<CharacterAbilitySetMetadataInt identifier="tiermodifiers.increasebatterycapacity" value="1"/>
+			<CharacterAbilitySetMetadataInt identifier="tiermodifiers.increasebatteryrechargespeed" value="1"/>
+			<CharacterAbilitySetMetadataInt identifier="tiermodifiers.increasefabricationspeed" value="1"/>
+			<CharacterAbilitySetMetadataInt identifier="tiermodifiers.decreasedeconstructiontime" value="1"/>
+			<CharacterAbilitySetMetadataInt identifier="tiermodifiers.turretincreaserotationlowskill" value="1"/>
+			<CharacterAbilitySetMetadataInt identifier="tiermodifiers.turretincreaseoffsetonselected" value="1"/>
+			<CharacterAbilitySetMetadataInt identifier="tiermodifiers.turretdecreasepowerconsumption" value="1"/>
+			<CharacterAbilitySetMetadataInt identifier="tiermodifiers.increaseenginemaxforce" value="1"/>
+			<CharacterAbilitySetMetadataInt identifier="tiermodifiers.increasereactoroutput" value="1"/>
+			<CharacterAbilitySetMetadataInt identifier="tiermodifiers.decreasefuelconsumption" value="1"/>
+			<CharacterAbilitySetMetadataInt identifier="tiermodifiers.increaseovervoltageresistance" value="1"/>
+			<CharacterAbilitySetMetadataInt identifier="tiermodifiers.decreaselowskillfixduration" value="1"/>
+			<CharacterAbilitySetMetadataInt identifier="tiermodifiers.increasedeteriorationdelay" value="1"/>
+			<CharacterAbilitySetMetadataInt identifier="tiermodifiers.increasemaxcondition" value="1"/>-->
+      </Abilities>
+    </AbilityGroupEffect>
+  </Talent>
+  <Talent identifier="drugssmugler">
+    <Icon texture="Content/UI/TalentsIcons3.png" sheetindex="1,2" sheetelementsize="128,128" />
+    <Description tag="talentdescription.drugssmugler">
+      <Replace tag="[skillamount1]" value="entityname.yeastshroom, entityname.slimebacteria, entityname.aquaticpoppy" color="gui.orange" />
+    </Description>
+    <AbilityGroupEffect abilityeffecttype="OnAnyMissionCompleted">
+      <Abilities>
+        <CharacterAbilityPutItem itemidentifier="yeastshroom" amount="1" />
+        <CharacterAbilityPutItem itemidentifier="slimebacteria" amount="1" />
+        <CharacterAbilityPutItem itemidentifier="aquaticpoppy" amount="1" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="None">
+      <Abilities>
+        <CharacterAbilityGiveStat stattype="MedicalSkillBonus" value="20" />
+      </Abilities>
+    </AbilityGroupEffect>
+  </Talent>
+  <Talent identifier="weaponssmugler">
+    <Description tag="talentdescription.weaponssmugler">
+      <Replace tag="[skillamount1]" value="entityname.magnesium" color="gui.orange" />
+      <Replace tag="[skillamount2]" value="entityname.steel" color="gui.orange" />
+      <Replace tag="[skillamount3]" value="entityname.copper" color="gui.orange" />
+    </Description>
+    <Icon texture="Content/UI/TalentsIcons1.png" sheetindex="6,3" sheetelementsize="128,128" />
+    <AbilityGroupEffect abilityeffecttype="OnAnyMissionCompleted">
+      <Abilities>
+        <CharacterAbilityPutItem itemidentifier="magnesium" amount="4" />
+        <CharacterAbilityPutItem itemidentifier="steel" amount="2" />
+        <CharacterAbilityPutItem itemidentifier="copper" amount="2" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AddedRecipe itemidentifier="revolver" />
+    <AddedRecipe itemidentifier="assaultrifle" />
+    <AddedRecipe itemidentifier="rifle" />
+    <AddedRecipe itemidentifier="autoshotgun" />
+    <AddedRecipe itemidentifier="shotgun" />
+    <AddedRecipe itemidentifier="smg" />
+    <AddedRecipe itemidentifier="hmg" />
+    <AddedRecipe itemidentifier="machinepistol" />
+  </Talent>
+  <Talent identifier="underground" abilityeffectsstackwithsametalent="false">
+    <Description tag="talentdescription.underground">
+      <Replace tag="[skillamount1]" value="faction.coalition" color="gui.red" />
+      <Replace tag="[skillamount2]" value="faction.separatists" color="gui.orange" />
+      <Replace tag="[repamount1]" value="10" color="gui.red" />
+      <Replace tag="[repamount2]" value="10" color="gui.green" />
+      <Replace tag="[skillamount3]" value="entityname.contactor" color="gui.orange" />
+    </Description>
+    <Description tag="talenttip.underground" />
+    <Description tag="talentdescription.unlockrecipe">
+      <Replace tag="[itemname]" value="entityname.contactor" color="gui.orange" />
+    </Description>
+    <Icon texture="Content/UI/TalentsIcons1.png" sheetindex="1,4" sheetelementsize="128,128" />
+    <AbilityGroupEffect abilityeffecttype="None">
+      <Abilities>
+        <CharacterAbilityGivePermanentStat statidentifier="randos" value="0" maxvalue="5" setvalue="true" />
+        <CharacterAbilityGivePermanentStat statidentifier="munitions" value="0" maxvalue="5" setvalue="true" />
+        <CharacterAbilityGivePermanentStat statidentifier="meds" value="0" maxvalue="5" setvalue="true" />
+        <CharacterAbilityGivePermanentStat statidentifier="sharingore" value="0" maxvalue="5" setvalue="true" />
+        <CharacterAbilityGivePermanentStat statidentifier="vesseltakedown" value="0" maxvalue="5" setvalue="true" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnRoundEnd">
+      <Abilities>
+        <CharacterAbilityGiveReputation identifier="coalition" amount="-10" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnAnyMissionCompleted">
+      <Abilities>
+        <CharacterAbilityGiveReputation identifier="separatists" amount="10" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnKillCharacter">
+      <Conditions>
+        <AbilityConditionCharacter targettypes="Enemy" />
+        <AbilityConditionCharacter>
+          <Conditional group="neq abyss" />
+        </AbilityConditionCharacter>
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityGivePermanentStat statidentifier="randos" value="0.05" />
+        <CharacterAbilityGivePermanentStat statidentifier="munitions" value="0.05" />
+        <CharacterAbilityGivePermanentStat statidentifier="meds" value="0.05" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnKillCharacter">
+      <Conditions>
+        <AbilityConditionCharacter targettypes="Monster" />
+        <AbilityConditionCharacter>
+          <Conditional group="eq abyss" />
+        </AbilityConditionCharacter>
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityGivePermanentStat statidentifier="randos" value="1" />
+        <CharacterAbilityGivePermanentStat statidentifier="munitions" value="0.5" />
+        <CharacterAbilityGivePermanentStat statidentifier="vesseltakedown" value="1" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnGainMissionExperience">
+      <Conditions>
+        <AbilityConditionMission isaffiliated="true" />
+        <AbilityConditionMission missiontype="Pirate" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityGivePermanentStat statidentifier="vesseltakedown" value="2" />
+        <CharacterAbilityGivePermanentStat statidentifier="munitions" value="0.5" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnGainMissionExperience">
+      <Conditions>
+        <AbilityConditionMission isaffiliated="true" />
+        <AbilityConditionMission missiontype="Nest" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityGivePermanentStat statidentifier="randos" value="0.25" />
+        <CharacterAbilityGivePermanentStat statidentifier="meds" value="0.5" />
+        <CharacterAbilityGivePermanentStat statidentifier="ammo" value="0.25" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnGainMissionExperience">
+      <Conditions>
+        <AbilityConditionMission isaffiliated="true" />
+        <AbilityConditionMission missiontype="Monster" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityGivePermanentStat statidentifier="randos" value="0.25" />
+        <CharacterAbilityGivePermanentStat statidentifier="meds" value="0.5" />
+        <CharacterAbilityGivePermanentStat statidentifier="ammo" value="0.25" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnGainMissionExperience">
+      <Conditions>
+        <AbilityConditionMission missiontype="Cargo" />
+        <AbilityConditionMission isaffiliated="true" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityGivePermanentStat statidentifier="randos" value="0.3" />
+        <CharacterAbilityGivePermanentStat statidentifier="meds" value="0.2" />
+        <CharacterAbilityGivePermanentStat statidentifier="munitions" value="0.20" />
+        <CharacterAbilityGivePermanentStat statidentifier="sharingore" value="0.25" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnGainMissionExperience">
+      <Conditions>
+        <AbilityConditionMission missiontype="Escort" />
+        <AbilityConditionMission isaffiliated="true" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityGivePermanentStat statidentifier="randos" value="0.2" />
+        <CharacterAbilityGivePermanentStat statidentifier="meds" value="0.1" />
+        <CharacterAbilityGivePermanentStat statidentifier="munitions" value="0.1" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnGainMissionExperience">
+      <Conditions>
+        <AbilityConditionMission missiontype="Salvage" />
+        <AbilityConditionMission isaffiliated="true" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityGivePermanentStat statidentifier="randos" value="0.25" />
+        <CharacterAbilityGivePermanentStat statidentifier="meds" value="0.5" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnGainMissionExperience">
+      <Conditions>
+        <AbilityConditionMission missiontype="Mineral" />
+        <AbilityConditionMission isaffiliated="true" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityGivePermanentStat statidentifier="sharingore" value="1.5" />
+        <CharacterAbilityGivePermanentStat statidentifier="meds" value="0.2" />
+        <CharacterAbilityGivePermanentStat statidentifier="munitions" value="0.1" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnRoundEnd">
+      <Conditions>
+        <AbilityConditionHasPermanentStat statidentifier="meds" min="1" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityPutItem itemidentifier="medscard" amount="1" />
+        <CharacterAbilityGivePermanentStat statidentifier="meds" value="-1" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnRoundEnd">
+      <Conditions>
+        <AbilityConditionHasPermanentStat statidentifier="vesseltakedown" min="1" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityPutItem itemidentifier="vesselcard" amount="1" />
+        <CharacterAbilityGivePermanentStat statidentifier="vesseltakedown" value="-1" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnRoundEnd">
+      <Conditions>
+        <AbilityConditionHasPermanentStat statidentifier="munitions" min="1" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityPutItem itemidentifier="munitionscard" amount="1" />
+        <CharacterAbilityGivePermanentStat statidentifier="munitions" value="-1" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnRoundEnd">
+      <Conditions>
+        <AbilityConditionHasPermanentStat statidentifier="sharingore" min="1" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityPutItem itemidentifier="orecard" amount="1" />
+        <CharacterAbilityGivePermanentStat statidentifier="sharingore" value="-1" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnRoundEnd">
+      <Conditions>
+        <AbilityConditionHasPermanentStat statidentifier="randos" min="1" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityPutItem itemidentifier="randoscard" amount="1" />
+        <CharacterAbilityGivePermanentStat statidentifier="randos" value="-1" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AddedRecipe itemidentifier="contactor" />
+  </Talent>
+  <Talent identifier="textiletreatment">
+    <Description tag="talentdescription.textiletreatment">
+      <Replace tag="[skillamount1.1]" value="entityname.piratecaptainhat" color="gui.orange" />
+      <Replace tag="[skillamount1.2]" value="entityname.piratebandana" color="gui.orange" />
+      <Replace tag="[skillamount1]" value="30" color="gui.green" />
+      <Replace tag="[skillamount2]" value="40" color="gui.green" />
+      <Replace tag="[skillamount3]" value="75" color="gui.red" />
+      <Replace tag="[skillamount2.1]" value="afflictionname.burn" color="gui.orange" />
+      <Replace tag="[skillamount2.2]" value="afflictionname.acidburn" color="gui.orange" />
+      <Replace tag="[skillamount2.3]" value="afflictionname.oxygenlow" color="gui.red" />
+    </Description>
+    <Icon texture="Content/UI/TalentsIcons3.png" sheetindex="0,3" sheetelementsize="128,128" />
+    <AbilityGroupInterval interval="0.9">
+      <Conditions>
+        <AbilityConditionHasItem itemidentifier="piratecaptainhat" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityModifyResistance resistanceid="burn" multiplier="0.7" />
+        <CharacterAbilityModifyResistance resistanceid="acidburn" multiplier="0.60" />
+        <CharacterAbilityModifyResistance resistanceid="oxygenlow" multiplier="-0.75" />
+      </Abilities>
+    </AbilityGroupInterval>
+    <AbilityGroupInterval interval="0.9">
+      <Conditions>
+        <AbilityConditionHasItem itemidentifier="piratebandana" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityModifyResistance resistanceid="burn" multiplier="0.7" />
+        <CharacterAbilityModifyResistance resistanceid="acidburn" multiplier="0.6" />
+        <CharacterAbilityModifyResistance resistanceid="oxygenlow" multiplier="-0.75" />
+      </Abilities>
+    </AbilityGroupInterval>
+  </Talent>
+  <!--Dealer tree-->
+</Talents>
+<!--
+-->

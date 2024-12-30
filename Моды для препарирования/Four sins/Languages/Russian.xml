@@ -1,0 +1,263 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="Russian" nowhitespace="false" translatedname="Русский">
+  <!-- job descriptions -->
+  <jobdescription.bodybuilder>Бодибилдеры, хотя и не обладают особыми навыками, которые могут быть очень полезны для помощи команде и/или настройки подводной лодки, все равно могут быть полезны.
+
+Ведь среди общих черт подводников, бодибилдеры имеют сильное преимущество перед рядовыми рабочими: * Умение работать в замкнутых пространствах: не боятся закрытых помещений и готовы выполнять свои обязанности в условиях подводной лодки.
+* Выносливость: обладают высокой выносливостью, что важно для длительных погружений.
+* Физическая сила: способны перемещать тяжелые грузы и выполнять физически сложные задачи.
+* Психологическая устойчивость: не боятся глубины и спокойны в критических ситуациях.
+
+(Максимум в комманде: 4)
+  </jobdescription.bodybuilder>
+  <jobdescription.deliveryman>Доставщик в команде подводников – это специалист, отвечающий за перемещение грузов и материалов внутри подводной лодки. Он занимается:
+
+* Транспортировкой: Доставка оборудования, провизии, инструментов и других необходимых материалов по разным отсекам лодки.
+* Хранением: Отслеживание запасов, их сохранность, правильная укладка и организация складов.
+* Техникой: Знание и умение работать с погрузочно-разгрузочным оборудованием и специфическими механизмами.
+* Безопасностью: Соблюдение правил техники безопасности, предупреждение повреждений и потерь грузов.
+
+Доставщик – незаменимый член команды, обеспечивающий ее жизнедеятельность и бесперебойное функционирование.
+
+(Максимум в комманде: 3)
+  </jobdescription.deliveryman>
+  <jobdescription.highvoltageworker>Высоковольтажник в команде подводников - это специалист по электротехнике, отвечающий за:
+
+* Обслуживание: Электрооборудование, системы управления, освещение и коммуникации лодки.
+* Ремонт: Поиск и устранение неполадок в электрических системах, замена и подключение компонентов.
+* Безопасность: Контроль над напряжением, заземлением и изоляцией, предотвращение короткого замыкания и других опасных ситуаций.
+* Предотвращение: Проведение профилактических работ и технического обслуживания электросети.
+
+Высоковольтажник - это гарантия бесперебойной работы жизненно важных систем подводной лодки, обеспечивающий безопасную и эффективную эксплуатацию.
+
+(Максимум в комманде: 2)
+  </jobdescription.highvoltageworker>
+  <jobdescription.terrorist>Террорист в команде подводников - это специалист, отвечающий за:
+
+* Скрытное проникновение: В тыл противника, используя подводную лодку или другие средства.
+* Подрывные действия: Установка взрывных устройств, повреждение инфраструктуры, саботаж.
+* Сбор информации: Разведка, наблюдение и передача данных о вражеских объектах.
+* Специальные операции: Выполнение сложных задач, требующих особой подготовки и навыков.
+
+Террорист - это высококвалифицированный и опытный боец, который может действовать в одиночку или в составе группы, используя свою смекалку, выносливость и знание вражеской территории.
+
+(Максимум в комманде: 1)
+  </jobdescription.terrorist>
+  <!-- effects -->
+  <talentdescription.desc>[desc]</talentdescription.desc>
+  <talentdescription.whenunconciousgaineffect>Пока ваш персонаж без сознания , получите эффект: "[effect]".</talentdescription.whenunconciousgaineffect>
+  <talentdescription.whenatprocenthpabove>Когда твой персонаж имеет больше [amount]% здоровья , получи: "[effect]".</talentdescription.whenatprocenthpabove>
+  <talentdescription.whenatprocenthpbelow>Когда твой персонаж имеет менее [amount]% здоровья , получи: "[effect]".</talentdescription.whenatprocenthpbelow>
+  <talentdescription.turretsgainbuffpowerusage>Турели на подлодке потребляют на [amount]% меньше энергии когда используются твоим персонажем.</talentdescription.turretsgainbuffpowerusage>
+  <talentdescription.turretsgaindebuffpowerusage>Турели на подлодке потребляют на [amount]% больше энергии когда используются твоим персонажем.</talentdescription.turretsgaindebuffpowerusage>
+  <talentdescription.turretsgainbuffdamage>Турели на подлодке наносят на [amount]% больше урона когда используются твоим персонажем.</talentdescription.turretsgainbuffdamage>
+  <talentdescription.turretsgaindebuffdamage>Турели на подлодке наносят на [amount]% меньше урона когда используются твоим персонажем.</talentdescription.turretsgaindebuffdamage>
+  <talentdescription.turretsgainbuffcharge>Турели на подлодке раскручиваются на [amount]% быстрее когда используются твоим персонажем.</talentdescription.turretsgainbuffcharge>
+  <talentdescription.turretsgainbufffirerate>Турели на подлодке стреляют на [amount]% быстрее когда используются твоим персонажем.</talentdescription.turretsgainbufffirerate>
+  <talentdescription.turretsgaindebuffcharge>Турели на подлодке раскручиваются на [amount]% медленее когда используются твоим персонажем.</talentdescription.turretsgaindebuffcharge>
+  <talentdescription.turretsgaindebufffirerate>Турели на подлодке стреляют на [amount]% медленее когда используются твоим персонажем.</talentdescription.turretsgaindebufffirerate>
+  <talentdescription.whenpointsreachnumbergainpermanent>Когда ты достигаешь "[amountp]" количества очков, получи эффект(ы): "[effect]".</talentdescription.whenpointsreachnumbergainpermanent>
+  <talentdescription.whenpointsreachnumbergainreduce>Когда ты достигаешь "[amountp]" количества очков, медленно убирай эффект(ы): "[effect]".</talentdescription.whenpointsreachnumbergainreduce>
+  <talentdescription.whenpointsreachnumbergaineffect>Когда ты достигаешь "[amountp]" количества очков, получи эффект: "[effect]".</talentdescription.whenpointsreachnumbergaineffect>
+  <talentdescription.whenpointsreachnumbergainresistance>Когда ты достигаешь "[amountp]" количества очков, получи сопротивление на [amount]% к эффекту "[effect]".</talentdescription.whenpointsreachnumbergainresistance>
+  <talentdescription.whenpointsreachnumbergaindamageresistance>Когда ты достигаешь "[amountp]" количества очков, получай на [amount]% меньше физического урона.</talentdescription.whenpointsreachnumbergaindamageresistance>
+  <talentdescription.lastslonger>Эффект от "[item]" длится дольше.</talentdescription.lastslonger>
+  <talentdescription.enemydebuffwhenattacked>Противник получит эффект: "[effect]", когда будет атакован вашим персонажем.</talentdescription.enemydebuffwhenattacked>
+  <talentdescription.strongereffect>Эффект от предмета "[item]" имеет более сильный эффект.</talentdescription.strongereffect>
+  <talentdescription.additionalbuff>"[item]" дает дополнительный эффект(ы): "[effect]".</talentdescription.additionalbuff>
+  <talentdescription.additionallyheals>"[item]" дополнительно лечит раны.</talentdescription.additionallyheals>
+  <talentdescription.gainpermanentaffliction>Получи перманентный эффект: [affliction]</talentdescription.gainpermanentaffliction>
+  <talentdescription.whenitemusedheal>"[item]" дополнительно лечит раны.</talentdescription.whenitemusedheal>
+  <talentdescription.reduceafflictionwhenused>Снижай эффект(ы): "[effect]" , когда используешь: "[item]".</talentdescription.reduceafflictionwhenused>
+  <talentdescription.slowlygaineffect>Медленно получай эффект(ы): "[effect]".</talentdescription.slowlygaineffect>
+  <talentdescription.slowlygaineffectinwater>Пока персонаж погружен в воду , получи эффект(ы): "[effect]".</talentdescription.slowlygaineffectinwater>
+  <talentdescription.slowlyreduceeffect>Медленно снижай эффект(ы): "[effect]".</talentdescription.slowlyreduceeffect>
+  <talentdescription.slowlyreduceeffectinwater>Пока персонаж погружен в воду , убирай эффект(ы) "[effect]".</talentdescription.slowlyreduceeffectinwater>
+  <talentdescription.slowlyreduceeffectinsubmarine>Пока ты внутри субмарины , убирай эффект(ы): "[effect]".</talentdescription.slowlyreduceeffectinsubmarine>
+  <talentdescription.slowlygaineffectinsubmarine>Пока ты внутри субмарины , получи эффект(ы): "[effect]".</talentdescription.slowlygaineffectinsubmarine>
+  <talentdescription.gaineffectonragdoll>Получи эффект(ы): "[effect]", каждый раз , когда вы рагдолитесь.</talentdescription.gaineffectonragdoll>
+  <talentdescription.deattachfaster>Отсоединяй компоненты на [amount]% быстрее.</talentdescription.deattachfaster>
+  <talentdescription.gainmoneywhenplayed>Получи деньги , когда играешь на "[item]".</talentdescription.gainmoneywhenplayed>
+  <talentdescription.onlyworkscrouch>Работает только в присяде</talentdescription.onlyworkscrouch>
+  <talentdescription.healusingtoken>Теперь вы можете лечиться за очки.</talentdescription.healusingtoken>
+  <talentdescription.healusingtokencrouched>Теперь вы можете лечиться за очки. (Только в присяди)</talentdescription.healusingtokencrouched>
+  <talentdescription.gaintokenwhenused>Получай очки, за каждый использованный вами предмет: "[item]".</talentdescription.gaintokenwhenused>
+  <talentdescription.gaintokenwhenrepaired>Получай очки, за каждое починенное устройство.</talentdescription.gaintokenwhenrepaired>
+  <talentdescription.gainskillforeverytoken>Теперь ваш персонаж может получать случайные скиллы за очки.</talentdescription.gainskillforeverytoken>
+  <talentdescription.gainskillforeverytokenwhencrouched>Теперь ваш персонаж может получать случайные скиллы за очки. (Только в присяди)</talentdescription.gainskillforeverytokenwhencrouched>
+  <talentdescription.applyforcewhen>Когда ты рагдолишься в НЕ водной среде , метнись в сторону движения персонажа.</talentdescription.applyforcewhen>
+  <talentdescription.gainlesswhenweared>Получай на [amount]% меньше "[effect]", пока носишь "[item]"</talentdescription.gainlesswhenweared>
+  <talentdescription.production>Получай [item],пока ты лежишь в течении [time] секунд.</talentdescription.production>
+  <talentdescription.movefasterwhenaiming>Двигайся на [amount]% быстрее, пока ты прицеливаешься с "[item]".</talentdescription.movefasterwhenaiming>
+  <talentdescription.movefasterinhands>Двигайся быстрее на [amount]% , пока "[item]" в твоих руках.</talentdescription.movefasterinhands>
+  <talentdescription.movefasterwhenweared>Двигайся быстрее на [amount]%, пока носишь "[item]".</talentdescription.movefasterwhenweared>
+  <talentdescription.moveslowerwhenaiming>Двигайся медленее на [amount]%, пока прицеливаешься с "[item]".</talentdescription.moveslowerwhenaiming>
+  <talentdescription.moveslowerinhands>Двигайся медленее на [amount]%, пока "[item]" в твоих руках.</talentdescription.moveslowerinhands>
+  <talentdescription.moveslowerwhenweared>Двигайся медленее на [amount]%, пока носишь "[item]".</talentdescription.moveslowerwhenweared>
+  <talentdescription.healingwithitems>Лечи [damage] и [damage1] пока [item] в твоих руках.</talentdescription.healingwithitems>
+  <talentdescription.whennotattackeddealdamage>Если вас не атаковали в течении [seconds] секунд, следующая атака нанесет агрессору эффект(ы): "[effect]".</talentdescription.whennotattackeddealdamage>
+  <talentdescription.whennotattackedgainbuff>Если вас не атаковали в течении [seconds] секунд, следующая атака по персонажу даст эффект(ы): "[effect]".</talentdescription.whennotattackedgainbuff>
+  <talentdescription.whennotattackedgainlessdamage>Если вас не атаковали в течении [seconds] секунд, следующая атака нанесет вам на [amount]% меньше урона.</talentdescription.whennotattackedgainlessdamage>
+  <talentdescription.fabricatorsworkfaster>Фабрикаторы работают на [amount]% быстрее.</talentdescription.fabricatorsworkfaster>
+  <talentdescription.fabricatorsworkslower>Фабрикаторы работают на [amount]% медленее.</talentdescription.fabricatorsworkslower>
+  <talentdescription.teammatesnearyougain>Союзники не дальше "[distance]" метров, получают эффект(ы): "[effect]", которые дают следующее:</talentdescription.teammatesnearyougain>
+  <talentdescription.deallessdamagetoteammates>Союзники получают на [amount]% меньше урона от огня по своим.</talentdescription.deallessdamagetoteammates>
+  <talentdescription.gainamountflowresistance>Течение влияет на персонада на [amount]% меньше.</talentdescription.gainamountflowresistance>
+  <talentdescription.ifgainskillgainrandomskill>Когда вы получаете очко навыка, так же получи "[amount]" случайных дополнительных очков.</talentdescription.ifgainskillgainrandomskill>
+  <talentdescription.bemoreloud>Будь более громким на "[amount]%".</talentdescription.bemoreloud>
+  <talentdescription.belessloud>Будь более тихим на "[amount]%".</talentdescription.belessloud>
+  <talentdescription.bemorevisible>Будь более заметным на "[amount]%".</talentdescription.bemorevisible>
+  <talentdescription.belessvisible>Будеь менее заметным на "[amount]%".</talentdescription.belessvisible>
+  <talentdescription.loudnessandvisibilityreminder>Громкость/заметность НЕ меняет громкость звуков в игре и/или прозрачность персонажа, это только влияет на поведение ИИ</talentdescription.loudnessandvisibilityreminder>
+  <talentdescription.thiseffectdoesnotapliestoyou>Этот эффект не применяется на тебя</talentdescription.thiseffectdoesnotapliestoyou>
+  <talentdescription.thiseffectdoapliestoyou>Этот эффект применяется на тебе</talentdescription.thiseffectdoapliestoyou>
+  <talentdescription.thiseffectdoapliesonlytoyou>Этот эффект применяется только на тебе</talentdescription.thiseffectdoapliesonlytoyou>
+  <!--afflictions and affl desc-->
+  <afflictionname.followme>За мной!</afflictionname.followme>
+  <afflictiondescription.followme>Почувствуй силу скорости! (Двигайся на 35% быстрее)</afflictiondescription.followme>
+  <afflictionname.electricalextertize>Электрическая экспертиза</afflictionname.electricalextertize>
+  <afflictiondescription.electricalextertize>Не должно. (+25 к навыку электрики)</afflictiondescription.electricalextertize>
+  <afflictionname.gunneryexpert>Оружейник</afflictionname.gunneryexpert>
+  <afflictiondescription.gunneryexpert>Вымпел уже завидует (+20 weapons skill)</afflictiondescription.gunneryexpert>
+  <afflictionname.vodolaz>Водолаз</afflictionname.vodolaz>
+  <afflictiondescription.vodolaz>Вдох-выдох. (Задерживай свое дыхание в два раза дольше)</afflictiondescription.vodolaz>
+  <afflictionname.hardstyle>Трудоголик</afflictionname.hardstyle>
+  <afflictiondescription.hardstyle>Работай усерднее. (+75% к получению навыков)</afflictiondescription.hardstyle>
+  <afflictionname.pomoshnik>Помошник</afflictionname.pomoshnik>
+  <afflictiondescription.pomoshnik>Небольшая помощь и куча изоленты - никогда не бывают лишними (+10% скорость бега , +20% скорость починки)</afflictiondescription.pomoshnik>
+  <afflictionname.nomoredeals>Завтра уже не будет</afflictionname.nomoredeals>
+  <afflictiondescription.nomoredeals>Начинай молиться. (+11% к скорости стрельбы турели , +10% к потреблению энергии турели , +50% к скорости раскрутки турели)</afflictiondescription.nomoredeals>
+  <afflictionname.killkillkillkillkill>БОЙНЯ</afflictionname.killkillkillkillkill>
+  <afflictiondescription.killkillkillkillkill>ГОЙДА! (+29% к скорости стрельбы турели , +27% к потреблению энергии турели , -85% к скорости раскрутки турели)</afflictiondescription.killkillkillkillkill>
+  <afflictionname.stillbreathing>Встань!</afflictionname.stillbreathing>
+  <afflictiondescription.stillbreathing>Встань , страх преодолей (+150% к шансу восстановления при СЛР)</afflictiondescription.stillbreathing>
+  <afflictionname.donoharm>Не убей.</afflictionname.donoharm>
+  <afflictiondescription.donoharm>Мы с тобой одной крови. (-99% к урону по союзникам)</afflictiondescription.donoharm>
+  <afflictionname.notdead>Интерн</afflictionname.notdead>
+  <afflictiondescription.notdead>ЛОБАНОВ С... (+15 к навыку медицины)</afflictiondescription.notdead>
+  <afflictionname.teachandlearn>Учись и слушай</afflictionname.teachandlearn>
+  <afflictiondescription.teachandlearn>Малый капитан (+25 к бонусу навыка управления)</afflictiondescription.teachandlearn>
+  <afflictionname.shadow>Тень</afflictionname.shadow>
+  <afflictiondescription.shadow>See me (not) (-60% к громкости , -50% к видимости)</afflictiondescription.shadow>
+  <afflictionname.decoy>Decoy</afflictionname.decoy>
+  <afflictiondescription.decoy>"Я никогда не был на твоей стороне" (+150% к громкости , -85% к видимости)</afflictiondescription.decoy>
+  <!--job names-->
+  <jobname.bodybuilder>Бодибилдер</jobname.bodybuilder>
+  <jobname.cursed>Проклятый у*бан</jobname.cursed>
+  <jobname.deliveryman>Доставщик</jobname.deliveryman>
+  <jobname.highvoltageworker>Высоковольтажник</jobname.highvoltageworker>
+  <jobname.miner>Копатель офлайн</jobname.miner>
+  <jobname.terrorist>Террорист</jobname.terrorist>
+  <jobname.amphibia>Амфибия</jobname.amphibia>
+  <!-- talents -->
+  <talentname.decoy>Т Е Р Р О Р</talentname.decoy>
+  <talentname.experiencedammomaker>Контроллер спецпроизводства</talentname.experiencedammomaker>
+  <talentname.mentor_combat>Ментор по обороне</talentname.mentor_combat>
+  <talentname.mentor_maintance>Практикующий по ремонту</talentname.mentor_maintance>
+  <talentname.miner_professional>Дворф</talentname.miner_professional>
+  <talentname.mentor_helm>Заместитель рулевого</talentname.mentor_helm>
+  <talentname.electricalmastery>Электро-фантом</talentname.electricalmastery>
+  <talentname.wire_production>Червовый</talentname.wire_production>
+  <talentname.lasthope>Последняя надежда</talentname.lasthope>
+  <talentname.noshortcircuit>Твердолобый</talentname.noshortcircuit>
+  <talentname.improved_safetyharness_electric>Заземленный костюм</talentname.improved_safetyharness_electric>
+  <talentname.electrical_plus>Тихая помощь</talentname.electrical_plus>
+  <talentname.terror>Рабство</talentname.terror>
+  <talentname.submarinerevive>Из огня да в полымя</talentname.submarinerevive>
+  <talentname.theoretic>Теория практики</talentname.theoretic>
+  <talentname.experiencedandrich>Разнорабочий</talentname.experiencedandrich>
+  <talentname.growing>Рост</talentname.growing>
+  <talentname.preparednready>Дебошир</talentname.preparednready>
+  <talentname.sharingiscaring>Соавтор</talentname.sharingiscaring>
+  <talentname.rocketswimmer>Метод "буравчика"</talentname.rocketswimmer>
+  <talentname.jump>Перекат</talentname.jump>
+  <talentname.bard_accordion>Горящая мелодия</talentname.bard_accordion>
+  <talentname.methlover>Очищенный метамфетамин</talentname.methlover>
+  <talentname.writingdownactions>Починка и прогнозы</talentname.writingdownactions>
+  <talentname.playtogain>Игра на публику</talentname.playtogain>
+  <talentname.deattacher>Разборщик</talentname.deattacher>
+  <talentname.alternaterepair>Иной путь</talentname.alternaterepair>
+  <talentname.allaboard>ВСЕ НА БОРТ!</talentname.allaboard>
+  <talentname.dionyscurse>Дионис</talentname.dionyscurse>
+  <talentname.steroider>Микстура "Trestoid"</talentname.steroider>
+  <talentname.proteinplus>Гематоген</talentname.proteinplus>
+  <talentname.paracetamol>Микстура "Paredroid"</talentname.paracetamol>
+  <talentname.broakine_mixture>Микстура "Broakine"</talentname.broakine_mixture>
+  <talentname.hyperrush>Сверх активная смесь</talentname.hyperrush>
+  <talentname.puretonic>Чистый тоник</talentname.puretonic>
+  <talentname.transfusion>Трансфузия</talentname.transfusion>
+  <talentname.emergencypurification>Обработка ран</talentname.emergencypurification>
+  <talentname.calmmind>Тишина и покой</talentname.calmmind>
+  <talentname.protectivestand>Стойка "Змей"</talentname.protectivestand>
+  <talentname.getback>Стойка "Медведь"</talentname.getback>
+  <talentname.tumbling>Змей</talentname.tumbling>
+  <talentname.clustermunitions>Кластерная аммуниция</talentname.clustermunitions>
+  <talentname.concretepiercingammunition>Бетонобойные боеприпасы</talentname.concretepiercingammunition>
+  <talentname.fuckgenevaconventions>Женевская ярость</talentname.fuckgenevaconventions>
+  <talentname.firefirefire>Брррррр</talentname.firefirefire>
+  <talentname.ecoturrets>Бззззззз</talentname.ecoturrets>
+  <talentname.autoturrets>Авто турели</talentname.autoturrets>
+  <talentname.momentumturrets>Улучшение "Момент"</talentname.momentumturrets>
+  <talentname.streamlinedturrets>Подключение напрямую</talentname.streamlinedturrets>
+  <talentname.training_vigor>Бодибилдинг</talentname.training_vigor>
+  <talentname.training_joy>Йога</talentname.training_joy>
+  <talentname.training_haste>Берпи</talentname.training_haste>
+  <talentname.talented>Талантный</talentname.talented>
+  <talentname.naturalgains>Натуральные добавки</talentname.naturalgains>
+  <talentname.unnaturalgains>Вредные присадки</talentname.unnaturalgains>
+  <talentname.opioidgains>Полирующие примеси</talentname.opioidgains>
+  <talentname.rebreather>Допинг кислородом</talentname.rebreather>
+  <talentname.calmness>Спокойствие</talentname.calmness>
+  <talentname.demolitionist>Подрывник</talentname.demolitionist>
+  <talentname.cortizol>Микстура "Cartozide"</talentname.cortizol>
+  <talentname.morethanalive>Более чем живой</talentname.morethanalive>
+  <talentname.opiatebullets>Диаморфиновые пули</talentname.opiatebullets>
+  <talentname.drunkinbullets>Покрытие алкоголем</talentname.drunkinbullets>
+  <talentname.ontheknees>Большой бум</talentname.ontheknees>
+  <talentname.riprounds>Экспансивные пули</talentname.riprounds>
+  <talentname.toxicbullets>Токсичное покрытие</talentname.toxicbullets>
+  <talentname.explosiverounds>Разрывные пули</talentname.explosiverounds>
+  <talentname.soulreaperrounds>Пули "Душегуб"</talentname.soulreaperrounds>
+  <talentname.softpointbullets>Тупоконечные пули</talentname.softpointbullets>
+  <talentname.incendiaryrounds>Зажигательные пули</talentname.incendiaryrounds>
+  <talentname.dominanthuskeggs>Двух бинарное заражение</talentname.dominanthuskeggs>
+  <talentname.vodka>Водка</talentname.vodka>
+  <talentname.bufotoxinmixture>Странная микстура</talentname.bufotoxinmixture>
+  <talentname.stonewalltonic>Тоник "Stone-wall"</talentname.stonewalltonic>
+  <talentname.advancedhealer>Боевой медик</talentname.advancedhealer>
+  <talentname.berserkcry>Вой берсерка</talentname.berserkcry>
+  <talentname.nevermore>Ещё раз</talentname.nevermore>
+  <talentname.supreme>Превосходящий</talentname.supreme>
+  <talentname.followme>За мной!</talentname.followme>
+  <talentname.electricalhelper>Электро-экспертиза</talentname.electricalhelper>
+  <talentname.gunneryexpert>Оружейник</talentname.gunneryexpert>
+  <talentname.vodolaz>Водолаз</talentname.vodolaz>
+  <talentname.hardstyle>Трудоголик</talentname.hardstyle>
+  <talentname.pomoshnik>Помошник</talentname.pomoshnik>
+  <talentname.nomoredeals>Завтра уже не будет</talentname.nomoredeals>
+  <talentname.killkillkillkillkill>БОЙНЯ</talentname.killkillkillkillkill>
+  <talentname.stillbreathing>Вдох-выдох</talentname.stillbreathing>
+  <talentname.donoharm>Не убей.</talentname.donoharm>
+  <talentname.teachandlearn>Учись и слушай</talentname.teachandlearn>
+  <talentname.savage>Жесткий</talentname.savage>
+  <talentname.flash>Адский разгон</talentname.flash>
+  <talentname.mastery>Мастерство</talentname.mastery>
+  <talentname.torpor>Стазисная регенерация</talentname.torpor>
+  <talentname.training_stabilozine>Кардио</talentname.training_stabilozine>
+  <talentname.training_paralysis>Растяжка</talentname.training_paralysis>
+  <talentname.drugsexpert>Почти фармацефт</talentname.drugsexpert>
+  <talentname.jogger>Олимпийский бегун</talentname.jogger>
+  <talentname.mountain>Гора</talentname.mountain>
+  <talentname.meleedancer>Последний танец</talentname.meleedancer>
+  <talentname.machinegunner>Пулеметчик</talentname.machinegunner>
+  <!-- trees -->
+  <talenttree.qualification>Квалификация</talenttree.qualification>
+  <talenttree.acolyte>Дух</talenttree.acolyte>
+  <talenttree.demolitioner>Разрушитель</talenttree.demolitioner>
+  <talenttree.khalifa>Халифа</talenttree.khalifa>
+  <talenttree.narcomaniac>Нарко-безумец</talenttree.narcomaniac>
+  <talenttree.atletic>Атлет</talenttree.atletic>
+  <talenttree.hardworker>Трудоголик</talenttree.hardworker>
+  <talenttree.guru>Гуру</talenttree.guru>
+  <talenttree.shocker>Шокер</talenttree.shocker>
+</infotexts>

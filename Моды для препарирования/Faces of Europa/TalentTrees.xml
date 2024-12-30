@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TalentTrees>
+  <TalentTree jobidentifier="hollow">
+    <Subtree identifier="hollow_start" type="primary" requires="" blocks="">
+      <TalentOptions>
+        <TalentOption identifier="hollow_start" />
+        <!--Начало-->
+      </TalentOptions>
+    </Subtree>
+    <Subtree identifier="hollow_weirdities" type="primary" requires="hollow_start" blocks="">
+      <TalentOptions requiredtalents="3" maxchosentalents="6">
+        <TalentOption identifier="bloody_gust" />
+        <!---->
+        <TalentOption identifier="lost" />
+        <!---->
+        <TalentOption identifier="crawler" />
+        <!---->
+        <TalentOption identifier="sotp" />
+        <!---->
+        <TalentOption identifier="dellirium" />
+        <!---->
+        <TalentOption identifier="morbidcuriousity" />
+        <!---->
+      </TalentOptions>
+    </Subtree>
+    <SubTree identifier="cultist" type="specialization" requires="hollow_weirdities" blocks="double,horror">
+      <TalentOptions>
+        <TalentOption identifier="communion" />
+      </TalentOptions>
+      <TalentOptions>
+        <TalentOption identifier="feral" />
+        <TalentOption identifier="devotion" />
+      </TalentOptions>
+      <TalentOptions>
+        <TalentOption identifier="naturesdelight" />
+        <TalentOption identifier="living_plague" />
+      </TalentOptions>
+      <TalentOptions>
+        <TalentOption identifier="fumigator" />
+        <!--Вокруг перса аура нейтралитета к незараженным-->
+      </TalentOptions>
+    </SubTree>
+    <SubTree identifier="double" type="specialization" requires="hollow_weirdities" blocks="horror,cultist">
+      <TalentOptions>
+        <TalentOption identifier="staring_down" />
+      </TalentOptions>
+      <TalentOptions>
+        <TalentOption identifier="cans" />
+        <TalentOption identifier="cells" />
+      </TalentOptions>
+      <TalentOptions>
+        <TalentOption identifier="conscript" />
+        <TalentOption identifier="idiot" />
+      </TalentOptions>
+      <TalentOptions>
+        <TalentOption identifier="geneus" />
+      </TalentOptions>
+    </SubTree>
+    <SubTree identifier="horror" type="specialization" requires="hollow_weirdities" blocks="cultist,double">
+      <TalentOptions>
+        <TalentOption identifier="courage" />
+      </TalentOptions>
+      <TalentOptions>
+        <TalentOption identifier="leech" />
+        <TalentOption identifier="puttingpressure" />
+      </TalentOptions>
+      <TalentOptions>
+        <TalentOption identifier="dinendash" />
+      </TalentOptions>
+      <TalentOptions>
+        <TalentOption identifier="what" />
+      </TalentOptions>
+    </SubTree>
+  </TalentTree>
+  <TalentTree jobidentifier="europan">
+    <Subtree identifier="diving_in" type="primary" requires="" blocks="">
+      <TalentOptions>
+        <TalentOption identifier="new_habitat" />
+        <!--Начало-->
+      </TalentOptions>
+    </Subtree>
+    <Subtree identifier="europanbackground" type="primary" requires="diving_in" blocks="">
+      <TalentOptions requiredtalents="4" maxchosentalents="8">
+        <TalentOption identifier="tetrisenjoyer" />
+        <!--рюкзак, больше места в инве и шкафах для материалов-->
+        <TalentOption identifier="beaconkeeper" />
+        <!--бонусы от маяков, +5 к механике и электрике-->
+        <TalentOption identifier="hunter" />
+        <!--бонусы от миссия с монстрами, +5 к оружию, гарпуны взрывные и баффы к взрывам +5 к оружию-->
+        <TalentOption identifier="сourier" />
+        <!--бонусы от доставок-->
+        <TalentOption identifier="expansionist" />
+        <!--бонусы от прохождения локаций и "экспансивных" миссий, +5 к оружию и управлению-->
+        <TalentOption identifier="herbalist" />
+        <!--шанс создать больше гранатовых шприцов, повысить их эффективность при использовании на других, дать +5 к медицине-->
+        <TalentOption identifier="tough" />
+        <!--Очень, очень хороший и вежливый мальчик. Скромен, добр, правдив. Слушает маму и каждое утро делает зарядку...-->
+        <TalentOption identifier="virtuoso" />
+        <!--Игра на инструментах дает баффы товарищам-->
+      </TalentOptions>
+    </Subtree>
+    <SubTree identifier="sailor" type="specialization" requires="diving_in,europanbackground" blocks="diver,gatherer">
+      <TalentOptions>
+        <TalentOption identifier="savvy_navy" />
+        <TalentOption identifier="second_in_command" />
+      </TalentOptions>
+      <TalentOptions>
+        <TalentOption identifier="all_hands" />
+      </TalentOptions>
+      <TalentOptions>
+        <TalentOption identifier="safety_specialist" />
+      </TalentOptions>
+      <TalentOptions>
+        <TalentOption identifier="premium_produce" />
+        <TalentOption identifier="royalties" />
+      </TalentOptions>
+    </SubTree>
+    <SubTree identifier="gatherer" type="specialization" requires="diving_in,europanbackground" blocks="sailor,diver">
+      <TalentOptions>
+        <TalentOption identifier="winnow" />
+        <TalentOption identifier="stone_chomper" />
+      </TalentOptions>
+      <TalentOptions>
+        <TalentOption identifier="defense_mechanisms" />
+      </TalentOptions>
+      <TalentOptions>
+        <TalentOption identifier="lamprey" />
+      </TalentOptions>
+      <TalentOptions>
+        <TalentOption identifier="cuts_of_meat" />
+      </TalentOptions>
+    </SubTree>
+    <SubTree identifier="diver" type="specialization" requires="diving_in,europanbackground" blocks="sailor,gatherer">
+      <TalentOptions>
+        <TalentOption identifier="freediving_championship" />
+        <TalentOption identifier="tough_skin" />
+      </TalentOptions>
+      <TalentOptions>
+        <TalentOption identifier="easy_does_it" />
+        <TalentOption identifier="frog_leaping" />
+      </TalentOptions>
+      <TalentOptions>
+        <TalentOption identifier="flight" />
+        <TalentOption identifier="fight" />
+      </TalentOptions>
+      <TalentOptions>
+        <TalentOption identifier="hunting_grounds" />
+      </TalentOptions>
+    </SubTree>
+  </TalentTree>
+  <TalentTree jobidentifier="fugitive">
+    <Subtree identifier="thisiswhereitbegins" type="primary" requires="" blocks="">
+      <TalentOptions>
+        <TalentOption identifier="runaway" />
+        <!--Начало. Дебафф к механике, электрике, управлению и медицине-->
+      </TalentOptions>
+    </Subtree>
+    <Subtree identifier="fugitive_background" type="primary" requires="thisiswhereitbegins" blocks="">
+      <TalentOptions requiredtalents="3" maxchosentalents="6">
+        <TalentOption identifier="bootcamp" />
+        <!--рюкзак, больше места в инве и шкафах для материалов-->
+        <TalentOption identifier="bountyhunter" />
+        <!--бонусы от маяков, +5 к механике и электрике-->
+        <TalentOption identifier="cheaping_out" />
+        <!--бонусы от миссия с монстрами, +5 к оружию, гарпуны взрывные и баффы к взрывам +5 к оружию-->
+        <TalentOption identifier="teetotaler" />
+        <!--бонусы от доставок-->
+        <TalentOption identifier="protectandserve" />
+        <!--бонусы от прохождения локаций и "экспансивных" миссий, +5 к оружию и управлению-->
+        <TalentOption identifier="undercoveragent" />
+        <!--шанс создать больше гранатовых шприцов, повысить их эффективность при использовании на других, дать +5 к медицине-->
+      </TalentOptions>
+    </Subtree>
+    <Subtree identifier="assisting" type="specialization" requires="thisiswhereitbegins, fugitive_background" blocks="serpent,rogue">
+      <TalentOptions>
+        <TalentOption identifier="teamplayer" />
+        <!--Повышать психоз ВСЕГДА-->
+      </TalentOptions>
+      <TalentOptions>
+        <TalentOption identifier="strongarms" />
+        <!--Перенос ящиков и снарядов-->
+        <TalentOption identifier="nap" />
+        <!--Если упасть на 30 секунд, получаешь скорость бега. Шанс нарколепсии-->
+      </TalentOptions>
+      <TalentOptions>
+        <TalentOption identifier="pieceofmind" />
+        <!--Наушники и плавание-->
+        <TalentOption identifier="angry_management" />
+        <!--Плетка, пиздишь союзников, даешь бафы к работе, делаешь больно, но убираешь себе психоз-->
+      </TalentOptions>
+      <TalentOptions>
+        <TalentOption identifier="shitisreal" />
+        <!--Починка 200%, быстрый психоз, работает только при полном пиздеце-->
+      </TalentOptions>
+    </Subtree>
+    <Subtree identifier="serpent" type="specialization" requires="thisiswhereitbegins, fugitive_background" blocks="assisting,rogue">
+      <TalentOptions>
+        <TalentOption identifier="bodycount" />
+        <!--счетчик убийств-->
+      </TalentOptions>
+      <TalentOptions>
+        <TalentOption identifier="definitelyaclown" />
+        <!--рецепты одежды со встроенным броником-->
+        <TalentOption identifier="inhumane_measures" />
+        <!--рецепты огненного ПП с тяжеленным щитом-->
+      </TalentOptions>
+      <TalentOptions>
+        <TalentOption identifier="spaceinvader" />
+        <!--бафы вне субы-->
+        <TalentOption identifier="cqc" />
+        <!--бафы внутри -->
+      </TalentOptions>
+      <TalentOptions>
+        <TalentOption identifier="clawingback" />
+        <TalentOption identifier="dealwiththedevil" />
+      </TalentOptions>
+    </Subtree>
+    <Subtree identifier="rogue" type="specialization" requires="thisiswhereitbegins, fugitive_background" blocks="assisting,serpent">
+      <TalentOptions>
+        <TalentOption identifier="textiletreatment" />
+        <!--Ношение банданы или треуголки сепаратистов дает резист к кислоте и огню, быстрее асфиксия-->
+      </TalentOptions>
+      <TalentOptions>
+        <TalentOption identifier="slapithere" />
+        <!--Улучшения субы, дороже магаз-->
+      </TalentOptions>
+      <TalentOptions>
+        <TalentOption identifier="drugssmugler" />
+        <!--дать мак, дрожжи, бактерии при каждом заходе в сепар гавань-->
+        <TalentOption identifier="weaponssmugler" />
+        <!--дать магний, сталь и медь при каждом заходе в сепар гавань^^^^-->
+      </TalentOptions>
+      <TalentOptions>
+        <TalentOption identifier="underground" />
+      </TalentOptions>
+    </Subtree>
+  </TalentTree>
+</TalentTrees>

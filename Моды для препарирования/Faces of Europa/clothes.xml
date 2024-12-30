@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+  <Item name="diver" identifier="diver" nameidentifier="diver" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem,clothing" scale="0.5" impactsoundtag="impact_soft">
+    <Price baseprice="150" sold="false" />
+    <Fabricate suitablefabricators="fabricator" requiredtime="20" requiresrecipe="true">
+      <RequiredSkill identifier="weapons" level="60" />
+      <RequiredSkill identifier="mechanical" level="30" />
+      <RequiredItem identifier="ballisticfiber" amount="1" />
+      <RequiredItem identifier="organicfiber" amount="3" />
+    </Fabricate>
+    <Deconstruct time="10">
+      <Item identifier="organicfiber" amount="2" />
+    </Deconstruct>
+    <InventoryIcon texture="%ModDir%//diver3.png" sourcerect="176,16,80,138" />
+    <Sprite name="diver" texture="%ModDir%/clothes_folded.png" sourcerect="258,6,115,58" depth="0.6" origin="0.5,0.5" />
+    <Body width="100" height="50" density="15" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="Diver's Torso" texture="diver3.png" limb="Torso" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" depth="0.4" />
+      <sprite name="Diver Right Hand" texture="diver3.png" limb="RightHand" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Diver Left Hand" texture="diver3.png" limb="LeftHand" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Diver Right Lower Arm" texture="diver3.png" limb="RightArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Diver Left Lower Arm" texture="diver3.png" limb="LeftArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Diver Right Upper Arm" texture="diver3.png" limb="RightForearm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Diver Left Upper Arm" texture="diver3.png" limb="LeftForearm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Diver Waist" texture="diver3.png" limb="Waist" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Diver Right Thigh" texture="diver3.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Diver Left Thigh" texture="diver3.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Diver Right Leg" texture="diver3.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Diver Left Leg" texture="diver3.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Diver Left Shoe" texture="diver3.png" limb="LeftFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Diver Right Shoe" texture="diver3.png" limb="RightFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="lacerations, bitewounds, blunttrauma" damagemultiplier="0.75" />
+    </Wearable>
+    <ItemContainer capacity="6" maxstacksize="2" hideitems="true">
+      <Containable items="smallitem" hide="true" />
+    </ItemContainer>
+  </Item>
+  <Item name="militia" identifier="militia" nameidentifier="militia" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem,clothing" scale="0.5" impactsoundtag="impact_soft">
+    <Price baseprice="150" sold="false">
+      <Price storeidentifier="merchantoutpost" />
+      <Price storeidentifier="merchantcity" />
+      <Price storeidentifier="merchantresearch" />
+      <Price storeidentifier="merchantmilitary" />
+      <Price storeidentifier="merchantmine" />
+    </Price>
+    <Deconstruct time="10">
+      <Item identifier="organicfiber" amount="2" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="20" requiresrecipe="true">
+      <RequiredSkill identifier="weapons" level="60" />
+      <RequiredSkill identifier="mechanical" level="30" />
+      <RequiredItem identifier="plastic" amount="2" />
+      <RequiredItem identifier="organicfiber" amount="2" />
+      <RequiredItem identifier="steel" amount="1" />
+    </Fabricate>
+    <InventoryIcon texture="%ModDir%//militia.png" sourcerect="176,22,80,133" />
+    <Sprite name="diver" texture="%ModDir%/clothes_folded.png" sourcerect="129,9,115,53" depth="0.6" origin="0.5,0.5" />
+    <Body width="100" height="50" density="15" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="0.85" setvalue="true" disabledeltatime="true" />
+      <sprite name="Militia Torso" texture="militia.png" limb="Torso" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" depth="0.4" />
+      <sprite name="Militia Right Hand" texture="militia.png" limb="RightHand" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Militia Left Hand" texture="militia.png" limb="LeftHand" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Militia Left Upper Arm" texture="militia.png" limb="RightArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Militia Right Upper Arm" texture="militia.png" limb="LeftArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Militia Left Lower Arm" texture="militia.png" limb="LeftForearm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Militia Right Lower Arm" texture="militia.png" limb="RightForearm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Militia Waist" texture="militia.png" limb="Waist" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Militia Right Thigh" texture="militia.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Militia Left Thigh" texture="militia.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Militia Right Leg" texture="militia.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Militia Left Leg" texture="militia.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Militia Left Shoe" texture="militia.png" limb="LeftFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Militia Right Shoe" texture="militia.png" limb="RightFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="bitewounds, gunshotwound" damagemultiplier="0.90" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="blunttrauma, lacerations" damagemultiplier="0.75" />
+    </Wearable>
+    <ItemContainer capacity="2" maxstacksize="1" hideitems="true">
+      <Containable items="smallitem" hide="true" />
+    </ItemContainer>
+  </Item>
+  <Item name="trenchcoat" identifier="trenchcoat" nameidentifier="trenchcoat" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem,clothing" scale="0.5" impactsoundtag="impact_soft">
+    <Price baseprice="150" sold="false">
+      <Price storeidentifier="merchantoutpost" />
+      <Price storeidentifier="merchantcity" />
+      <Price storeidentifier="merchantresearch" />
+      <Price storeidentifier="merchantmilitary" />
+      <Price storeidentifier="merchantmine" />
+    </Price>
+    <Fabricate suitablefabricators="fabricator" requiredtime="20" requiresrecipe="true">
+      <RequiredSkill identifier="helm" level="20" />
+      <RequiredSkill identifier="mechanical" level="30" />
+      <RequiredItem identifier="ballisticfiber" amount="2" />
+      <RequiredItem identifier="organicfiber" amount="2" />
+    </Fabricate>
+    <Deconstruct time="10">
+      <Item identifier="organicfiber" amount="2" />
+    </Deconstruct>
+    <InventoryIcon texture="%ModDir%//trenchcoat.png" sourcerect="176,22,80,148" />
+    <Sprite name="diver" texture="%ModDir%/clothes_folded.png" sourcerect="0,0,117,71" depth="0.6" origin="0.5,0.5" />
+    <Body width="100" height="50" density="15" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="0.75" setvalue="true" disabledeltatime="true" />
+      <sprite name="Diver's Torso" texture="trenchcoat.png" limb="Torso" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" depth="0.4" />
+      <sprite name="Diver Right Hand" texture="trenchcoat.png" limb="RightHand" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Diver Left Hand" texture="trenchcoat.png" limb="LeftHand" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Diver Right Lower Arm" texture="trenchcoat.png" limb="RightArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Diver Left Lower Arm" texture="trenchcoat.png" limb="LeftArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Diver Right Upper Arm" texture="trenchcoat.png" limb="RightForearm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Diver Left Upper Arm" texture="trenchcoat.png" limb="LeftForearm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Diver Waist" texture="trenchcoat.png" limb="Waist" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Diver Right Thigh" texture="trenchcoat.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Diver Left Thigh" texture="trenchcoat.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Diver Right Leg" texture="trenchcoat.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Diver Left Leg" texture="trenchcoat.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Diver Left Shoe" texture="trenchcoat.png" limb="LeftFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Diver Right Shoe" texture="trenchcoat.png" limb="RightFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="lacerations, gunshotwound, bitewounds, blunttrauma" damagemultiplier="0.90" />
+    </Wearable>
+  </Item>
+  <Item name="notaclown" identifier="notaclown" nameidentifier="notaclown" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem,clothing,clowngear,clowns" scale="0.5" impactsoundtag="impact_soft">
+    <Fabricate suitablefabricators="fabricator" requiredtime="20" requiresrecipe="true">
+      <RequiredSkill identifier="weapons" level="60" />
+      <RequiredSkill identifier="mechanical" level="30" />
+      <RequiredItem identifier="ballisticfiber" amount="4" />
+      <RequiredItem identifier="organicfiber" amount="2" />
+      <RequiredItem identifier="titaniumaluminiumalloy" amount="1" />
+      <RequiredItem identifier="redpaint" amount="1" />
+    </Fabricate>
+    <Price baseprice="150" sold="false">
+      <Price storeidentifier="merchantoutpost" />
+      <Price storeidentifier="merchantcity" />
+      <Price storeidentifier="merchantresearch" />
+      <Price storeidentifier="merchantmilitary" />
+      <Price storeidentifier="merchantmine" />
+    </Price>
+    <Deconstruct time="10">
+      <Item identifier="organicfiber" amount="2" />
+    </Deconstruct>
+    <InventoryIcon texture="%ModDir%//notaclown.png" sourcerect="170,16,91,156" />
+    <Sprite name="notaclown" texture="%ModDir%/clothes_folded.png" sourcerect="386,0,115,70" depth="0.6" origin="0.5,0.5" />
+    <Body width="100" height="50" density="15" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="0.75" setvalue="true" disabledeltatime="true" />
+      <sprite name="Clown Torso" texture="notaclown.png" limb="Torso" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" depth="0.4" />
+      <sprite name="Clown Right Hand" texture="notaclown.png" limb="RightHand" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Clown Left Hand" texture="notaclown.png" limb="LeftHand" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Clown Right Lower Arm" texture="notaclown.png" limb="RightArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Clown Left Lower Arm" texture="notaclown.png" limb="LeftArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Clown Right Upper Arm" texture="notaclown.png" limb="RightForearm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Clown Left Upper Arm" texture="notaclown.png" limb="LeftForearm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Clown Waist" texture="notaclown.png" limb="Waist" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Clown Right Thigh" texture="notaclown.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Clown Left Thigh" texture="notaclown.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Clown Right Leg" texture="notaclown.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Clown Left Leg" texture="notaclown.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Clown Left Shoe" texture="notaclown.png" limb="LeftFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Clown Right Shoe" texture="notaclown.png" limb="RightFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="gunshotwound, bitewounds" damagesound="LimbClown" damagemultiplier="0.75" />
+      <damagemodifier afflictionidentifiers="blunttrauma" armorsector="0.0,360.0" damagemultiplier="0.8" damagesound="LimbClown" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="progressivestun,incrementalstun,stun" armorsector="0.0,360.0" damagemultiplier="0.8" damagesound="LimbClown" />
+      <damagemodifier afflictionidentifiers="lacerations" armorsector="0.0,360.0" damagemultiplier="0.3" damagesound="LimbClown" />
+    </Wearable>
+    <ItemContainer capacity="1" maxstacksize="1" hideitems="true">
+      <Containable items="smallitem" hide="true" />
+    </ItemContainer>
+  </Item>
+  <Item name="notaclownmask" identifier="notaclownmask" nameidentifier="notaclownmask" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem,clothing,clownmask,clowns" scale="0.5" impactsoundtag="impact_soft">
+    <Fabricate suitablefabricators="fabricator" requiredtime="20" requiresrecipe="true">
+      <RequiredSkill identifier="weapons" level="60" />
+      <RequiredSkill identifier="mechanical" level="30" />
+      <RequiredItem identifier="ballisticfiber" amount="4" />
+      <RequiredItem identifier="organicfiber" amount="1" />
+    </Fabricate>
+    <Price baseprice="150" sold="false">
+      <Price storeidentifier="merchantoutpost" />
+      <Price storeidentifier="merchantcity" />
+      <Price storeidentifier="merchantresearch" />
+      <Price storeidentifier="merchantmilitary" />
+      <Price storeidentifier="merchantmine" />
+    </Price>
+    <Deconstruct time="10">
+      <Item identifier="ballisticfiber" amount="2" />
+      <Item identifier="titanium" amount="1" />
+    </Deconstruct>
+    <InventoryIcon texture="%ModDir%//notaclown.png" sourcerect="412,4,84,88" />
+    <Sprite name="notaclown" texture="%ModDir%//notaclown.png" sourcerect="416,8,77,80" depth="0.6" limb="Head" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" hidewearablesoftype="Hair" />
+    <Body width="100" height="50" density="15" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,Head" armorvalue="90" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnWearing" target="Character" hideface="true" ObstructVisionAmount="0.9" LowPassMultiplier="0.7" setvalue="true" disabledeltatime="true" />
+      <sprite name="Clown helmet" texture="%ModDir%//notaclown.png" limb="Head" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.95" hidewearablesoftype="hair,moustache,beard" sourcerect="416,8,77,80" origin="0.57,0.7" />
+      <damagemodifier afflictionidentifiers="lacerations,gunshotwound,bitewounds" armorsector="0.0,360.0" damagemultiplier="0.1" damagesound="Content/Items/Alien/DAMAGE_guardianPodImpact1.ogg" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="blunttrauma" armorsector="0.0,360.0" damagemultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictiontypes="bleeding" armorsector="0.0,360.0" damagemultiplier="0.0" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="concussion" armorsector="0.0,360.0" damagemultiplier="0.0" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="progressivestun,incrementalstun,stun" armorsector="0.0,360.0" damagemultiplier="0.3" damagesound="LimbArmor" deflectprojectiles="true" />
+    </Wearable>
+  </Item>
+  <Item identifier="hardhat" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem,helmet" impactsoundtag="impact_soft" scale="0.60">
+    <Fabricate suitablefabricators="fabricator" requiredtime="20" requiresrecipe="true">
+      <RequiredSkill identifier="mechanical" level="40" />
+      <RequiredItem identifier="plastic" amount="3" />
+    </Fabricate>
+    <Price baseprice="150" sold="false">
+      <Price storeidentifier="merchantoutpost" />
+      <Price storeidentifier="merchantcity" />
+      <Price storeidentifier="merchantresearch" />
+      <Price storeidentifier="merchantmilitary" />
+      <Price storeidentifier="merchantmine" />
+    </Price>
+    <Deconstruct time="10">
+      <Item identifier="plastic" amount="1" />
+    </Deconstruct>
+    <InventoryIcon texture="%ModDir%/items.png" sourcerect="260,5,99,59" />
+    <Sprite texture="%ModDir%/items.png" sourcerect="260,5,99,59" depth="0.6" limb="Head" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" hidewearablesoftype="Hair" />
+    <Body width="99" height="5" density="15" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,Head" armorvalue="10" msg="ItemMsgPickUpSelect">
+      <sprite name="Hard hat" texture="%ModDir%//items.png" scale="0.60" sourcerect="260,5,99,59" limb="Head" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" hidewearablesoftype="hair" origin="0.5,1" />
+      <damagemodifier afflictionidentifiers="lacerations,bitewounds" armorsector="0.0,360.0" damagemultiplier="0.8" damagesound="Content/Items/Alien/DAMAGE_guardianPodImpact1.ogg" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="blunttrauma" armorsector="0.0,360.0" damagemultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictiontypes="bleeding,burn" armorsector="0.0,360.0" damagemultiplier="0.7" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="concussion" armorsector="0.0,360.0" damagemultiplier="0.0" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="progressivestun,incrementalstun,stun" armorsector="0.0,360.0" damagemultiplier="0.3" damagesound="LimbArmor" deflectprojectiles="true" />
+    </Wearable>
+  </Item>
+  <Item identifier="clownhardhat" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem,helmet,clownmask,clowns" impactsoundtag="impact_soft" scale="0.60">
+    <Fabricate suitablefabricators="fabricator" requiredtime="20" requiresrecipe="true">
+      <RequiredSkill identifier="mechanical" level="40" />
+      <RequiredItem identifier="plastic" amount="1" />
+      <RequiredItem identifier="bikehorn" amount="2" />
+    </Fabricate>
+    <Price baseprice="150" sold="false">
+      <Price storeidentifier="merchantoutpost" />
+      <Price storeidentifier="merchantcity" />
+      <Price storeidentifier="merchantresearch" />
+      <Price storeidentifier="merchantmilitary" />
+      <Price storeidentifier="merchantmine" />
+    </Price>
+    <Deconstruct time="10">
+      <Item identifier="plastic" amount="1" />
+    </Deconstruct>
+    <InventoryIcon texture="%ModDir%/items.png" sourcerect="366,5,122,100" />
+    <Sprite texture="%ModDir%/items.png" sourcerect="366,5,122,100" depth="0.6" limb="Head" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" hidewearablesoftype="Hair" />
+    <Body width="99" height="5" density="15" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,Head" armorvalue="10" msg="ItemMsgPickUpSelect">
+      <sprite name="Hard hat" texture="%ModDir%//items.png" sourcerect="366,5,122,100" limb="Head" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" hidewearablesoftype="hair,beard,moustache" scale="0.60" origin="0.5,0.55" />
+      <damagemodifier afflictionidentifiers="lacerations,bitewounds" armorsector="0.0,360.0" damagemultiplier="0.7" damagesound="Content/Items/Alien/DAMAGE_guardianPodImpact1.ogg" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="blunttrauma" armorsector="0.0,360.0" damagemultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictiontypes="bleeding,burn" armorsector="0.0,360.0" damagemultiplier="0.8" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="concussion" armorsector="0.0,360.0" damagemultiplier="0.0" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="progressivestun,incrementalstun,stun" armorsector="0.0,360.0" damagemultiplier="0" damagesound="LimbArmor" deflectprojectiles="true" />
+    </Wearable>
+  </Item>
+</Items>

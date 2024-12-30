@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Afflictions>
+  <!-- For pilot later -->
+  <Affliction identifier="wired" type="talentbuff" isbuff="true" limbspecific="false" maxstrength="1" duration="5" iconcolors="33,75,78;126,211,224;126,211,224;227,247,249">
+    <Effect minstrength="0" maxstrength="1" resistancefor="stun" minresistance="0.5" maxresistance="0.5">
+      <StatValue stattype="HelmSkillBonus" value="10" />
+    </Effect>
+    <Icon texture="Content/UI/TalentsIcons2.png" sheetindex="5,7" sheetelementsize="128,128" color="10,193,114,255" origin="0,0" />
+  </Affliction>
+  <Affliction identifier="clandestineveins" type="talentbuff" isbuff="true" limbspecific="false" maxstrength="1" duration="5" showiconthreshold="100" treatmentthreshold="1000" iconcolors="33,75,78;126,211,224;126,211,224;227,247,249">
+    <Effect minstrength="0" maxstrength="1">
+      <StatValue stattype="MedicalItemEffectivenessMultiplier" value="0.35" />
+    </Effect>
+  </Affliction>
+  <Affliction identifier="midnightswim" type="talentbuff" isbuff="true" limbspecific="false" maxstrength="1" duration="5" showiconthreshold="100" treatmentthreshold="1000" iconcolors="33,75,78;126,211,224;126,211,224;227,247,249">
+    <Effect minstrength="0" maxstrength="1">
+      <StatValue stattype="MaximumHealthMultiplier" value="0.15" />
+      <StatValue stattype="SwimmingSpeed" value="0.10" />
+    </Effect>
+  </Affliction>
+  <Affliction identifier="trappedhaste" type="talentbuff" isbuff="true" limbspecific="false" maxstrength="1" duration="5" treatmentthreshold="1000" showiconthreshold="0" iconcolors="33,75,78;126,211,224;126,211,224;227,247,249">
+    <Effect minstrength="0" maxstrength="1">
+      <StatValue stattype="AttackMultiplier" value="0.15" />
+    </Effect>
+    <Icon texture="Content/UI/TalentsIcons3.png" sheetindex="3,0" sheetelementsize="128,128" color="10,193,114,255" origin="0,0" />
+  </Affliction>
+  <Affliction identifier="trappedoverdose" type="talentbuff" isbuff="true" limbspecific="false" maxstrength="1" duration="5" treatmentthreshold="1000" showiconthreshold="0" iconcolors="33,75,78;126,211,224;126,211,224;227,247,249">
+    <Effect minstrength="0" maxstrength="1" resistancefor="damage" minresistance="0" maxresistance="0.25"></Effect>
+    <Icon texture="Content/UI/TalentsIcons3.png" sheetindex="0,1" sheetelementsize="128,128" color="10,193,114,255" origin="0,0" />
+  </Affliction>
+</Afflictions>

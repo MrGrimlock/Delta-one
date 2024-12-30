@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Jobs>
+  <Job identifier="highvoltageworker" maxnumber="2" initialcount="1" minkarma="35" uicolor="0.78,0.52,0.33" vitalitymodifier="11" pricemultiplier="1.40" idlebehavior="Patrol">
+    <Jobicon>
+      <sprite texture="%ModDir%/IconsHvo.png" sourcerect="512,512,0,0" origin="0.5,0.5" />
+    </Jobicon>
+    <JobiconSmall>
+      <sprite texture="%ModDir%/IconsHvo.png" sourcerect="512,512,0,0" origin="0.5,0.5" />
+    </JobiconSmall>
+    <Skills>
+      <Skill identifier="medical" level="15,25" />
+      <Skill identifier="weapons" level="15,25" />
+      <Skill identifier="helm" level="5,10" />
+      <Skill identifier="mechanical" level="15,25" />
+      <Skill identifier="electrical" level="65,75" primary="true" />
+    </Skills>
+    <ItemSet>
+      <Item identifier="idcard" equip="true" showpreview="false" />
+      <Item identifier="orangejumpsuit2" equip="true" outfit="true" />
+      <Item identifier="headset" equip="true" showpreview="false" />
+      <Item identifier="baseballcap" equip="true" />
+      <Item identifier="alarmbuzzer" equip="false" />
+      <Item identifier="emergencysiren" equip="false" />
+      <Item identifier="fpgacircuit" equip="false" />
+      <Item identifier="screwdriver" equip="false" />
+    </ItemSet>
+    <ItemSet>
+      <Item identifier="idcard" equip="true" showpreview="false" />
+      <Item identifier="bluejumpsuit2" equip="true" outfit="true" />
+      <Item identifier="headset" equip="true" showpreview="false" />
+      <Item identifier="baseballcap" equip="true" />
+      <Item identifier="redwire" equip="false" />
+      <Item identifier="greenwire" equip="false" />
+      <Item identifier="bluewire" equip="false" />
+      <Item identifier="textdisplay" equip="false" />
+      <Item identifier="lever" equip="false" />
+      <Item identifier="screwdriver" equip="false" />
+    </ItemSet>
+  </Job>
+</Jobs>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contentpackage name="Faces of Europe" modversion="1.0.5.?" corepackage="False" steamworkshopid="3358395322" gameversion="1.7.7.0" expectedhash="00B7C9926C46699B4DB389510CB48F21">
+  <Jobs file="%ModDir%/Jobs.xml" />
+  <TalentTrees file="%ModDir%/TalentTrees.xml" />
+  <Talents file="%ModDir%/Talents.xml" />
+  <Text file="%ModDir%/Ru.xml" />
+  <Text file="%ModDir%/En.xml" />
+  <Item file="%ModDir%/Items.xml" />
+  <Item file="%ModDir%/clothes.xml" />
+  <Item file="%ModDir%/weapons.xml" />
+  <Afflictions file="%ModDir%/Afflictions.xml" />
+</contentpackage>

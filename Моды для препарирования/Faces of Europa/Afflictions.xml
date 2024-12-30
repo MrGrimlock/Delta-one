@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Afflictions>
+  <Affliction name="afflictionname.flight" identifier="flight" description="afflictiondescription.flight" type="talentbuff" isbuff="true" limbspecific="false" hideiconafterdelay="true" maxstrength="1" treatmentthreshold="1000" duration="10" iconcolors="33,75,78;126,211,224;126,211,224;227,247,249">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect type="Always" target="Character" lockhands="true" setvalue="true" />
+      <!--lockhands="true" засунуть в статус эффекты если захочется-->
+      <StatValue stattype="SwimmingSpeed" value="3" />
+      <StatValue stattype="RangedSpreadReduction" value="-1" />
+      <StatValue stattype="RangedAttackSpeed" value="-1" />
+      <StatValue stattype="AttackMultiplier" value="-1" />
+      <StatValue stattype="MeleeAttackSpeed" value="-1" />
+      <StatValue stattype="MeleeAttackMultiplier" value="-1" />
+    </Effect>
+    <Icon texture="%ModDir%/talenticon.png" sheetindex="6,5" sheetelementsize="128,128" color="10,193,114,255" origin="0,0" />
+  </Affliction>
+  <Affliction name="afflictionname.motivation" identifier="motivation" description="afflictiondescription.motivation" type="talentbuff" isbuff="true" limbspecific="false" hideiconafterdelay="true" maxstrength="10" treatmentthreshold="1000" iconcolors="33,75,78;126,211,224;126,211,224;227,247,249">
+    <Effect minstrength="0" maxstrength="10" strengthchange="-1">
+      <StatValue stattype="ElectricalSkillBonus" value="10" />
+      <StatValue stattype="HelmSkillBonus" value="10" />
+      <StatValue stattype="MechanicalSkillBonus" value="10" />
+      <StatValue stattype="MedicalSkillBonus" value="10" />
+      <StatValue stattype="WeaponsSkillBonus" value="10" />
+      <StatValue stattype="RepairSpeed" value="0.25" />
+    </Effect>
+    <Icon texture="%ModDir%/TalentsIcons1.png" sheetindex="5,5" sheetelementsize="128,128" color="10,193,114,255" origin="0,0" />
+  </Affliction>
+  <Affliction name="afflictionname.easydoesit" identifier="easydoesit" description="afflictiondescription.easydoesit" type="talentbuff" isbuff="true" limbspecific="false" maxstrength="1" treatmentthreshold="1000" hideiconafterdelay="true" iconcolors="33,75,78;126,211,224;126,211,224;227,247,249">
+    <Effect minstrength="0" maxstrength="1">
+      <AbilityFlag flagtype="IgnoredByEnemyAI" />
+    </Effect>
+    <Icon texture="%ModDir%/talenticon.png" sheetindex="7,5" sheetelementsize="128,128" color="10,193,114,255" origin="0,0" />
+  </Affliction>
+  <Affliction name="afflictionname.swimming_trainer" identifier="swimming_trainer" description="afflictiondescription.swimming_trainer" type="talentbuff" isbuff="true" limbspecific="false" maxstrength="1" treatmentthreshold="1000" hideiconafterdelay="true" duration="1" iconcolors="33,75,78;126,211,224;126,211,224;227,247,249">
+    <Effect minstrength="0" maxstrength="1">
+      <StatValue stattype="SwimmingSpeed" value="0.5" />
+    </Effect>
+    <Icon texture="%ModDir%/talenticon.png" sheetindex="7,6" color="10,193,114,255" sheetelementsize="128,128" origin="0,0" />
+  </Affliction>
+  <Affliction name="afflictionname.devotion" identifier="devotion" description="afflictiondescription.devotion" type="talentbuff" isbuff="true" limbspecific="false" maxstrength="1" treatmentthreshold="1000" hideiconafterdelay="true" duration="1" iconcolors="33,75,78;126,211,224;126,211,224;227,247,249">
+    <Effect minstrength="0" maxstrength="1" />
+    <Icon texture="%ModDir%/talenticon.png" sheetindex="4,6" color="10,193,114,255" sheetelementsize="128,128" origin="0,0" />
+  </Affliction>
+  <Affliction name="afflictionname.fight" identifier="fight" description="afflictiondescription.fight" type="talentbuff" isbuff="true" limbspecific="false" hideiconafterdelay="true" maxstrength="1" treatmentthreshold="1000" causespeechimpediment="true" duration="15" iconcolors="33,75,78;126,211,224;126,211,224;227,247,249">
+    <Effect minstrength="0" maxstrength="1">
+      <StatValue stattype="SwimmingSpeed" value="-0.75" />
+      <StatValue stattype="RangedSpreadReduction" value="-0.75" />
+      <StatValue stattype="RangedAttackSpeed" value="0.25" />
+      <StatValue stattype="MeleeAttackSpeed" value="0.25" />
+      <StatValue stattype="MeleeAttackMultiplier" value="0.5" />
+    </Effect>
+    <Icon texture="Content/UI/TalentsIcons4.png" sheetindex="0,1" sheetelementsize="128,128" color="10,193,114,255" origin="0,0" />
+  </Affliction>
+  <Affliction name="afflictionname.frog_leaping" identifier="frog_leaping" type="talentbuff" isbuff="true" limbspecific="false" maxstrength="1" treatmentthreshold="1000" iconcolors="33,75,78;126,211,224;126,211,224;227,247,249">
+    <Effect minstrength="0" maxstrength="1" strengthchange="-2" />
+    <Icon texture="Content/UI/TalentsIcons3.png" sheetindex="1,3" sheetelementsize="128,128" color="10,193,114,255" origin="0,0" />
+  </Affliction>
+  <Affliction name="afflictionname.all_hands" identifier="all_hands" type="talentbuff" isbuff="true" limbspecific="false" hideiconafterdelay="true" maxstrength="1" treatmentthreshold="1000" causespeechimpediment="true" duration="15" iconcolors="33,75,78;126,211,224;126,211,224;227,247,249">
+    <Effect minstrength="0" maxstrength="1">
+      <StatValue stattype="RepairSpeed" value="0.25" />
+      <StatValue stattype="RepairToolStructureRepairMultiplier" value="0.25" />
+    </Effect>
+    <Icon texture="Content/UI/TalentsIcons2.png" sheetindex="4,6" sheetelementsize="128,128" color="10,193,114,255" origin="0,0" />
+  </Affliction>
+  <Affliction name="afflictionname.idiot" identifier="idiot" type="talentbuff" isbuff="true" limbspecific="false" hideiconafterdelay="true" maxstrength="1" treatmentthreshold="1000" causespeechimpediment="true" duration="1" iconcolors="33,75,78;126,211,224;126,211,224;227,247,249">
+    <Effect minstrength="0" maxstrength="1">
+      <StatValue stattype="ElectricalSkillBonus" value="-100" />
+      <StatValue stattype="HelmSkillBonus" value="-100" />
+      <StatValue stattype="MechanicalSkillBonus" value="-100" />
+      <StatValue stattype="WeaponsSkillBonus" value="-100" />
+      <StatValue stattype="MedicalSkillBonus" value="-100" />
+    </Effect>
+    <Icon texture="Content/UI/TalentsIcons2.png" sheetindex="2,7" sheetelementsize="128,128" color="10,193,114,255" origin="0,0" />
+  </Affliction>
+  <!--  <Affliction
+    name="afflictionname.big-game"
+    identifier="big-game"
+    type="talentbuff"
+    isbuff="true"
+    limbspecific="false"
+    hideiconafterdelay="true"
+    maxstrength="1"
+    treatmentthreshold="1000"
+    iconcolors="33,75,78;126,211,224;126,211,224;227,247,249">
+<Effect minstrength="0" maxstrength="1"
+      resistancefor="stun"
+      minresistance="0"
+      maxresistance="0.3" >
+		<StatValue stattype="TurretAttackSpeed" value="0.2" />
+		<StatValue stattype="MovementSpeed" value="0.3" />
+    </Effect>
+    <Icon texture="Content/UI/TalentsIcons1.png" sheetindex="4,2" sheetelementsize="128,128" color="10,193,114,255" origin="0,0"/>
+  </Affliction>  -->
+  <Affliction name="afflictionname.adapting" identifier="adapting" description="afflictiondescription.adapting" type="talentbuff" isbuff="true" hideiconafterdelay="true" limbspecific="false" maxstrength="7" treatmentthreshold="1000" iconcolors="33,75,78;126,211,224;126,211,224;227,247,249">
+    <Effect minstrength="0" maxstrength="7" strengthchange="-1">
+      <AbilityFlag flagtype="ImmuneToPressure" />
+    </Effect>
+    <!--	<Effect minstrength="7" maxstrength="15" strengthchange="-1">
+      <AbilityFlag flagtype="ImmuneToPressure" />
+<!{1}**      <StatusEffect target="Character" interval="2" disabledeltatime="true">
+      </StatusEffect>**{1}>
+    </Effect>-->
+    <Icon texture="Content/UI/TalentsIcons2.png" sheetindex="7,6" sheetelementsize="128,128" color="195,136,60,255" origin="0,0" />
+  </Affliction>
+  <Affliction name="afflictionname.swansong" identifier="swansong" description="afflictiondescription.swansong" type="talentbuff" isbuff="true" hideiconafterdelay="true" limbspecific="false" maxstrength="1" treatmentthreshold="1000" duration="1" iconcolors="33,75,78;126,211,224;126,211,224;227,247,249">
+    <Effect minstrength="0" maxstrength="1">
+      <AbilityFlag flagtype="AlwaysStayConscious" />
+      <StatValue stattype="MovementSpeed" value="-0.65" />
+      <StatValue stattype="RangedAttackSpeed" value="-0.5" />
+      <StatValue stattype="RangedSpreadReduction" value="-0.75" />
+      <StatusEffect target="Character">
+        <Affliction identifier="organdamage" amount="2" />
+        <TriggerAnimation Type="Walk" filename="DrunkenWalk" priority="1" ExpectedSpecies="Human" />
+        <TriggerAnimation Type="Run" filename="DrunkenRun" priority="1" ExpectedSpecies="Human" />
+      </StatusEffect>
+    </Effect>
+    <Icon texture="Content/UI/TalentsIcons4.png" sheetindex="6,2" sheetelementsize="128,128" color="195,136,60,255" origin="0,0" />
+  </Affliction>
+  <Affliction name="afflictionname.final" identifier="final" type="talentbuff" isbuff="true" hideiconafterdelay="true" limbspecific="false" maxstrength="10" treatmentthreshold="1000" iconcolors="33,75,78;126,211,224;126,211,224;227,247,249">
+    <Effect minstrength="0" maxstrength="10" strengthchange="-1">
+      <AbilityFlag flagtype="CanNotDieToAfflictions" />
+    </Effect>
+    <Icon texture="Content/UI/TalentsIcons4.png" sheetindex="6,2" sheetelementsize="128,128" color="195,136,60,255" origin="0,0" />
+  </Affliction>
+  <Affliction name="afflictionname.onfeet" identifier="onfeet" description="afflictiondescription.onfeet" type="talentbuff" isbuff="true" limbspecific="false" maxstrength="1" treatmentthreshold="1000" duration="1" iconcolors="33,75,78;126,211,224;126,211,224;227,247,249">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character">
+        <ReduceAffliction type="damage" strength="100" />
+        <ReduceAffliction type="burn" strength="100" />
+        <ReduceAffliction identifier="bloodloss" strength="100" />
+        <ReduceAffliction identifier="bleeding" strength="100" />
+        <ReduceAffliction identifier="oxygenlow" strength="100" />
+        <ReduceAffliction identifier="concussion" strength="100" />
+        <ReduceAffliction identifier="stun" strength="100" />
+      </StatusEffect>
+    </Effect>
+    <Icon texture="Content/UI/TalentsIcons4.png" sheetindex="1,0" sheetelementsize="128,128" color="10,193,114,255" origin="0,0" />
+  </Affliction>
+  <Affliction identifier="beatdown" type="talentbuff" isbuff="true" limbspecific="false" maxstrength="2" treatmentthreshold="1000" showiconthreshold="3" iconcolors="33,75,78;126,211,224;126,211,224;227,247,249">
+    <Effect minstrength="0" maxstrength="2" strengthchange="-1" />
+    <Icon texture="Content/UI/TalentsIcons4.png" sheetindex="3,0" sheetelementsize="128,128" origin="0,0" />
+  </Affliction>
+  <Affliction name="afflictionname.courage" identifier="courage" description="afflictiondescription.courage" type="talentbuff" isbuff="true" limbspecific="false" maxstrength="10" treatmentthreshold="1000" showiconthreshold="1" iconcolors="33,75,78;126,211,224;126,211,224;227,247,249">
+    <Effect minstrength="0" maxstrength="2" strengthchange="-0.25">
+      <StatValue stattype="MeleeAttackSpeed" value="0.2" />
+    </Effect>
+    <Effect minstrength="2" maxstrength="4" strengthchange="-0.25">
+      <StatValue stattype="MeleeAttackSpeed" value="0.5" />
+    </Effect>
+    <Effect minstrength="4" maxstrength="6" strengthchange="-0.5">
+      <StatValue stattype="MeleeAttackSpeed" value="0.7" />
+    </Effect>
+    <Effect minstrength="6" maxstrength="8" strengthchange="-0.5">
+      <StatValue stattype="MeleeAttackSpeed" value="1" />
+    </Effect>
+    <Effect minstrength="8" maxstrength="10" strengthchange="-0.5">
+      <StatusEffect target="Character" interval="1" disabledeltatime="true">
+        <Affliction identifier="psychosis" amount="0.25" />
+      </StatusEffect>
+      <StatValue stattype="MeleeAttackSpeed" value="1.5" />
+    </Effect>
+    <Icon texture="%ModDir%/talenticon.png" sheetindex="4,5" sheetelementsize="128,128" color="10,193,114,255" origin="0,0" />
+  </Affliction>
+  <Affliction name="afflictionname.staring_down" identifier="staring_down" description="afflictiondescription.staring_down" type="talentbuff" isbuff="true" limbspecific="false" hideiconafterdelay="true" maxstrength="5" treatmentthreshold="1000" iconcolors="33,75,78;126,211,224;126,211,224;227,247,249">
+    <Effect minstrength="0" maxstrength="5" strengthchange="-1">
+      <StatValue stattype="ElectricalSkillBonus" value="25" />
+      <StatValue stattype="MechanicalSkillBonus" value="25" />
+      <StatValue stattype="MedicalSkillBonus" value="25" />
+      <StatValue stattype="WeaponsSkillBonus" value="25" />
+      <StatValue stattype="HelmSkillBonus" value="25" />
+      <StatValue stattype="MovementSpeed" value="0.1" />
+      <StatValue stattype="RepairSpeed" value="0.1" />
+      <StatValue stattype="RepairToolStructureRepairMultiplier" value="0.1" />
+    </Effect>
+    <Icon texture="%ModDir%/talenticon.png" sheetindex="5,6" sheetelementsize="128,128" color="10,193,114,255" origin="0,0" />
+  </Affliction>
+  <Affliction name="afflictionname.egg_swallower" identifier="egg_swallower" type="talentbuff" isbuff="true" limbspecific="false" hideiconafterdelay="true" maxstrength="1" treatmentthreshold="1000" duration="30" iconcolors="33,75,78;126,211,224;126,211,224;227,247,249">
+    <Effect minstrength="0" maxstrength="1" resistancefor="damage" minresistance="0.3" maxresistance="0.3">
+      <StatValue stattype="MovementSpeed" value="0.5" />
+    </Effect>
+    <Icon texture="%ModDir%/talenticon.png" sheetindex="2,5" sheetelementsize="128,128" color="10,193,114,255" origin="0,0" />
+  </Affliction>
+  <Affliction name="afflictionname.inconspicuous" identifier="inconspicuous" description="afflictiondescription.inconspicuous" type="talentbuff" isbuff="true" limbspecific="false" hideiconafterdelay="true" maxstrength="1" treatmentthreshold="1000" iconcolors="33,75,78;126,211,224;126,211,224;227,247,249">
+    <Effect minstrength="0" maxstrength="1" strengthchange="-0.8" maxbodytint="0,0,0,255" MinAfflictionOverlayAlphaMultiplier="0" MaxAfflictionOverlayAlphaMultiplier="1">
+      <StatusEffect target="Character" indetectable="true" />
+    </Effect>
+    <Icon texture="%ModDir%/talenticon.png" sheetindex="0,5" sheetelementsize="128,128" color="10,193,114,255" origin="0,0" />
+  </Affliction>
+  <Affliction identifier="spotted" description="pediks nearby" type="talentbuff" isbuff="true" limbspecific="false" hideiconafterdelay="true" maxstrength="10" treatmentthreshold="1000" showiconthreshold="1000">
+    <!---->
+    <Effect minstrength="0" maxstrength="10" strengthchange="-0.6" MinAfflictionOverlayAlphaMultiplier="0" MaxAfflictionOverlayAlphaMultiplier="0.5">
+      <!--		<StatusEffect target="Character">
+		<ReduceAffliction identifier="inconspicuous" amount="1"/>
+      </StatusEffect>-->
+    </Effect>
+    <AfflictionOverlay texture="%ModDir%/spotted.png" />
+  </Affliction>
+  <Affliction name="afflictionname.crawlermask" identifier="crawlermask" description="afflictiondescription.crawlermask" type="talentbuff" indicatorlimb="Head" isbuff="true" limbspecific="false" maxstrength="1">
+    <Effect minstrength="0" maxstrength="1" ThermalOverlayRange="1500" ThermalOverlayColor="255,18,29,150" />
+    <icon texture="%ModDir%/talenticon.png" sheetindex="5,5" sheetelementsize="128,128" color="10,193,114,255" origin="0,0" />
+  </Affliction>
+  <Affliction name="afflictionname.enlightened" identifier="enlightened" description="afflictiondescription.enlightened" type="talentbuff" indicatorlimb="Head" isbuff="true" limbspecific="false" maxstrength="40" iconcolors="33,75,78;126,211,224;126,211,224;227,247,249">
+    <Effect minstrength="0" maxstrength="30" strengthchange="-0.5">
+      <StatusEffect target="Character" setvalue="true">
+        <TriggerAnimation Type="Walk" filename="JollyWalk" priority="3" ExpectedSpecies="Human" />
+      </StatusEffect>
+      <StatValue stattype="ElectricalSkillBonus" value="10" />
+      <StatValue stattype="MechanicalSkillBonus" value="10" />
+      <StatValue stattype="MedicalSkillBonus" value="10" />
+      <StatValue stattype="MedicalSkillGainSpeed" value="0.25" />
+      <StatValue stattype="MechanicalSkillGainSpeed" value="0.25" />
+      <StatValue stattype="ElectricalSkillGainSpeed" value="0.25" />
+    </Effect>
+    <Effect minstrength="30" maxstrength="40" strengthchange="-0.5">
+      <StatusEffect target="Character" setvalue="true">
+        <ReduceAffliction type="damage" strength="0.015" />
+        <ReduceAffliction identifier="bloodloss" strength="0.015" />
+        <TriggerAnimation Type="Walk" filename="JollyWalk" priority="3" ExpectedSpecies="Human" />
+      </StatusEffect>
+      <StatValue stattype="ElectricalSkillBonus" value="20" />
+      <StatValue stattype="MechanicalSkillBonus" value="20" />
+      <StatValue stattype="MedicalSkillBonus" value="20" />
+      <StatValue stattype="MedicalSkillGainSpeed" value="0.25" />
+      <StatValue stattype="MechanicalSkillGainSpeed" value="0.25" />
+      <StatValue stattype="ElectricalSkillGainSpeed" value="0.25" />
+    </Effect>
+    <icon texture="%ModDir%/talenticon.png" sheetindex="6,6" sheetelementsize="128,128" color="10,193,114,255" origin="0,0" />
+  </Affliction>
+  <Affliction identifier="fumigator" type="disguiseashusk" isbuff="true" limbspecific="false" indicatorlimb="Head" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="1">
+    <Effect minstrength="0" maxstrength="1" strengthchange="-1" tag="huskinfected" />
+    <icon texture="%ModDir%/talenticon.png" sheetindex="1,5" sheetelementsize="128,128" color="10,193,114,255" origin="0,0" />
+  </Affliction>
+</Afflictions>

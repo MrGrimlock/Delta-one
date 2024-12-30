@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TalentTrees>
+  <TalentTree jobidentifier="terrorist">
+    <SubTree identifier="terrorist_primary" nameidentifier="talenttree.primary" type="primary">
+      <TalentOptions requiredtalents="2" maxchosentalents="5">
+        <TalentOption identifier="warstories" />
+        <TalentOption identifier="revengesquad" />
+        <TalentOption identifier="whatastench" />
+        <TalentOption identifier="nobodyimportantdies" />
+        <TalentOption identifier="dontpushit" />
+      </TalentOptions>
+      <TalentOptions requiredtalents="1" maxchosentalents="1">
+        <!-- rework , DRG -->
+        <TalentOption identifier="opiatebullets" />
+        <TalentOption identifier="ontheknees" />
+        <TalentOption identifier="riprounds" />
+        <TalentOption identifier="toxicbullets" />
+        <TalentOption identifier="explosiverounds" />
+        <TalentOption identifier="softpointbullets" />
+        <TalentOption identifier="incendiaryrounds" />
+      </TalentOptions>
+    </SubTree>
+    <SubTree identifier="khalifa" type="specialization" requires="terrorist_primary" blocks="demolitioner,acolyte">
+      <!--done-->
+      <TalentOptions>
+        <TalentOption identifier="donoharm" />
+      </TalentOptions>
+      <TalentOptions>
+        <TalentOption identifier="killkillkillkillkill" />
+        <TalentOption identifier="momentumturrets" />
+      </TalentOptions>
+      <TalentOptions>
+        <TalentOption identifier="nomoredeals" />
+        <TalentOption identifier="streamlinedturrets" />
+      </TalentOptions>
+      <TalentOptions>
+        <TalentOption identifier="gunneryexpert" />
+      </TalentOptions>
+    </SubTree>
+    <SubTree identifier="demolitioner" type="specialization" requires="terrorist_primary" blocks="khalifa,acolyte">
+      <!--done-->
+      <TalentOptions>
+        <TalentOption identifier="terror" />
+      </TalentOptions>
+      <TalentOptions>
+        <TalentOption identifier="decoy" />
+        <TalentOption identifier="electrical_plus" />
+      </TalentOptions>
+      <TalentOptions>
+        <TalentOption identifier="concretepiercingammunition" />
+        <TalentOption identifier="clustermunitions" />
+      </TalentOptions>
+      <TalentOptions>
+        <TalentOption identifier="nuclearoption" />
+      </TalentOptions>
+    </SubTree>
+    <SubTree identifier="acolyte" type="specialization" requires="terrorist_primary" blocks="demolitioner,khalifa">
+      <!--done-->
+      <TalentOptions>
+        <TalentOption identifier="dominanthuskeggs" />
+      </TalentOptions>
+      <TalentOptions>
+        <TalentOption identifier="stillbreathing" />
+      </TalentOptions>
+      <TalentOptions>
+        <TalentOption identifier="mentor_combat" />
+        <TalentOption identifier="mentor_maintance" />
+      </TalentOptions>
+      <TalentOptions>
+        <TalentOption identifier="talented" />
+        <TalentOption identifier="allaboard" />
+      </TalentOptions>
+    </SubTree>
+  </TalentTree>
+</TalentTrees>

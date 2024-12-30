@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TalentTrees>
+  <TalentTree jobidentifier="addict">
+    <SubTree identifier="addict_primary" nameidentifier="talenttree.primary" type="primary">
+      <TalentOptions maxchosentalents="2">
+        <TalentOption identifier="salvagecrew" />
+        <TalentOption identifier="thewaitinglist" />
+        <TalentOption identifier="laresistance" />
+        <TalentOption identifier="selfcare" />
+      </TalentOptions>
+      <TalentOptions maxchosentalents="2">
+        <TalentOption identifier="bythebook" />
+        <TalentOption identifier="drsubmarine" />
+        <TalentOption identifier="crewlayabout" />
+        <TalentOption identifier="exampleofhealth" />
+      </TalentOptions>
+    </SubTree>
+    <SubTree identifier="Путь на дно" type="specialization" requires="addict_primary" blocks="">
+      <TalentOptions>
+        <TalentOption identifier="wired" />
+        <TalentOption identifier="clandestineveins" />
+      </TalentOptions>
+      <TalentOptions>
+        <TalentOption identifier="waterwhite" />
+        <TalentOption identifier="aprofessional" />
+      </TalentOptions>
+      <TalentOptions>
+        <TalentOption identifier="sharingneedles" />
+        <TalentOption identifier="midnightswim" />
+      </TalentOptions>
+      <TalentOptions>
+        <TalentOption identifier="trapped" />
+      </TalentOptions>
+    </SubTree>
+    <SubTree identifier="П.Т.С.Р" type="specialization" requires="addict_primary" blocks="">
+      <TalentOptions>
+        <TalentOption identifier="ptsdattack" />
+      </TalentOptions>
+      <TalentOptions>
+        <TalentOption identifier="commando" />
+      </TalentOptions>
+      <TalentOptions>
+        <TalentOption identifier="lonewolf" />
+      </TalentOptions>
+      <TalentOptions>
+        <TalentOption identifier="fanatic" />
+      </TalentOptions>
+    </SubTree>
+    <SubTree identifier="Кем я был раньше?" type="specialization" requires="addict_primary" blocks="">
+      <TalentOptions>
+        <ShowCaseTalent identifier="Onceuponatime">
+          <TalentOption identifier="Onceuponatime_assistant" />
+          <TalentOption identifier="Onceuponatime_captain" />
+          <TalentOption identifier="Onceuponatime_doctor" />
+          <TalentOption identifier="Onceuponatime_engineer" />
+          <TalentOption identifier="Onceuponatime_mechanic" />
+          <TalentOption identifier="Onceuponatime_security" />
+        </ShowCaseTalent>
+      </TalentOptions>
+      <TalentOptions>
+        <TalentOption identifier="plaguedoctor" />
+        <TalentOption identifier="playingwithfire" />
+      </TalentOptions>
+      <TalentOptions>
+        <TalentOption identifier="whatastench" />
+        <TalentOption identifier="extrapowder" />
+      </TalentOptions>
+      <TalentOptions>
+        <TalentOption identifier="berserker" />
+      </TalentOptions>
+    </SubTree>
+    <SubTree identifier="Это...Что со мной?" type="specialization" requires="addict_primary" blocks="">
+      <TalentOptions>
+        <TalentOption identifier="supplication" />
+      </TalentOptions>
+      <TalentOptions>
+        <TalentOption identifier="jekyllandhyde" />
+      </TalentOptions>
+      <TalentOptions>
+        <TalentOption identifier="willinghost" />
+      </TalentOptions>
+      <TalentOptions>
+        <TalentOption identifier="sacrifice" />
+      </TalentOptions>
+    </SubTree>
+  </TalentTree>
+</TalentTrees>

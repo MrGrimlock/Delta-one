@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TalentTrees>
+  <TalentTree jobidentifier="deliveryman">
+    <SubTree identifier="deliveryman_primary" nameidentifier="talenttree.primary" type="primary">
+      <TalentOptions requiredtalents="1" maxchosentalents="5">
+        <!--done-->
+        <TalentOption identifier="mule" />
+        <TalentOption identifier="jengamaster" />
+        <TalentOption identifier="bagitup" />
+        <TalentOption identifier="logisticsexpert" />
+        <TalentOption identifier="indenturedservitude" />
+      </TalentOptions>
+      <TalentOptions requiredtalents="1" maxchosentalents="4">
+        <!--done-->
+        <TalentOption identifier="mailman" />
+        <TalentOption identifier="crewlayabout" />
+        <TalentOption identifier="firemanscarry" />
+        <TalentOption identifier="heavylifting" />
+        <TalentOption identifier="vodolaz" />
+      </TalentOptions>
+      <TalentOptions requiredtalents="1" maxchosentalents="4">
+        <!--done-->
+        <TalentOption identifier="salvagecrew" />
+        <TalentOption identifier="steadytune" />
+        <TalentOption identifier="samplecollection" />
+        <TalentOption identifier="gunrunner" />
+        <TalentOption identifier="emergencymaneuvers" />
+      </TalentOptions>
+      <TalentOptions requiredtalents="1" maxchosentalents="4">
+        <!--done-->
+        <TalentOption identifier="skedaddle" />
+        <TalentOption identifier="scrapsavant" />
+        <TalentOption identifier="residualwaste" />
+        <TalentOption identifier="oiledmachinery" />
+        <TalentOption identifier="melodicrespite" />
+      </TalentOptions>
+      <TalentOptions requiredtalents="1" maxchosentalents="4">
+        <!--done-->
+        <TalentOption identifier="machinemaniac" />
+        <TalentOption identifier="junctionjunkie" />
+        <TalentOption identifier="egghead" />
+        <TalentOption identifier="protectandserve" />
+        <TalentOption identifier="daringdolphin" />
+      </TalentOptions>
+      <TalentOptions requiredtalents="1" maxchosentalents="4">
+        <!--done-->
+        <TalentOption identifier="logisticssystems" />
+        <TalentOption identifier="healthinsurance" />
+        <TalentOption identifier="deliverysystem" />
+        <TalentOption identifier="prodigy" />
+        <TalentOption identifier="teachandlearn" />
+      </TalentOptions>
+    </SubTree>
+    <SubTree identifier="qualification" type="specialization" requires="deliveryman_primary" blocks="xxxxxx">
+      <!--done-->
+      <TalentOptions>
+        <TalentOption identifier="mastery" />
+        <TalentOption identifier="flash" />
+        <TalentOption identifier="savage" />
+        <TalentOption identifier="miner_professional" />
+      </TalentOptions>
+    </SubTree>
+  </TalentTree>
+</TalentTrees>

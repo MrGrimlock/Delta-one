@@ -1,0 +1,327 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="English" nowhitespace="false" translatedname="English">
+  <!-- Items and descs -->
+  <entityname.toothy>"Toothpick"</entityname.toothy>
+  <entitydescription.toothy>The cleanest tool of mass murder.</entitydescription.toothy>
+  <entityname.vortex>"Whirlwind" SMG </entityname.vortex>
+  <entitydescription.vortex>A crude submachine gun with a proprietary caliber known only to the manufacturer.</entitydescription.vortex>
+  <entityname.shortyGL>"Shorty" Grenade Launcher</entityname.shortyGL>
+  <entitydescription.shortyGL>A portable grenade launcher for 40mm grenades.</entitydescription.shortyGL>
+  <entityname.firemagazine>Drum magazine with incendiary rounds for SMG "Whirlwind"</entityname.firemagazine>
+  <entitydescription.firemagazine>A drum magazine for SMG "Whirlwind" with incendiary rounds that leave horrific burns on unprotected skin.</entitydescription.firemagazine>
+  <entityname.metalmagazine>Drum magazine for SMG "Whirlwind"</entityname.metalmagazine>
+  <entitydescription.metalmagazine>A drum magazine for SMG "Whirlwind".</entitydescription.metalmagazine>
+  <entityname.thermitegrenade>40mm Thermite Grenade</entityname.thermitegrenade>
+  <entitydescription.thermitegrenade>Ammunition for grenade launcher. Filled with thermite mixture, causing burns when active, and covered with thin layer of glue to stick to surfaces. Used to burn through materials and flesh if need be.</entitydescription.thermitegrenade>
+  <entityname.canistershot>40mm anister Shell</entityname.canistershot>
+  <entitydescription.canistershot>Ammunition for grenade launcher. Filled with metal pellets that are emitted and scattered at high velocity on shot.</entitydescription.canistershot>
+  <entityname.impactgrenade>Impact Grenade</entityname.impactgrenade>
+  <entitydescription.impactgrenade>Round handgrenade that detonates on impact.</entitydescription.impactgrenade>
+  <entityname.thermitecharge>Thermite Charge</entityname.thermitecharge>
+  <entitydescription.thermitecharge>Satchel full of thermite mixture. Good for burning through materials and flesh if need be.</entitydescription.thermitecharge>
+  <entityname.diver>Hunter's Clothes</entityname.diver>
+  <entitydescription.diver>Cargo pants, a pair of leather boots and a thick jacket. When You want to look like a professional.</entitydescription.diver>
+  <entityname.hardhat>Hard hat</entityname.hardhat>
+  <entitydescription.hardhat>Sturdy headwear made of plastic. Will protect from hits to the head but not from bullets.</entitydescription.hardhat>
+  <entityname.clownhardhat>Father's Support</entityname.clownhardhat>
+  <entitydescription.clownhardhat>Clowns won't stay, if the circus won't leave. The circus won't leave, if it's not built.</entitydescription.clownhardhat>
+  <entityname.militia>Rebel's Clothes</entityname.militia>
+  <entitydescription.militia>Casual clothing with an added layer of ballistic protection.\nConvenient when you need to switch between daily chores and rebellious activities.</entitydescription.militia>
+  <entityname.trenchcoat>Marshal's Clothes</entityname.trenchcoat>
+  <entitydescription.trenchcoat>Looks cool, feels warm, but the thick coat is constrictive as hell.</entitydescription.trenchcoat>
+  <entityname.notaclown>Clown Bastard Costume</entityname.notaclown>
+  <entitydescription.notaclown>Behind its red-nosed silliness lies a combat-capable suit made almost entirely of protective materials.</entitydescription.notaclown>
+  <entityname.notaclownmask>Clown Bastard Mask</entityname.notaclownmask>
+  <entitydescription.notaclownmask>An ingenious solution consisting of a shockproof mask and a red wig glued to a helmet.</entitydescription.notaclownmask>
+  <entityname.contactor>Contactor</entityname.contactor>
+  <entitydescription.contactor>Walkie-talkie looking thing. Looks cheap, feels cheap, but it does the job so no complaints.</entitydescription.contactor>
+  <entityname.orecard>"Minerals" card</entityname.orecard>
+  <entitydescription.orecard>Contacts from this card could provide us with unrefined minerals.</entitydescription.orecard>
+  <entityname.randoscard>"Random stuff" card</entityname.randoscard>
+  <entitydescription.randoscard>Contacts from this card could provide us with ... Things and stuff.</entitydescription.randoscard>
+  <entityname.medscard>"Medicine" card</entityname.medscard>
+  <entitydescription.medscard>Contacts from this card could provide us with "expired" and "written-off" medicine.</entitydescription.medscard>
+  <entityname.munitionscard>"Ammunition" card</entityname.munitionscard>
+  <entitydescription.munitionscard>Contacts from this card could provide us with some ammo, drugs and... Other tools of war and plunder.</entitydescription.munitionscard>
+  <entityname.vesselcard>"Submarine items" card</entityname.vesselcard>
+  <entitydescription.vesselcard>Contacts from this card couldprovide us with items for our vessel. Makes you wonder where they get all the stuff.</entitydescription.vesselcard>
+  <entityname.medscrate>Crate with medicine</entityname.medscrate>
+  <entitydescription.medscrate>Something is rattling inside the crate, so at least it's not empty.</entitydescription.medscrate>
+  <entityname.orecrate>Crate with minerals.</entityname.orecrate>
+  <entitydescription.orecrate>This one is heavy. Hope it's not all rocks and stone.</entitydescription.orecrate>
+  <entityname.vesselcrate>Crate with submarine ammunition.</entityname.vesselcrate>
+  <entitydescription.vesselcrate>By Jove, you could probably squish a crawler with this crate!</entitydescription.vesselcrate>
+  <entityname.munitionscrate>Crate with ammunition.</entityname.munitionscrate>
+  <entitydescription.munitionscrate>Don't shake or heat it up, who knows what could go off inside.</entitydescription.munitionscrate>
+  <entityname.randoscrate>Crate with random stuff.</entityname.randoscrate>
+  <entitydescription.randoscrate>Expect anything from this.</entitydescription.randoscrate>
+  <entityname.randoscrate_shit>Crate full of shit</entityname.randoscrate_shit>
+  <entitydescription.randoscrate_shit>WHAT THE *gags*</entitydescription.randoscrate_shit>
+  <entityname.randoscrate_clowntainer>Clowntainer</entityname.randoscrate_clowntainer>
+  <entitydescription.randoscrate_clowntainer>Looks like a clown container.</entitydescription.randoscrate_clowntainer>
+  <openlootcrate>Open the stash</openlootcrate>
+  <openlootcrateTRAP>Pull harder?</openlootcrateTRAP>
+  <!-- Jobs and descs -->
+  <jobname.europan>Europan</jobname.europan>
+  <jobname.fugitive>Fugitive</jobname.fugitive>
+  <jobname.hollow>Hollow</jobname.hollow>
+  <!-- Trees -->
+  <talenttree.cultist>Cultist</talenttree.cultist>
+  <talenttree.double>Double</talenttree.double>
+  <talenttree.horror>Horror</talenttree.horror>
+  <!-- -->
+  <talenttree.diver>Diver</talenttree.diver>
+  <talenttree.sailor>Sailor</talenttree.sailor>
+  <talenttree.gatherer>Gatherer</talenttree.gatherer>
+  <!-- -->
+  <talenttree.assisting>Assistant</talenttree.assisting>
+  <talenttree.serpent>Serpent</talenttree.serpent>
+  <talenttree.rogue>Rogue</talenttree.rogue>
+  <!-- Talents -->
+  <!-- -->
+  <talentname.new_habitat>Diver: the Beginning</talentname.new_habitat>
+  <talentname.jengaenjoyer>Jenga Enjoyer</talentname.jengaenjoyer>
+  <talentname.beaconkeeper>Beacon Keeper</talentname.beaconkeeper>
+  <talentname.hunter>Hunter</talentname.hunter>
+  <talentname.сourier>Courier</talentname.сourier>
+  <talentname.expansionist>Expansionist</talentname.expansionist>
+  <talentname.herbalist>Herbalist</talentname.herbalist>
+  <talentname.tough>Tough</talentname.tough>
+  <talentname.virtuoso>Virtuoso</talentname.virtuoso>
+  <talentname.freediving_championship>Freediving Championship</talentname.freediving_championship>
+  <talentname.tough_skin>Tough Skin</talentname.tough_skin>
+  <talentname.easy_does_it>Easy Does It</talentname.easy_does_it>
+  <talentname.frog_leaping>By Leaps and Bounds</talentname.frog_leaping>
+  <talentname.fight>Fight...</talentname.fight>
+  <talentname.flight>... Or flight</talentname.flight>
+  <talentname.biggame_hunting>Biggame Hunting</talentname.biggame_hunting>
+  <talentname.hunting_grounds>Hunting Grounds</talentname.hunting_grounds>
+  <talentname.savvy_navy>Savvy</talentname.savvy_navy>
+  <talentname.second_in_command>Second in Command</talentname.second_in_command>
+  <talentname.safety_specialist>Safety Specialist</talentname.safety_specialist>
+  <talentname.all_hands>All Hands!</talentname.all_hands>
+  <talentname.premium_produce>Premium Produce</talentname.premium_produce>
+  <talentname.royalties>Royalties</talentname.royalties>
+  <talentname.lamprey>Lamprey</talentname.lamprey>
+  <talentname.defense_mechanisms>Defense Mechanisms</talentname.defense_mechanisms>
+  <talentname.cuts_of_meat>Cuts of Meat</talentname.cuts_of_meat>
+  <talentname.winnow>Wheat from the Сhaff</talentname.winnow>
+  <talentname.stone_chomper>Stone Chomper</talentname.stone_chomper>
+  <talentname.runaway>Fugitive: the Beginning</talentname.runaway>
+  <talentname.teetotaler>Teetotaler</talentname.teetotaler>
+  <talentname.cheaping_out>Cheaping Out</talentname.cheaping_out>
+  <talentname.undercoveragent>Undercover Agent</talentname.undercoveragent>
+  <talentname.teamplayer>"Team Player"</talentname.teamplayer>
+  <talentname.strongarms>Strong Arms</talentname.strongarms>
+  <talentname.nap>Power Nap</talentname.nap>
+  <talentname.pieceofmind>Piece of Mind</talentname.pieceofmind>
+  <talentname.angry_management>Motivation</talentname.angry_management>
+  <talentname.shitisreal>Wake UP!</talentname.shitisreal>
+  <talentname.bodycount>Notches</talentname.bodycount>
+  <talentname.definitelyaclown>Definitely a Clown</talentname.definitelyaclown>
+  <talentname.inhumane_measures>Inhumane Measures</talentname.inhumane_measures>
+  <talentname.dealwiththedevil>Deal with the Devil</talentname.dealwiththedevil>
+  <talentname.clawingback>Clawing Back</talentname.clawingback>
+  <talentname.spaceinvader>Invader</talentname.spaceinvader>
+  <talentname.cqc>CQC</talentname.cqc>
+  <talentname.slapithere>Slap It There</talentname.slapithere>
+  <talentname.drugssmugler>Drugs Smuggler</talentname.drugssmugler>
+  <talentname.weaponssmugler>Weapons Smuggler</talentname.weaponssmugler>
+  <talentname.underground>Connections with the Underground</talentname.underground>
+  <talentname.textiletreatment>Textile Treatment</talentname.textiletreatment>
+  <talentdescription.new_habitat>Gain ‖color:Gold‖120 money‖end‖... And that's it. Yep, not much, but enough to buy a chocolate bar and an energy drink.</talentdescription.new_habitat>
+  <talentdescription.xpformission>Gain [xp]% more experience for completing [missiontype] missions.</talentdescription.xpformission>
+  <talentdescription.beaconkeeper1>While in the beacon, gain [skillamount1] points to [skillname1] and [skillamount2]% resistance to [affname1].</talentdescription.beaconkeeper1>
+  <talentdescription.expansionist1>When entering a new outpost you have positive faction reputation with, you gain [skillamount1] marks and [skillamount2] experience. When entering a location without an outpost, you gain [skillamount2] experience.</talentdescription.expansionist1>
+  <talentdescription.expansionist2>Gain a [xp]% increase to money and experience for completing [missiontype] missions if you have [skillname].</talentdescription.expansionist2>
+  <talentdescription.characterbuffs1>Gain [skillamount1]% to [skillname1].</talentdescription.characterbuffs1>
+  <talentdescription.characterbuffs1.1>Gain [skillamount1] to [skillname1].</talentdescription.characterbuffs1.1>
+  <talentdescription.characterbuffs1.2>Gain [skillamount1]% resistance to [skillname1].</talentdescription.characterbuffs1.2>
+  <talentdescription.characterbuffs3>While playing on [instrument], you and crew members in the same room gain [skillamount1].</talentdescription.characterbuffs3>
+  <talentdescription.characterbuffs2>Gain [skillamount1] points to [skillname1].</talentdescription.characterbuffs2>
+  <talentdescription.doubleoutput>When producing [itemcat], there is a [skillamount1]% chance of doubling the output.</talentdescription.doubleoutput>
+  <talentdescription.ammo>Ammunition</talentdescription.ammo>
+  <talentdescription.doubledeconout>When deconstructing [itemcat], there is a [skillamount1]% chance of doubling the output.</talentdescription.doubledeconout>
+  <talentdescription.highereffect>Your [itemcat] is more effective.</talentdescription.highereffect>
+  <talentdescription.freediving_championship>While sitting, gain [skillamount1]% to [skillname1].\nNearby crew members swim faster.</talentdescription.freediving_championship>
+  <talentdescription.tough_skin_deb>There is a small chance of you stumbling while running.</talentdescription.tough_skin_deb>
+  <talentdescription.easy_does_it>Gain ‖color:gui.orange‖concealment‖end‖ while you are in open water. If there is a hostile creature next to you or you start swimming fast, ‖color:gui.orange‖concealment‖end‖ goes away.</talentdescription.easy_does_it>
+  <talentdescription.easy_does_it_inv>When you ragdoll in water, enemies stop attacking you after some time.</talentdescription.easy_does_it_inv>
+  <talentdescription.frog_leaping>When you ragdoll in  water, you will make a leap forward.\nIf you ragdoll indoors, the leap will be stronger.</talentdescription.frog_leaping>
+  <talentdescription.flight>When attacked in water by a monster, you fall into a panic. [affname1] increases by a large amount, but you cannot attack and interact with objects.</talentdescription.flight>
+  <talentdescription.flight_dodge>During the panic, you have a [skillamount1]% chance to dodge a melee attack.</talentdescription.flight_dodge>
+  <talentdescription.fight>When attacked in water by a monster, you switch to defense mode. [affname1] is drastically reduced, but your melee attacks become [skillamount1]% powerful and [skillamount2]% faster.</talentdescription.fight>
+  <talentdescription.fight_stun>You have a [skillamount1]% chance to stun your attacker.</talentdescription.fight_stun>
+  <talentdescription.hunting_grounds>Large caliber: Shooting from [rifle] is slower by [skillamount1]%, but shots deal [skillamount2] times more damage.</talentdescription.hunting_grounds>
+  <talentdescription.hunting_grounds_beasts>‖color:gui.orange‖Xenophobia: When killing large creatures, gain [xp1] experience. When killing pets with a [knife], gain [xp2] experience. You don't have to, but you can.‖end‖</talentdescription.hunting_grounds_beasts>
+  <talentdescription.hunting_grounds_harpoon>Old friend: Shooting [harpguns] is [skillamount1]% faster. Damage from [harpoons] is [skillamount1]% higher.</talentdescription.hunting_grounds_harpoon>
+  <talentdescription.hunting_grounds_adapting>‖color:Cyan‖Adaptation: If you are in the [pressurehudwarning] zone without [divingsuit], get short-term pressure resistance.‖end‖</talentdescription.hunting_grounds_adapting>
+  <talentdescription.savvy_navy>You gain [skillname] [skillamount]% faster.</talentdescription.savvy_navy>
+  <talentdescription.safety_specialist>If your [skillname] are higher than [skillamount], there is a [skillamount1]% chance of getting [skillbookhandyseaman] after completing at least 1 mission.</talentdescription.safety_specialist>
+  <talentdescription.all_hands>If your submarine is flooded by [skillamount1]%, all crew members in the same room with you gain [skillamount2]% to [RepairSpeedRepairToolStructureRepairMultiplier]. fixing leaks give [xp1] experience, repairing devices give [xp2] experience.</talentdescription.all_hands>
+  <talentdescription.premium_produce>Loot from monsters is more expensive.</talentdescription.premium_produce>
+  <talentdescription.cuts_of_meat>When holding a [tool], you gain additional loot from [monsters].</talentdescription.cuts_of_meat>
+  <character.crawlerhusk>Crawler husk</character.crawlerhusk>
+  <talentdescription.runaway>‖color:DimGray‖Start as a Fugitive: ex-Coalition spy falsely accused of helping separatists.‖end‖</talentdescription.runaway>
+  <talentdescription.runaway_debuffs>You escaped from imprisonment and it gets on your nerves; prolonged organ massages done by prison security clearly did not benefit you.\nYou lose [skillamount1]% of [affname1], [skillamount1]% of [movementspeed] and [skillamount2]% of ‖color:gui.orange‖Ranged Accuracy‖end‖. When wearing headphones, you suffer from [psychosis].</talentdescription.runaway_debuffs>
+  <talentdescription.teetotaler>Your body is much better at handling intoxicating substances. Gain [skillamount1]% resistance to all addictions and withdrawals.</talentdescription.teetotaler>
+  <talentdescription.cheaping_out>‖color:Gray‖I sure hope that cheap ammo doesn't blow up.‖end‖</talentdescription.cheaping_out>
+  <talentdescription.undercoveragent>Gain invisibility while wearing [skillamount1] in a hostile settlement.\nWhen attacking with [toothy] you have a great chance of delivering a fatal blow when you have [inconspicuous].</talentdescription.undercoveragent>
+  <talentdescription.teamplayer>Gain one-time rewards for repairing ‖color:gui.orange‖devices‖end‖, fixing ‖color:gui.orange‖leaks‖end‖, hauling ‖color:gui.orange‖crates‖end‖ and ‖color:gui.orange‖ammunition boxes‖end‖:</talentdescription.teamplayer>
+  <talentdescription.teamplayer.100>- ‖color:gui.orange‖100‖end‖ support points: Gain [skillamount1]% to [movementspeed] and [skillamount2]% to [vitality]</talentdescription.teamplayer.100>
+  <talentdescription.teamplayer.200>- ‖color:gui.orange‖200‖end‖ support points: Melee damage is increased by [skillamount1]%, recieved damage is decreased by [skillamount1]%; gain additional [skillamount2] points to [weapons]</talentdescription.teamplayer.200>
+  <talentdescription.teamplayer.360>- ‖color:gui.orange‖360‖end‖ support points: You drag people without any speed penalty;\nGain [skillamount1]% resistance to [affname1] , [skillamount2]% to [affname2] and [skillamount3]% to [affname3];\nGain additional [skillamount5] points to [mechel], and gain [skillamount6]% to [mechel] gain speed.\n[meleeattackspeed] is [skillamount4]% faster.</talentdescription.teamplayer.360>
+  <talentdescription.strongarms>When carrying crates, shells, and ammunition, you move [skillamount1]% faster, but gain [affname1].</talentdescription.strongarms>
+  <talentdescription.nap>When you ragdoll, slowly restore your sanity and health. After [skillamount1] seconds of ragdolling, gain [affname1].</talentdescription.nap>
+  <talentdescription.pieceofmind>‖color:gui.green‖Take off your headphones to calm your mind. Let the world burn in flames, bodies tear to pieces, the creatures from the Abyss rumble in the deep dark, you don't care: you're having a break.‖end‖</talentdescription.pieceofmind>
+  <talentdescription.angry_management>When you hit a crew member, they gain ‖color:gui.green‖"Motivation"‖end‖ and you reduce your [psychosis] level.</talentdescription.angry_management>
+  <talentdescription.shitisreal>If your submarine is flooded by [skillamount1]%, your [affname1] is increased by [skillamount2]%, and you can repair mechanical devices [skillamount3]% past their normal maximum condition..\nAlso you're losing your shit, but in situation like this it's more than forgivable.</talentdescription.shitisreal>
+  <talentdescription.bodycount>Gain one-time rewards for ‖color:gui.red‖killing enemies‖end‖:</talentdescription.bodycount>
+  <talentdescription.bodycount.70>- ‖color:gui.orange‖70‖end‖ kills: Gain [skillamount1]% to [affname1] and [skillamount2]% to [affname2];\n‖color:gui.orange‖Ranged Accuracy‖end‖ is [skillamount3]% better.\nGain [skillname] [skillamount4]% faster.</talentdescription.bodycount.70>
+  <talentdescription.bodycount.200>- ‖color:gui.orange‖200‖end‖ kills: Gain [skillamount1]% to Ranged Accuracy;\n‖color:gui.orange‖Recieved Damage‖end‖ decreased by [skillamount2]%;\n[skillname] gain speed is [skillamount3]% faster.</talentdescription.bodycount.200>
+  <talentdescription.bodycount.500>- ‖color:gui.orange‖500‖end‖ kills: No penalty when dual wielding ranged weapons;\n‖color:gui.orange‖Recieved Damage‖end‖ decreased by [skillamount1]%, [affname1] by [skillamount2]%, [affname2] by [skillamount3]%;\nThe CPR you apply is much more powerful.</talentdescription.bodycount.500>
+  <talentdescription.definitelyaclown>Clowns are so annoying to be around with, so no one will ever bother to ask you why your clothes are made with of Kevlar.</talentdescription.definitelyaclown>
+  <talentdescription.inhumane_measures>Capturing and conquering was never that easy!</talentdescription.inhumane_measures>
+  <talentdescription.dealwiththedevil>After killing [skillamount1] creatures(people included), gain [skillamount2]% chance of revival.\nWhile running, you have a [skillamount3]% chance to dodge ranged attacks.</talentdescription.dealwiththedevil>
+  <talentdescription.clawingback>You remain conscious if your [affname1] is below [skillamount1]%. If [affname1] falls below [skillamount2]%, you will die.\nTo return to positive values of [affname1], use [skillamount3].</talentdescription.clawingback>
+  <talentdescription.spaceinvader>While outside your submarine, gain [skillamount1]% resistance to [affname1], [affname2] and damage. [itemname] works much more efficiently.</talentdescription.spaceinvader>
+  <talentdescription.cqc>‖color:red‖Talent works indoors!‖end‖\nYou walk [skillamount1]% faster when aiming; shooting speed is increased by [skillamount2]%, damage is increased by [skillamount3]%. Breaking down doors with a crowbar is [skillamount2]% faster.\nWhile in an enemy submarine, get [skillamount4]% resistance to [affname1] and [skillamount3]% resistance to [affname3].\n‖color:crimson‖While in an enemy submarine, there is a [skillamount5]% chance of you blowing up targets when shooting a shotgun.‖end‖</talentdescription.cqc>
+  <talentdescription.slapithere>All parts of the submarine can be improved by 1 level.</talentdescription.slapithere>
+  <talentdescription.drugssmugler>After completing at least 1 mission, you are given [skillamount1].</talentdescription.drugssmugler>
+  <talentdescription.weaponssmugler>After completing at least 1 mission, you are given 4 [skillamount1], 2 [skillamount2], and 2 [skillamount3].</talentdescription.weaponssmugler>
+  <talentdescription.underground>From now on, you will lose [repamount1] reputation with [skillamount1] every round. After completing at least 1 mission, you get [repamount2] reputation with [skillamount2]. When completing some missions, you will earn points, which are converted into useful resources. To cash out the points, pick up [skillamount3].</talentdescription.underground>
+  <talentdescription.textiletreatment>When wearing [skillamount1.1] or [skillamount1.2], gain [skillamount1]% resistance to [skillamount2.1] and [skillamount2]% resistance to [skillamount2.2]. Gain [skillamount3]% weakness to [skillamount2.3].</talentdescription.textiletreatment>
+  <talentname.hollow_start>Hollow: the Beginning</talentname.hollow_start>
+  <talentname.bloody_gust>Bloody Gust</talentname.bloody_gust>
+  <talentname.lost>Lost</talentname.lost>
+  <talentname.crawler>Crawler</talentname.crawler>
+  <talentname.sotp>Shards of the Past</talentname.sotp>
+  <talentname.dellirium>Delirium</talentname.dellirium>
+  <talentname.morbidcuriosity>Morbid Curiosity</talentname.morbidcuriosity>
+  <talentname.communion>Communion</talentname.communion>
+  <talentname.devotion>Devotion</talentname.devotion>
+  <talentname.living_plague>Living Plague</talentname.living_plague>
+  <talentname.feral>Feral</talentname.feral>
+  <talentname.fumigator>Fumigator</talentname.fumigator>
+  <talentname.naturesdelight>Nature's Delights</talentname.naturesdelight>
+  <talentname.cans>Mechanic</talentname.cans>
+  <talentname.staring_down>VIP</talentname.staring_down>
+  <talentname.cells>Electrician</talentname.cells>
+  <talentname.conscript>Conscript</talentname.conscript>
+  <talentname.idiot>Idiot</talentname.idiot>
+  <talentname.geneus>GENius</talentname.geneus>
+  <talentname.courage>Courage</talentname.courage>
+  <talentname.what>WHAT</talentname.what>
+  <talentname.dinendash>Dine 'n Dash</talentname.dinendash>
+  <talentname.leech>Leech</talentname.leech>
+  <talentname.puttingpressure>Direct Pressure</talentname.puttingpressure>
+  <talentdescription.hollow_start>Your [psychosis] is constantly kept at [units] points. If [psychosis] reaches [units2] points, the remains of your brain will start to degrade.\nIf you are being attacked, your [psychosis] level increases.</talentdescription.hollow_start>
+  <talentdescription.bloody_gust>The damage inflicted on you is increased by [dmg]%!\nIf your health drops below [hprange1], you gain [skillamount1]% to [movementspeed1].\nIf your health drops below [hprange2], you gain [skillamount2]% to [movementspeed2] and [skillamount1]% to [MeleeAttackMultiplier1].\nIf your health drops below [hprange3], you gain [skillamount3]% to [movementspeed3] and [skillamount1.1]% to [MeleeAttackMultiplier2].</talentdescription.bloody_gust>
+  <talentdescription.lost>If [psychosis] reaches [units] points, you will gain [skillamount1]% resistance to [skillname].</talentdescription.lost>
+  <talentdescription.crawler>When wearing [talentsuit], you will get the [thermogoogles]-like effect.</talentdescription.crawler>
+  <talentdescription.sotp>While in [ruins], get [skillamount1]% to ‖color:gui.orange‖Damage Resistance‖end‖ and [skillamount2]% bonus to [movementspeed].\nWhen in [ruins], ragdoll to get ignored by enemies.</talentdescription.sotp>
+  <talentdescription.dellirium>Laugh uncontrollably when you ragdoll, removing [psychosis] from yourself and increasing it in the crew nearby. If your [psychosis] is higher than [skillamount] points, get [enlightened] while laughing.\nIn the later stages of [enlightened] get [regen].</talentdescription.dellirium>
+  <talentdescription.double>When wearing [talentsuit], you will gain [suitprot]% additional protection from [element1] and [element2].</talentdescription.double>
+  <talentdescription.double1>When wearing ‖color:gui.orange‖full clown costume‖end‖, gain [idiot]. When you are being an idiot, you lose [xp] in all skills, but you remain conscious for a short time if [vitality] is lower than [hp], ‖color:DimGray‖to finish your performance with a BANG‖end‖.</talentdescription.double1>
+  <talentdescription.double2>When wearing [talentsuit], you will gain [suitprot1]% bonus to [element1] and [suitprot2]% bonus to [element2].</talentdescription.double2>
+  <talentdescription.debufftootherskills>Get additional [skillamount] points to [talentsuitskill], but lose [skillamountloss] points in other skills.</talentdescription.debufftootherskills>
+  <talentdescription.urnidiot>‖color:Red‖Congratulations, you... You're an idiot, right?... Well, not all of us born equal. Anyway—‖end‖</talentdescription.urnidiot>
+  <talentdescription.urnidiotbonus>‖color:DarkRed‖But at the same time, you are an absolute moron with a -100 penalty to all skills.‖end‖</talentdescription.urnidiotbonus>
+  <talentdescription.staring_down_bonus>People who are in the same room with you gain additional [skillamount] points to all skills; their repair and movement speed are [suitprot]% faster.</talentdescription.staring_down_bonus>
+  <talentdescription.tools_bonus>The [tools] you make are [skillamount] level higher in quality.</talentdescription.tools_bonus>
+  <talentdescription.joke_cans>‖color:DimGray‖Everything is lubed up, you are no exception.‖end‖</talentdescription.joke_cans>
+  <talentdescription.joke_staring_down>‖color:DimGray‖Maybe it's the empty eyes...‖end‖</talentdescription.joke_staring_down>
+  <talentdescription.joke_cells>‖color:DimGray‖Congrats, you can be used as an emergency light.‖end‖</talentdescription.joke_cells>
+  <talentdescription.joke_conscript>‖color:DimGray‖Don't point a gun at your face, it's too early to give up.‖end‖</talentdescription.joke_conscript>
+  <talentdescription.joke_geneus>‖color:DimGray‖Is this an actual license?‖end‖</talentdescription.joke_geneus>
+  <talentdescription.communion>If you have [affname1] or [affname2], you will get [skillamount1]% resistance to [affname3], [skillamount2]% resistance to ‖color:gui.orange‖Damage‖end‖, but at the same time you have [skillamount3]% weakness to [affname4]</talentdescription.communion>
+  <talentdescription.devotion>When holding [figurine], get [skillamount1]% to [affname1], [skillamount2]% to ‖color:gui.orange‖Damage‖end‖ and [skillamount2]% to [affname3].</talentdescription.devotion>
+  <talentdescription.living_plague>You have a [skillamount1]% chance of infecting your victims with parasites by attacking them with [huskstinger].</talentdescription.living_plague>
+  <talentdescription.feral>When wearing [skillamount1], you slowly regain health.\nTalent requires [affname1] or [affname2] to work.</talentdescription.feral>
+  <talentdescription.fumigator>Husks will not attack crew members next to you.\nTalent requires [affname1] or [affname2] to work.</talentdescription.fumigator>
+  <talentdescription.naturesdelight>After using [skillamount1] or [skillamount2], you move [skillamount3]% faster. While talent is working, you gain [courage] when using [huskstinger].</talentdescription.naturesdelight>
+  <talentdescription.courage>When attacking a victim with [skillamount1], get "Courage": the more attacks you land, the faster you hit.</talentdescription.courage>
+  <talentdescription.what>When holding [skillamount1], lift [skillamount2] to cut out [skillamount3].</talentdescription.what>
+  <talentdescription.dinendash>When holding a [skillamount1], lift [skillamount2] to have a nice lunch.</talentdescription.dinendash>
+  <talentdescription.corpse>Human corpse</talentdescription.corpse>
+  <talentdescription.leech>When using [skillamount1], you restore a small amount of [vitality] and get [haste] for [skillamount2] seconds.\nWhen using [skillamount3], you restore a moderate amount of [vitality].</talentdescription.leech>
+  <talentdescription.puttingpressure>When holding a [bandage], recover from [bleedinglacer] faster.</talentdescription.puttingpressure>
+  <afflictiondescription.flight>A-A-A-A-A! Fuck off!</afflictiondescription.flight>
+  <afflictiondescription.motivation>You've been hit hard. Probably for a reason.</afflictiondescription.motivation>
+  <afflictiondescription.easydoesit>Easy does it.</afflictiondescription.easydoesit>
+  <afflictiondescription.swimming_trainer>There is a swimming expert near you.</afflictiondescription.swimming_trainer>
+  <afflictiondescription.fight>Oh, it's on!</afflictiondescription.fight>
+  <afflictiondescription.big-game>You hear deep roaring somewhere nearby.</afflictiondescription.big-game>
+  <afflictiondescription.adapting>You feel pressure crushing you. Find a diving suit ASAP!</afflictiondescription.adapting>
+  <afflictiondescription.swansong>You're on your last legs.</afflictiondescription.swansong>
+  <afflictiondescription.onfeet>"You are lucky".</afflictiondescription.onfeet>
+  <afflictiondescription.devotion>Devotion to the church doesn't let you to go down so easily.</afflictiondescription.devotion>
+  <afflictiondescription.courage>*Poke-poke-SLASH!*</afflictiondescription.courage>
+  <afflictiondescription.staring_down>Looks like you have a red collar on board.</afflictiondescription.staring_down>
+  <afflictiondescription.inconspicuous>Don't get caught by guards and everything will be sound.</afflictiondescription.inconspicuous>
+  <afflictiondescription.crawlermask>Don't ask how it works. This character is a half-witted cretin.</afflictiondescription.crawlermask>
+  <afflictiondescription.enlightened>Good laugh fixes everything!</afflictiondescription.enlightened>
+  <afflictiondescription.></afflictiondescription.>
+  <afflictionname.devotion>Devotion</afflictionname.devotion>
+  <afflictionname.flight>... Or flight</afflictionname.flight>
+  <afflictionname.motivation>Motivation</afflictionname.motivation>
+  <afflictionname.easydoesit>Easy does it</afflictionname.easydoesit>
+  <afflictionname.swimming_trainer>Swimming trainer</afflictionname.swimming_trainer>
+  <afflictionname.fight>Fight...</afflictionname.fight>
+  <afflictionname.frog_leaping>Hop!</afflictionname.frog_leaping>
+  <afflictionname.all_hands>All hands!</afflictionname.all_hands>
+  <afflictionname.big-game>Big-game</afflictionname.big-game>
+  <afflictionname.adapting>Adaptation</afflictionname.adapting>
+  <afflictionname.swansong>Swan song</afflictionname.swansong>
+  <afflictionname.onfeet>Deal with the Devil</afflictionname.onfeet>
+  <afflictionname.courage>Courage</afflictionname.courage>
+  <afflictionname.staring_down>Inspection?</afflictionname.staring_down>
+  <afflictionname.egg_swallower>Egg swallower</afflictionname.egg_swallower>
+  <afflictionname.inconspicuous>Disguised</afflictionname.inconspicuous>
+  <afflictionname.crawlermask>Crawler mask</afflictionname.crawlermask>
+  <afflictionname.enlightened>Enlightened</afflictionname.enlightened>
+  <afflictionname.idiot>Idiot POWAH</afflictionname.idiot>
+  <afflictionname.></afflictionname.>
+  <talenttip.enlightened>‖color:DimGray‖"Enlightened" gives [skillamount] to [skill] and increases [skill] gain speed by [values]%.‖end‖</talenttip.enlightened>
+  <talenttip.onfeet>‖color:DimGray‖Whenever your health drops below zero, you have a chance to get back up and remove all negative afflictions.‖end‖</talenttip.onfeet>
+  <talenttip.swansong>‖color:DimGray‖Whenever your health drops below zero, your movement speed and ranged attacks get worse. It is recommended to wait untill negative afflictions go away due to regeneration from the talent and use stimulators when nothing but organ damage is left.‖end‖</talenttip.swansong>
+  <talenttip.dinendash>‖color:DimGray‖Eating corpses regenerates your health.</talenttip.dinendash>
+  <talenttip.hollow_start>‖color:DimGray‖When psychosis reaches 100 points, you'll start to take "brain" damage a.k.a organ damage in the head. While not extremely deadly, it can lead to faster demise when untreated.‖end‖</talenttip.hollow_start>
+  <talenttip.underground>‖color:DimGray‖Stash system is point-based and there are five types of stashes you can get: random stuff, ammunition, medicine, ore and submarine ammunition. The type of stash depends mainly on the missions you complete, for example completing ore excavation gives you 1.5 "ore stash points",  cargo gives you various "stash points" etc. Also you can gain points by killing abyss creatures and hostile humans.‖end‖</talenttip.underground>
+  <talenttip.inconspicuous>‖color:DimGray‖Whenever you enter an outpost, you will get disguised. If your screen turns red either security or suspicious npc is lurking around. It's a good idea to walk past them rather than running away.‖end‖</talenttip.inconspicuous>
+  <talenttip.pieceofmind>‖color:DimGray‖Taking headphones off removes psychosis.‖end‖</talenttip.pieceofmind>
+  <talentdescription.angry_management_info>‖color:DimGray‖"Motivation" gives [skillamount1] to [skillname1] and [skillamount2] to [skillname2] for [time] seconds.‖end‖</talentdescription.angry_management_info>
+</infotexts>
+<!--Бычок-цуцик-->
+<!--2 горизонт 
+
+сделать невидимке визуальный индикатор "охрана рядом". Эффект взять из термоочков
+связям сделать телефон, в которые вставляются "разовые карточки" для получения схронов
+
+
+
+
+
+Полый начало мозг с вопросом
+кровавый порыв огонь и бегущий человечек
+ползун маска ползуна
+деллирий морда и улыбка(недуг в сердечке)
+осколки прошлого мозг с текстурой стекла
+потерянный морда с вопросительным знаком
+дикий шлем хаска
+причащение восстание из мертвых(talenticons в папке мода)
+преданность фигурка хаска(есть)
+чума лицо с тентаклей 
+природные тарелка с яйцами хаска
+фумигатор фумигатор
+кураж сердечко и бегущий человечек
+давйвер начало гарпун(45 градусов) 
+травник пилюли(талант у медика)
+фанат тетриса нарисовать тетрис
+экспансионис пазлы?
+ охотничьи угодья накидать текстурок в гимпе
+беглец(талант) наручники
+экономия в производстве горки пороха и гильзы
+трезвенник пиковая форма(вроде медик)
+шпион морда с маской
+-->

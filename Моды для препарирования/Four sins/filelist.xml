@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contentpackage name="Four sins" modversion="1" corepackage="False" steamworkshopid="3353911241" gameversion="1.6.19.1" expectedhash="9E0FFA6E6B4383EA7CDA8DABAA290571">
+  <Jobs file="%ModDir%/Jobs/Bod/Jobs.xml" />
+  <TalentTrees file="%ModDir%/Jobs/Bod/TalentTrees.xml" />
+  <Jobs file="%ModDir%/Jobs/Del/Jobs.xml" />
+  <TalentTrees file="%ModDir%/Jobs/Del/TalentTrees.xml" />
+  <Jobs file="%ModDir%/Jobs/Hvo/Jobs.xml" />
+  <TalentTrees file="%ModDir%/Jobs/Hvo/TalentTrees.xml" />
+  <Jobs file="%ModDir%/Jobs/Ter/Jobs.xml" />
+  <TalentTrees file="%ModDir%/Jobs/Ter/TalentTrees.xml" />
+  <Talents file="%ModDir%/Talents/Talents.xml" />
+  <Afflictions file="%ModDir%/Afflictions/Affliction.xml" />
+  <Text file="%ModDir%/Languages/English.xml" />
+  <Text file="%ModDir%/Languages/Russian.xml" />
+  <Other file="%ModDir%/Sounds/Berserkscream.ogg" />
+  <Other file="%ModDir%/Sounds/Dryscream.ogg" />
+  <Other file="%ModDir%/Sounds/Gigachad.ogg" />
+</contentpackage>

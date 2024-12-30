@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Afflictions>
+  <!-- тяжело -->
+  <Affliction identifier="followme" type="talentbuff" isbuff="true" limbspecific="false" hideiconafterdelay="true" maxstrength="2" treatmentthreshold="1000" iconcolors="33,75,78;126,211,224;126,211,224;227,247,249">
+    <Effect minstrength="0" maxstrength="2" strengthchange="-1">
+      <StatValue stattype="MovementSpeed" value="0.35" />
+    </Effect>
+    <Icon texture="%ModDir%/TalentsIcons111.png" sheetindex="5,7" sheetelementsize="128,128" color="10,193,114,255" origin="0,0" />
+  </Affliction>
+  <Affliction identifier="electricalextertize" type="talentbuff" isbuff="true" limbspecific="false" hideiconafterdelay="true" maxstrength="2" treatmentthreshold="1000" iconcolors="33,75,78;126,211,224;126,211,224;227,247,249">
+    <Effect minstrength="0" maxstrength="2" strengthchange="-1">
+      <StatValue stattype="ElectricalSkillBonus" value="25" />
+    </Effect>
+    <Icon texture="%ModDir%/TalentsIcons111.png" sheetindex="3,6" sheetelementsize="128,128" color="10,193,114,255" origin="0,0" />
+  </Affliction>
+  <Affliction identifier="gunneryexpert" type="talentbuff" isbuff="true" limbspecific="false" hideiconafterdelay="true" maxstrength="2" treatmentthreshold="1000" iconcolors="33,75,78;126,211,224;126,211,224;227,247,249">
+    <Effect minstrength="0" maxstrength="2" strengthchange="-1">
+      <StatValue stattype="WeaponsSkillBonus" value="20" />
+    </Effect>
+    <Icon texture="%ModDir%/TalentsIcons95.png" sheetindex="7,0" sheetelementsize="128,128" color="10,193,114,255" origin="0,0" />
+  </Affliction>
+  <Affliction identifier="vodolaz" type="talentbuff" isbuff="true" limbspecific="false" hideiconafterdelay="true" maxstrength="2" treatmentthreshold="1000" iconcolors="33,75,78;126,211,224;126,211,224;227,247,249">
+    <Effect minstrength="0" maxstrength="2" strengthchange="-1">
+      <StatValue stattype="HoldBreathMultiplier" value="1" />
+    </Effect>
+    <Icon texture="%ModDir%/TalentsIcons90.png" sheetindex="1,3" sheetelementsize="128,128" color="10,193,114,255" origin="0,0" />
+  </Affliction>
+  <Affliction identifier="hardstyle" type="talentbuff" isbuff="true" limbspecific="false" hideiconafterdelay="true" maxstrength="2" treatmentthreshold="1000" iconcolors="33,75,78;126,211,224;126,211,224;227,247,249">
+    <Effect minstrength="0" maxstrength="2" strengthchange="-1">
+      <StatValue stattype="MedicalSkillGainSpeed" value="0.75" />
+      <StatValue stattype="WeaponsSkillGainSpeed" value="0.75" />
+      <StatValue stattype="ElectricalSkillGainSpeed" value="0.75" />
+      <StatValue stattype="HelmSkillGainSpeed" value="0.75" />
+      <StatValue stattype="MechanicalSkillGainSpeed" value="0.75" />
+    </Effect>
+    <Icon texture="%ModDir%/TalentsIcons111.png" sheetindex="7,6" sheetelementsize="128,128" color="10,193,114,255" origin="0,0" />
+  </Affliction>
+  <Affliction identifier="pomoshnik" type="talentbuff" isbuff="true" limbspecific="false" hideiconafterdelay="true" maxstrength="2" treatmentthreshold="1000" iconcolors="33,75,78;126,211,224;126,211,224;227,247,249">
+    <Effect minstrength="0" maxstrength="2" strengthchange="-1">
+      <StatValue stattype="RepairSpeed" value="0.20" />
+      <StatValue stattype="WalkingSpeed" value="0.10" />
+    </Effect>
+    <Icon texture="%ModDir%/TalentsIcons111.png" sheetindex="6,6" sheetelementsize="128,128" color="10,193,114,255" origin="0,0" />
+  </Affliction>
+  <Affliction identifier="nomoredeals" type="talentbuff" isbuff="true" limbspecific="false" hideiconafterdelay="true" maxstrength="2" treatmentthreshold="1000" iconcolors="33,75,78;126,211,224;126,211,224;227,247,249">
+    <Effect minstrength="0" maxstrength="2" strengthchange="-1">
+      <StatValue stattype="TurretAttackSpeed" value="0.11" />
+      <StatValue stattype="TurretPowerCostReduction" value="-0.10" />
+      <StatValue stattype="TurretChargeSpeed" value="0.5" />
+    </Effect>
+    <Icon texture="%ModDir%/TalentsIcons97.png" sheetindex="5,6" sheetelementsize="128,128" color="10,193,114,255" origin="0,0" />
+  </Affliction>
+  <Affliction identifier="killkillkillkillkill" type="talentbuff" isbuff="true" limbspecific="false" hideiconafterdelay="true" maxstrength="2" treatmentthreshold="1000" iconcolors="33,75,78;126,211,224;126,211,224;227,247,249">
+    <Effect minstrength="0" maxstrength="2" strengthchange="-1">
+      <StatValue stattype="TurretAttackSpeed" value="0.29" />
+      <StatValue stattype="TurretPowerCostReduction" value="-0.27" />
+      <StatValue stattype="TurretChargeSpeed" value="-0.85" />
+    </Effect>
+    <Icon texture="%ModDir%/TalentsIcons96.png" sheetindex="6,7" sheetelementsize="128,128" color="10,193,114,255" origin="0,0" />
+  </Affliction>
+  <Affliction identifier="stillbreathing" type="talentbuff" isbuff="true" limbspecific="false" hideiconafterdelay="true" maxstrength="2" treatmentthreshold="1000" iconcolors="33,75,78;126,211,224;126,211,224;227,247,249">
+    <Effect minstrength="0" maxstrength="2" strengthchange="-1">
+      <StatValue stattype="CPRBoost" value="1.5" />
+    </Effect>
+    <Icon texture="%ModDir%/TalentsIcons90.png" sheetindex="1,3" sheetelementsize="128,128" color="10,193,114,255" origin="0,0" />
+  </Affliction>
+  <Affliction identifier="donoharm" type="talentbuff" isbuff="true" limbspecific="false" hideiconafterdelay="true" maxstrength="2" treatmentthreshold="1000" iconcolors="33,75,78;126,211,224;126,211,224;227,247,249">
+    <Effect minstrength="0" maxstrength="2" strengthchange="-1">
+      <StatValue stattype="TeamAttackMultiplier" value="-0.99" />
+    </Effect>
+    <Icon texture="%ModDir%/TalentsIcons111.png" sheetindex="5,6" sheetelementsize="128,128" color="10,193,114,255" origin="0,0" />
+  </Affliction>
+  <Affliction identifier="notdead" type="talentbuff" isbuff="true" limbspecific="false" hideiconafterdelay="true" maxstrength="2" treatmentthreshold="1000" iconcolors="33,75,78;126,211,224;126,211,224;227,247,249">
+    <Effect minstrength="0" maxstrength="2" strengthchange="-1">
+      <StatValue stattype="MedicalSkillBonus" value="15" />
+    </Effect>
+    <Icon texture="%ModDir%/TalentsIcons97.png" sheetindex="2,6" sheetelementsize="128,128" color="10,193,114,255" origin="0,0" />
+  </Affliction>
+  <Affliction identifier="teachandlearn" type="talentbuff" isbuff="true" limbspecific="false" hideiconafterdelay="true" maxstrength="2" treatmentthreshold="1000" iconcolors="33,75,78;126,211,224;126,211,224;227,247,249">
+    <Effect minstrength="0" maxstrength="2" strengthchange="-1">
+      <StatValue stattype="HelmSkillBonus" value="25" />
+    </Effect>
+    <Icon texture="%ModDir%/TalentsIcons97.png" sheetindex="5,7" sheetelementsize="128,128" color="10,193,114,255" origin="0,0" />
+  </Affliction>
+  <Affliction identifier="shadow" type="talentbuff" isbuff="true" limbspecific="false" maxstrength="1" treatmentthreshold="1000" hideiconafterdelay="true" duration="1" iconcolors="33,75,78;126,211,224;126,211,224;227,247,249">
+    <Effect minstrength="0" maxstrength="1">
+      <StatValue stattype="SoundRangeMultiplier" value="-0.60" />
+      <StatValue stattype="SightRangeMultiplier" value="-0.50" />
+    </Effect>
+    <Icon texture="%ModDir%/TalentsIcons111.png" sheetindex="2,7" sheetelementsize="128,128" origin="0,0" />
+  </Affliction>
+  <Affliction identifier="decoy" type="talentbuff" isbuff="true" limbspecific="false" maxstrength="1" treatmentthreshold="1000" hideiconafterdelay="true" duration="1" iconcolors="33,75,78;126,211,224;126,211,224;227,247,249">
+    <Effect minstrength="0" maxstrength="1">
+      <StatValue stattype="SoundRangeMultiplier" value="1.5" />
+      <StatValue stattype="SightRangeMultiplier" value="-0.85" />
+    </Effect>
+    <Icon texture="%ModDir%/TalentsIcons111.png" sheetindex="6,7" sheetelementsize="128,128" origin="0,0" />
+  </Affliction>
+</Afflictions>

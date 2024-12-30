@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contentpackage name="Narco job" modversion="1.0.9" corepackage="False" steamworkshopid="3131048216" gameversion="1.2.7.0" expectedhash="87E7EB302A2C38642109AE24ACFB96B2">
+  <Jobs file="%ModDir%/Jobs.xml" />
+  <TalentTrees file="%ModDir%/TalentTrees.xml" />
+  <Talents file="%ModDir%/TalentsAddict.xml" />
+  <Afflictions file="%ModDir%/AddictAfflictions.xml" />
+</contentpackage>

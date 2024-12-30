@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Jobs>
+  <Job identifier="deliveryman" maxnumber="3" initialcount="1" minkarma="35" uicolor="0.10,0.37,0.38" vitalitymodifier="1" pricemultiplier="1" idlebehavior="Patrol">
+    <Jobicon>
+      <sprite texture="%ModDir%/IconsDel.png" sourcerect="512,512,0,0" origin="0.5,0.5" />
+    </Jobicon>
+    <JobiconSmall>
+      <sprite texture="%ModDir%/IconsDel.png" sourcerect="512,512,0,0" origin="0.5,0.5" />
+    </JobiconSmall>
+    <Skills>
+      <Skill identifier="medical" level="10,20" />
+      <Skill identifier="weapons" level="10,20" />
+      <Skill identifier="helm" level="15,25" primary="true" />
+      <Skill identifier="mechanical" level="10,20" />
+      <Skill identifier="electrical" level="10,20" />
+    </Skills>
+    <ItemSet>
+      <Item identifier="idcard" equip="true" showpreview="false" />
+      <Item identifier="assistantclothes" equip="true" outfit="true" />
+      <Item identifier="headset" equip="true" showpreview="false" />
+      <Item identifier="harmonica" equip="false" />
+      <Item identifier="metalcrate" equip="true" />
+    </ItemSet>
+    <ItemSet>
+      <Item identifier="idcard" equip="true" showpreview="false" />
+      <Item identifier="pirateclothesnovice" equip="true" outfit="true" />
+      <Item identifier="headset" equip="true" showpreview="false" />
+      <Item identifier="flashlight" equip="false" />
+      <Item identifier="batterycell" />
+      <Item identifier="handheldterminal" equip="true" />
+    </ItemSet>
+  </Job>
+</Jobs>

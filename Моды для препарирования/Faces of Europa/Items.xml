@@ -1,0 +1,1952 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+  <Override>
+    <Item name="" identifier="machinepistol" category="Weapon" cargocontaineridentifier="metalcrate" tags="smallautoweapon,smallitem,weapon,gun,pistolitem,gunsmith,provocativetohumanai,mountableweapon" Scale="0.5" impactsoundtag="impact_metal_light">
+      <PreferredContainer primary="secarmcab" amount="1" spawnprobability="1" notcampaign="true" />
+      <PreferredContainer secondary="outpostsecarmcab" amount="1" spawnprobability="0.5" />
+      <PreferredContainer secondary="wrecksecarmcab,abandonedsecarmcab,piratesecarmcab" amount="1" spawnprobability="0.25" />
+      <PreferredContainer secondary="armcab,weaponholder" />
+      <Price baseprice="200" minleveldifficulty="15">
+        <Price storeidentifier="merchantoutpost" sold="false" multiplier="1.5" />
+        <Price storeidentifier="merchantcity" multiplier="1.25" minavailable="1" sold="false" />
+        <Price storeidentifier="merchantresearch" sold="false" multiplier="1.25" />
+        <Price storeidentifier="merchantmilitary" multiplier="0.9" minavailable="2" />
+        <Price storeidentifier="merchantmine" sold="false" multiplier="1.25" />
+        <Price storeidentifier="merchantarmory" multiplier="0.9" minavailable="2" />
+      </Price>
+      <Fabricate suitablefabricators="fabricator" requiredtime="20" requiresrecipe="true">
+        <RequiredSkill identifier="weapons" level="60" />
+        <RequiredItem identifier="steel" amount="4" />
+        <RequiredItem identifier="plastic" amount="2" />
+      </Fabricate>
+      <Deconstruct time="10">
+        <Item identifier="steel" />
+        <Item identifier="plastic" />
+      </Deconstruct>
+      <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="270,295,107,49" depth="0.55" origin="0.5,0.5" />
+      <Body width="100" height="44" density="25" />
+      <Holdable slots="Any,RightHand,LeftHand" controlpose="true" aimpos="70,5" handle1="-25,-7" msg="ItemMsgPickUpSelect" />
+      <RangedWeapon reload="0.175" weapondamagemodifier="0.8" holdtrigger="true" barrelpos="54,9" spread="10" unskilledspread="18" combatPriority="70" drawhudwhenequipped="true" crosshairscale="0.2" DualWieldAccuracyPenalty="10">
+        <Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
+        <CrosshairPointer texture="Content/Items/Weapons/Crosshairs.png" sourcerect="256,256,256,256" />
+        <ParticleEmitter particle="muzzleflash" particleamount="1" velocitymin="0" velocitymax="0" />
+        <Sound file="Content/Items/Weapons/WEAPON_machinePistolShot1.ogg" type="OnUse" range="3000" selectionmode="Random" />
+        <Sound file="Content/Items/Weapons/WEAPON_machinePistolShot2.ogg" type="OnUse" range="3000" />
+        <Sound file="Content/Items/Weapons/WEAPON_machinePistolShot3.ogg" type="OnUse" range="3000" />
+        <Sound file="Content/Items/Weapons/WEAPON_machinePistolShot4.ogg" type="OnUse" range="3000" />
+        <Sound file="Content/Items/Weapons/WEAPON_machinePistolShot5.ogg" type="OnUse" range="3000" />
+        <Sound file="Content/Items/Weapons/WEAPON_machinePistolShot6.ogg" type="OnUse" range="3000" />
+        <StatusEffect type="OnUse" target="This">
+          <ParticleEmitter particle="casingfirearm" particleamount="1" anglemin="90" anglemax="150" velocitymin="50" velocitymax="250" CopyEntityAngle="true" />
+          <Explosion range="150.0" force="1" shockwave="false" smoke="false" flames="false" sparks="false" underwaterbubble="false" camerashake="6.0" />
+        </StatusEffect>
+        <!--"Use" contained magazine to spawn projectiles.-->
+        <StatusEffect type="OnUse" target="Contained">
+          <Use />
+        </StatusEffect>
+        <RequiredItems items="smgammo" type="Contained" msg="ItemMsgAmmoRequired" />
+        <RequiredSkill identifier="weapons" level="50" />
+      </RangedWeapon>
+      <ItemContainer capacity="1" maxstacksize="1" hideitems="false" containedstateindicatorslot="0" containedstateindicatorstyle="bullet" containedspritedepth="0.56">
+        <SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png" sourcerect="256,448,64,64" origin="0.5,0.5" />
+        <Containable items="smgammo" hide="false" itempos="3,-5" rotation="-5" />
+      </ItemContainer>
+      <aitarget sightrange="2000" soundrange="4000" fadeouttime="5" />
+      <Quality>
+        <QualityStat stattype="FirepowerMultiplier" value="0.1" />
+      </Quality>
+      <SkillRequirementHint identifier="weapons" level="60" />
+    </Item>
+    <Item name="" identifier="huskfigurine" category="Misc" maxstacksize="2" Tags="smallitem,traitormissionitem,huskfigurine" scale="0.5" health="10" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light" isshootable="true">
+      <Price baseprice="50" sold="false" canbespecial="false">
+        <Price storeidentifier="merchantoutpost" />
+        <Price storeidentifier="merchantcity" />
+        <Price storeidentifier="merchantresearch" />
+        <Price storeidentifier="merchantmilitary" />
+        <Price storeidentifier="merchantmine" />
+      </Price>
+      <Fabricate suitablefabricators="fabricator" hidefornontraitors="false" requiredtime="10" requiresrecipe="true">
+        <RequiredItem identifier="aluminium" amount="2 " />
+      </Fabricate>
+      <InventoryIcon texture="Content/Map/Outposts/Art/FactionItems.png" sourcerect="384,448,64,64" origin="0.5,0.5" />
+      <Sprite texture="Content/Map/Outposts/Art/FactionItems.png" sourcerect="399,451,35,60" depth="0.55" origin="0.5,0.5" />
+      <Body width="30" height="55" density="15" />
+      <Holdable selectkey="Select" pickkey="Use" slots="Any,RightHand,LeftHand" msg="ItemMsgDetachWrench" PickingTime="3.0" aimpos="35,-10" handle1="0,0" attachable="true" attachedbydefault="false" aimable="true">
+        <requireditem identifier="wrench" type="Equipped" />
+        <StatusEffect type="OnNotContained" target="This" interval="25">
+          <Conditional targetitemcomponent="Holdable" Attached="eq true" />
+          <particleemitter particle="shockwavesmall" particleamount="1" scalemin="0.5" scalemax="0.5" />
+          <Sound file="Content/Characters/Husk/Husk_Idle1.ogg" type="OnUse" range="300" selectionmode="Random" />
+          <Sound file="Content/Characters/Husk/Husk_Idle2.ogg" type="OnUse" range="300" />
+          <Sound file="Content/Characters/Husk/Husk_Idle3.ogg" type="OnUse" range="300" />
+          <Sound file="Content/Characters/Husk/Husk_Idle4.ogg" type="OnUse" range="300" />
+        </StatusEffect>
+      </Holdable>
+    </Item>
+    <!--Дешевки-->
+    <Item name="" identifier="shellshield" category="Equipment" tags="mediumitem,cheaploot" health="180" cargocontaineridentifier="metalcrate" damagedbyprojectiles="true" impactsoundtag="impact_soft" scale="0.5" allowasextracargo="true">
+      <Upgrade gameversion="0.10.0.0" scale="0.5" />
+      <Price baseprice="1" sold="false" canbespecial="false" />
+      <PreferredContainer primary="locker" />
+      <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="962,322,61,61" origin="0.5,0.5" />
+      <Sprite texture="Content/Items/CreatureLoot/CreatureLoot.png" sourcerect="464,1,48,229" origin="0.5,0.5" depth="0.55" />
+      <Body radius="20" height="150" density="15" />
+      <Holdable slots="RightHand+LeftHand" aimpos="60,-30" holdpos="45,-30" handle1="-15,-10" handle2="-15,10" controlpose="true" blocksplayers="true" msg="ItemMsgPickUpSelect">
+        <StatusEffect type="OnActive" target="Character" SpeedMultiplier="0.6" setvalue="true" />
+        <StatusEffect type="OnBroken" target="This">
+          <particleemitter particle="brownchunks" drawontop="true" particleamount="50" velocitymin="100" velocitymax="500" anglemin="0" anglemax="360" distancemin="0" distancemax="30" scalemin="0.1" scalemax="0.35" />
+          <Sound file="Content/Sounds/Damage/HitArmor1.ogg" range="800" />
+          <Remove />
+        </StatusEffect>
+        <StatusEffect type="OnDamaged" target="This">
+          <particleemitter particle="brownchunks" drawontop="true" particleamount="5" velocitymin="100" velocitymax="500" anglemin="0" anglemax="360" distancemin="0" distancemax="20" scalemin="0.1" scalemax="0.35" />
+          <Sound file="Content/Sounds/Damage/HitArmor1.ogg" range="800" />
+          <!-- an invisible explosion to make the user "flinch" -->
+          <Explosion range="150.0" force="1.5" showeffects="false" camerashake="2.0" />
+        </StatusEffect>
+      </Holdable>
+    </Item>
+    <Item name="" identifier="mudraptorshell" category="Equipment" tags="smallitem,clothing,cheaploot" impactsoundtag="impact_metal_light" scale="0.5" allowasextracargo="true">
+      <Upgrade gameversion="0.10.0.0" scale="0.5" />
+      <Price baseprice="1" sold="false" canbespecial="false" />
+      <PreferredContainer primary="locker" />
+      <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="960,384,64,64" />
+      <Sprite texture="Content/Items/CreatureLoot/CreatureLoot.png" sourcerect="363,0,100,165" depth="0.6" />
+      <Body radius="40" height="60" density="20" />
+      <Wearable slots="Any,OuterClothes" msg="ItemMsgPickUpSelect">
+        <damagemodifier afflictiontypes="burn" armorsector="0.0,360.0" damagemultiplier="0.9" />
+        <damagemodifier afflictiontypes="stun" armorsector="0.0,360.0" damagemultiplier="0.6" />
+        <damagemodifier afflictionidentifiers="blunttrauma,gunshotwound,lacerations" armorsector="0.0,360.0" damagemultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true" />
+        <damagemodifier afflictionidentifiers="bitewounds" armorsector="0.0,360.0" damagemultiplier="0.1" damagesound="LimbArmor" />
+        <damagemodifier afflictiontypes="bleeding" armorsector="0.0,360.0" damagemultiplier="0.1" damagesound="LimbArmor" deflectprojectiles="true" />
+        <sprite name="shellshield" texture="Content/Items/CreatureLoot/CreatureLoot.png" sourcerect="363,0,100,165" limb="Torso" depthlimb="head" hidelimb="false" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" origin="0.5,0.65" />
+        <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="0.7" setvalue="true" disabledeltatime="true" />
+      </Wearable>
+    </Item>
+    <Item name="" identifier="crawlermask" category="Equipment" tags="smallitem,cheaploot" scale="0.5" cargocontaineridentifier="metalcrate" allowasextracargo="true">
+      <Upgrade gameversion="0.10.0.0" scale="0.5" />
+      <Price baseprice="1" sold="false" canbespecial="false" />
+      <PreferredContainer primary="locker" />
+      <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" depth="0.6" sourcerect="962,450,59,61" origin="0.5,0.5" />
+      <Sprite texture="Content/Items/CreatureLoot/CreatureLoot.png" depth="0.6" sourcerect="248,0,113,122" origin="0.5,0.5" />
+      <Body radius="40" width="20" density="20" />
+      <Wearable limbtype="Head" slots="Any,Head" msg="ItemMsgPickUpSelect">
+        <sprite texture="Content/Items/CreatureLoot/CreatureLoot.png" limb="Head" inheritlimbdepth="true" hidelimb="false" inherittexturescale="true" hideotherwearables="false" sourcerect="248,0,113,122" origin="0.5,0.55" />
+        <StatusEffect type="OnWearing" target="Character" HideFace="true" setvalue="true" disabledeltatime="true" />
+        <StatusEffect type="OnWearing" target="Character" delay="7" stackable="false" checkconditionalalways="true">
+          <conditional isDead="eq false" />
+          <Sound file="Content/Characters/Crawler/CRAWLER_idle1.ogg" type="OnUse" range="300" selectionmode="Random" />
+          <Sound file="Content/Characters/Crawler/CRAWLER_idle2.ogg" type="OnUse" range="300" />
+          <Sound file="Content/Characters/Crawler/CRAWLER_idle3.ogg" type="OnUse" range="300" />
+        </StatusEffect>
+      </Wearable>
+    </Item>
+    <Item name="" identifier="huskstinger" category="Weapon" Tags="smallitem,cheaploot" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light" scale="0.5" allowasextracargo="true" RequireAimToUse="True">
+      <Upgrade gameversion="0.10.0.0" scale="0.5" />
+      <Price baseprice="1" sold="false" canbespecial="false" />
+      <Price baseprice="500" sold="false">
+        <Price storeidentifier="merchanthusk" minavailable="1" maxavailable="2" sold="true">
+          <Reputation faction="huskcult" min="70" />
+        </Price>
+      </Price>
+      <PreferredContainer primary="armcab" />
+      <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="960,576,64,64" origin="0.5,0.5" />
+      <Sprite texture="Content/Items/CreatureLoot/CreatureLoot.png" sourcerect="425,232,86,23" depth="0.55" origin="0.44,0.6" />
+      <Body radius="10" width="60" density="20" />
+      <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="30,5" handle1="-20,0" holdangle="65" reload="1.0" range="50" combatpriority="10" msg="ItemMsgPickUpSelect">
+        <Attack targetimpulse="2" severlimbsprobability="0.1" itemdamage="2" structuredamage="2" structuresoundtype="StructureSlash">
+          <Affliction identifier="lacerations" strength="5" />
+          <Affliction identifier="bleeding" strength="10" />
+          <Affliction identifier="stun" strength="0.2" />
+          <StatusEffect type="OnUse" target="UseTarget">
+            <Conditional entitytype="eq Character" />
+            <Sound file="Content/Sounds/Damage/LimbSlash1.ogg" selectionmode="random" range="500" />
+            <Sound file="Content/Sounds/Damage/LimbSlash2.ogg" range="500" />
+            <Sound file="Content/Sounds/Damage/LimbSlash3.ogg" range="500" />
+            <Sound file="Content/Sounds/Damage/LimbSlash4.ogg" range="500" />
+            <Sound file="Content/Sounds/Damage/LimbSlash5.ogg" range="500" />
+            <Sound file="Content/Sounds/Damage/LimbSlash6.ogg" range="500" />
+          </StatusEffect>
+        </Attack>
+      </MeleeWeapon>
+    </Item>
+    <!--Дешевки-->
+    <!--Средние-->
+    <Item name="" identifier="spinelingspikeloot" category="Weapon" tags="smallitem,mediumloot" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light" scale="0.5" allowasextracargo="true" RequireAimToUse="True" nameidentifier="spinelingspike" translationidentifier="spinelingspike">
+      <Price baseprice="100" sold="false">
+        <Price storeidentifier="merchantoutpost" multiplier="1" />
+        <Price storeidentifier="merchantcity" multiplier="1" />
+        <Price storeidentifier="merchantresearch" multiplier="1.5" />
+        <Price storeidentifier="merchantmilitary" multiplier="1" />
+        <Price storeidentifier="merchantmine" multiplier="1" />
+      </Price>
+      <Deconstruct time="10">
+        <Item identifier="carbon" />
+        <Item identifier="zinc" />
+      </Deconstruct>
+      <PreferredContainer primary="armcab" />
+      <Sprite texture="Content/Characters/Spineling/Spineling.png" sourcerect="0,215,180,18" depth="0.55" />
+      <Body width="160" height="10" density="15" />
+      <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="30,5" handle1="-20,0" holdangle="65" reload="1.0" range="50" combatpriority="10" msg="ItemMsgPickUpSelect">
+        <Attack targetimpulse="2" severlimbsprobability="0.1" itemdamage="2" structuredamage="2" structuresoundtype="StructureSlash">
+          <Affliction identifier="lacerations" strength="5" />
+          <Affliction identifier="bleeding" strength="10" />
+          <Affliction identifier="stun" strength="0.2" />
+          <StatusEffect type="OnUse" target="UseTarget">
+            <Conditional entitytype="eq Character" />
+            <Sound file="Content/Sounds/Damage/LimbSlash1.ogg" selectionmode="random" range="500" />
+            <Sound file="Content/Sounds/Damage/LimbSlash2.ogg" range="500" />
+            <Sound file="Content/Sounds/Damage/LimbSlash3.ogg" range="500" />
+            <Sound file="Content/Sounds/Damage/LimbSlash4.ogg" range="500" />
+            <Sound file="Content/Sounds/Damage/LimbSlash5.ogg" range="500" />
+            <Sound file="Content/Sounds/Damage/LimbSlash6.ogg" range="500" />
+          </StatusEffect>
+        </Attack>
+      </MeleeWeapon>
+      <LightComponent range="200" castshadows="False" drawbehindsubs="False" ison="True" blinkfrequency="0" lightcolor="200,200,255,20" isactive="True" minvoltage="0" powerconsumption="0" vulnerabletoemp="False" pickingtime="0" canbepicked="False" allowingameediting="False" msg="">
+        <Sprite texture="Content/Characters/Spineling/Spineling.png" sourcerect="0,230,180,23" origin="0.5,0.6" alpha="0.5" />
+      </LightComponent>
+    </Item>
+    <Item name="" identifier="crawleregg" hideinmenus="true" health="20" damagedbyexplosions="true" Tags="largeitem,ignorebyai,mediumloot" damagedbyprojectiles="true" damagedbymeleeweapons="true" damagedbyrepairtools="true" category="Misc" spritecolor="199,253,172,255" scale="0.5" impactsoundtag="impact_soft">
+      <Sprite texture="Content/Items/CreatureLoot/CreatureLoot.png" depth="0.18" sourcerect="8,280,118,145" origin="0.5,0.5" />
+      <Price baseprice="200" sold="false" />
+      <Deconstruct time="10">
+        <Item identifier="alienblood" />
+        <Item identifier="sulphuricacid" />
+      </Deconstruct>
+      <!-- rectangular body to prevent the egg from rolling -->
+      <Body width="110" height="120" friction="1.0" restitution="0.01" angulardamping="1.0" density="12" />
+      <Holdable slots="RightHand+LeftHand" holdpos="0,-80" handle1="-30,14" handle2="30,14" aimable="false">
+        <StatusEffect type="OnBroken" target="This">
+          <particleemitter particle="whitegoosplash" particleamount="20" velocitymin="0" velocitymax="300" anglemin="0" anglemax="360" scalemin="0.5" scalemax="1.0" emitinterval="0" particlespersecond="0" highqualitycollisiondetection="False" copyentityangle="False" />
+          <particleemitter particle="mudrapeggbrownchunks" particleamount="100" velocitymin="100" velocitymax="2000" anglemin="0" anglemax="360" scalemin="0.2" scalemax="0.5" />
+          <Sound file="Content/Sounds/Damage/Gore6.ogg" range="500" />
+          <Remove />
+        </StatusEffect>
+        <StatusEffect type="OnDamaged" target="This">
+          <particleemitter particle="mudrapeggbrownchunks" particleamount="8" velocitymin="100" velocitymax="1000" anglemin="0" anglemax="360" scalemin="0.2" scalemax="0.5" />
+        </StatusEffect>
+        <StatusEffect type="OnFire" target="This" Condition="-5.0" />
+      </Holdable>
+      <ItemContainer capacity="1" maxstacksize="1" hideitems="true" showcontainedstateindicator="false" canbeselected="true">
+        <GuiFrame relativesize="0.15,0.2" anchor="Center" style="ItemUI" />
+        <StatusEffect type="OnBroken" target="This">
+          <particleemitter particle="whitegoosplash" particleamount="20" velocitymin="0" velocitymax="300" anglemin="0" anglemax="360" scalemin="0.5" scalemax="1.0" emitinterval="0" particlespersecond="0" highqualitycollisiondetection="False" copyentityangle="False" />
+          <particleemitter particle="mudrapeggbrownchunks" particleamount="100" velocitymin="100" velocitymax="2000" anglemin="0" anglemax="360" scalemin="0.4" scalemax="0.6" />
+          <Sound file="Content/Sounds/Damage/Gore5.ogg" range="500" />
+          <Remove />
+        </StatusEffect>
+        <StatusEffect type="OnDamaged" target="This">
+          <particleemitter particle="mudrapeggbrownchunks" particleamount="8" velocitymin="100" velocitymax="1000" anglemin="0" anglemax="360" scalemin="0.2" scalemax="0.5" />
+        </StatusEffect>
+        <StatusEffect type="OnFire" target="This" Condition="-5.0" />
+        <!-- spawn a crawler and remove the item if scale is above 0.75 -->
+        <StatusEffect type="Always" target="This" Condition="0" setvalue="true">
+          <Conditional Scale="gte 0.75" />
+          <SpawnCharacter speciesname="Crawler_hatchling" />
+          <Remove />
+        </StatusEffect>
+        <Containable items="antibloodloss1">
+          <!-- increase scale -->
+          <StatusEffect type="OnContaining" target="This" Scale="0.005" />
+          <StatusEffect type="OnContaining" target="Contained" Condition="-1" />
+        </Containable>
+      </ItemContainer>
+      <LightComponent range="5" lightcolor="255,0,0,61" powerconsumption="0" IsOn="true" castshadows="false" allowingameediting="false" pulsefrequency="1" pulseamount="0.30">
+        <sprite texture="Content/Items/CreatureLoot/CreatureLoot.png" depth="0.025" sourcerect="300,291,98,113" origin="0.5,0.6" alpha="1.0" />
+      </LightComponent>
+      <LightComponent range="40" lightcolor="255,199,0,58" powerconsumption="0" IsOn="true" castshadows="false" allowingameediting="false">
+        <sprite texture="Content/Items/CreatureLoot/CreatureLoot.png" depth="0.025" sourcerect="410,301,88,95" origin="0.5,0.6" alpha="1.0" />
+      </LightComponent>
+    </Item>
+    <Item name="" identifier="tigerthresheregg" hideinmenus="true" health="60" damagedbyexplosions="true" Tags="largeitem,ignorebyai,mediumloot" damagedbyprojectiles="true" damagedbymeleeweapons="true" damagedbyrepairtools="true" category="Misc" spritecolor="185,230,240,255" scale="0.5" impactsoundtag="impact_soft">
+      <Sprite texture="Content/Items/CreatureLoot/CreatureLoot.png" depth="0.18" sourcerect="165,280,114,145" origin="0.5,0.5" />
+      <Price baseprice="370" sold="false" />
+      <Deconstruct time="10">
+        <Item identifier="adrenalinegland" />
+        <Item identifier="alienblood" />
+      </Deconstruct>
+      <!-- rectangular body to prevent the egg from rolling -->
+      <Body width="110" height="120" friction="1.0" restitution="0.01" angulardamping="1.0" density="12" />
+      <Holdable slots="RightHand+LeftHand" holdpos="0,-80" handle1="-30,14" handle2="30,14" aimable="false">
+        <StatusEffect type="OnBroken" target="This">
+          <particleemitter particle="whitegoosplash" particleamount="20" velocitymin="0" velocitymax="300" anglemin="0" anglemax="360" scalemin="0.5" scalemax="1.0" emitinterval="0" particlespersecond="0" highqualitycollisiondetection="False" copyentityangle="False" />
+          <particleemitter particle="mudrapeggbrownchunks" particleamount="100" velocitymin="100" velocitymax="2000" anglemin="0" anglemax="360" scalemin="0.2" scalemax="0.5" />
+          <Sound file="Content/Sounds/Damage/Gore6.ogg" range="500" />
+          <Remove />
+        </StatusEffect>
+        <StatusEffect type="OnDamaged" target="This">
+          <particleemitter particle="mudrapeggbrownchunks" particleamount="8" velocitymin="100" velocitymax="1000" anglemin="0" anglemax="360" scalemin="0.2" scalemax="0.5" />
+        </StatusEffect>
+        <StatusEffect type="OnFire" target="This" Condition="-5.0" />
+      </Holdable>
+      <ItemContainer capacity="1" maxstacksize="1" hideitems="true" showcontainedstateindicator="false" canbeselected="true">
+        <GuiFrame relativesize="0.15,0.2" anchor="Center" style="ItemUI" />
+        <StatusEffect type="OnBroken" target="This">
+          <particleemitter particle="mudrapeggbrownchunks" particleamount="100" velocitymin="100" velocitymax="2000" anglemin="0" anglemax="360" scalemin="0.4" scalemax="0.6" />
+          <particleemitter particle="whitegoosplash" particleamount="20" velocitymin="0" velocitymax="300" anglemin="0" anglemax="360" scalemin="0.5" scalemax="1.0" emitinterval="0" particlespersecond="0" highqualitycollisiondetection="False" copyentityangle="False" />
+          <Sound file="Content/Sounds/Damage/Gore4.ogg" range="500" />
+          <Remove />
+        </StatusEffect>
+        <StatusEffect type="OnDamaged" target="This">
+          <particleemitter particle="mudrapeggbrownchunks" particleamount="8" velocitymin="100" velocitymax="1000" anglemin="0" anglemax="360" scalemin="0.2" scalemax="0.5" />
+        </StatusEffect>
+        <StatusEffect type="OnFire" target="This" Condition="-5.0" />
+        <!-- spawn a thresher and remove the item if scale is above 0.95 -->
+        <StatusEffect type="Always" target="This" Condition="0" setvalue="true">
+          <Conditional Scale="gte 0.95" />
+          <SpawnCharacter speciesname="Tigerthresher_hatchling" />
+          <Remove />
+        </StatusEffect>
+        <Containable items="antibloodloss1,alienblood">
+          <!-- increase scale -->
+          <StatusEffect type="OnContaining" target="This" Scale="0.005" />
+          <StatusEffect type="OnContaining" target="Contained" Condition="-1" />
+        </Containable>
+      </ItemContainer>
+      <LightComponent range="5" lightcolor="217,157,0,61" powerconsumption="0" IsOn="true" castshadows="false" allowingameediting="false" pulsefrequency="1" pulseamount="0.30">
+        <sprite texture="Content/Items/CreatureLoot/CreatureLoot.png" depth="0.025" sourcerect="300,291,98,113" origin="0.5,0.6" alpha="1.0" />
+      </LightComponent>
+      <LightComponent range="40" lightcolor="255,199,0,58" powerconsumption="0" IsOn="true" castshadows="false" allowingameediting="false">
+        <sprite texture="Content/Items/CreatureLoot/CreatureLoot.png" depth="0.025" sourcerect="410,301,88,95" origin="0.5,0.6" alpha="1.0" />
+      </LightComponent>
+    </Item>
+    <Item name="" identifier="watchershell" sonarsize="4" category="Misc" tags="mediumitem,mediumloot" cargocontaineridentifier="metalcrate" impactsoundtag="impact_soft" scale="0.5" allowasextracargo="true">
+      <Price baseprice="500" sold="false">
+        <Price storeidentifier="merchantoutpost" multiplier="1" />
+        <Price storeidentifier="merchantcity" multiplier="1" />
+        <Price storeidentifier="merchantresearch" multiplier="1.5" />
+        <Price storeidentifier="merchantmilitary" multiplier="1" />
+        <Price storeidentifier="merchantmine" multiplier="1" />
+      </Price>
+      <Deconstruct time="10">
+        <Item identifier="carbon" />
+        <Item identifier="dementonite" amount="2" />
+      </Deconstruct>
+      <PreferredContainer primary="storagecab" secondary="mineralcab" />
+      <Sprite texture="Content/Items/CreatureLoot/CreatureLoot.png" sourcerect="654,0,88,71" origin="0.5,0.5" depth="0.55" />
+      <Body radius="32" density="15" />
+      <Holdable slots="Any,RightHand+LeftHand" holdpos="0,-80" handle1="-30,14" handle2="30,14" aimable="false" msg="ItemMsgPickUpSelect" />
+    </Item>
+    <Item name="" identifier="smallmudraptoregg" nameidentifier="mudraptoregg" Tags="smallitem,ignorebyai,mudraptoregg,mediumloot" health="20" damagedbyexplosions="true" damagedbyprojectiles="true" damagedbymeleeweapons="true" damagedbyrepairtools="true" category="Misc" scale="0.5" impactsoundtag="impact_soft">
+      <Upgrade gameversion="0.10.0.0" scale="0.5" />
+      <Price baseprice="300" sold="false">
+        <Price storeidentifier="merchantoutpost" multiplier="0.85" />
+        <Price storeidentifier="merchantcity" multiplier="0.9" />
+        <Price storeidentifier="merchantresearch" sold="true" multiplier="1.5" minavailable="1" />
+        <Price storeidentifier="merchantmilitary" multiplier="1.1" />
+        <Price storeidentifier="merchantmine" multiplier="0.85" />
+      </Price>
+      <PreferredContainer primary="toxcontainer" spawnprobability="0.01" notcampaign="true" />
+      <PreferredContainer secondary="locker" spawnprobability="0.01" notcampaign="true" />
+      <Sprite texture="Content/Items/CreatureLoot/CreatureLoot.png" depth="0.18" sourcerect="164,3,42,49" origin="0.5,0.5" />
+      <Deconstruct time="10">
+        <Item identifier="alienblood" />
+      </Deconstruct>
+      <Body width="40" height="45" friction="1.0" restitution="0.01" angulardamping="0.8" density="10.5" />
+      <Holdable slots="RightHand,LeftHand,Any" holdpos="0,-70" handle1="0,10" handle2="0,-10">
+        <StatusEffect type="OnBroken" target="This">
+          <particleemitter particle="whitegoosplash" particleamount="20" velocitymin="0" velocitymax="300" anglemin="0" anglemax="360" scalemin="0.5" scalemax="1.0" emitinterval="0" particlespersecond="0" highqualitycollisiondetection="False" copyentityangle="False" />
+          <particleemitter particle="mudrapeggbrownchunks" particleamount="100" velocitymin="100" velocitymax="2000" anglemin="0" anglemax="360" scalemin="0.2" scalemax="0.5" />
+          <Sound file="Content/Sounds/Damage/Gore6.ogg" range="500" />
+          <Remove />
+        </StatusEffect>
+        <StatusEffect type="OnDamaged" target="This">
+          <particleemitter particle="mudrapeggbrownchunks" particleamount="8" velocitymin="100" velocitymax="1000" anglemin="0" anglemax="360" scalemin="0.2" scalemax="0.5" />
+        </StatusEffect>
+        <StatusEffect type="OnFire" target="This" Condition="-5.0" />
+      </Holdable>
+      <ItemContainer capacity="1" maxstacksize="1" hideitems="true" showcontainedstateindicator="false">
+        <Containable items="antibloodloss1">
+          <!-- increase scale -->
+          <StatusEffect type="OnContaining" target="This" Scale="0.005" />
+          <StatusEffect type="OnContaining" target="Contained" Condition="-1" />
+          <!-- remove and spawn a medium egg when scale is greater than or equal to 0.95 -->
+          <StatusEffect type="OnContaining" target="This">
+            <Sound file="Content/Sounds/Damage/Gore6.ogg" range="500" />
+            <particleemitter particle="brownchunks" particleamount="10" emitinterval="1000" velocitymin="0" velocitymax="100" anglemin="0" anglemax="360" scalemin="0.1" scalemax="0.3" />
+            <Conditional Scale="gte 0.95" />
+            <SpawnItem identifier="mediummudraptoregg" spawnposition="SameInventory" inheriteventtags="true" SpawnIfInventoryFull="true" SpawnIfNotInInventory="true" />
+            <Remove />
+          </StatusEffect>
+        </Containable>
+      </ItemContainer>
+      <LightComponent range="5" lightcolor="127,196,196,61" powerconsumption="0" IsOn="true" castshadows="false" allowingameediting="false" pulsefrequency="1" pulseamount="0.30">
+        <sprite texture="Content/Items/CreatureLoot/CreatureLoot.png" depth="0.025" sourcerect="164,3,42,49" origin="0.5,0.5" alpha="1.0" />
+      </LightComponent>
+      <LightComponent range="20" lightcolor="255,199,0,58" powerconsumption="0" IsOn="true" castshadows="false" allowingameediting="false">
+        <sprite texture="Content/Items/CreatureLoot/CreatureLoot.png" depth="0.025" sourcerect="164,3,42,49" origin="0.5,0.5" alpha="1.0" />
+      </LightComponent>
+    </Item>
+    <Item name="" identifier="alienblood" category="Medical" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="chemicalcrate" description="" Tags="smallitem,chem,medical,mediumloot" useinhealthinterface="true" scale="0.5" RequireAimToUse="True">
+      <Upgrade gameversion="0.10.0.0" scale="0.5" />
+      <PreferredContainer primary="medfabcab" secondary="medcontainer" />
+      <PreferredContainer secondary="storageorgan" minamount="1" maxamount="2" spawnprobability="1" />
+      <Price baseprice="100" sold="false">
+        <Price storeidentifier="merchantoutpost" multiplier="0.85" />
+        <Price storeidentifier="merchantcity" multiplier="0.85" />
+        <Price storeidentifier="merchantresearch" sold="true" multiplier="1.2" minavailable="2" />
+        <Price storeidentifier="merchantmilitary" multiplier="0.9" />
+        <Price storeidentifier="merchantmine" multiplier="0.85" />
+      </Price>
+      <SuitableTreatment type="bloodloss" suitability="40" />
+      <SuitableTreatment type="psychosis" suitability="-45" />
+      <SuitableTreatment type="damage" suitability="-10" />
+      <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="448,771,64,64" origin="0.5,0.5" />
+      <Sprite texture="Content/Items/CreatureLoot/CreatureLoot.png" sourcerect="1,128,30,58" depth="0.6" origin="0.5,0.5" />
+      <Body width="30" height="55" density="11" />
+      <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="10" handle1="0,0" msg="ItemMsgPickUpSelect">
+        <RequiredSkill identifier="medical" level="35" />
+        <StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true">
+          <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
+        </StatusEffect>
+        <StatusEffect tags="medical" type="OnSuccess" target="UseTarget, This" duration="15">
+          <ReduceAffliction identifier="bloodloss" amount="6" />
+          <Affliction identifier="psychosis" amount="3" />
+          <Affliction identifier="organdamage" amount="0.65" />
+        </StatusEffect>
+        <StatusEffect tags="medical" type="OnFailure" target="UseTarget, This" duration="15">
+          <ReduceAffliction identifier="bloodloss" amount="3" />
+          <Affliction identifier="psychosis" amount="3" />
+          <Affliction identifier="organdamage" amount="0.65" />
+        </StatusEffect>
+        <!-- Remove the item when fully used -->
+        <StatusEffect type="OnBroken" target="This">
+          <Remove />
+        </StatusEffect>
+      </Holdable>
+      <SkillRequirementHint identifier="medical" level="35" />
+    </Item>
+    <Item name="" identifier="huskeggsbasic" category="Material" maxstacksize="8" cargocontaineridentifier="chemicalcrate" Tags="smallitem,chem,medical,mediumloot" description="" useinhealthinterface="true" scale="0.3" RequireAimToUse="True">
+      <PreferredContainer primary="toxcontainer" spawnprobability="0.5" notcampaign="true" />
+      <PreferredContainer primary="wrecktoxcontainer" spawnprobability="0.2" />
+      <PreferredContainer secondary="medfabcab" />
+      <Price baseprice="310">
+        <Price storeidentifier="merchantoutpost" sold="false" multiplier="1.2" />
+        <Price storeidentifier="merchantcity" multiplier="1.3" />
+        <Price storeidentifier="merchantresearch" minavailable="1" />
+        <Price storeidentifier="merchantmilitary" sold="false" multiplier="1.2" />
+        <Price storeidentifier="merchantmine" sold="false" multiplier="1.3" />
+      </Price>
+      <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdpos="0,-80" aimpos="40,5" handle1="-30,14" handle2="30,14" aimable="false" msg="ItemMsgPickUpSelect">
+        <StatusEffect type="OnSecondaryUse" target="This" Condition="-25.0" />
+        <StatusEffect type="OnSecondaryUse" target="This,Character" disabledeltatime="true">
+          <Conditional Condition="lte 1" />
+          <Use />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="This" Condition="-100.0" setvalue="true" />
+        <StatusEffect type="OnUse" target="UseTarget" duration="60.0">
+          <!-- HuskInfectionState must be less than 0.01 so you can't speed up the infection -->
+          <Conditional huskinfection="lt 0.01" />
+          <Affliction identifier="huskinfection" amount="0.01" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="UseTarget">
+          <Conditional entitytype="eq Character" />
+          <Sound file="Content/Sounds/Damage/Gore6.ogg" range="500" />
+        </StatusEffect>
+        <StatusEffect type="OnBroken" target="This">
+          <Remove />
+        </StatusEffect>
+      </Holdable>
+      <Sprite texture="Content/Items/CreatureLoot/CreatureLoot.png" sourcerect="523,86,160,50" depth="0.6" origin="0.5,0.5" />
+      <Body width="140" height="45" density="10.5" />
+    </Item>
+    <Item name="" identifier="huskeggs" category="Medical" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="chemicalcrate" Tags="smallitem,chem,medical,syringe,mediumloot" description="" useinhealthinterface="true" scale="0.5" RequireAimToUse="True" HitOnlyCharacters="true">
+      <Upgrade gameversion="0.10.0.0" scale="0.5" />
+      <PreferredContainer primary="toxcontainer" spawnprobability="0.5" notcampaign="true" />
+      <PreferredContainer primary="wrecktoxcontainer" spawnprobability="0.2" />
+      <PreferredContainer secondary="medfabcab" />
+      <Price baseprice="400">
+        <Price storeidentifier="merchantoutpost" sold="false" multiplier="1.2" />
+        <Price storeidentifier="merchantcity" multiplier="1.3" />
+        <Price storeidentifier="merchantresearch" minavailable="1" />
+        <Price storeidentifier="merchantmilitary" sold="false" multiplier="1.2" />
+        <Price storeidentifier="merchantmine" sold="false" multiplier="1.3" />
+        <Price storeidentifier="merchanthusk" minavailable="2" maxavailable="6">
+          <Reputation faction="huskcult" min="30" />
+        </Price>
+      </Price>
+      <Fabricate suitablefabricators="medicalfabricator" requiredtime="30">
+        <RequiredSkill identifier="medical" level="30" />
+        <RequiredItem identifier="huskeggsbasic" />
+        <RequiredItem identifier="calcium" />
+      </Fabricate>
+      <Deconstruct time="5">
+        <Item identifier="calcium" />
+      </Deconstruct>
+      <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="832,448,64,64" origin="0.5,0.5" />
+      <Sprite texture="Content/Items/CreatureLoot/CreatureLoot.png" sourcerect="0,186,38,70" depth="0.6" origin="0.5,0.5" />
+      <Body width="35" height="70" density="20" />
+      <MeleeWeapon canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="0,0" holdangle="220" reload="1.0" msg="ItemMsgPickUpSelect">
+        <!--Can't fail, but can't use OnUse for projectiles-->
+        <StatusEffect type="OnSuccess" target="This" Condition="-100.0" setvalue="true" />
+        <StatusEffect type="OnSuccess" target="UseTarget" duration="60.0">
+          <!-- HuskInfectionState must be less than 0.01 so you can't speed up the infection -->
+          <Conditional huskinfection="lt 0.01" />
+          <Affliction identifier="huskinfection" amount="0.01" />
+        </StatusEffect>
+        <StatusEffect type="OnSuccess" target="UseTarget">
+          <Conditional entitytype="eq Character" />
+          <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
+        </StatusEffect>
+        <StatusEffect type="OnImpact" target="UseTarget" multiplyafflictionsbymaxvitality="true" AllowWhenBroken="true">
+          <Affliction identifier="stun" amount="0.1" />
+        </StatusEffect>
+        <!-- Remove the item when fully used -->
+        <StatusEffect type="OnBroken" target="This">
+          <Remove />
+        </StatusEffect>
+      </MeleeWeapon>
+      <Projectile characterusable="false" launchimpulse="20.0" sticktocharacters="true" launchrotation="-90" inheritstatuseffectsfrom="MeleeWeapon" />
+    </Item>
+    <Item name="" identifier="swimbladder" description="" Tags="smallitem,chem,medical,mediumloot" cargocontaineridentifier="chemicalcrate" maxstacksize="8" category="Material" scale="0.5" impactsoundtag="impact_soft">
+      <Upgrade gameversion="0.10.0.0" scale="0.5" />
+      <Price baseprice="250">
+        <Price storeidentifier="merchantoutpost" sold="false" multiplier="0.9" />
+        <Price storeidentifier="merchantcity" minavailable="2" />
+        <Price storeidentifier="merchantresearch" multiplier="1.1" minavailable="3" />
+        <Price storeidentifier="merchantmilitary" sold="false" />
+        <Price storeidentifier="merchantmine" sold="false" multiplier="0.9" />
+      </Price>
+      <PreferredContainer primary="medfabcab" secondary="medcontainer" />
+      <Sprite texture="Content/Items/CreatureLoot/CreatureLoot.png" depth="0.7" sourcerect="64,0,44,52" origin="0.5,0.5" />
+      <Deconstruct time="10">
+        <Item identifier="stabilozine" />
+        <Item identifier="stabilozine" />
+        <Item identifier="antibloodloss1" />
+        <Item identifier="antibloodloss1" />
+        <Item identifier="antibloodloss1" />
+      </Deconstruct>
+      <Body width="40" height="45" density="9.9" />
+      <Holdable slots="RightHand,LeftHand,Any" holdpos="0,-70" handle1="0,10" handle2="0,-10" />
+    </Item>
+    <Item name="" identifier="adrenalinegland" Tags="smallitem,chem,medical,mediumloot" maxstacksize="8" cargocontaineridentifier="chemicalcrate" description="" category="Material" scale="0.5" impactsoundtag="impact_soft">
+      <Upgrade gameversion="0.10.0.0" scale="0.5" />
+      <Price baseprice="240">
+        <Price storeidentifier="merchantoutpost" sold="false" multiplier="0.9" />
+        <Price storeidentifier="merchantcity" multiplier="1.1" minavailable="2" />
+        <Price storeidentifier="merchantresearch" multiplier="1.2" minavailable="3" />
+        <Price storeidentifier="merchantmilitary" sold="false" multiplier="0.9" />
+        <Price storeidentifier="merchantmine" sold="false" multiplier="0.85" />
+      </Price>
+      <PreferredContainer primary="medfabcab" secondary="medcontainer" />
+      <PreferredContainer primary="storageorgan" minamount="1" maxamount="2" spawnprobability="1" />
+      <Sprite texture="Content/Items/CreatureLoot/CreatureLoot.png" depth="0.7" sourcerect="108,1,45,51" origin="0.5,0.5" />
+      <Deconstruct time="10">
+        <Item identifier="adrenaline" />
+        <Item identifier="adrenaline" />
+      </Deconstruct>
+      <Body width="40" height="45" density="11" />
+      <Holdable slots="RightHand,LeftHand,Any" holdpos="0,-70" handle1="0,10" handle2="0,-10" />
+    </Item>
+    <!--Средние-->
+    <!--Дорогие-->
+    <Item name="" identifier="endwormshell" sonarsize="4" category="Misc" tags="mediumitem,expensiveloot" cargocontaineridentifier="metalcrate" impactsoundtag="impact_soft" scale="0.5" allowasextracargo="true">
+      <Price baseprice="1400" sold="false">
+        <Price storeidentifier="merchantoutpost" multiplier="1" />
+        <Price storeidentifier="merchantcity" multiplier="1" />
+        <Price storeidentifier="merchantresearch" multiplier="1.75" />
+        <Price storeidentifier="merchantmilitary" multiplier="1.5" />
+        <Price storeidentifier="merchantmine" multiplier="1" />
+      </Price>
+      <Deconstruct time="20">
+        <Item identifier="carbon" amount="4" />
+        <Item identifier="physicorium" amount="6" />
+      </Deconstruct>
+      <PreferredContainer primary="storagecab" secondary="mineralcab" />
+      <Sprite texture="Content/Items/CreatureLoot/CreatureLoot.png" sourcerect="516,0,134,84" origin="0.5,0.5" depth="0.55" />
+      <Body radius="38" width="80" density="15" />
+      <Holdable slots="Any,RightHand+LeftHand" holdpos="0,-80" handle1="-30,14" handle2="30,14" aimable="false" msg="ItemMsgPickUpSelect" />
+    </Item>
+    <Item name="" identifier="largemudraptoregg" nameidentifier="mudraptoregg" Tags="largeitem,ignorebyai,mudraptoregg,expensiveloot" hideinmenus="true" health="60" damagedbyexplosions="true" damagedbyprojectiles="true" damagedbymeleeweapons="true" damagedbyrepairtools="true" category="Misc" scale="0.4" impactsoundtag="impact_soft">
+      <Upgrade gameversion="0.20.15.0" scale="0.4" />
+      <Price baseprice="1000" sold="false" />
+      <Sprite texture="Content/Items/CreatureLoot/CreatureLoot.png" depth="0.18" sourcerect="80,105,124,147" origin="0.5,0.5" />
+      <Deconstruct time="10">
+        <Item identifier="alienblood" amount="2" />
+        <Item identifier="adrenalinegland" amount="2" />
+      </Deconstruct>
+      <!-- rectangular body to prevent the egg from rolling -->
+      <Body width="120" height="120" friction="1.0" restitution="0.01" angulardamping="1.0" density="12" />
+      <Holdable slots="RightHand+LeftHand" holdpos="0,-80" handle1="-30,14" handle2="30,14" aimable="false">
+        <StatusEffect type="OnBroken" target="This">
+          <particleemitter particle="whitegoosplash" particleamount="20" velocitymin="0" velocitymax="300" anglemin="0" anglemax="360" scalemin="0.5" scalemax="1.0" emitinterval="0" particlespersecond="0" highqualitycollisiondetection="False" copyentityangle="False" />
+          <particleemitter particle="mudrapeggbrownchunks" particleamount="100" velocitymin="100" velocitymax="2000" anglemin="0" anglemax="360" scalemin="0.2" scalemax="0.5" />
+          <Sound file="Content/Sounds/Damage/Gore6.ogg" range="500" />
+          <Remove />
+        </StatusEffect>
+        <StatusEffect type="OnDamaged" target="This">
+          <particleemitter particle="mudrapeggbrownchunks" particleamount="8" velocitymin="100" velocitymax="1000" anglemin="0" anglemax="360" scalemin="0.2" scalemax="0.5" />
+        </StatusEffect>
+        <StatusEffect type="OnFire" target="This" Condition="-5.0" />
+      </Holdable>
+      <ItemContainer capacity="1" maxstacksize="1" hideitems="true" showcontainedstateindicator="false" canbeselected="true">
+        <GuiFrame relativesize="0.15,0.2" anchor="Center" style="ItemUI" />
+        <StatusEffect type="OnBroken" target="This">
+          <particleemitter particle="mudrapeggbrownchunks" particleamount="100" velocitymin="100" velocitymax="2000" anglemin="0" anglemax="360" scalemin="0.4" scalemax="0.6" />
+          <particleemitter particle="whitegoosplash" particleamount="20" velocitymin="0" velocitymax="300" anglemin="0" anglemax="360" scalemin="0.5" scalemax="1.0" emitinterval="0" particlespersecond="0" highqualitycollisiondetection="False" copyentityangle="False" />
+          <Sound file="Content/Sounds/Damage/Gore7.ogg" range="500" />
+          <Remove />
+        </StatusEffect>
+        <StatusEffect type="OnDamaged" target="This">
+          <particleemitter particle="mudrapeggbrownchunks" particleamount="8" velocitymin="100" velocitymax="1000" anglemin="0" anglemax="360" scalemin="0.2" scalemax="0.5" />
+        </StatusEffect>
+        <StatusEffect type="OnFire" target="This" Condition="-5.0" />
+        <StatusEffect type="Always" target="This" Condition="0" setvalue="true">
+          <Conditional Scale="gte 0.5" />
+          <Remove />
+          <SpawnCharacter speciesname="Mudraptor_hatchling" inheriteventtags="true" />
+        </StatusEffect>
+        <Containable items="antibloodloss1">
+          <!-- increase scale -->
+          <StatusEffect type="OnContaining" target="This" Scale="0.002" />
+          <StatusEffect type="OnContaining" target="Contained" Condition="-1" />
+        </Containable>
+      </ItemContainer>
+      <LightComponent range="5" lightcolor="127,196,196,61" powerconsumption="0" IsOn="true" castshadows="false" allowingameediting="false" pulsefrequency="1" pulseamount="0.30">
+        <sprite texture="Content/Items/CreatureLoot/CreatureLoot.png" depth="0.025" sourcerect="300,291,98,113" origin="0.5,0.5" alpha="1.0" />
+      </LightComponent>
+      <LightComponent range="40" lightcolor="255,199,0,58" powerconsumption="0" IsOn="true" castshadows="false" allowingameediting="false">
+        <sprite texture="Content/Items/CreatureLoot/CreatureLoot.png" depth="0.025" sourcerect="410,301,88,95" origin="0.5,0.5" alpha="1.0" />
+      </LightComponent>
+    </Item>
+    <Item name="" identifier="molochbone" sonarsize="4" tags="mediumitem,expensiveloot" category="Misc" canbepicked="true" scale="0.5" impactsoundtag="impact_metal_heavy">
+      <PreferredContainer primary="storagecab" secondary="mineralcab" />
+      <Sprite texture="Content/Items/CreatureLoot/CreatureLoot.png" depth="0.18" sourcerect="4,450,262,62" origin="0.5,0.5" />
+      <Price baseprice="1000" sold="false">
+        <Price storeidentifier="merchantoutpost" multiplier="1" />
+        <Price storeidentifier="merchantcity" multiplier="2" />
+        <Price storeidentifier="merchantresearch" multiplier="0.75" />
+        <Price storeidentifier="merchantmilitary" multiplier="0.75" />
+        <Price storeidentifier="merchantmine" multiplier="0.5" />
+      </Price>
+      <Deconstruct time="10">
+        <Item identifier="carbon" amount="2" />
+        <Item identifier="calcium" amount="4" />
+      </Deconstruct>
+      <Body width="262" height="62" density="15" friction="1.0" restitution="0.01" angulardamping="1.0" />
+      <Holdable slots="Any,RightHand+LeftHand" holdpos="0,-80" handle1="-30,14" handle2="30,14" aimable="false" msg="ItemMsgPickUpSelect" />
+    </Item>
+    <Item name="" identifier="mediummudraptoregg" nameidentifier="mudraptoregg" Tags="mediumitem,ignorebyai,mudraptoregg,expensiveloot" hideinmenus="true" health="40" damagedbyexplosions="true" damagedbyprojectiles="true" damagedbymeleeweapons="true" damagedbyrepairtools="true" category="Misc" scale="0.4" impactsoundtag="impact_soft">
+      <Upgrade gameversion="0.20.15.0" scale="0.4" />
+      <Price baseprice="800" sold="false" />
+      <Sprite texture="Content/Items/CreatureLoot/CreatureLoot.png" depth="0.18" sourcerect="235,156,67,82" origin="0.5,0.5" />
+      <Deconstruct time="10">
+        <Item identifier="alienblood" />
+        <Item identifier="adrenalinegland" />
+      </Deconstruct>
+      <!-- rectangular body to prevent the egg from rolling -->
+      <Body width="65" height="75" friction="1.0" restitution="0.01" angulardamping="1.0" density="11" />
+      <Holdable slots="RightHand+LeftHand" holdpos="40,-80" handle1="-18,-12" handle2="18,-12" aimable="false">
+        <StatusEffect type="OnBroken" target="This">
+          <particleemitter particle="whitegoosplash" particleamount="20" velocitymin="0" velocitymax="300" anglemin="0" anglemax="360" scalemin="0.5" scalemax="1.0" emitinterval="0" particlespersecond="0" highqualitycollisiondetection="False" copyentityangle="False" />
+          <particleemitter particle="mudrapeggbrownchunks" particleamount="100" velocitymin="100" velocitymax="2000" anglemin="0" anglemax="360" scalemin="0.2" scalemax="0.5" />
+          <Sound file="Content/Sounds/Damage/Gore6.ogg" range="500" />
+          <Remove />
+        </StatusEffect>
+        <StatusEffect type="OnDamaged" target="This">
+          <particleemitter particle="mudrapeggbrownchunks" particleamount="8" velocitymin="100" velocitymax="1000" anglemin="0" anglemax="360" scalemin="0.2" scalemax="0.5" />
+        </StatusEffect>
+        <StatusEffect type="OnFire" target="This" Condition="-5.0" />
+      </Holdable>
+      <ItemContainer capacity="1" maxstacksize="1" hideitems="true" showcontainedstateindicator="false" canbeselected="true">
+        <GuiFrame relativesize="0.15,0.2" anchor="Center" style="ItemUI" />
+        <StatusEffect type="OnBroken" target="This">
+          <particleemitter particle="whitegoosplash" particleamount="20" velocitymin="0" velocitymax="300" anglemin="0" anglemax="360" scalemin="0.5" scalemax="1.0" emitinterval="0" particlespersecond="0" highqualitycollisiondetection="False" copyentityangle="False" />
+          <particleemitter particle="mudrapeggbrownchunks" particleamount="100" velocitymin="100" velocitymax="2000" anglemin="0" anglemax="360" scalemin="0.2" scalemax="0.5" />
+          <Sound file="Content/Sounds/Damage/Gore6.ogg" range="500" />
+          <Remove />
+        </StatusEffect>
+        <StatusEffect type="OnDamaged" target="This">
+          <particleemitter particle="mudrapeggbrownchunks" particleamount="8" velocitymin="100" velocitymax="1000" anglemin="0" anglemax="360" scalemin="0.2" scalemax="0.5" />
+        </StatusEffect>
+        <StatusEffect type="OnFire" target="This" Condition="-5.0" />
+        <Containable items="antibloodloss1">
+          <!-- increase scale -->
+          <StatusEffect type="OnContaining" target="This" Scale="0.005" />
+          <StatusEffect type="OnContaining" target="Contained" Condition="-1" />
+          <StatusEffect type="OnContaining" target="This">
+            <Sound file="Content/Sounds/Damage/Gore6.ogg" range="500" />
+            <particleemitter particle="brownchunks" particleamount="10" emitinterval="1000" velocitymin="0" velocitymax="500" anglemin="0" anglemax="360" scalemin="0.2" scalemax="0.5" />
+            <Conditional Scale="gte 0.75" />
+            <SpawnItem identifier="largemudraptoregg" spawnposition="SameInventory" inheriteventtags="true" SpawnIfInventoryFull="true" SpawnIfNotInInventory="true" />
+            <Remove />
+          </StatusEffect>
+        </Containable>
+      </ItemContainer>
+      <LightComponent range="5" lightcolor="127,196,196,61" powerconsumption="0" IsOn="true" castshadows="false" allowingameediting="false" pulsefrequency="1" pulseamount="0.30">
+        <sprite texture="Content/Items/CreatureLoot/CreatureLoot.png" depth="0.025" sourcerect="235,156,67,82" origin="0.5,0.5" alpha="1.0" />
+      </LightComponent>
+      <LightComponent range="30" lightcolor="255,199,0,58" powerconsumption="0" IsOn="true" castshadows="false" allowingameediting="false">
+        <sprite texture="Content/Items/CreatureLoot/CreatureLoot.png" depth="0.025" sourcerect="235,156,67,82" origin="0.5,0.5" alpha="1.0" />
+      </LightComponent>
+    </Item>
+    <!--Дорогие-->
+  </Override>
+  <!--Медицина-->
+  <Item name="" identifier="medscrate" tags="crate,meddrop" scale="0.5" linkable="true" showcontentsintooltip="true" impactsoundtag="impact_metal_heavy" spritecolor="53,161,161,255">
+    <Deconstruct time="0.5" />
+    <Sprite texture="Content/Items/Containers/containers.png" depth="0.54" sourcerect="407,376,152,89" origin="0.5,0.5" />
+    <Body width="150" height="75" density="25" />
+    <Holdable slots="RightHand+LeftHand" holdpos="0,-80" handle1="-30,14" handle2="30,14" aimable="false" msg="ItemMsgPickUpSelect" />
+    <CustomInterface canbeselected="false" drawhudwhenequipped="true" allowuioverlap="true">
+      <GuiFrame relativesize="0.15,0.1" anchor="BottomCenter" pivot="BottomCenter" relativeoffset="0,0.1" style="ItemUI" />
+      <Button text="openlootcrate">
+        <StatusEffect type="OnUse" duration="1" target="This" spawnItemRandomly="true">
+          <SpawnItem identifiers="medscrate_primitive" spawnposition="SameInventory" />
+          <SpawnItem identifiers="medscrate_pro" spawnposition="SameInventory" />
+          <SpawnItem identifiers="medscrate_initial" spawnposition="SameInventory" />
+          <SpawnItem identifiers="medscrate_antidotes" spawnposition="SameInventory" />
+          <SpawnItem identifiers="medscrate_stims" spawnposition="SameInventory" />
+          <SpawnItem identifiers="medscrate_advanced" spawnposition="SameInventory" />
+          <sound file="Content/Items/Door/Duct1.ogg" type="OnUse" range="1000.0" frequencymultiplier="1.25" selectionmode="Random" />
+          <sound file="Content/Items/Door/Duct2.ogg" type="OnUse" range="1000.0" frequencymultiplier="1.25" />
+          <sound file="Content/Sounds/Footsteps/Armor/FootstepArmorHeavy1.ogg" type="OnUse" range="1000.0" frequencymultiplier="1.25" />
+          <sound file="Content/Sounds/Footsteps/Armor/FootstepArmorHeavy2.ogg" type="OnUse" range="1000.0" frequencymultiplier="1.25" />
+          <sound file="Content/Sounds/Footsteps/Armor/FootstepArmorHeavy3.ogg" type="OnUse" range="1000.0" frequencymultiplier="1.25" />
+          <sound file="Content/Sounds/Footsteps/Armor/FootstepArmorHeavy4.ogg" type="OnUse" range="1000.0" frequencymultiplier="1.25" />
+          <Remove />
+        </StatusEffect>
+      </Button>
+    </CustomInterface>
+  </Item>
+  <Item name="" identifier="medscrate_primitive" tags="crate,meddrop" showcontentsintooltip="true" Scale="0.5" fireproof="true" nameidentifier="medscrate" impactsoundtag="impact_metal_heavy" spritecolor="53,161,161,255" waterproof="true">
+    <Deconstruct time="0.5" />
+    <Sprite texture="Content/Items/Containers/containers.png" depth="0.54" sourcerect="407,376,152,89" origin="0.5,0.5" />
+    <Body width="150" height="75" density="25" />
+    <Holdable slots="RightHand+LeftHand" holdpos="0,-80" handle1="-30,14" handle2="30,14" aimable="false" msg="ItemMsgPickUpSelect" />
+    <ItemContainer capacity="6" maxstacksize="32" depth="0.5">
+      <StatusEffect type="OnSpawn" target="this">
+        <SpawnItem identifiers="pomegrenadeextract" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" />
+        <SpawnItem identifiers="raptorbaneextract" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="antibiotics" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="hallucinogenicbufotoxin" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="organicfiber" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="sulphuricacid" mincount="1" maxcount="4" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="stabilozine" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="elastin" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="opium" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="ethanol" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="adrenaline" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="alienblood" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="antibloodloss1" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="antibleeding1" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" />
+      </StatusEffect>
+    </ItemContainer>
+  </Item>
+  <Item name="" identifier="medscrate_initial" tags="crate,meddrop" showcontentsintooltip="true" Scale="0.5" fireproof="true" nameidentifier="medscrate" impactsoundtag="impact_metal_heavy" spritecolor="53,161,161,255" waterproof="true">
+    <Deconstruct time="0.5" />
+    <Sprite texture="Content/Items/Containers/containers.png" depth="0.54" sourcerect="407,376,152,89" origin="0.5,0.5" />
+    <Body width="150" height="75" density="25" />
+    <Holdable slots="RightHand+LeftHand" holdpos="0,-80" handle1="-30,14" handle2="30,14" aimable="false" msg="ItemMsgPickUpSelect" />
+    <ItemContainer capacity="6" maxstacksize="32" depth="0.5">
+      <StatusEffect type="OnSpawn" target="this">
+        <SpawnItem identifiers="skillbookeuropanmedicine" mincount="1" maxcount="2" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.1" />
+        <SpawnItem identifiers="opium" mincount="1" maxcount="12" spawnposition="ThisInventory" spawnifinventoryfull="false" />
+        <SpawnItem identifiers="antibloodloss1" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="antibleeding1" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" />
+        <SpawnItem identifiers="stabilozine" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="antinarc" mincount="1" maxcount="4" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="food" mincount="1" maxcount="4" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="tonicliquid" mincount="1" maxcount="4" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="antipsychosis" mincount="1" maxcount="4" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+      </StatusEffect>
+    </ItemContainer>
+  </Item>
+  <Item name="" identifier="medscrate_advanced" tags="crate,meddrop" showcontentsintooltip="true" Scale="0.5" fireproof="true" nameidentifier="medscrate" impactsoundtag="impact_metal_heavy" spritecolor="53,161,161,255" waterproof="true">
+    <Deconstruct time="0.5" />
+    <Sprite texture="Content/Items/Containers/containers.png" depth="0.54" sourcerect="407,376,152,89" origin="0.5,0.5" />
+    <Body width="150" height="75" density="25" />
+    <Holdable slots="RightHand+LeftHand" holdpos="0,-80" handle1="-30,14" handle2="30,14" aimable="false" msg="ItemMsgPickUpSelect" />
+    <ItemContainer capacity="6" maxstacksize="32" depth="0.5">
+      <StatusEffect type="OnSpawn" target="this">
+        <Clear />
+        <SpawnItem identifier="antibleeding2" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" />
+        <SpawnItem identifier="antibloodloss2" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" />
+        <SpawnItem identifier="antidama1" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" />
+      </StatusEffect>
+    </ItemContainer>
+  </Item>
+  <Item name="" identifier="medscrate_pro" tags="crate,meddrop" showcontentsintooltip="true" Scale="0.5" fireproof="true" nameidentifier="medscrate" impactsoundtag="impact_metal_heavy" spritecolor="53,161,161,255" waterproof="true">
+    <Deconstruct time="0.5" />
+    <Sprite texture="Content/Items/Containers/containers.png" depth="0.54" sourcerect="407,376,152,89" origin="0.5,0.5" />
+    <Body width="150" height="75" density="25" />
+    <Holdable slots="RightHand+LeftHand" holdpos="0,-80" handle1="-30,14" handle2="30,14" aimable="false" msg="ItemMsgPickUpSelect" />
+    <ItemContainer capacity="6" maxstacksize="32" depth="0.5">
+      <StatusEffect type="OnSpawn" target="this">
+        <Clear />
+        <SpawnItem identifier="antibleeding3" spawnposition="ThisInventory" mincount="1" maxcount="8" />
+        <SpawnItem identifier="antidama2" spawnposition="ThisInventory" mincount="1" maxcount="8" />
+        <SpawnItem identifier="antibloodloss2" spawnposition="ThisInventory" mincount="1" maxcount="8" />
+        <SpawnItem identifier="liquidoxygenite" spawnposition="ThisInventory" mincount="1" maxcount="8" probability="0.75" />
+        <SpawnItem identifier="antinarc" spawnposition="ThisInventory" mincount="1" maxcount="8" probability="0.75" />
+        <SpawnItem identifier="combatstimulantsyringe" spawnposition="ThisInventory" mincount="1" maxcount="8" probability="0.75" />
+        <SpawnItem identifier="mindsense" spawnposition="ThisInventory" mincount="1" maxcount="2" probability="0.75" />
+      </StatusEffect>
+    </ItemContainer>
+  </Item>
+  <Item name="" identifier="medscrate_stims" tags="crate,meddrop" showcontentsintooltip="true" Scale="0.5" fireproof="true" nameidentifier="medscrate" impactsoundtag="impact_metal_heavy" spritecolor="53,161,161,255" waterproof="true">
+    <Deconstruct time="0.5" />
+    <Sprite texture="Content/Items/Containers/containers.png" depth="0.54" sourcerect="407,376,152,89" origin="0.5,0.5" />
+    <Body width="150" height="75" density="25" />
+    <Holdable slots="RightHand+LeftHand" holdpos="0,-80" handle1="-30,14" handle2="30,14" aimable="false" msg="ItemMsgPickUpSelect" />
+    <ItemContainer capacity="6" maxstacksize="32" depth="0.5">
+      <StatusEffect type="OnSpawn" target="this">
+        <SpawnItem identifiers="tonicliquid" mincount="1" maxcount="4" spawnposition="ThisInventory" spawnifinventoryfull="false" />
+        <SpawnItem identifiers="adrenaline" mincount="1" maxcount="4" spawnposition="ThisInventory" spawnifinventoryfull="false" />
+        <SpawnItem identifiers="hyperzine" mincount="1" maxcount="4" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="pressurestabilizer" mincount="1" maxcount="4" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="combatstimulantsyringe" mincount="1" maxcount="4" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="meth" mincount="1" maxcount="4" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="steroids" mincount="1" maxcount="4" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="deusizine" mincount="1" maxcount="4" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+      </StatusEffect>
+    </ItemContainer>
+  </Item>
+  <Item name="" identifier="medscrate_antidotes" tags="crate,meddrop" showcontentsintooltip="true" Scale="0.5" fireproof="true" nameidentifier="medscrate" impactsoundtag="impact_metal_heavy" spritecolor="53,161,161,255" waterproof="true">
+    <Deconstruct time="0.5" />
+    <Sprite texture="Content/Items/Containers/containers.png" depth="0.54" sourcerect="407,376,152,89" origin="0.5,0.5" />
+    <Body width="150" height="75" density="25" />
+    <Holdable slots="RightHand+LeftHand" holdpos="0,-80" handle1="-30,14" handle2="30,14" aimable="false" msg="ItemMsgPickUpSelect" />
+    <ItemContainer capacity="6" maxstacksize="32" depth="0.5">
+      <StatusEffect type="OnSpawn" target="this">
+        <SpawnItem identifiers="antipsychosis" mincount="1" maxcount="4" spawnposition="ThisInventory" spawnifinventoryfull="false" />
+        <SpawnItem identifiers="antinarc" mincount="1" maxcount="4" spawnposition="ThisInventory" spawnifinventoryfull="false" />
+        <SpawnItem identifiers="calyxanide" mincount="1" maxcount="4" spawnposition="ThisInventory" spawnifinventoryfull="false" />
+        <SpawnItem identifiers="antiparalysis" mincount="1" maxcount="4" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="deliriumineantidote" mincount="1" maxcount="4" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="morbusineantidote" mincount="1" maxcount="4" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="cyanideantidote" mincount="1" maxcount="4" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="antirad" mincount="1" maxcount="4" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="sufforinantidote" mincount="1" maxcount="4" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+      </StatusEffect>
+    </ItemContainer>
+  </Item>
+  <!--Медицина-->
+  <!--Руда-->
+  <Item name="" identifier="orecrate" tags="crate,oredrop" nameidentifier="orecrate" scale="0.45" linkable="true" pickdistance="150" showcontentsintooltip="true" impactsoundtag="impact_metal_heavy" spritecolor="194,83,83,255" waterproof="true">
+    <Deconstruct time="0.5" />
+    <Sprite texture="%ModDir%/items.png" depth="0.54" sourcerect="0,384,192,128" origin="0.5,0.5" />
+    <Body width="192" height="128" density="25" />
+    <Holdable slots="RightHand+LeftHand" holdpos="30,-60" holdangle="15" handle1="20,40" handle2="20,40" msg="ItemMsgPickUpUse" canbepicked="true">
+      <StatValue stattype="SwimmingSpeed" value="-0.6" />
+      <StatValue stattype="MovementSpeed" value="-0.4" />
+      <StatusEffect type="Always" target="Character" comparison="and" interval="8">
+        <Sound file="Content/Characters/Human/male_damage1.ogg" volume="0.25" selectionmode="Random" />
+        <Sound file="Content/Characters/Human/male_damage2.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage3.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage4.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage5.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage6.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage7.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage8.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage9.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage10.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage11.ogg" volume="0.25" />
+        <Conditional ishuman="true" />
+        <Conditional hasspecifiertag="male" />
+      </StatusEffect>
+      <StatusEffect type="Always" target="Character" comparison="and" interval="8">
+        <Sound file="Content/Characters/Human/female_damage1.ogg" selectionmode="Random" />
+        <Sound file="Content/Characters/Human/female_damage2.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage3.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage4.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage5.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage6.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage7.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage8.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage9.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage10.ogg" volume="0.25" />
+        <Conditional ishuman="true" />
+        <Conditional hasspecifiertag="female" />
+      </StatusEffect>
+    </Holdable>
+    <CustomInterface canbeselected="false" drawhudwhenequipped="true" allowuioverlap="true">
+      <GuiFrame relativesize="0.15,0.1" anchor="BottomCenter" pivot="BottomCenter" relativeoffset="0,0.1" style="ItemUI" />
+      <Button text="openlootcrate">
+        <StatusEffect type="OnUse" duration="1" target="This" spawnItemRandomly="true">
+          <SpawnItem identifiers="orecrate_metals" spawnposition="SameInventory" />
+          <SpawnItem identifiers="orecrate_nonmetals" spawnposition="SameInventory" />
+          <SpawnItem identifiers="orecrate_other" spawnposition="SameInventory" />
+          <sound file="Content/Items/Door/Duct1.ogg" type="OnUse" range="1000.0" frequencymultiplier="1.25" selectionmode="Random" />
+          <sound file="Content/Items/Door/Duct2.ogg" type="OnUse" range="1000.0" frequencymultiplier="1.25" />
+          <sound file="Content/Sounds/Footsteps/Armor/FootstepArmorHeavy1.ogg" type="OnUse" range="1000.0" frequencymultiplier="1.25" />
+          <sound file="Content/Sounds/Footsteps/Armor/FootstepArmorHeavy2.ogg" type="OnUse" range="1000.0" frequencymultiplier="1.25" />
+          <sound file="Content/Sounds/Footsteps/Armor/FootstepArmorHeavy3.ogg" type="OnUse" range="1000.0" frequencymultiplier="1.25" />
+          <sound file="Content/Sounds/Footsteps/Armor/FootstepArmorHeavy4.ogg" type="OnUse" range="1000.0" frequencymultiplier="1.25" />
+          <Remove />
+        </StatusEffect>
+      </Button>
+    </CustomInterface>
+  </Item>
+  <Item name="" identifier="orecrate_metals" tags="crate,oredrop" showcontentsintooltip="true" Scale="0.45" nameidentifier="orecrate" spritecolor="194,83,83,255" impactsoundtag="impact_metal_heavy" fireproof="true" waterproof="true">
+    <Deconstruct time="0.5" />
+    <Sprite texture="%ModDir%/items.png" depth="0.54" sourcerect="0,384,192,128" origin="0.5,0.5" />
+    <Body width="150" height="75" density="30" />
+    <Holdable slots="RightHand+LeftHand" holdpos="30,-60" holdangle="15" handle1="20,40" handle2="20,40" msg="ItemMsgPickUpUse" canbepicked="true">
+      <StatValue stattype="SwimmingSpeed" value="-0.6" />
+      <StatValue stattype="MovementSpeed" value="-0.4" />
+      <StatusEffect type="Always" target="Character" comparison="and" interval="8">
+        <Sound file="Content/Characters/Human/male_damage1.ogg" volume="0.25" selectionmode="Random" />
+        <Sound file="Content/Characters/Human/male_damage2.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage3.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage4.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage5.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage6.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage7.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage8.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage9.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage10.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage11.ogg" volume="0.25" />
+        <Conditional ishuman="true" />
+        <Conditional hasspecifiertag="male" />
+      </StatusEffect>
+      <StatusEffect type="Always" target="Character" comparison="and" interval="8">
+        <Sound file="Content/Characters/Human/female_damage1.ogg" selectionmode="Random" />
+        <Sound file="Content/Characters/Human/female_damage2.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage3.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage4.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage5.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage6.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage7.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage8.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage9.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage10.ogg" volume="0.25" />
+        <Conditional ishuman="true" />
+        <Conditional hasspecifiertag="female" />
+      </StatusEffect>
+    </Holdable>
+    <ItemContainer capacity="6" maxstacksize="32" depth="0.5">
+      <StatusEffect type="OnSpawn" target="this">
+        <SpawnItem identifiers="UEX" mincount="1" maxcount="4" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.30" />
+        <SpawnItem identifiers="c4block" mincount="1" maxcount="2" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.15" />
+        <SpawnItem identifiers="bornite" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.47" />
+        <SpawnItem identifiers="cassiterite" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.45" />
+        <SpawnItem identifiers="chalcopyrite" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.28" />
+        <SpawnItem identifiers="chamosite" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.39" />
+        <SpawnItem identifiers="esperite" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.36" />
+        <SpawnItem identifiers="galena" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.85" />
+        <SpawnItem identifiers="ilmenite" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.3" />
+        <SpawnItem identifiers="ironore" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.47" />
+        <SpawnItem identifiers="sphalerite" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.12" />
+        <SpawnItem identifiers="stannite" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.52" />
+        <SpawnItem identifiers="titanite" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.44" />
+      </StatusEffect>
+    </ItemContainer>
+  </Item>
+  <Item name="" identifier="orecrate_nonmetals" tags="crate,oredrop" showcontentsintooltip="true" Scale="0.45" spritecolor="194,83,83,255" nameidentifier="orecrate" impactsoundtag="impact_metal_heavy" fireproof="true" waterproof="true">
+    <Deconstruct time="0.5" />
+    <Sprite texture="%ModDir%/items.png" depth="0.54" sourcerect="0,384,192,128" origin="0.5,0.5" />
+    <Body width="150" height="75" density="25" />
+    <Holdable slots="RightHand+LeftHand" holdpos="30,-60" holdangle="15" handle1="20,40" handle2="20,40" msg="ItemMsgPickUpUse" canbepicked="true">
+      <StatValue stattype="SwimmingSpeed" value="-0.6" />
+      <StatValue stattype="MovementSpeed" value="-0.4" />
+      <StatusEffect type="Always" target="Character" comparison="and" interval="8">
+        <Sound file="Content/Characters/Human/male_damage1.ogg" volume="0.25" selectionmode="Random" />
+        <Sound file="Content/Characters/Human/male_damage2.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage3.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage4.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage5.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage6.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage7.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage8.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage9.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage10.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage11.ogg" volume="0.25" />
+        <Conditional ishuman="true" />
+        <Conditional hasspecifiertag="male" />
+      </StatusEffect>
+      <StatusEffect type="Always" target="Character" comparison="and" interval="8">
+        <Sound file="Content/Characters/Human/female_damage1.ogg" selectionmode="Random" />
+        <Sound file="Content/Characters/Human/female_damage2.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage3.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage4.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage5.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage6.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage7.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage8.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage9.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage10.ogg" volume="0.25" />
+        <Conditional ishuman="true" />
+        <Conditional hasspecifiertag="female" />
+      </StatusEffect>
+    </Holdable>
+    <ItemContainer capacity="6" maxstacksize="32" depth="0.5">
+      <StatusEffect type="OnSpawn" target="this">
+        <SpawnItem identifiers="brockite" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.08" />
+        <SpawnItem identifiers="uraniumore" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.11" />
+        <SpawnItem identifiers="thorianite" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.18" />
+        <SpawnItem identifiers="amblygonite" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.35" />
+        <SpawnItem identifiers="aragonite" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.1" />
+        <SpawnItem identifiers="chrysoprase" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.3" />
+        <SpawnItem identifiers="cryolite" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.48" />
+        <SpawnItem identifiers="diamond" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.48" />
+        <SpawnItem identifiers="graphite" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.46" />
+        <SpawnItem identifiers="hydroxyapatite" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.44" />
+        <SpawnItem identifiers="langbeinite" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.42" />
+        <SpawnItem identifiers="lazulite" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.3" />
+        <SpawnItem identifiers="polyhalite" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.36" />
+        <SpawnItem identifiers="pyromorphite" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.3" />
+        <SpawnItem identifiers="quartz" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.42" />
+        <SpawnItem identifiers="sylvite" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.46" />
+        <SpawnItem identifiers="triphylite" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.24" />
+      </StatusEffect>
+    </ItemContainer>
+  </Item>
+  <Item name="" identifier="orecrate_other" tags="crate,oredrop" showcontentsintooltip="true" Scale="0.45" spritecolor="194,83,83,255" nameidentifier="orecrate" impactsoundtag="impact_metal_heavy" fireproof="true" waterproof="true">
+    <Deconstruct time="0.5" />
+    <Sprite texture="%ModDir%/items.png" depth="0.54" sourcerect="0,384,192,128" origin="0.5,0.5" />
+    <Body width="150" height="75" density="25" />
+    <Holdable slots="RightHand+LeftHand" holdpos="30,-60" holdangle="15" handle1="20,40" handle2="20,40" msg="ItemMsgPickUpUse" canbepicked="true">
+      <StatValue stattype="SwimmingSpeed" value="-0.6" />
+      <StatValue stattype="MovementSpeed" value="-0.4" />
+      <StatusEffect type="Always" target="Character" comparison="and" interval="8">
+        <Sound file="Content/Characters/Human/male_damage1.ogg" volume="0.25" selectionmode="Random" />
+        <Sound file="Content/Characters/Human/male_damage2.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage3.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage4.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage5.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage6.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage7.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage8.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage9.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage10.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage11.ogg" volume="0.25" />
+        <Conditional ishuman="true" />
+        <Conditional hasspecifiertag="male" />
+      </StatusEffect>
+      <StatusEffect type="Always" target="Character" comparison="and" interval="8">
+        <Sound file="Content/Characters/Human/female_damage1.ogg" selectionmode="Random" />
+        <Sound file="Content/Characters/Human/female_damage2.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage3.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage4.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage5.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage6.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage7.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage8.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage9.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage10.ogg" volume="0.25" />
+        <Conditional ishuman="true" />
+        <Conditional hasspecifiertag="female" />
+      </StatusEffect>
+    </Holdable>
+    <ItemContainer capacity="6" maxstacksize="32" depth="0.5">
+      <StatusEffect type="OnSpawn" target="this">
+        <SpawnItem identifiers="brockite" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.16" />
+        <SpawnItem identifiers="uraniumore" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.22" />
+        <SpawnItem identifiers="thorianite" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.37" />
+        <SpawnItem identifiers="physicorium" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.3" />
+        <SpawnItem identifiers="paralyxis" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.13" />
+        <SpawnItem identifiers="incendium" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.26" />
+        <SpawnItem identifiers="fulgurium" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.30" />
+        <SpawnItem identifiers="dementonite" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.13" />
+      </StatusEffect>
+    </ItemContainer>
+  </Item>
+  <!--Руда-->
+  <!--Суда-->
+  <Item name="" identifier="vesselcrate" tags="crate,vesseldrop" scale="0.5" linkable="true" pickdistance="150" showcontentsintooltip="true" impactsoundtag="impact_metal_heavy" spritecolor="22,105,192,255" waterproof="true">
+    <Deconstruct time="0.5" />
+    <Sprite texture="%ModDir%/items.png" depth="0.54" sourcerect="0,384,192,128" origin="0.5,0.5" />
+    <Holdable slots="RightHand+LeftHand" holdpos="30,-60" holdangle="15" handle1="20,40" handle2="20,40" msg="ItemMsgPickUpUse" canbepicked="true">
+      <StatValue stattype="SwimmingSpeed" value="-0.6" />
+      <StatValue stattype="MovementSpeed" value="-0.4" />
+      <StatusEffect type="Always" target="Character" comparison="and" interval="8">
+        <Sound file="Content/Characters/Human/male_damage1.ogg" volume="0.25" selectionmode="Random" />
+        <Sound file="Content/Characters/Human/male_damage2.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage3.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage4.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage5.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage6.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage7.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage8.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage9.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage10.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage11.ogg" volume="0.25" />
+        <Conditional ishuman="true" />
+        <Conditional hasspecifiertag="male" />
+      </StatusEffect>
+      <StatusEffect type="Always" target="Character" comparison="and" interval="8">
+        <Sound file="Content/Characters/Human/female_damage1.ogg" selectionmode="Random" />
+        <Sound file="Content/Characters/Human/female_damage2.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage3.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage4.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage5.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage6.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage7.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage8.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage9.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage10.ogg" volume="0.25" />
+        <Conditional ishuman="true" />
+        <Conditional hasspecifiertag="female" />
+      </StatusEffect>
+    </Holdable>
+    <CustomInterface canbeselected="false" drawhudwhenequipped="true" allowuioverlap="true">
+      <GuiFrame relativesize="0.15,0.1" anchor="BottomCenter" pivot="BottomCenter" relativeoffset="0,0.1" style="ItemUI" />
+      <Button text="openlootcrate">
+        <StatusEffect type="OnUse" duration="1" target="This" spawnItemRandomly="true">
+          <SpawnItem identifiers="vesselcrate_bombardmentammo" spawnposition="SameInventory" />
+          <SpawnItem identifiers="vesselcrate_rootintootin" spawnposition="SameInventory" />
+          <SpawnItem identifiers="vesselcrate_royalties" spawnposition="SameInventory" />
+          <SpawnItem identifiers="vesselcrate_in_the_sub" spawnposition="SameInventory" />
+          <sound file="Content/Items/Door/Duct1.ogg" type="OnUse" range="1000.0" frequencymultiplier="1.25" selectionmode="Random" />
+          <sound file="Content/Items/Door/Duct2.ogg" type="OnUse" range="1000.0" frequencymultiplier="1.25" />
+          <sound file="Content/Sounds/Footsteps/Armor/FootstepArmorHeavy1.ogg" type="OnUse" range="1000.0" frequencymultiplier="1.25" />
+          <sound file="Content/Sounds/Footsteps/Armor/FootstepArmorHeavy2.ogg" type="OnUse" range="1000.0" frequencymultiplier="1.25" />
+          <sound file="Content/Sounds/Footsteps/Armor/FootstepArmorHeavy3.ogg" type="OnUse" range="1000.0" frequencymultiplier="1.25" />
+          <sound file="Content/Sounds/Footsteps/Armor/FootstepArmorHeavy4.ogg" type="OnUse" range="1000.0" frequencymultiplier="1.25" />
+          <Remove />
+        </StatusEffect>
+      </Button>
+    </CustomInterface>
+  </Item>
+  <Item name="" identifier="vesselcrate_bombardmentammo" tags="crate,vesseldrop" showcontentsintooltip="true" Scale="0.5" nameidentifier="vesselcrate" impactsoundtag="impact_metal_heavy" spritecolor="22,105,192,255" fireproof="true" waterproof="true">
+    <Deconstruct time="0.5" />
+    <Sprite texture="%ModDir%/items.png" depth="0.54" sourcerect="0,384,192,128" origin="0.5,0.5" />
+    <Holdable slots="RightHand+LeftHand" holdpos="30,-60" holdangle="15" handle1="20,40" handle2="20,40" msg="ItemMsgPickUpUse" canbepicked="true">
+      <StatValue stattype="SwimmingSpeed" value="-0.6" />
+      <StatValue stattype="MovementSpeed" value="-0.4" />
+      <StatusEffect type="Always" target="Character" comparison="and" interval="8">
+        <Sound file="Content/Characters/Human/male_damage1.ogg" volume="0.25" selectionmode="Random" />
+        <Sound file="Content/Characters/Human/male_damage2.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage3.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage4.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage5.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage6.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage7.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage8.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage9.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage10.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage11.ogg" volume="0.25" />
+        <Conditional ishuman="true" />
+        <Conditional hasspecifiertag="male" />
+      </StatusEffect>
+      <StatusEffect type="Always" target="Character" comparison="and" interval="8">
+        <Sound file="Content/Characters/Human/female_damage1.ogg" selectionmode="Random" />
+        <Sound file="Content/Characters/Human/female_damage2.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage3.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage4.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage5.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage6.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage7.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage8.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage9.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage10.ogg" volume="0.25" />
+        <Conditional ishuman="true" />
+        <Conditional hasspecifiertag="female" />
+      </StatusEffect>
+    </Holdable>
+    <ItemContainer capacity="6" maxstacksize="32" depth="0.5">
+      <StatusEffect type="OnSpawn" target="this">
+        <SpawnItem identifiers="UEX" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="c4block" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="compoundn" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="empgrenade" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="depthchargeshell" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="railgunshell" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+      </StatusEffect>
+    </ItemContainer>
+  </Item>
+  <Item name="" identifier="vesselcrate_rootintootin" tags="crate,vesseldrop" showcontentsintooltip="true" Scale="0.5" nameidentifier="vesselcrate" impactsoundtag="impact_metal_heavy" spritecolor="22,105,192,255" fireproof="true" waterproof="true">
+    <Deconstruct time="0.5" />
+    <Sprite texture="%ModDir%/items.png" depth="0.54" sourcerect="0,384,192,128" origin="0.5,0.5" />
+    <Holdable slots="RightHand+LeftHand" holdpos="30,-60" holdangle="15" handle1="20,40" handle2="20,40" msg="ItemMsgPickUpUse" canbepicked="true">
+      <StatValue stattype="SwimmingSpeed" value="-0.6" />
+      <StatValue stattype="MovementSpeed" value="-0.4" />
+      <StatusEffect type="Always" target="Character" comparison="and" interval="8">
+        <Sound file="Content/Characters/Human/male_damage1.ogg" volume="0.25" selectionmode="Random" />
+        <Sound file="Content/Characters/Human/male_damage2.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage3.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage4.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage5.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage6.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage7.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage8.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage9.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage10.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage11.ogg" volume="0.25" />
+        <Conditional ishuman="true" />
+        <Conditional hasspecifiertag="male" />
+      </StatusEffect>
+      <StatusEffect type="Always" target="Character" comparison="and" interval="8">
+        <Sound file="Content/Characters/Human/female_damage1.ogg" selectionmode="Random" />
+        <Sound file="Content/Characters/Human/female_damage2.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage3.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage4.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage5.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage6.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage7.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage8.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage9.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage10.ogg" volume="0.25" />
+        <Conditional ishuman="true" />
+        <Conditional hasspecifiertag="female" />
+      </StatusEffect>
+    </Holdable>
+    <ItemContainer capacity="6" maxstacksize="32" depth="0.5">
+      <StatusEffect type="OnSpawn" target="this">
+        <SpawnItem identifiers="chaingunammobox" mincount="1" maxcount="2" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="chaingunammoboxshredder" mincount="1" maxcount="2" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="coilgunammobox" mincount="1" maxcount="2" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="coilgunammoboxpiercing" mincount="1" maxcount="2" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="empgrenade" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="railgunharpoon" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="coilgunharpoonbox" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+      </StatusEffect>
+    </ItemContainer>
+  </Item>
+  <Item name="" identifier="vesselcrate_royalties" tags="crate,vesseldrop" showcontentsintooltip="true" Scale="0.5" nameidentifier="vesselcrate" impactsoundtag="impact_metal_heavy" spritecolor="22,105,192,255" fireproof="true" waterproof="true">
+    <Deconstruct time="0.5" />
+    <Sprite texture="%ModDir%/items.png" depth="0.54" sourcerect="0,384,192,128" origin="0.5,0.5" />
+    <Holdable slots="RightHand+LeftHand" holdpos="30,-60" holdangle="15" handle1="20,40" handle2="20,40" msg="ItemMsgPickUpUse" canbepicked="true">
+      <StatValue stattype="SwimmingSpeed" value="-0.6" />
+      <StatValue stattype="MovementSpeed" value="-0.4" />
+      <StatusEffect type="Always" target="Character" comparison="and" interval="8">
+        <Sound file="Content/Characters/Human/male_damage1.ogg" volume="0.25" selectionmode="Random" />
+        <Sound file="Content/Characters/Human/male_damage2.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage3.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage4.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage5.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage6.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage7.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage8.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage9.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage10.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage11.ogg" volume="0.25" />
+        <Conditional ishuman="true" />
+        <Conditional hasspecifiertag="male" />
+      </StatusEffect>
+      <StatusEffect type="Always" target="Character" comparison="and" interval="8">
+        <Sound file="Content/Characters/Human/female_damage1.ogg" selectionmode="Random" />
+        <Sound file="Content/Characters/Human/female_damage2.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage3.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage4.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage5.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage6.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage7.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage8.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage9.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage10.ogg" volume="0.25" />
+        <Conditional ishuman="true" />
+        <Conditional hasspecifiertag="female" />
+      </StatusEffect>
+    </Holdable>
+    <ItemContainer capacity="6" maxstacksize="32" depth="0.5">
+      <StatusEffect type="OnSpawn" target="this">
+        <SpawnItem identifiers="coalitionmedal" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="coalitioncommendation" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="pipetobacco" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="cigar" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="beerbottle1" mincount="1" maxcount="16" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="beerbottle2" mincount="1" maxcount="16" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="rum" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="pressurestabilizer" mincount="1" maxcount="4" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+      </StatusEffect>
+    </ItemContainer>
+  </Item>
+  <Item name="" identifier="vesselcrate_in_the_sub" tags="crate,vesseldrop" showcontentsintooltip="true" Scale="0.5" nameidentifier="vesselcrate" impactsoundtag="impact_metal_heavy" spritecolor="22,105,192,255" fireproof="true" waterproof="true">
+    <Deconstruct time="0.5" />
+    <Sprite texture="%ModDir%/items.png" depth="0.54" sourcerect="0,384,192,128" origin="0.5,0.5" />
+    <Holdable slots="RightHand+LeftHand" holdpos="30,-60" holdangle="15" handle1="20,40" handle2="20,40" msg="ItemMsgPickUpUse" canbepicked="true">
+      <StatValue stattype="SwimmingSpeed" value="-0.6" />
+      <StatValue stattype="MovementSpeed" value="-0.4" />
+      <StatusEffect type="Always" target="Character" comparison="and" interval="8">
+        <Sound file="Content/Characters/Human/male_damage1.ogg" volume="0.25" selectionmode="Random" />
+        <Sound file="Content/Characters/Human/male_damage2.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage3.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage4.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage5.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage6.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage7.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage8.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage9.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage10.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage11.ogg" volume="0.25" />
+        <Conditional ishuman="true" />
+        <Conditional hasspecifiertag="male" />
+      </StatusEffect>
+      <StatusEffect type="Always" target="Character" comparison="and" interval="8">
+        <Sound file="Content/Characters/Human/female_damage1.ogg" selectionmode="Random" />
+        <Sound file="Content/Characters/Human/female_damage2.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage3.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage4.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage5.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage6.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage7.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage8.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage9.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage10.ogg" volume="0.25" />
+        <Conditional ishuman="true" />
+        <Conditional hasspecifiertag="female" />
+      </StatusEffect>
+    </Holdable>
+    <ItemContainer capacity="6" maxstacksize="32" depth="0.5">
+      <StatusEffect type="OnSpawn" target="this">
+        <SpawnItem identifiers="fuelrod" mincount="1" maxcount="4" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="thoriumfuelrod" mincount="1" maxcount="3" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="glowstick" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="flare" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="ethanol" mincount="1" maxcount="16" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="sprayer" mincount="1" maxcount="2" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="pressurestabilizer" mincount="1" maxcount="4" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="flamerunique" mincount="1" maxcount="2" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="fixfoamgrenade" mincount="1" maxcount="12" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.35" />
+        <SpawnItem identifiers="defensebotammobox" mincount="1" maxcount="4" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.35" />
+        <SpawnItem identifiers="defensebotspawner" mincount="1" maxcount="2" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.35" />
+        <SpawnItem identifiers="artifacttransportcase" mincount="1" maxcount="2" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.35" />
+        <SpawnItem identifiers="handheldelectricalmonitor" mincount="1" maxcount="2" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.35" />
+        <SpawnItem identifiers="handhelditemfinder" mincount="1" maxcount="2" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.35" />
+        <SpawnItem identifiers="handheldstatusmonitor" mincount="1" maxcount="2" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.35" />
+        <SpawnItem identifiers="reactorpda" mincount="1" maxcount="2" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.35" />
+        <SpawnItem identifiers="extinguisher" mincount="1" maxcount="2" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.35" />
+        <SpawnItem identifiers="smallplanter" mincount="1" maxcount="2" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.35" />
+        <SpawnItem identifiers="fertilizer" mincount="1" maxcount="2" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.35" />
+        <SpawnItem identifiers="wateringcan" mincount="1" maxcount="2" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.35" />
+        <SpawnItem identifiers="banana" mincount="1" maxcount="2" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.35" />
+        <SpawnItem identifiers="creepingorangevineseed" mincount="1" maxcount="2" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.35" />
+        <SpawnItem identifiers="raptorbaneseed" mincount="1" maxcount="2" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.35" />
+        <SpawnItem identifiers="saltvineseed" mincount="1" maxcount="2" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.35" />
+        <SpawnItem identifiers="tobaccovineseed" mincount="1" maxcount="2" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.35" />
+      </StatusEffect>
+    </ItemContainer>
+  </Item>
+  <!--Суда-->
+  <!--Оружия-->
+  <Item name="" identifier="munitionscrate" tags="crate,munitionsdrop" nameidentifier="" scale="0.5" linkable="true" pickdistance="150" showcontentsintooltip="true" impactsoundtag="impact_metal_heavy" spritecolor="192,127,39,255" fireproof="true" waterproof="true">
+    <Deconstruct time="0.5" />
+    <Sprite texture="%ModDir%/items.png" depth="0.54" sourcerect="0,384,192,128" origin="0.5,0.5" />
+    <Holdable slots="RightHand+LeftHand" holdpos="30,-60" holdangle="15" handle1="20,40" handle2="20,40" msg="ItemMsgPickUpUse" canbepicked="true">
+      <StatValue stattype="SwimmingSpeed" value="-0.6" />
+      <StatValue stattype="MovementSpeed" value="-0.4" />
+      <StatusEffect type="Always" target="Character" comparison="and" interval="8">
+        <Sound file="Content/Characters/Human/male_damage1.ogg" volume="0.25" selectionmode="Random" />
+        <Sound file="Content/Characters/Human/male_damage2.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage3.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage4.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage5.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage6.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage7.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage8.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage9.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage10.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage11.ogg" volume="0.25" />
+        <Conditional ishuman="true" />
+        <Conditional hasspecifiertag="male" />
+      </StatusEffect>
+      <StatusEffect type="Always" target="Character" comparison="and" interval="8">
+        <Sound file="Content/Characters/Human/female_damage1.ogg" selectionmode="Random" />
+        <Sound file="Content/Characters/Human/female_damage2.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage3.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage4.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage5.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage6.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage7.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage8.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage9.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage10.ogg" volume="0.25" />
+        <Conditional ishuman="true" />
+        <Conditional hasspecifiertag="female" />
+      </StatusEffect>
+    </Holdable>
+    <CustomInterface canbeselected="false" drawhudwhenequipped="true" allowuioverlap="true">
+      <GuiFrame relativesize="0.15,0.1" anchor="BottomCenter" pivot="BottomCenter" relativeoffset="0,0.1" style="ItemUI" />
+      <Button text="openlootcrate">
+        <StatusEffect type="OnUse" duration="1" target="This" spawnItemRandomly="true">
+          <SpawnItem identifiers="munitionscrate_smallarms" spawnposition="SameInventory" />
+          <SpawnItem identifiers="munitionscrate_mediumarms" spawnposition="SameInventory" />
+          <SpawnItem identifiers="munitionscrate_look_at_those_GUNS_BRUTHAAA" spawnposition="SameInventory" />
+          <SpawnItem identifiers="munitionscrate_less_lethal_less_fun" spawnposition="SameInventory" />
+          <sound file="Content/Items/Door/Duct1.ogg" type="OnUse" range="1000.0" frequencymultiplier="1.25" selectionmode="Random" />
+          <sound file="Content/Items/Door/Duct2.ogg" type="OnUse" range="1000.0" frequencymultiplier="1.25" />
+          <sound file="Content/Sounds/Footsteps/Armor/FootstepArmorHeavy1.ogg" type="OnUse" range="1000.0" frequencymultiplier="1.25" />
+          <sound file="Content/Sounds/Footsteps/Armor/FootstepArmorHeavy2.ogg" type="OnUse" range="1000.0" frequencymultiplier="1.25" />
+          <sound file="Content/Sounds/Footsteps/Armor/FootstepArmorHeavy3.ogg" type="OnUse" range="1000.0" frequencymultiplier="1.25" />
+          <sound file="Content/Sounds/Footsteps/Armor/FootstepArmorHeavy4.ogg" type="OnUse" range="1000.0" frequencymultiplier="1.25" />
+          <Remove />
+        </StatusEffect>
+      </Button>
+    </CustomInterface>
+  </Item>
+  <Item name="" identifier="munitionscrate_smallarms" tags="crate,munitionsdrop" showcontentsintooltip="true" Scale="0.5" nameidentifier="munitionscrate" impactsoundtag="impact_metal_heavy" spritecolor="192,127,39,255" fireproof="true" waterproof="true">
+    <Deconstruct time="0.5" />
+    <Sprite texture="%ModDir%/items.png" depth="0.54" sourcerect="0,384,192,128" origin="0.5,0.5" />
+    <Holdable slots="RightHand+LeftHand" holdpos="30,-60" holdangle="15" handle1="20,40" handle2="20,40" msg="ItemMsgPickUpUse" canbepicked="true">
+      <StatValue stattype="SwimmingSpeed" value="-0.6" />
+      <StatValue stattype="MovementSpeed" value="-0.4" />
+      <StatusEffect type="Always" target="Character" comparison="and" interval="8">
+        <Sound file="Content/Characters/Human/male_damage1.ogg" volume="0.25" selectionmode="Random" />
+        <Sound file="Content/Characters/Human/male_damage2.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage3.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage4.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage5.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage6.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage7.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage8.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage9.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage10.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage11.ogg" volume="0.25" />
+        <Conditional ishuman="true" />
+        <Conditional hasspecifiertag="male" />
+      </StatusEffect>
+      <StatusEffect type="Always" target="Character" comparison="and" interval="8">
+        <Sound file="Content/Characters/Human/female_damage1.ogg" selectionmode="Random" />
+        <Sound file="Content/Characters/Human/female_damage2.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage3.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage4.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage5.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage6.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage7.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage8.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage9.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage10.ogg" volume="0.25" />
+        <Conditional ishuman="true" />
+        <Conditional hasspecifiertag="female" />
+      </StatusEffect>
+    </Holdable>
+    <ItemContainer capacity="6" maxstacksize="32" depth="0.5">
+      <StatusEffect type="OnSpawn" target="this">
+        <SpawnItem identifiers="revolverround" mincount="1" maxcount="24" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="revolver" mincount="1" maxcount="2" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.5" />
+        <SpawnItem identifiers="machinepistol" mincount="1" maxcount="2" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.5" />
+        <SpawnItem identifiers="smgmagazine" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.65" />
+        <SpawnItem identifiers="molotovcoctail" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.5" />
+        <SpawnItem identifiers="shotgunshell" mincount="1" maxcount="24" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.65" />
+        <SpawnItem identifiers="shotgununique" mincount="1" maxcount="2" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.2" />
+        <SpawnItem identifiers="divingknife" mincount="1" maxcount="4" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.5" />
+        <SpawnItem identifiers="ballistichelmet2" mincount="1" maxcount="2" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.35" />
+        <SpawnItem identifiers="chitinhelmet" mincount="1" maxcount="2" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.25" />
+        <SpawnItem identifiers="ironhelmet" mincount="1" maxcount="2" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.1" />
+        <SpawnItem identifiers="makeshiftarmor" mincount="1" maxcount="2" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.25" />
+        <SpawnItem identifiers="UEX" mincount="1" maxcount="6" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.5" />
+      </StatusEffect>
+    </ItemContainer>
+  </Item>
+  <Item name="" identifier="munitionscrate_mediumarms" tags="crate,munitionsdrop" showcontentsintooltip="true" Scale="0.5" nameidentifier="munitionscrate" impactsoundtag="impact_metal_heavy" spritecolor="192,127,39,255" fireproof="true" waterproof="true">
+    <Deconstruct time="0.5" />
+    <Sprite texture="%ModDir%/items.png" depth="0.54" sourcerect="0,384,192,128" origin="0.5,0.5" />
+    <Holdable slots="RightHand+LeftHand" holdpos="30,-60" holdangle="15" handle1="20,40" handle2="20,40" msg="ItemMsgPickUpUse" canbepicked="true">
+      <StatValue stattype="SwimmingSpeed" value="-0.6" />
+      <StatValue stattype="MovementSpeed" value="-0.4" />
+      <StatusEffect type="Always" target="Character" comparison="and" interval="8">
+        <Sound file="Content/Characters/Human/male_damage1.ogg" volume="0.25" selectionmode="Random" />
+        <Sound file="Content/Characters/Human/male_damage2.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage3.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage4.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage5.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage6.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage7.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage8.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage9.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage10.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage11.ogg" volume="0.25" />
+        <Conditional ishuman="true" />
+        <Conditional hasspecifiertag="male" />
+      </StatusEffect>
+      <StatusEffect type="Always" target="Character" comparison="and" interval="8">
+        <Sound file="Content/Characters/Human/female_damage1.ogg" selectionmode="Random" />
+        <Sound file="Content/Characters/Human/female_damage2.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage3.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage4.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage5.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage6.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage7.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage8.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage9.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage10.ogg" volume="0.25" />
+        <Conditional ishuman="true" />
+        <Conditional hasspecifiertag="female" />
+      </StatusEffect>
+    </Holdable>
+    <ItemContainer capacity="6" maxstacksize="32" depth="0.5">
+      <StatusEffect type="OnSpawn" target="this">
+        <SpawnItem identifiers="molotovcoctail" mincount="1" maxcount="6" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.35" />
+        <SpawnItem identifiers="smgmagazine" mincount="1" maxcount="6" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.35" />
+        <SpawnItem identifiers="shotgunshell" mincount="1" maxcount="24" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.35" />
+        <SpawnItem identifiers="spear" mincount="1" maxcount="24" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.5" />
+        <SpawnItem identifiers="explosivespear" mincount="1" maxcount="12" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.35" />
+        <SpawnItem identifiers="riflebullet" mincount="1" maxcount="24" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.35" />
+        <SpawnItem identifiers="fraggrenade" mincount="1" maxcount="2" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.35" />
+        <SpawnItem identifiers="stungrenade" mincount="1" maxcount="2" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.35" />
+        <SpawnItem identifiers="empgrenade" mincount="1" maxcount="2" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.35" />
+        <SpawnItem identifiers="shotgun" mincount="1" maxcount="2" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.2" />
+        <SpawnItem identifiers="smg" mincount="1" maxcount="2" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.2" />
+        <SpawnItem identifiers="smgunique" mincount="1" maxcount="2" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.1" />
+        <SpawnItem identifiers="rifle" mincount="1" maxcount="2" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.35" />
+        <SpawnItem identifiers="harpoongun" mincount="1" maxcount="2" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.2" />
+        <SpawnItem identifiers="harpooncoilrifle" mincount="1" maxcount="2" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.1" />
+        <SpawnItem identifiers="flamer" mincount="1" maxcount="2" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.1" />
+        <SpawnItem identifiers="flamerunique" mincount="1" maxcount="2" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.05" />
+        <SpawnItem identifiers="crowbar" mincount="1" maxcount="4" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.35" />
+      </StatusEffect>
+    </ItemContainer>
+  </Item>
+  <Item name="" identifier="munitionscrate_look_at_those_GUNS_BRUTHAAA" tags="crate,munitionsdrop" showcontentsintooltip="true" Scale="0.5" nameidentifier="munitionscrate" impactsoundtag="impact_metal_heavy" spritecolor="192,127,39,255" waterproof="true">
+    <Deconstruct time="0.5" />
+    <Sprite texture="%ModDir%/items.png" depth="0.54" sourcerect="0,384,192,128" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/items.png" depth="0.54" sourcerect="0,384,192,128" origin="0.5,0.5" />
+    <Holdable slots="RightHand+LeftHand" holdpos="30,-60" holdangle="15" handle1="20,40" handle2="20,40" msg="ItemMsgPickUpUse" canbepicked="true">
+      <StatValue stattype="SwimmingSpeed" value="-0.6" />
+      <StatValue stattype="MovementSpeed" value="-0.4" />
+      <StatusEffect type="Always" target="Character" comparison="and" interval="8">
+        <Sound file="Content/Characters/Human/male_damage1.ogg" volume="0.25" selectionmode="Random" />
+        <Sound file="Content/Characters/Human/male_damage2.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage3.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage4.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage5.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage6.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage7.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage8.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage9.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage10.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage11.ogg" volume="0.25" />
+        <Conditional ishuman="true" />
+        <Conditional hasspecifiertag="male" />
+      </StatusEffect>
+      <StatusEffect type="Always" target="Character" comparison="and" interval="8">
+        <Sound file="Content/Characters/Human/female_damage1.ogg" selectionmode="Random" />
+        <Sound file="Content/Characters/Human/female_damage2.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage3.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage4.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage5.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage6.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage7.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage8.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage9.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage10.ogg" volume="0.25" />
+        <Conditional ishuman="true" />
+        <Conditional hasspecifiertag="female" />
+      </StatusEffect>
+    </Holdable>
+    <ItemContainer capacity="6" maxstacksize="32" depth="0.5">
+      <StatusEffect type="OnSpawn" target="this">
+        <SpawnItem identifiers="arcemitter" count="1" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.1" />
+        <SpawnItem identifiers="fulguriumbatterycell" mincount="1" maxcount="4" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.2" />
+        <SpawnItem identifiers="scrapcannon" count="1" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.1" />
+        <SpawnItem identifiers="iron" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.2" />
+        <SpawnItem identifiers="bandolier" mincount="1" maxcount="2" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.25" />
+        <SpawnItem identifiers="mudraptorshell" count="1" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.25" />
+        <SpawnItem identifiers="ballistichelmet1" mincount="1" maxcount="2" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.35" />
+        <SpawnItem identifiers="piratehelmet" mincount="1" maxcount="2" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.35" />
+        <SpawnItem identifiers="piratebodyarmor" mincount="1" maxcount="2" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.35" />
+        <SpawnItem identifiers="bodyarmor" mincount="1" maxcount="2" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.35" />
+        <SpawnItem identifiers="boardingaxe" mincount="1" maxcount="2" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.35" />
+        <SpawnItem identifiers="incendiumgrenade" mincount="1" maxcount="4" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.5" />
+        <SpawnItem identifiers="chemgrenade" mincount="1" maxcount="4" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.5" />
+        <SpawnItem identifiers="fraggrenade" mincount="1" maxcount="4" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.5" />
+        <SpawnItem identifiers="grenadelauncher" count="1" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.15" />
+        <SpawnItem identifiers="40mmgrenade" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.25" />
+        <SpawnItem identifiers="40mmchemgrenade" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.25" />
+        <SpawnItem identifiers="40mmnuke" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.05" />
+        <SpawnItem identifiers="autoshotgun" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.15" />
+        <SpawnItem identifiers="shotgunslugexplosive" mincount="1" maxcount="24" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.25" />
+        <SpawnItem identifiers="shotgunshell" mincount="1" maxcount="24" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.5" />
+        <SpawnItem identifiers="handcannon" count="1" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.15" />
+        <SpawnItem identifiers="handcannonround" mincount="1" maxcount="12" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.25" />
+        <SpawnItem identifiers="assaultrifle" count="1" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.15" />
+        <SpawnItem identifiers="assaultriflemagazine" mincount="1" maxcount="4" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.45" />
+        <SpawnItem identifiers="hmg" count="1" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.15" />
+        <SpawnItem identifiers="hmgmagazine" mincount="1" maxcount="2" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.35" />
+      </StatusEffect>
+    </ItemContainer>
+  </Item>
+  <Item name="" identifier="munitionscrate_less_lethal_less_fun" tags="crate,munitionsdrop" showcontentsintooltip="true" Scale="0.5" nameidentifier="munitionscrate" impactsoundtag="impact_metal_heavy" spritecolor="192,127,39,255" fireproof="true" waterproof="true">
+    <Deconstruct time="0.5" />
+    <Sprite texture="%ModDir%/items.png" depth="0.54" sourcerect="0,384,192,128" origin="0.5,0.5" />
+    <Holdable slots="RightHand+LeftHand" holdpos="30,-60" holdangle="15" handle1="20,40" handle2="20,40" msg="ItemMsgPickUpUse" canbepicked="true">
+      <StatValue stattype="SwimmingSpeed" value="-0.6" />
+      <StatValue stattype="MovementSpeed" value="-0.4" />
+      <StatusEffect type="Always" target="Character" comparison="and" interval="8">
+        <Sound file="Content/Characters/Human/male_damage1.ogg" volume="0.25" selectionmode="Random" />
+        <Sound file="Content/Characters/Human/male_damage2.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage3.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage4.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage5.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage6.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage7.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage8.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage9.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage10.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/male_damage11.ogg" volume="0.25" />
+        <Conditional ishuman="true" />
+        <Conditional hasspecifiertag="male" />
+      </StatusEffect>
+      <StatusEffect type="Always" target="Character" comparison="and" interval="8">
+        <Sound file="Content/Characters/Human/female_damage1.ogg" selectionmode="Random" />
+        <Sound file="Content/Characters/Human/female_damage2.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage3.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage4.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage5.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage6.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage7.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage8.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage9.ogg" volume="0.25" />
+        <Sound file="Content/Characters/Human/female_damage10.ogg" volume="0.25" />
+        <Conditional ishuman="true" />
+        <Conditional hasspecifiertag="female" />
+      </StatusEffect>
+    </Holdable>
+    <ItemContainer capacity="6" maxstacksize="32" depth="0.5">
+      <StatusEffect type="OnSpawn" target="this">
+        <SpawnItem identifiers="stungun" mincount="1" maxcount="2" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="stungundart" mincount="1" maxcount="16" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="shotgunshellblunt" mincount="1" maxcount="24" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.65" />
+        <SpawnItem identifiers="40mmstungrenade" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.35" />
+        <SpawnItem identifiers="stungrenade" mincount="1" maxcount="4" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.35" />
+        <SpawnItem identifiers="handcuffs" mincount="1" maxcount="4" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="stunbaton" mincount="1" maxcount="4" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.5" />
+        <SpawnItem identifiers="batterycell" mincount="1" maxcount="4" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.5" />
+        <SpawnItem identifiers="glowstick" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="riotshield" count="1" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.25" />
+        <SpawnItem identifiers="piratebodyarmor" mincount="1" maxcount="2" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.25" />
+        <SpawnItem identifiers="piratehelmet" mincount="1" maxcount="2" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.25" />
+        <SpawnItem identifiers="ballistichelmet3" mincount="1" maxcount="2" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.25" />
+      </StatusEffect>
+    </ItemContainer>
+  </Item>
+  <!--Оружия-->
+  <!--Рандо-->
+  <Item identifier="randoscrate" tags="crate,randosdrop" scale="0.5" linkable="true" pickdistance="150" showcontentsintooltip="true" impactsoundtag="impact_metal_heavy" spritecolor="48,48,48,255">
+    <Deconstruct time="0.5" />
+    <Sprite texture="Content/Items/Containers/containers.png" depth="0.54" sourcerect="407,376,152,89" origin="0.5,0.5" />
+    <Holdable slots="RightHand+LeftHand" holdpos="0,-70" handle1="-5,0" handle2="10,-20" holdangle="0" msg="ItemMsgPickUpUse" canbeselected="false" canbepicked="true" pickkey="Use" allowswappingwhenpicked="false" />
+    <Body width="150" height="75" density="25" />
+    <CustomInterface canbeselected="false" drawhudwhenequipped="true" allowuioverlap="true">
+      <GuiFrame relativesize="0.15,0.1" anchor="BottomCenter" pivot="BottomCenter" relativeoffset="0,0.1" style="ItemUI" />
+      <Button text="openlootcrate">
+        <StatusEffect type="OnUse" duration="1" target="This" spawnItemRandomly="true">
+          <SpawnItem identifiers="randoscrate_clown_trap" spawnposition="SameInventory" />
+          <SpawnItem identifiers="randoscrate_trap" spawnposition="SameInventory" />
+          <SpawnItem identifiers="randoscrate_shit" spawnposition="SameInventory" />
+          <SpawnItem identifiers="randoscrate_foods" spawnposition="SameInventory" />
+          <SpawnItem identifiers="randoscrate_hazardousmaterials" spawnposition="SameInventory" />
+          <SpawnItem identifiers="randoscrate_dumpster" spawnposition="SameInventory" />
+          <SpawnItem identifiers="randoscrate_clowntainer" spawnposition="SameInventory" />
+          <SpawnItem identifiers="randoscrate_drugdilla" spawnposition="SameInventory" />
+          <SpawnItem identifiers="randoscrate_pyro" spawnposition="SameInventory" />
+          <SpawnItem identifiers="randoscrate_chillum" spawnposition="SameInventory" />
+          <sound file="Content/Items/Door/Duct1.ogg" type="OnUse" range="1000.0" frequencymultiplier="1.25" selectionmode="Random" />
+          <sound file="Content/Items/Door/Duct2.ogg" type="OnUse" range="1000.0" frequencymultiplier="1.25" />
+          <sound file="Content/Sounds/Footsteps/Armor/FootstepArmorHeavy1.ogg" type="OnUse" range="1000.0" frequencymultiplier="1.25" />
+          <sound file="Content/Sounds/Footsteps/Armor/FootstepArmorHeavy2.ogg" type="OnUse" range="1000.0" frequencymultiplier="1.25" />
+          <sound file="Content/Sounds/Footsteps/Armor/FootstepArmorHeavy3.ogg" type="OnUse" range="1000.0" frequencymultiplier="1.25" />
+          <sound file="Content/Sounds/Footsteps/Armor/FootstepArmorHeavy4.ogg" type="OnUse" range="1000.0" frequencymultiplier="1.25" />
+          <Remove />
+        </StatusEffect>
+      </Button>
+    </CustomInterface>
+  </Item>
+  <Item nameidentifier="randoscrate" identifier="randoscrate_trap" tags="crate,randosdrop" showcontentsintooltip="true" Scale="0.5" impactsoundtag="impact_metal_heavy" spritecolor="48,48,48,255">
+    <Deconstruct time="0.5" />
+    <Sprite texture="Content/Items/Containers/containers.png" depth="0.54" sourcerect="407,376,152,89" origin="0.5,0.5" />
+    <Body width="150" height="75" density="25" />
+    <Holdable slots="RightHand+LeftHand" holdpos="0,-80" handle1="-30,14" handle2="30,14" aimable="false" msg="ItemMsgPickUpSelect" />
+    <CustomInterface canbeselected="false" drawhudwhenequipped="true" allowuioverlap="true">
+      <GuiFrame relativesize="0.15,0.1" anchor="BottomCenter" pivot="BottomCenter" relativeoffset="0,0.1" style="ItemUI" />
+      <Button text="openlootcrateTRAP">
+        <StatusEffect type="OnUse" duration="1" target="This">
+          <sound file="Content/Items/Weapons/IncendiumGrenade.ogg" range="2500" />
+          <sound file="Content/Items/Weapons/StunGrenade.ogg" range="2500" />
+          <Explosion range="250.0" ballastfloradamage="50" structuredamage="10" levelwalldamage="75" itemdamage="250" force="5" severlimbsprobability="0.5" decal="explosion" decalsize="0.5" camerashake="6.0">
+            <Affliction identifier="explosiondamage" strength="150" />
+            <Affliction identifier="bleeding" strength="100" />
+            <Affliction identifier="bleeding" strength="50" probability="0.1" dividebylimbcount="false" />
+            <Affliction identifier="stun" strength="7" />
+          </Explosion>
+          <!--	<SpawnItem identifiers="trap_explosion" spawnposition="SameInventory"/>-->
+          <Remove />
+        </StatusEffect>
+      </Button>
+    </CustomInterface>
+  </Item>
+  <Item nameidentifier="randoscrate" identifier="randoscrate_foods" tags="crate,randosdrop" showcontentsintooltip="true" Scale="0.5" impactsoundtag="impact_metal_heavy" spritecolor="48,48,48,255">
+    <Deconstruct time="0.5" />
+    <Sprite texture="Content/Items/Containers/containers.png" depth="0.54" sourcerect="407,376,152,89" origin="0.5,0.5" />
+    <Body width="150" height="75" density="25" />
+    <Holdable slots="RightHand+LeftHand" holdpos="0,-80" handle1="-30,14" handle2="30,14" aimable="false" msg="ItemMsgPickUpSelect" />
+    <ItemContainer capacity="6" maxstacksize="32" depth="0.5">
+      <StatusEffect type="OnSpawn" target="this">
+        <SpawnItem identifiers="proteinbar" mincount="4" maxcount="16" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="beerbottle1" mincount="4" maxcount="16" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="beerbottle2" mincount="4" maxcount="16" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="energydrink" mincount="4" maxcount="16" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="tonicliquid" mincount="4" maxcount="16" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="banana" mincount="4" maxcount="16" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="creepingorange" mincount="4" maxcount="16" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="rum" mincount="4" maxcount="16" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+      </StatusEffect>
+    </ItemContainer>
+  </Item>
+  <Item nameidentifier="randoscrate" identifier="randoscrate_hazardousmaterials" tags="crate,randosdrop" showcontentsintooltip="true" Scale="0.5" impactsoundtag="impact_metal_heavy" spritecolor="48,48,48,255">
+    <Deconstruct time="0.5" />
+    <Sprite texture="Content/Items/Containers/containers.png" depth="0.54" sourcerect="407,376,152,89" origin="0.5,0.5" />
+    <Body width="150" height="75" density="25" />
+    <Holdable slots="RightHand+LeftHand" holdpos="0,-80" handle1="-30,14" handle2="30,14" aimable="false" msg="ItemMsgPickUpSelect" />
+    <ItemContainer capacity="6" maxstacksize="32" depth="0.5">
+      <StatusEffect type="OnSpawn" target="this">
+        <SpawnItem identifiers="fulguriumfuelrodvolatile" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" />
+      </StatusEffect>
+    </ItemContainer>
+  </Item>
+  <Item nameidentifier="randoscrate" identifier="randoscrate_dumpster" tags="crate,randosdrop" showcontentsintooltip="true" Scale="0.5" impactsoundtag="impact_metal_heavy" spritecolor="48,48,48,255">
+    <Deconstruct time="0.5" />
+    <Sprite texture="Content/Items/Containers/containers.png" depth="0.54" sourcerect="407,376,152,89" origin="0.5,0.5" />
+    <Body width="150" height="75" density="25" />
+    <Holdable slots="RightHand+LeftHand" holdpos="0,-80" handle1="-30,14" handle2="30,14" aimable="false" msg="ItemMsgPickUpSelect" />
+    <ItemContainer capacity="6" maxstacksize="32" depth="0.5">
+      <StatusEffect type="OnSpawn" target="this">
+        <SpawnItem identifiers="antidama1" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="antidama2" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="deusizine" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="opium" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="screwdriver" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="wrench" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="batterycell" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="cigar" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+      </StatusEffect>
+    </ItemContainer>
+  </Item>
+  <Item nameidentifier="randoscrate" identifier="randoscrate_pyro" tags="crate,randosdrop" showcontentsintooltip="true" Scale="0.5" impactsoundtag="impact_metal_heavy" spritecolor="48,48,48,255">
+    <Deconstruct time="0.5" />
+    <Sprite texture="Content/Items/Containers/containers.png" depth="0.54" sourcerect="407,376,152,89" origin="0.5,0.5" />
+    <Body width="150" height="75" density="25" />
+    <Holdable slots="RightHand+LeftHand" holdpos="0,-80" handle1="-30,14" handle2="30,14" aimable="false" msg="ItemMsgPickUpSelect" />
+    <ItemContainer capacity="6" maxstacksize="32" depth="0.5">
+      <StatusEffect type="OnSpawn" target="this">
+        <SpawnItem identifiers="molotovcoctail" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="incendiumgrenade" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="flamer" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="weldingfueltank" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="incendiumfueltank" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="incendiumfueltank" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="incendium" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+      </StatusEffect>
+    </ItemContainer>
+  </Item>
+  <Item nameidentifier="randoscrate" identifier="randoscrate_chillum" tags="crate,randosdrop" showcontentsintooltip="true" Scale="0.5" impactsoundtag="impact_metal_heavy" spritecolor="48,48,48,255">
+    <Deconstruct time="0.5" />
+    <Sprite texture="Content/Items/Containers/containers.png" depth="0.54" sourcerect="407,376,152,89" origin="0.5,0.5" />
+    <Body width="150" height="75" density="25" />
+    <Holdable slots="RightHand+LeftHand" holdpos="0,-80" handle1="-30,14" handle2="30,14" aimable="false" msg="ItemMsgPickUpSelect" />
+    <ItemContainer capacity="6" maxstacksize="32" depth="0.5">
+      <StatusEffect type="OnSpawn" target="this">
+        <SpawnItem identifiers="beerbottle1" mincount="1" maxcount="16" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="beerbottle2" mincount="1" maxcount="16" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="cigar" mincount="1" maxcount="16" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="pipetobacco" mincount="1" maxcount="16" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="rum" mincount="1" maxcount="16" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="ethanol" mincount="1" maxcount="16" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+      </StatusEffect>
+    </ItemContainer>
+  </Item>
+  <Item identifier="randoscrate_clowntainer" tags="crate,randosdrop" showcontentsintooltip="true" Scale="0.5" impactsoundtag="impact_metal_heavy">
+    <Price baseprice="170" sold="false" canbespecial="false" />
+    <Deconstruct time="5" />
+    <sprite texture="Content/Map/Outposts/Art/FactionItems.png" sourcerect="5,0,158,83" depth="0.54" origin="0.5,0.5" />
+    <Body width="150" height="76" density="20" />
+    <Holdable slots="RightHand+LeftHand" holdpos="0,-80" handle1="-20,14" handle2="20,14" aimable="false" msg="ItemMsgPickUpSelect" />
+    <ItemContainer capacity="12" canbeselected="false" hideitems="true" keepopenwhenequipped="true" movableframe="true">
+      <Containable items="smallitem" excludeditems="toolbox,cargoscooter" />
+      <StatusEffect type="OnSpawn" target="this">
+        <SpawnItem identifiers="bananapeel" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="banana" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="toyhammer" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="bikehorn" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="cymbals" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="clowncostume" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="clownsuitunique" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="clownmaskunique" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="clownmask" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="clowndivingmask" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+      </StatusEffect>
+    </ItemContainer>
+    <Controller UserPos="0,-20" direction="Right" canbeselected="true" AllowSelectingWhenSelectedByOther="false" selectkey="Use" drawuserbehind="true" forceusertostayattached="true" msg="itemmsggoinside">
+      <limbposition limb="Head" position="74,-40" />
+      <limbposition limb="Torso" position="74,-40" />
+      <limbposition limb="Waist" position="74,-40" />
+      <limbposition limb="LeftHand" position="74,-40" />
+      <limbposition limb="RightHand" position="74,-40" />
+      <limbposition limb="RightLeg" position="74,-40" />
+      <limbposition limb="LeftLeg" position="74,-40" />
+      <limbposition limb="RightFoot" position="74,-40" />
+      <limbposition limb="LeftFoot" position="74,-40" />
+      <StatusEffect type="OnActive" targettype="Character" delay="0.25" stackable="true" indetectable="true" DisableFocusingOnEntities="true" invisibletimer="0.1" IgnoreMeleeWeapons="true" PressureProtection="6500.0" setvalue="true" />
+    </Controller>
+  </Item>
+  <Item nameidentifier="randoscrate" identifier="randoscrate_drugdilla" tags="crate,randosdrop" showcontentsintooltip="true" Scale="0.5" impactsoundtag="impact_metal_heavy" spritecolor="48,48,48,255">
+    <Deconstruct time="0.5" />
+    <Sprite texture="Content/Items/Containers/containers.png" depth="0.54" sourcerect="407,376,152,89" origin="0.5,0.5" />
+    <Body width="150" height="75" density="25" />
+    <Holdable slots="RightHand+LeftHand" holdpos="0,-80" handle1="-30,14" handle2="30,14" aimable="false" msg="ItemMsgPickUpSelect" />
+    <ItemContainer capacity="6" maxstacksize="32" depth="0.5">
+      <StatusEffect type="OnSpawn" target="this">
+        <SpawnItem identifiers="phosphorus" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="chlorine" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="carbon" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="tonicliquid" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="adrenaline" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="ethanol" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="antidama1" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+        <SpawnItem identifiers="antinarc" mincount="1" maxcount="8" spawnposition="ThisInventory" spawnifinventoryfull="false" probability="0.75" />
+      </StatusEffect>
+    </ItemContainer>
+  </Item>
+  <Item identifier="randoscrate_shit" tags="crate,randosdrop" showcontentsintooltip="true" Scale="0.5" impactsoundtag="impact_metal_heavy" spritecolor="48,48,48,255">
+    <Deconstruct time="0.5" />
+    <Sprite texture="Content/Items/Containers/containers.png" depth="0.54" sourcerect="407,376,152,89" origin="0.5,0.5" />
+    <Body width="150" height="75" density="25" />
+    <Holdable slots="RightHand+LeftHand" holdpos="0,-80" handle1="-30,14" handle2="30,14" aimable="false" msg="ItemMsgPickUpSelect" />
+    <ItemContainer capacity="6" maxstacksize="32" depth="0.5">
+      <StatusEffect type="OnSpawn" target="this,Character">
+        <SpawnItem identifiers="poop" mincount="8" maxcount="48" spawnposition="ThisInventory" spawnifinventoryfull="false" />
+        <Affliction identifier="nausea" amount="100" probability="0.1" />
+      </StatusEffect>
+    </ItemContainer>
+  </Item>
+  <Item nameidentifier="randoscrate" identifier="randoscrate_clown_trap" tags="crate,randosdrop" showcontentsintooltip="true" Scale="0.5" impactsoundtag="impact_metal_heavy" spritecolor="48,48,48,255">
+    <Deconstruct time="0.5" />
+    <Sprite texture="Content/Items/Containers/containers.png" depth="0.54" sourcerect="407,376,152,89" origin="0.5,0.5" />
+    <Body width="150" height="75" density="25" />
+    <Holdable slots="RightHand+LeftHand" holdpos="0,-80" handle1="-30,14" handle2="30,14" aimable="false" msg="ItemMsgPickUpSelect" />
+    <ItemContainer capacity="6" maxstacksize="32" depth="0.5">
+      <StatusEffect type="Always" target="This" duration="5" interval="0.3">
+        <SpawnItem identifiers="bananapeel" count="3" spawnposition="This" impulse="2" rotationtype="Random" spawnifinventoryfull="true" />
+        <SpawnItem identifiers="poop" mincount="2" maxcount="3" spawnposition="This" impulse="2" rotationtype="Random" spawnifinventoryfull="true" />
+      </StatusEffect>
+      <StatusEffect type="Always" target="This,NearbyCharacters,Character" duration="5" range="1000">
+        <sound file="Content/Items/JobGear/Clown/ClownExosuitHorn.ogg" type="OnUse" range="5000.0" camerashake="5" />
+        <Explosion range="1500.0" shockwave="true" smoke="false" force="10" flames="false" flash="false" sparks="false" underwaterbubble="false" camerashake="6.0" showeffects="true" />
+        <Affliction identifier="stun" amount="0.05" />
+      </StatusEffect>
+      <StatusEffect type="Always" target="This" delay="4">
+        <Remove />
+      </StatusEffect>
+    </ItemContainer>
+  </Item>
+  <!--Рандо-->
+  <Item name="" identifier="contactor" category="Equipment" Tags="smallitem,provocative" cargocontaineridentifier="metalcrate" Scale="0.5" impactsoundtag="impact_metal_light" requireaimtouse="true">
+    <Deconstruct time="15">
+      <Item identifier="copper" />
+      <Item identifier="plastic" amount="2" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="15" requiresrecipe="true">
+      <RequiredSkill identifier="mechanical" level="30" />
+      <RequiredSkill identifier="electrical" level="30" />
+      <RequiredItem identifier="fpgacircuit" />
+      <RequiredItem identifier="plastic" />
+    </Fabricate>
+    <InventoryIcon texture="%ModDir%/items.png" sourcerect="192,0,12,60" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/items.png" sourcerect="192,0,12,60" depth="0.54" origin="0.5,0.5" />
+    <Body width="12" height="60" density="12" />
+    <Holdable slots="Any,LeftHand" aimable="false" aimpos="18,20" aimangle="50" holdangle="15" handle1="0,-15" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnSecondaryUse" targettype="Contained" targetslot="0" Condition="-1">
+        <RequiredItem items="mobilebattery" type="Contained" />
+        <sound file="Content/Characters/Peanut/Peanut_idle1.ogg" range="100.0" loop="true" frequencymultiplier="0.75" />
+      </StatusEffect>
+      <StatusEffect type="OnSecondaryUse" targettype="Contained" targetslot="1" Condition="-10">
+        <RequiredItem items="dropcards" type="Contained" targetslot="1" />
+        <RequiredItem items="mobilebattery" type="Contained" targetslot="0" />
+        <sound file="%ModDir%/who_are_you_calling_2.ogg" range="100.0" loop="true" volume="0.2" />
+      </StatusEffect>
+    </Holdable>
+    <ItemContainer capacity="1" maxstacksize="1" hideitems="true" containedstateindicatorstyle="battery" containedstateindicatorslot="0">
+      <SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png" sourcerect="128,448,64,64" origin="0.5,0.5" />
+      <SlotIcon slotindex="1" texture="%ModDir%/items.png" sourcerect="214,64,10,23" origin="0.5,0.5" />
+      <Containable items="mobilebattery" />
+      <SubContainer capacity="1" maxstacksize="1">
+        <Containable items="dropcards" />
+      </SubContainer>
+    </ItemContainer>
+  </Item>
+  <Item name="" identifier="orecard" maxstacksize="16" maxstacksizecharacterinventory="4" Tags="smallitem,dropcards" Scale="0.5" impactsoundtag="impact_metal_light">
+    <Deconstruct time="15" />
+    <InventoryIcon texture="%ModDir%/items.png" sourcerect="225,64,10,23" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/items.png" sourcerect="225,64,10,23" depth="0.54" origin="0.5,0.5" />
+    <Body width="12" height="60" density="12" />
+    <Holdable slots="Any,LeftHand" holdangle="15" handle1="0,-15" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnBroken" targettype="This">
+        <SpawnItem identifiers="orecrate" count="1" spawnposition="This" />
+        <Remove />
+      </StatusEffect>
+    </Holdable>
+  </Item>
+  <Item name="" identifier="randoscard" maxstacksize="16" maxstacksizecharacterinventory="4" Tags="smallitem,dropcards" Scale="0.5" impactsoundtag="impact_metal_light">
+    <Deconstruct time="15" />
+    <InventoryIcon texture="%ModDir%/items.png" sourcerect="214,64,10,23" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/items.png" sourcerect="214,64,10,23" depth="0.54" origin="0.5,0.5" />
+    <Body width="12" height="60" density="12" />
+    <Holdable slots="Any,LeftHand" holdangle="15" handle1="0,-15" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnBroken" targettype="This">
+        <SpawnItem identifiers="randoscrate" count="1" spawnposition="This" />
+        <Remove />
+      </StatusEffect>
+    </Holdable>
+  </Item>
+  <Item name="" identifier="medscard" maxstacksize="16" maxstacksizecharacterinventory="4" Tags="smallitem,dropcards" Scale="0.5" impactsoundtag="impact_metal_light">
+    <Deconstruct time="15" />
+    <InventoryIcon texture="%ModDir%/items.png" sourcerect="192,64,10,23" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/items.png" sourcerect="192,64,10,23" depth="0.54" origin="0.5,0.5" />
+    <Body width="12" height="60" density="12" />
+    <Holdable slots="Any,LeftHand" holdangle="15" handle1="0,-15" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnBroken" targettype="This">
+        <SpawnItem identifiers="medscrate" count="1" spawnposition="This" />
+        <Remove />
+      </StatusEffect>
+    </Holdable>
+  </Item>
+  <Item name="" identifier="munitionscard" maxstacksize="16" maxstacksizecharacterinventory="4" Tags="smallitem,dropcards" Scale="0.5" impactsoundtag="impact_metal_light">
+    <Deconstruct time="15" />
+    <InventoryIcon texture="%ModDir%/items.png" sourcerect="203,64,10,23" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/items.png" sourcerect="203,64,10,23" depth="0.54" origin="0.5,0.5" />
+    <Body width="12" height="60" density="12" />
+    <Holdable slots="Any,LeftHand" holdangle="15" handle1="0,-15" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnBroken" targettype="This">
+        <SpawnItem identifiers="munitionscrate" count="1" spawnposition="This" />
+        <Remove />
+      </StatusEffect>
+    </Holdable>
+  </Item>
+  <Item name="" identifier="vesselcard" maxstacksize="16" maxstacksizecharacterinventory="4" Tags="smallitem,dropcards" Scale="0.5" impactsoundtag="impact_metal_light">
+    <Deconstruct time="15" />
+    <InventoryIcon texture="%ModDir%/items.png" sourcerect="236,64,10,23" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/items.png" sourcerect="236,64,10,23" depth="0.54" origin="0.5,0.5" />
+    <Body width="12" height="60" density="12" />
+    <Holdable slots="Any,LeftHand" holdangle="15" handle1="0,-15" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnBroken" targettype="This">
+        <SpawnItem identifiers="vesselcrate" count="1" spawnposition="This" />
+        <Remove />
+      </StatusEffect>
+    </Holdable>
+  </Item>
+  <!--	<Item name="" identifier="trap_explosion" hideinmenus="true" category="Equipment" tags="" Scale="0.5">
+		<Deconstruct time="15">
+			<Item identifier="fraggrenade"/>
+		</Deconstruct>
+		<InventoryIcon texture="%ModDir%/items.png" sourcerect="236,64,10,23" origin="0.5,0.5"/>
+		<Sprite texture="%ModDir%/items.png" sourcerect="236,64,10,23" depth="0.54" origin="0.5,0.5"/>
+		 <ItemComponent>
+		<StatusEffect type="Always" target="This" reload="2">
+			<Explosion range="250.0" ballastfloradamage="50" structuredamage="10" levelwalldamage="75" itemdamage="250" force="5" severlimbsprobability="0.5" decal="explosion" decalsize="0.5" flames="false" flash="false" sparks="false" underwaterbubble="false" camerashake="6.0" showeffects="true">
+				<Affliction identifier="explosiondamage" strength="150"/>
+				<Affliction identifier="bleeding" strength="100"/>
+				<Affliction identifier="bleeding" strength="50" probability="0.1" dividebylimbcount="false"/>
+				<Affliction identifier="stun" strength="7"/>
+			</Explosion>
+			<Remove/>
+		</StatusEffect>
+		 </ItemComponent>
+	</Item>-->
+  <!--	<Item name="" identifier="horny_trap_lmao" hideinmenus="true" category="Equipment" tags="" Scale="0.5">
+		<InventoryIcon texture="%ModDir%/items.png" sourcerect="236,64,10,23" origin="0.5,0.5"/>
+		<Sprite texture="%ModDir%/items.png" sourcerect="236,64,10,23" depth="0.54" origin="0.5,0.5"/>
+		 <ItemComponent>
+<StatusEffect type="Always" target="This,NearbyCharacters,Character" duration="6" range="1000">
+		<sound file="Content/Items/JobGear/Clown/ClownExosuitHorn.ogg" type="OnUse" range="5000.0" camerashake="5"/>
+					<Explosion range="1500.0" shockwave="true" smoke="false" force="10" flames="false" flash="false" sparks="false" underwaterbubble="false" camerashake="6.0" showeffects="true"/>
+		<Affliction identifier="stun" amount="0.05" />
+		</StatusEffect>
+		<StatusEffect type="Always" target="This" delay="5">
+			<Remove/>
+		</StatusEffect>
+		 </ItemComponent>
+	</Item>-->
+</Items>

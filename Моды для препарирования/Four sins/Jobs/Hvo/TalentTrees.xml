@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TalentTrees>
+  <TalentTree jobidentifier="highvoltageworker">
+    <SubTree identifier="highvoltageworker_primary" nameidentifier="talenttree.primary" type="primary">
+      <TalentOptions requiredtalents="2" maxchosentalents="5">
+        <TalentOption identifier="stationengineer" />
+        <TalentOption identifier="pomoshnik" />
+        <TalentOption identifier="noshortcircuit" />
+        <TalentOption identifier="submarineofthings" />
+        <TalentOption identifier="improved_safetyharness_electric" />
+      </TalentOptions>
+      <TalentOptions requiredtalents="2" maxchosentalents="5">
+        <!--додумать ветки , сделано-->
+        <TalentOption identifier="robotics" />
+        <TalentOption identifier="medicalcompanion" />
+        <TalentOption identifier="wire_production" />
+        <TalentOption identifier="lasthope" />
+        <TalentOption identifier="deattacher" />
+      </TalentOptions>
+    </SubTree>
+    <SubTree identifier="hardworker" type="specialization" requires="highvoltageworker_primary" blocks="guru,shocker">
+      <!--done-->
+      <TalentOptions>
+        <TalentOption identifier="hardstyle" />
+      </TalentOptions>
+      <TalentOptions>
+        <TalentOption identifier="followme" />
+        <TalentOption identifier="sharingiscaring" />
+      </TalentOptions>
+      <TalentOptions>
+        <TalentOption identifier="calmness" />
+        <TalentOption identifier="electricalhelper" />
+      </TalentOptions>
+      <TalentOptions>
+        <TalentOption identifier="writingdownactions" />
+      </TalentOptions>
+    </SubTree>
+    <SubTree identifier="guru" type="specialization" requires="highvoltageworker_primary" blocks="hardworker,shocker">
+      <!--done-->
+      <TalentOptions>
+        <TalentOption identifier="electricalmastery" />
+      </TalentOptions>
+      <TalentOptions>
+        <TalentOption identifier="playtogain" />
+        <TalentOption identifier="bard_accordion" />
+      </TalentOptions>
+      <TalentOptions>
+        <TalentOption identifier="submarinerevive" />
+        <TalentOption identifier="theoretic" />
+      </TalentOptions>
+      <TalentOptions>
+        <TalentOption identifier="alternaterepair" />
+      </TalentOptions>
+    </SubTree>
+    <SubTree identifier="shocker" type="specialization" requires="highvoltageworker_primary" blocks="hardworker,guru">
+      <!--done-->
+      <TalentOptions>
+        <TalentOption identifier="protectivestand" />
+      </TalentOptions>
+      <TalentOptions>
+        <TalentOption identifier="jump" />
+        <TalentOption identifier="fuckgenevaconventions" />
+      </TalentOptions>
+      <TalentOptions>
+        <TalentOption identifier="ecoturrets" />
+        <TalentOption identifier="firefirefire" />
+      </TalentOptions>
+      <TalentOptions>
+        <TalentOption identifier="nevermore" />
+      </TalentOptions>
+    </SubTree>
+  </TalentTree>
+</TalentTrees>

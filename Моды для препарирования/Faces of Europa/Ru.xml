@@ -1,0 +1,296 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="Russian" nowhitespace="false" translatedname="Русский">
+  <!-- Items and descs -->
+  <entityname.toothy>"Зубочистка"</entityname.toothy>
+  <entitydescription.toothy>Лучший друг человека в местах ограничения свободы, поддерживающий гигиену ротовой полости и сохранность владельца.</entitydescription.toothy>
+  <entityname.vortex>ПП "Вихрь"</entityname.vortex>
+  <entitydescription.vortex>Грубый пистолет-пулемет с проприетарным калибром, известным только производителю.</entitydescription.vortex>
+  <entityname.shortyGL>Гранатомет "Коротыш"</entityname.shortyGL>
+  <entitydescription.shortyGL>Однозарядный гранатомет, стреляющий 40-мм гранатами.</entitydescription.shortyGL>
+  <entityname.firemagazine>Магазин с поджигательными патронами для ПП "Вихрь"</entityname.firemagazine>
+  <entitydescription.firemagazine>Магазин барабанного типа с поджигательными патронами для "Вихря", оставляющими ужасающие ожоги на незащищенной коже.</entitydescription.firemagazine>
+  <entityname.metalmagazine>Магазин для ПП "Вихрь"</entityname.metalmagazine>
+  <entitydescription.metalmagazine>Магазин барабанного типа для "Вихря" с обычными патронами.</entitydescription.metalmagazine>
+  <entityname.thermitegrenade>40-мм термитный патрон</entityname.thermitegrenade>
+  <entitydescription.thermitegrenade>Снаряд для гранатомета с термитной смесью, покрытая тонким слоем клея. Может использоваться для прожигания построек и назойливых тушек.</entitydescription.thermitegrenade>
+  <entityname.canistershot>40-мм картечный патрон</entityname.canistershot>
+  <entitydescription.canistershot>Снаряд для гранатомета. Заполнен картечью, наносящей жуткий урон по широкой площади.</entitydescription.canistershot>
+  <entityname.impactgrenade>Контактная граната</entityname.impactgrenade>
+  <entitydescription.impactgrenade>Ручная граната, детонирующая при контакте.</entitydescription.impactgrenade>
+  <entityname.thermitecharge>Сумка с термитом</entityname.thermitecharge>
+  <entitydescription.thermitecharge>Сумка с термитной смесью. Хорошо прожигает постройки и плоть.</entitydescription.thermitecharge>
+  <entityname.hardhat>Каска</entityname.hardhat>
+  <entitydescription.hardhat>Крепкая пластиковая каска, спасет от удара, но не от пули.</entitydescription.hardhat>
+  <entityname.clownhardhat>Отцовская поддержка</entityname.clownhardhat>
+  <entitydescription.clownhardhat>Клоуны не останутся, если цирк не уедет. Цирк не уедет, если его не построить.</entitydescription.clownhardhat>
+  <entityname.diver>Одежда охотника</entityname.diver>
+  <entitydescription.diver>Форма, состоящая из штанов карго, пары кожанных берцев и теплой, плотной куртки.</entitydescription.diver>
+  <entityname.militia>Одежда повстанца</entityname.militia>
+  <entitydescription.militia>Один из тех случаев, когда на ничем непримечательные штаны и водолазку накинули слой баллистической защиты.\nСтилистически выглядит лениво, но в плане защиты - удовлетворительно.</entitydescription.militia>
+  <entityname.trenchcoat>Одежда маршала</entityname.trenchcoat>
+  <entitydescription.trenchcoat>Толстое пальто темно-синего цвета поможет в случаях, когда больше нечем показать свое превосходство.</entitydescription.trenchcoat>
+  <entityname.notaclown>Костюм бастарда клоунов</entityname.notaclown>
+  <entitydescription.notaclown>За его красноносой придурковатостью кроется боевой костюм, почти полностью выполненный из защитных материалов.</entitydescription.notaclown>
+  <entityname.notaclownmask>Маска бастарда клоунов</entityname.notaclownmask>
+  <entitydescription.notaclownmask>При ношении этого тихого ужаса сколиоз гарантирован.\nГениальное решение из противоударной маски и красного парика, приклеенного к шлему.</entitydescription.notaclownmask>
+  <entityname.contactor>Контактор</entityname.contactor>
+  <entitydescription.contactor>Сильно упрощенный телефон, у которого даже "змейки" нет. Хлипкий, дешевый, но со своими функциями справляется.</entitydescription.contactor>
+  <entityname.orecard>Карта "Минералы"</entityname.orecard>
+  <entitydescription.orecard>Контакты на данной карте предоставят полезные ископаемые.</entitydescription.orecard>
+  <entityname.randoscard>Карта "Разности"</entityname.randoscard>
+  <entitydescription.randoscard>Контакты на данной карте могут накидать всякую всячину.</entitydescription.randoscard>
+  <entityname.medscard>Карта "Медицина"</entityname.medscard>
+  <entitydescription.medscard>Контакты на данной карте могут "списать просроченные лекарства" и принести их нам.</entitydescription.medscard>
+  <entityname.munitionscard>Карта "Вооружение"</entityname.munitionscard>
+  <entitydescription.munitionscard>Контакты на данной карте предоставят вещи, связанные с боевыми действиями.</entitydescription.munitionscard>
+  <entityname.vesselcard>Карта "Субмарина"</entityname.vesselcard>
+  <entitydescription.vesselcard>Контакты на данной карте предоставят нам награду за недавно подбитую субмарину.</entitydescription.vesselcard>
+  <entityname.medscrate>Ящик с медикаментами</entityname.medscrate>
+  <entitydescription.medscrate>В ящике что-то тарахтит, значит он как минимум не пустой. Главное что бы там ничего не было разбито.</entitydescription.medscrate>
+  <entityname.orecrate>Ящик с минералами.</entityname.orecrate>
+  <entitydescription.orecrate>Увесистый ящик. Главное что б там не просто камней накидали.</entitydescription.orecrate>
+  <entityname.vesselcrate>Ящик с корабельным инвентарем.</entityname.vesselcrate>
+  <entitydescription.vesselcrate>Ящиком такой тяжести можно спокойно раздавить ползуна.</entitydescription.vesselcrate>
+  <entityname.munitionscrate>Ящик с вооружением.</entityname.munitionscrate>
+  <entitydescription.munitionscrate>Лишний раз лучше не трясти и не греть - может рвануть.</entitydescription.munitionscrate>
+  <entityname.randoscrate>Ящик с чем-то.</entityname.randoscrate>
+  <entitydescription.randoscrate>Самый опасный ящик, от него можно ожидать чего угодно.</entitydescription.randoscrate>
+  <entityname.randoscrate_shit>Ящик с говном</entityname.randoscrate_shit>
+  <entitydescription.randoscrate_shit>КТО В ЯЩИК НАСРАЛ?</entitydescription.randoscrate_shit>
+  <entityname.randoscrate_clowntainer>Клоунтейнер.</entityname.randoscrate_clowntainer>
+  <entitydescription.randoscrate_clowntainer>Похоже на контейнер красноносых.</entitydescription.randoscrate_clowntainer>
+  <openlootcrate>Открыть схрон.</openlootcrate>
+  <openlootcrateTRAP>Дернуть сильнее?</openlootcrateTRAP>
+  <!-- Jobs and descs -->
+  <jobname.europan>Европеец</jobname.europan>
+  <jobname.fugitive>Беглец</jobname.fugitive>
+  <jobname.hollow>Полый</jobname.hollow>
+  <!-- Trees -->
+  <talenttree.cultist>Культист</talenttree.cultist>
+  <talenttree.double>Мимик</talenttree.double>
+  <talenttree.horror>Ужас</talenttree.horror>
+  <!-- -->
+  <talenttree.diver>"Подвох"</talenttree.diver>
+  <talenttree.sailor>Мореход</talenttree.sailor>
+  <talenttree.gatherer>Добытчик</talenttree.gatherer>
+  <!-- -->
+  <talenttree.assisting>Помощник</talenttree.assisting>
+  <talenttree.serpent>Гадюка</talenttree.serpent>
+  <talenttree.rogue>Изгой</talenttree.rogue>
+  <!-- Talents -->
+  <!-- -->
+  <talentname.new_habitat>Дайвер: начало</talentname.new_habitat>
+  <talentname.jengaenjoyer>Фанат дженги</talentname.jengaenjoyer>
+  <talentname.beaconkeeper>Смотритель маяка</talentname.beaconkeeper>
+  <talentname.hunter>Охотник</talentname.hunter>
+  <talentname.сourier>Курьер</talentname.сourier>
+  <talentname.expansionist>Экспансионист</talentname.expansionist>
+  <talentname.herbalist>Травник</talentname.herbalist>
+  <talentname.tough>Крепкий</talentname.tough>
+  <talentname.virtuoso>Музыкант</talentname.virtuoso>
+  <talentname.freediving_championship>Чемпион по плаванию</talentname.freediving_championship>
+  <talentname.tough_skin>Твердокожий</talentname.tough_skin>
+  <talentname.easy_does_it>Тихоходка</talentname.easy_does_it>
+  <talentname.frog_leaping>Семимильными рывками</talentname.frog_leaping>
+  <talentname.fight>Бей...</talentname.fight>
+  <talentname.flight>... Или беги</talentname.flight>
+  <talentname.biggame_hunting>Крупная дичь</talentname.biggame_hunting>
+  <talentname.hunting_grounds>Охотничьи угодья</talentname.hunting_grounds>
+  <talentname.savvy_navy>Смышленыш</talentname.savvy_navy>
+  <talentname.second_in_command>Заместитель</talentname.second_in_command>
+  <talentname.safety_specialist>Охранник труда</talentname.safety_specialist>
+  <talentname.all_hands>Полундра!</talentname.all_hands>
+  <talentname.premium_produce>Дары морские</talentname.premium_produce>
+  <talentname.royalties>Гонорар</talentname.royalties>
+  <talentname.lamprey>Минога</talentname.lamprey>
+  <talentname.defense_mechanisms>Ракушечник</talentname.defense_mechanisms>
+  <talentname.cuts_of_meat>Мясник</talentname.cuts_of_meat>
+  <talentname.winnow>Зерна от плевел</talentname.winnow>
+  <talentname.stone_chomper>Камнедробилка</talentname.stone_chomper>
+  <talentname.runaway>Беглец</talentname.runaway>
+  <talentname.teetotaler>Трезвенник</talentname.teetotaler>
+  <talentname.cheaping_out>Экономия в производстве</talentname.cheaping_out>
+  <talentname.undercoveragent>Шпион</talentname.undercoveragent>
+  <talentname.teamplayer>"Командный игрок"</talentname.teamplayer>
+  <talentname.strongarms>Вьючный мул</talentname.strongarms>
+  <talentname.nap>Тихий час</talentname.nap>
+  <talentname.pieceofmind>Тишина и спокойствие</talentname.pieceofmind>
+  <talentname.angry_management>Кнут и... Все</talentname.angry_management>
+  <talentname.shitisreal>Подтягиваемся!</talentname.shitisreal>
+  <talentname.bodycount>Зарубки</talentname.bodycount>
+  <talentname.definitelyaclown>Крепкий дурак</talentname.definitelyaclown>
+  <talentname.inhumane_measures>Пытка огнем</talentname.inhumane_measures>
+  <talentname.dealwiththedevil>Сделка с Дьяволом</talentname.dealwiththedevil>
+  <talentname.clawingback>Воля к жизни</talentname.clawingback>
+  <talentname.spaceinvader>Угонщик</talentname.spaceinvader>
+  <talentname.cqc>Ближний бой</talentname.cqc>
+  <talentname.slapithere>Посади на изоленту</talentname.slapithere>
+  <talentname.drugssmugler>Торговец химией</talentname.drugssmugler>
+  <talentname.weaponssmugler>Торговец оружием</talentname.weaponssmugler>
+  <talentname.underground>Связи с повстанцами</talentname.underground>
+  <talentname.textiletreatment>Защитная пропитка</talentname.textiletreatment>
+  <talentdescription.new_habitat>Получите ‖color:Gold‖120 денег‖end‖... И все. Да, немного, но на шоколадку и энергетик хватит.\n</talentdescription.new_habitat>
+  <talentdescription.xpformission>Получите на [xp]% больше опыта за выполнение миссий типа [missiontype].</talentdescription.xpformission>
+  <talentdescription.beaconkeeper1>Находясь в маяке, получите [skillamount1] очков к [skillname1] и [skillamount2]% сопротивление к [affname1].</talentdescription.beaconkeeper1>
+  <talentdescription.expansionist1>Заходя в новый аванпост, во фракции которого у вас хорошая репутация, вы получаете [skillamount1] марок и [skillamount2] опыта. Заходя на локацию без аванпоста, вы получаете [skillamount2] опыта.</talentdescription.expansionist1>
+  <talentdescription.expansionist2>Получите [xp]% прибавку к прибыли и опыту за выполнение миссий типа [missiontype] если у вас есть [skillname].</talentdescription.expansionist2>
+  <talentdescription.characterbuffs1>Получите [skillamount1]% к [skillname1].</talentdescription.characterbuffs1>
+  <talentdescription.characterbuffs1.1>Получите [skillamount1] к [skillname1].</talentdescription.characterbuffs1.1>
+  <talentdescription.characterbuffs1.2>Получите сопротивление [skillamount1]% к [skillname1].</talentdescription.characterbuffs1.2>
+  <talentdescription.characterbuffs3>При игре на [instrument], вы и члены экипажа в комнате получаете [skillamount1].</talentdescription.characterbuffs3>
+  <talentdescription.characterbuffs2>Получите [skillamount1] очков к [skillname1].</talentdescription.characterbuffs2>
+  <talentdescription.doubleoutput>При производстве [itemcat] есть [skillamount1]% шанс удвоить результат.</talentdescription.doubleoutput>
+  <talentdescription.ammo>Аммуниция</talentdescription.ammo>
+  <talentdescription.doubledeconout>При деконструкции [itemcat] есть [skillamount1]% шанс удвоить результат.</talentdescription.doubledeconout>
+  <talentdescription.highereffect>Ваш [itemcat] эффективнее.</talentdescription.highereffect>
+  <talentdescription.freediving_championship>Находясь в присяди, получите [skillamount1]% к [skillname1].\nРядом находящиеся члены экипажа плавают эффективнее.</talentdescription.freediving_championship>
+  <stattypenames.FlowResistance>Сопротивление течению</stattypenames.FlowResistance>
+  <talentdescription.tough_skin_deb>Существует небольшой шанс, что вы споткнетесь.</talentdescription.tough_skin_deb>
+  <talentdescription.easy_does_it>Получите ‖color:gui.orange‖невидимость‖end‖ находясь в воде. Если рядом с вами находится живое существо или вы начинаете плыть быстро - ‖color:gui.orange‖невидимость‖end‖ спадает.</talentdescription.easy_does_it>
+  <talentdescription.easy_does_it_inv>Если расслабиться в воде, противники через некоторое время перестают атаковать.</talentdescription.easy_does_it_inv>
+  <talentdescription.frog_leaping>Если расслабиться в воде, вы сделаете рывок вперед.\nЕсли расслабиться в помещении, рывок окажется сильнее.</talentdescription.frog_leaping>
+  <talentdescription.flight>Если на вас напал монстр в воде, вы впадаете во временную панику. [affname1] многократно возрастает, однако вы не можете атаковать и взаимодействовать с предметами.\nЕдинственным спасением в этом случае окажутся ваши товарищи.</talentdescription.flight>
+  <talentdescription.flight_dodge>Во время паники, у вас есть [skillamount1]% шанс увернуться от нападающего.</talentdescription.flight_dodge>
+  <talentdescription.fight>Если на вас напал монстр в воде, вы переходите в режим обороны. [affname1] многократно снижается, однако ваши атаки в ближнем бою становятся смертоносными.</talentdescription.fight>
+  <talentdescription.fight_stun>У вас есть [skillamount1]% шанс оглушить нападающего.</talentdescription.fight_stun>
+  <talentdescription.hunting_grounds>Крупный калибр: стрельба из [rifle] медленней на [skillamount1]%, но выстрелы наносят в [skillamount2] раз больше урона.</talentdescription.hunting_grounds>
+  <talentdescription.hunting_grounds_beasts>‖color:gui.orange‖Ксенофобия: при убийстве больших существ, получите [xp1] ОО. При убийстве питомцев [knife], получите [xp2] ОО.‖end‖</talentdescription.hunting_grounds_beasts>
+  <talentdescription.hunting_grounds_harpoon>Старый приятель: стрельба из [harpguns] на [skillamount1]% быстрее. Урон от [harpoons] на [skillamount1]% выше.</talentdescription.hunting_grounds_harpoon>
+  <talentdescription.hunting_grounds_adapting>‖color:CornflowerBlue‖Адаптация: если вы находитесь в зоне [pressurehudwarning] без [divingsuit], получите кратковременное сопротивление давлению.‖end‖</talentdescription.hunting_grounds_adapting>
+  <talentdescription.savvy_navy>Получение навыков [skillname] ускорено на [skillamount]%.</talentdescription.savvy_navy>
+  <talentdescription.safety_specialist>После выполнения хотя бы 1 миссии, если ваши [skillname] выше [skillamount], есть [skillamount1]% шанс получения [skillbookhandyseaman].</talentdescription.safety_specialist>
+  <talentdescription.all_hands>Если субмарина затоплена на [skillamount1]%, все члены экипажа, находящиеся в комнате с вами, получают [skillamount2]% ускорение к [RepairSpeedRepairToolStructureRepairMultiplier]. Ремонт течи дает [xp1] ОО, ремонт устройств дает [xp2] ОО.</talentdescription.all_hands>
+  <talentdescription.premium_produce>Трофеи с монстров стоят дороже.</talentdescription.premium_produce>
+  <talentdescription.cuts_of_meat>Взяв в руки [tool], вы можете вырезать трофеи из [monsters].</talentdescription.cuts_of_meat>
+  <character.crawlerhusk>Ползун-хаск</character.crawlerhusk>
+  <talentdescription.runaway>‖color:DimGray‖Одним холодным днем, после славной взбучки, вас затолкали в субмарину и отправили в поселение, которое славилось своими гигантскими шахтами и подозрительно низкой численностью населения.\nПока экипаж субмарины вышел на экспедицию, вы и еще парочка приличных ребят в наручниках "нейтрализовали" охрану, а капитана отправили плавать за борт. Дойдя до ближайшего безопасного аванпоста, вы переоделись в непримечательную одежду, подобрали то, что выглядело полезным и распрощались с приличными ребятами: теперь ваша цель узнать кто вас сдал и отомстить по всем стандартам...\nА, давайте надеяться, что с той экспедицией все хорошо и они безопасно доплыли куда-нибудь.‖end‖</talentdescription.runaway>
+  <talentdescription.runaway_debuffs>Тот факт, что вы формально сбежали из под заключения давит на нервы, а массаж внутренних органов на протяжении долгого времени вам явно не пошел на пользу.\nВы теряете [skillamount1]% [affname1], [skillamount1]% [movementspeed] и [skillamount2]% ‖color:gui.orange‖Точность стрельбы‖end‖. При ношении наушников, страдайте от постоянно растущего [psychosis].</talentdescription.runaway_debuffs>
+  <talentdescription.teetotaler>Ваш организм лучше справляется с веществами, вызывающими интоксикацию. Получите [skillamount1]% сопротивление ко всем зависимостям и ломкам.</talentdescription.teetotaler>
+  <talentdescription.cheaping_out>‖color:Gray‖Когда военная машина требует крови и при этом не выделяет нужного бюджета, приходится перебиваться тем что есть и тем, что получается наскрести в округе.‖end‖</talentdescription.cheaping_out>
+  <talentdescription.undercoveragent>Получите невидимость при ношении [skillamount1] во вражеском поселении.\nАтакуя [toothy] велик шанс нанести смертоносный удар пока у вас есть [inconspicuous].</talentdescription.undercoveragent>
+  <talentdescription.teamplayer>Вы будете получать разовые награды за ‖color:gui.orange‖ремонты устройств‖end‖, ‖color:gui.orange‖обшивки‖end‖, а также ношение ‖color:gui.orange‖ящиков‖end‖ и ‖color:gui.orange‖аммуниции‖end‖:</talentdescription.teamplayer>
+  <talentdescription.teamplayer.100>- ‖color:gui.orange‖100‖end‖ очков помощи: Дает [skillamount1]% к [movementspeed] и [skillamount2]% к [vitality]</talentdescription.teamplayer.100>
+  <talentdescription.teamplayer.200>- ‖color:gui.orange‖200‖end‖ очков помощи: Урон в ближнем бою на [skillamount1]% выше, получаемый урон на [skillamount1]% меньше, дополнительные [skillamount2] очков к [weapons]</talentdescription.teamplayer.200>
+  <talentdescription.teamplayer.360>- ‖color:gui.orange‖360‖end‖ очков помощи: Ношение людей без штрафа по скорости; сопротивление [affname1] [skillamount1]%, [affname2] — [skillamount2]%, [affname3] — [skillamount3]%; [meleeattackspeed] на [skillamount4]%, дополнительные [skillamount5] очков к [mechel], а также [skillamount6]% к скорости получения очков [mechel].</talentdescription.teamplayer.360>
+  <talentdescription.strongarms>При ношении ящиков, снарядов и аммуниции вы перемещаетесь на [skillamount1]%, но при этом получаете [affname1].</talentdescription.strongarms>
+  <talentdescription.nap>Если вы упали, медленно восстанавливайте рассудок и здоровье. После [skillamount1] секунд дрема, получите [affname1].</talentdescription.nap>
+  <talentdescription.pieceofmind>‖color:gui.green‖Снимите наушники, чтобы успокоить себя и свой разум. Пусть мир горит в огнях, тела рвутся в клочья, твари Бездны грохочут во тьме, вам все равно: у вас перерыв.‖end‖</talentdescription.pieceofmind>
+  <talentdescription.angry_management>Экипаж ковыряется во всяких отверстиях пока ваша посудина трещит по швам? Возьмите что-нибудь увесистое и напомните им об их обязаностях!\nЕсли ударить члена экипажа, у него появится ‖color:gui.orange‖"Мотивация"‖end‖, а вы спустите пар накопившийся за время проведенное с этими идиотами.</talentdescription.angry_management>
+  <talentdescription.angry_management_info>‖color:DimGray‖"Мотивация" дает [skillamount1] к [skillname1] и [skillamount2] к [skillname2] на [time] секунд.‖end‖</talentdescription.angry_management_info>
+  <talentdescription.shitisreal>Лопнула посудина? Лопнул только нанятый помощник? Раптор стал вашим новым капитаном? Пора действовать!\nЕсли субмарина затоплена на [skillamount1]%, ваша [affname1] повышается на [skillamount2]%, а устройства ремонтируются на [skillamount3]% выше нормы.\nЕще у вас крыша течет как будто ее нет, но в такой ситуации простительно.</talentdescription.shitisreal>
+  <talentdescription.bodycount>Вы будете получать разовые награды за ‖color:gui.red‖убийство пока что живых существ‖end‖:</talentdescription.bodycount>
+  <talentdescription.bodycount.70>- ‖color:gui.orange‖70‖end‖ убийств: Дает [skillamount1]% к [affname1] и [skillamount2]% к [affname2]; ‖color:gui.orange‖Точность Стрельбы‖end‖ возрастает на [skillamount3]% и получение очков [skillname] на [skillamount4]%.</talentdescription.bodycount.70>
+  <talentdescription.bodycount.200>- ‖color:gui.orange‖200‖end‖ убийств: Повышается ‖color:gui.orange‖Точность Стрельбы‖end‖ на [skillamount1]%, уменьшается ‖color:gui.orange‖Получаемый Урон‖end‖ на [skillamount2]%, скорость получения очков медицины повышена на [skillamount3]%.</talentdescription.bodycount.200>
+  <talentdescription.bodycount.500>- ‖color:gui.orange‖500‖end‖ убийств: Стрельба с двух рук без штрафа к ‖color:gui.orange‖Точность Стрельбы‖end‖; сопротивление ‖color:gui.orange‖Урону‖end‖ [skillamount1]%, [affname1] — [skillamount2]%, [affname2] — [skillamount3]%; ваши реанимационные действия гораздо эффективнее обычных.</talentdescription.bodycount.500>
+  <talentdescription.definitelyaclown>С дураков взятки гладки, а значит никто не будет докучать с вопросами дурака, одежда которого почти полностью сшита из кевлара.</talentdescription.definitelyaclown>
+  <talentdescription.inhumane_measures>Важная информация не убежит, если у нее вместо ног угольки.</talentdescription.inhumane_measures>
+  <talentdescription.dealwiththedevil>После убийства [skillamount1] существ(в том числе людей), получите [skillamount2]% шанс на возрождение.\nВо время бега у вас есть [skillamount3]% шанс увернуться от урона.</talentdescription.dealwiththedevil>
+  <talentdescription.clawingback>Вы остаетесь в сознании если [affname1] ниже [skillamount1]%. Если [affname1] упадет ниже [skillamount2]%, вы умрете.\nДля возвращения к положительным показателям [affname1], используйте [skillamount3].</talentdescription.clawingback>
+  <talentdescription.spaceinvader>Будучи вне субмарины, получите [skillamount1]% сопротивление к [affname1], [affname2] и ‖color:gui.orange‖Урону‖end‖. [itemname] работает гораздо эффективнее.</talentdescription.spaceinvader>
+  <talentdescription.cqc>‖color:red‖Талант работает только внутри помещений!‖end‖\nВы ходите на [skillamount1]% быстрее при прицеливании; скорость стрельбы улучшена на [skillamount2]%, а урон - на [skillamount3]%. Взламывание дверей ломом происходит на [skillamount2]% быстрее.\nНаходясь во вражеской субмарине, получите [skillamount4]% сопротивление к [affname1] и [skillamount3]% сопротивление к [affname3].\n‖color:crimson‖Находясь во вражеской субмарине, есть [skillamount5]% шанс, что при стрельбе из дробовика вашу цель разорвет на части.‖end‖</talentdescription.cqc>
+  <talentdescription.slapithere>Все части субмарины можно улучшить на 1 уровень выше</talentdescription.slapithere>
+  <talentdescription.drugssmugler>После выполнения хотя бы 1 миссии, вам выдаются [skillamount1].</talentdescription.drugssmugler>
+  <talentdescription.weaponssmugler>После выполнения хотя бы 1 миссии, вам выдаются 4 [skillamount1], 2 [skillamount2], и 2 [skillamount3].</talentdescription.weaponssmugler>
+  <talentdescription.underground>Отныне каждый раунд вы будете терять 10 очков репутации с [skillamount1]. После выполнения хотя бы 1 миссии, вы получаете 10 очков репутации с [skillamount2]. При выполнении некоторых миссий вам будут начисляться карточки, которые переводятся в полезные ресурсы. Чтобы получить ресурсы, вставьте карточки в [skillamount3].</talentdescription.underground>
+  <talentdescription.textiletreatment>При ношении [skillamount1.1] или [skillamount1.2], получите [skillamount1]% сопротивление к [skillamount2.1] и [skillamount2]% сопротивление к [skillamount2.2]. Получите [skillamount3]% слабость к [skillamount2.3].</talentdescription.textiletreatment>
+  <talentname.hollow_start>Полый: начало</talentname.hollow_start>
+  <talentname.bloody_gust>Кровавый порыв</talentname.bloody_gust>
+  <talentname.lost>Потерянный</talentname.lost>
+  <talentname.crawler>Ползун</talentname.crawler>
+  <talentname.sotp>Осколки прошлого</talentname.sotp>
+  <talentname.dellirium>Делирий</talentname.dellirium>
+  <talentname.morbidcuriosity>Нездоровый интерес</talentname.morbidcuriosity>
+  <talentname.communion>Причащение</talentname.communion>
+  <talentname.devotion>Преданность</talentname.devotion>
+  <talentname.living_plague>Чума</talentname.living_plague>
+  <talentname.feral>Дикий</talentname.feral>
+  <talentname.fumigator>Фумигатор</talentname.fumigator>
+  <talentname.naturesdelight>Природный деликатес</talentname.naturesdelight>
+  <talentname.cans>Механик</talentname.cans>
+  <talentname.staring_down>ВИП</talentname.staring_down>
+  <talentname.cells>Электрик</talentname.cells>
+  <talentname.conscript>Мобилизованный</talentname.conscript>
+  <talentname.idiot>Идиот</talentname.idiot>
+  <talentname.geneus>ГЕНий</talentname.geneus>
+  <talentname.courage>Кураж</talentname.courage>
+  <talentname.what>ЧТО</talentname.what>
+  <talentname.dinendash>Отобедать и смыться</talentname.dinendash>
+  <talentname.leech>Пиявка</talentname.leech>
+  <talentname.puttingpressure>Прямое давление</talentname.puttingpressure>
+  <talentdescription.hollow_start>Ваш [psychosis] постоянно держится на уровне [units] единиц. Если  [psychosis] достигает [units2] единиц, остатки вашего мозга начинают деградировать.\nЕсли вас атаковали, у вас повышается уровень [psychosis].</talentdescription.hollow_start>
+  <talentdescription.bloody_gust>Урон, наносимый по вам, повышен на [dmg]%!\nЕсли ваше здоровье упало ниже [hprange1], вы получаете [skillamount1]% к [movementspeed1].\nЕсли ваше здоровье упало ниже [hprange2], вы получаете [skillamount2]% к [movementspeed2] и [skillamount1]% к [MeleeAttackMultiplier1].\nЕсли ваше здоровье упало ниже [hprange3], вы получаете [skillamount3]% к [movementspeed3] и [skillamount1.1]% к [MeleeAttackMultiplier2].</talentdescription.bloody_gust>
+  <talentdescription.lost>Если [psychosis] достиг [units] единиц, вы получаете [skillamount1]% сопротивление к [skillname].</talentdescription.lost>
+  <talentdescription.crawler>Надевая [talentsuit], получите эффект [thermogoogles].</talentdescription.crawler>
+  <talentdescription.sotp>Находясь в [ruins], получите [skillamount1]% сопротивление урону и [skillamount2]% бонус к [movementspeed].\nНаходясь в [ruins], упадите, чтобы вас начали игнорировать противники.</talentdescription.sotp>
+  <talentdescription.dellirium>Смех - хороший способ снять напряжение!\nРасслабившись, начните бесконтрольно смеяться, снимая [psychosis] с себя, но повышая его у экипажа в комнате. Если ваш [psychosis] выше [skillamount] единиц, во время смеха получайте [enlightened].\nНа поздних стадиях [enlightened] получите [regen]</talentdescription.dellirium>
+  <talentdescription.double>Надевая [talentsuit], получите бонусные [suitprot]% защиты от [element1] и [element2].</talentdescription.double>
+  <talentdescription.double1>Надевая ‖color:gui.orange‖полный костюм клоуна‖end‖, получите [idiot].\nБудучи идиотом, вы теряете [xp] во всех навыках, но при этом кратковременно остаетесь в сознании, если [vitality] становится ниже [hp], ‖color:DimGray‖чтобы закончить свое представление со взрывом‖end‖.</talentdescription.double1>
+  <talentdescription.double2>Надевая [talentsuit], получите бонусные [suitprot1]% к [element1] и [suitprot2]% к [element2].</talentdescription.double2>
+  <talentdescription.debufftootherskills>Получите бонусные [skillamount] очков к [talentsuitskill], но потеряйте [skillamountloss] очков в остальных навыках.</talentdescription.debufftootherskills>
+  <talentdescription.urnidiot>‖color:Red‖Поздравляю, вы... Вы идиот, да?.. Угу... Что ж, в этом случае от перегоревшей лампочки будет больше пользы, но да ладно—‖end‖</talentdescription.urnidiot>
+  <talentdescription.staring_down_bonus>Люди, находящиеся с вами в одной комнате, получают [skillamount] ко всем навыкам, а также чинят и двигаются на [suitprot]% быстрее.</talentdescription.staring_down_bonus>
+  <talentdescription.tools_bonus>Производимые вами [tools] на [skillamount] уровень выше качеством.</talentdescription.tools_bonus>
+  <talentdescription.joke_cans>‖color:DimGray‖Все смазано, вы не исключение.‖end‖</talentdescription.joke_cans>
+  <talentdescription.joke_staring_down>‖color:DimGray‖Возможно дело в пустых глазах...‖end‖</talentdescription.joke_staring_down>
+  <talentdescription.joke_cells>‖color:DimGray‖Вы соревнуетесь в "Кто светится ярче?" с местным светильником. Вы явно выигрываете.‖end‖</talentdescription.joke_cells>
+  <talentdescription.joke_conscript>‖color:DimGray‖Надеюсь вам выдали патроны?‖end‖</talentdescription.joke_conscript>
+  <talentdescription.joke_geneus>‖color:DimGray‖Это настоящая лицензия?‖end‖</talentdescription.joke_geneus>
+  <talentdescription.communion>Имея [affname1] или [affname2], вы получите [skillamount1]% сопротивление к [affname3], [skillamount2]% сопротивление к ‖color:gui.green‖урону‖end‖, но при этом получите [skillamount3]% слабость к [affname4]</talentdescription.communion>
+  <talentdescription.devotion>Держа [figurine], получите [skillamount1]% сопротивление к [affname1], [skillamount2]% сопротивление ‖color:gui.green‖урону‖end‖ и [skillamount2]%  к [affname3].</talentdescription.devotion>
+  <talentdescription.living_plague>У вас есть [skillamount1]% шанс заразить жертву паразитами, атакуя [huskstinger].</talentdescription.living_plague>
+  <talentdescription.feral>При ношении [skillamount1] вы медленно восстанавливаете здоровье.\nДля работы таланта требуется [affname1] или [affname2].</talentdescription.feral>
+  <talentdescription.fumigator>Оболочки не будут атаковать членов экипажа, находящихся рядом с вами.\nДля работы таланта требуется [affname1] или [affname2].</talentdescription.fumigator>
+  <talentdescription.naturesdelight>Употребляя [skillamount1] или [skillamount2], вы двигаетесь на [skillamount3]% быстрее. Во время действия таланта действует [courage] для [huskstinger].</talentdescription.naturesdelight>
+  <talentdescription.courage>Атакуя жертву [skillamount1], получите "Кураж": чем больше ударов вы нанесли, тем быстрее и сильнее вы бьете.</talentdescription.courage>
+  <talentdescription.what>Держа [skillamount1], поднимите [skillamount2], чтобы вырезать [skillamount3].\nПроводите эту процедуру подальше от глаз экипажа.</talentdescription.what>
+  <talentdescription.dinendash>Держа [skillamount1], поднимите [skillamount2], чтобы славно отобедать.\nПроводите эту процедуру подальше от глаз экипажа.\n‖color:DimGray‖Приятного аппетита‖end‖.</talentdescription.dinendash>
+  <talentdescription.corpse>Человеческий труп</talentdescription.corpse>
+  <talentdescription.leech>Принимая [skillamount1], вы восстанавливаете малое количество [vitality] в течение [skillamount2] секунд и получаете [haste] на [skillamount2] секунд.\nПринимая [skillamount3], вы восстанавливаете умеренное количество [vitality] в течение [skillamount2] секунд.</talentdescription.leech>
+  <talentdescription.puttingpressure>Держа в руках [bandage], ваши [bleedinglacer] проходят быстрее.</talentdescription.puttingpressure>
+  <afflictiondescription.flight>А-А-А-А-А! Отвали, тварь!</afflictiondescription.flight>
+  <afflictiondescription.motivation>Вам знатно прилетело по голове, шестеренки зашевелились.</afflictiondescription.motivation>
+  <afflictiondescription.easydoesit>Тише гребешь - дальше уплывешь.</afflictiondescription.easydoesit>
+  <afflictiondescription.swimming_trainer>Рядом с вами мастер по плаванию.</afflictiondescription.swimming_trainer>
+  <afflictiondescription.fight>Ах ты ж... Иди сюда, тварь!</afflictiondescription.fight>
+  <afflictiondescription.big-game>Где-то рядом крупная гадина.</afflictiondescription.big-game>
+  <afflictiondescription.adapting>Ощущения до жути неприятные, но сейчас главное найти скафандр.</afflictiondescription.adapting>
+  <afflictiondescription.swansong>Вы на последнем издыхании.</afflictiondescription.swansong>
+  <afflictiondescription.onfeet>В этот раз вам повезло.</afflictiondescription.onfeet>
+  <afflictiondescription.courage>*Тык-тык-ТЫК!*</afflictiondescription.courage>
+  <afflictiondescription.staring_down>Похоже, что перед вами инспекция. Покажите что вы работаете в поте лица!</afflictiondescription.staring_down>
+  <afflictiondescription.inconspicuous>Прикинься ветошью, не отсвечивай и не мельтеши перед глазами охраны.</afflictiondescription.inconspicuous>
+  <afflictiondescription.crawlermask>Не спрашивайте как это работает. Вы играете за полоумного кретина.</afflictiondescription.crawlermask>
+  <afflictiondescription.enlightened>Так легко на душе, жизнь прекрасна!</afflictiondescription.enlightened>
+  <afflictiondescription.devotion>Преданность церкви не дает вам просто так сдаться.</afflictiondescription.devotion>
+  <afflictiondescription.></afflictiondescription.>
+  <afflictionname.flight>... Или беги</afflictionname.flight>
+  <afflictionname.motivation>Мотивация</afflictionname.motivation>
+  <afflictionname.easydoesit>Тихоходка</afflictionname.easydoesit>
+  <afflictionname.swimming_trainer>Мастер по плаванию</afflictionname.swimming_trainer>
+  <afflictionname.fight>Бей...</afflictionname.fight>
+  <afflictionname.frog_leaping>Семимильными рывками</afflictionname.frog_leaping>
+  <afflictionname.all_hands>Полундра!</afflictionname.all_hands>
+  <afflictionname.big-game>Крупная дичь</afflictionname.big-game>
+  <afflictionname.adapting>Адаптация</afflictionname.adapting>
+  <afflictionname.swansong>Лебединая песнь</afflictionname.swansong>
+  <afflictionname.onfeet>Сделка с Дьяволом</afflictionname.onfeet>
+  <afflictionname.courage>Кураж</afflictionname.courage>
+  <afflictionname.staring_down>Инспектор?</afflictionname.staring_down>
+  <afflictionname.egg_swallower>Яйцеглот</afflictionname.egg_swallower>
+  <afflictionname.inconspicuous>Маскировка</afflictionname.inconspicuous>
+  <afflictionname.crawlermask>Маска ползуна</afflictionname.crawlermask>
+  <afflictionname.enlightened>Просветление</afflictionname.enlightened>
+  <afflictionname.devotion>Преданность</afflictionname.devotion>
+  <afflictionname.idiot>Сила идиота</afflictionname.idiot>
+  <afflictionname.></afflictionname.>
+  <talenttip.enlightened>‖color:DimGray‖"Просветление" дает [skillamount] к [skill] и увеличивает скорость получения [skill] на [values]%.‖end‖</talenttip.enlightened>
+  <talenttip.onfeet>‖color:DimGray‖Когда ваше здоровье падает ниже нуля, у вас есть шанс подняться и избавиться от всех ранений.‖end‖</talenttip.onfeet>
+  <talenttip.swansong>‖color:DimGray‖Когда ваше здоровье падает ниже нуля, ваши движение и стрельба становятся хуже. Рекомуендуется подождать пока естественная регенерация сама уберет ранения, а потом вылечить "Повреждение органов" стимуляторами.‖end‖</talenttip.swansong>
+  <talenttip.dinendash>‖color:DimGray‖Поедание трупов восстанавливает здоровье.‖end‖</talenttip.dinendash>
+  <talenttip.hollow_start>‖color:DimGray‖Если психоз достигает 100 единиц, вы начинаете получать "Повреждение органов" в голове. Несмотря на то, что урон невелик, он может стать косвенной причиной смерти.‖end‖</talenttip.hollow_start>
+  <talenttip.underground>‖color:DimGray‖При выполнении достаточного количества миссий или при убийстве достаточного количества существ, вам выдаются карточки. Используйте эти карточки, чтобы получить награду\nУбийства монстров Бездны считаются премиальными и дают больше всего наград.‖end‖</talenttip.underground>
+  <talenttip.inconspicuous>‖color:DimGray‖Заходя на аванпост, вы получаете маскировку. Если ваш экран становится красным, то рядом с вами находится охрана или что-то подозревающий гражданин. Не находитесь рядом с ними продолжительное время, иначе вас раскроют. После раскрытия маскировка не будет появляться.‖end‖</talenttip.inconspicuous>
+  <talenttip.pieceofmind>‖color:DimGray‖Психоз будет уменньшаться, если снять наушники.‖end‖</talenttip.pieceofmind>
+  <talentdescription.angry_management_info>‖color:DimGray‖"Мотивация" дает [skillamount1] бонусные [skillname1] очков и  ускоряет [skillamount2] на [time] секунд.‖end‖</talentdescription.angry_management_info>
+</infotexts>
+<!--Бычок-цуцик-->
